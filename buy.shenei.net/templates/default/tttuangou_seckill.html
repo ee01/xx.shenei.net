@@ -19,7 +19,7 @@ var is_seckill={$product['is_seckill']};
 <table class="at_jrat">
 <tbody>
 <tr>
-<td width="150px" style="color:#000000">½ñÈÕÃëÉ±£º</td>
+<td width="150px" style="color:#000000">ä»Šæ—¥ç§’æ€ï¼š</td>
 <td>{$product['name']}</td>
 </tr>
 </tbody>
@@ -27,30 +27,30 @@ var is_seckill={$product['is_seckill']};
 <div style="position: relative;" class="t_deal">
 <div style="height: 160px; padding-top: 30px;" class="t_deal_l">
 <div class="at_zk">{$product['agio']}</div>
-Ô­¼Û<strong style="text-decoration: line-through;">&yen;{$product['price']}</strong><br>
-½ÚÊ¡&yen;{$product['price']-$product['nowprice']}
+åŸä»·<strong style="text-decoration: line-through;">&yen;{$product['price']}</strong><br>
+èŠ‚çœ&yen;{$product['price']-$product['nowprice']}
 <div class="at_buy"> 
 <div class="deal_m">&yen; {$product['nowprice']} </div>
 <div class="deal_k">
 <!--{if $product['is_seckill']==1 && $product['time0']>=0}-->
-<a id="TimeStart" href="javascript:alert('ÃëÉ±»¹Î´¿ªÊ¼...');"><img src="templates/default/images/logo_m.gif"></a>
+<a id="TimeStart" href="javascript:alert('ç§’æ€è¿˜æœªå¼€å§‹...');"><img src="templates/default/images/logo_m.gif"></a>
 <!--{else}-->
 <a id="TimeStart" href="tttuangou_seckill.html@mod=index&code=buy&id={$product%5b'id'%5d}.htm"><img src="templates/default/images/logo_m.gif"></a>
 <!--{/if}-->
 </div></div>
 </div>
 <div id="tuanState" style="float: left;" class="t_deal_l mb_0625">
-<div style="text-align: center;"> ÒÑÓĞ{$product['ordernum']}ÈËÃëµ½ÊÖ<br>
-<span class="txt12">ÊıÁ¿ÓĞÏŞ»¹²»¿ì¿ªÃë£¡£¡</span><br>
-<a <a href="{eval%20echo%20$this-_5f3econfig%5bsite_url%5d;%20}/@u={member_id}" onclick="copyText(this.href);">ÑûÇëÅóÓÑ°ïÃ¦Ò»ÆğÃë<br>»¹·µÀû{$this->config['default_payfinder']}ÔªàŞ~</a>
+<div style="text-align: center;"> å·²æœ‰{$product['ordernum']}äººç§’åˆ°æ‰‹<br>
+<span class="txt12">æ•°é‡æœ‰é™è¿˜ä¸å¿«å¼€ç§’ï¼ï¼</span><br>
+<a <a href="{eval%20echo%20$this-_5f3econfig%5bsite_url%5d;%20}/@u={member_id}" onclick="copyText(this.href);">é‚€è¯·æœ‹å‹å¸®å¿™ä¸€èµ·ç§’<br>è¿˜è¿”åˆ©{$this->config['default_payfinder']}å…ƒå™¢~</a>
 </div>
 </div>
 <div class="t_deal_l mb_0625"> 
 <!--{if $product['is_seckill']==1 && $product['time0']>=0}-->
-<div id="TimeText">ÃëÉ±¿ªÊ¼µ¹¼ÆÊ±</div>
+<div id="TimeText">ç§’æ€å¼€å§‹å€’è®¡æ—¶</div>
 <div class="deal_djs" id="remainTime"></div>
 <!--{else}-->
-<div id="TimeText">¿ìÃëTA£¬Ö»Ê£ÏÂ</div>
+<div id="TimeText">å¿«ç§’TAï¼Œåªå‰©ä¸‹</div>
 <div class="deal_djs" id="remainTime"></div>
 <!--{/if}-->
 </div>
@@ -78,35 +78,35 @@ if (height > xl ) mypic.height = xl;
 <div class="t_area_out">
 <div style="position: relative;" class="t_area_in t_padding">
 <div class="t_detail_l">
-<h4>±¾µ¥ÏêÇé</h4>
+<h4>æœ¬å•è¯¦æƒ…</h4>
 <div class="t_detail_txt">{$product['content']}</div>
-<h4>ÌØ±ğÌáÊ¾</h4>
+<h4>ç‰¹åˆ«æç¤º</h4>
 <div class="t_detail_txt">{$product['cue']}</div>
-<h4>ËûÃÇËµ</h4>
+<h4>ä»–ä»¬è¯´</h4>
 <div class="t_detail_txt">{$product['theysay']}</div>
 <div class="at_xts">
-<div class="at_xts_t"><div class="sName">{$this->Config[site_name]}Ëµ</div></div>
+<div class="at_xts_t"><div class="sName">{$this->Config[site_name]}è¯´</div></div>
 <div class="at_xts_m">
-<p><span style="font-size: 14px;"><span style="font-family: ËÎÌå;">{$product['wesay']}</span></span></p>
+<p><span style="font-size: 14px;"><span style="font-family: å®‹ä½“;">{$product['wesay']}</span></span></p>
 </div>
 <div class="at_xts_f"></div></div>
 </div>
 <div class="t_detail_r">
 <h1>{$product['sellername']}</h1>
-<b>µØÖ·£º</b>{$product['selleraddress']}<br/>
-<b>µç»°£º</b>{$product['sellerphone']}<br/>
+<b>åœ°å€ï¼š</b>{$product['selleraddress']}<br/>
+<b>ç”µè¯ï¼š</b>{$product['sellerphone']}<br/>
 <a href="{$product%5b'sellerurl'%5d}" target="_blank">{$product['sellerurl']}</a><br/>
 {if $sellermap[0]!=''}
-<button id="img1">²é¿´µØÍ¼</button>
+<button id="img1">æŸ¥çœ‹åœ°å›¾</button>
 {/if}
 
 <div style="margin-top:50px;">
-<h1>ÉáÄÚÍÅÃë¿Í·ş£º</h1>
+<h1>èˆå†…å›¢ç§’å®¢æœï¼š</h1>
 <p><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=ae8441a8470085845e015a2386ae2554cbc2a14b09583b4e85956c1882786ba8"; target=_blank; onclick="var tempSrc='../../../sighttp.qq.com/wpa.js@rantime=.htm'+Math.random()+'&sigkey=ae8441a8470085845e015a2386ae2554cbc2a14b09583b4e85956c1882786ba8';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='../../../pub.idqqimg.com/qconn/wpa/button/button_21.gif' alt=""></a>
-¡¡<a href="tencent_3a//message/@menu=yes&exe=&uin=162053702&websitename=_25c9_25e1_25c4_25da_25cd_25f8&info=&service=200&sigt=af83d1e019b09d0eff3e6" target="_blank"><img src="../../../pub.idqqimg.com/qconn/wpa/button/button_21.gif" alt="QQ"></a></p>
+ã€€<a href="tencent_3a//message/@menu=yes&exe=&uin=162053702&websitename=_25c9_25e1_25c4_25da_25cd_25f8&info=&service=200&sigt=af83d1e019b09d0eff3e6" target="_blank"><img src="../../../pub.idqqimg.com/qconn/wpa/button/button_21.gif" alt="QQ"></a></p>
 <p><a href="tencent_3a//message/@menu=yes&exe=&uin=598618077&websitename=_25c9_25e1_25c4_25da_25cd_25f8&info=&service=200&sigt=af83d1e019b09d0eff3e6" target="_blank"><img src="../../../pub.idqqimg.com/qconn/wpa/button/button_21.gif" alt="QQ"></a>
-¡¡<a href="tencent_3a//message/@menu=yes&exe=&uin=834343007&websitename=_25c9_25e1_25c4_25da_25cd_25f8&info=&service=200&sigt=af83d1e019b09d0eff3e6" target="_blank"><img src="../../../pub.idqqimg.com/qconn/wpa/button/button_21.gif" alt="QQ"></a></p>
-<font color="gray" size=2>×¢£ºQQÍ·Ïñ»ÒÉ«ºÜ¿ÉÄÜÒşÉí£¡</font>
+ã€€<a href="tencent_3a//message/@menu=yes&exe=&uin=834343007&websitename=_25c9_25e1_25c4_25da_25cd_25f8&info=&service=200&sigt=af83d1e019b09d0eff3e6" target="_blank"><img src="../../../pub.idqqimg.com/qconn/wpa/button/button_21.gif" alt="QQ"></a></p>
+<font color="gray" size=2>æ³¨ï¼šQQå¤´åƒç°è‰²å¾ˆå¯èƒ½éšèº«ï¼</font>
 </div>
 
 </div>
@@ -117,13 +117,13 @@ if (height > xl ) mypic.height = xl;
 <div class="t_r">
 <div class="t_area_out">
 <div class="t_area_in" style="padding:5px" align="center">
-<a href="tttuangou_seckill.html@mod=index&type=groupbuy.htm"><span style="font:bold 20px/40px Microsoft YaHei,Times New Roman;color:#f60;">È¥¿´¿´ÕıÔÚ½øĞĞµÄÍÅ¹º</span></a>
+<a href="tttuangou_seckill.html@mod=index&type=groupbuy.htm"><span style="font:bold 20px/40px Microsoft YaHei,Times New Roman;color:#f60;">å»çœ‹çœ‹æ­£åœ¨è¿›è¡Œçš„å›¢è´­</span></a>
 </div>
 </div>
 <!--{template "tttuangou_myfinder"}-->
 <div class="t_area_out">
-<h1>ÍÅÃëÎÊ´ğ</h1>
-<div class="t_area_in"> <a target="_blank" href="tttuangou_seckill.html@mod=list&code=question.htm#q_form">ÎÒÒªÌáÎÊ</a> | <a target="_blank" href="tttuangou_seckill.html@mod=list&code=question.htm">²é¿´È«²¿</a> {loop $question $i $value} <a target="_blank" class="txt13" href="tttuangou_seckill.html@mod=list&code=question.htm#id{$value['id']}">{$value['content']}</a> {/loop} </div>
+<h1>å›¢ç§’é—®ç­”</h1>
+<div class="t_area_in"> <a target="_blank" href="tttuangou_seckill.html@mod=list&code=question.htm#q_form">æˆ‘è¦æé—®</a> | <a target="_blank" href="tttuangou_seckill.html@mod=list&code=question.htm">æŸ¥çœ‹å…¨éƒ¨</a> {loop $question $i $value} <a target="_blank" class="txt13" href="tttuangou_seckill.html@mod=list&code=question.htm#id{$value['id']}">{$value['content']}</a> {/loop} </div>
 </div>
 <!--{template tttuangou_mail}-->
 </div>
@@ -132,7 +132,7 @@ if (height > xl ) mypic.height = xl;
 <script type="text/javascript">
 $(document).ready(function() {
 $("#img1").click(function() {
-tipsWindown("ÉÌ¼ÒµØÍ¼","img_3ahttp_3a//ditu.google.cn/staticmap@center={$sellermap%5b0%5d},{$sellermap%5b1%5d}&zoom={$sellermap%5b2%5d}&size=512x512&maptype=mobile&markers={$sellerm00b58b9d24>config['default_googlemapkey']}&sensor=false","512","512","true","","true","img")
+tipsWindown("å•†å®¶åœ°å›¾","img_3ahttp_3a//ditu.google.cn/staticmap@center={$sellermap%5b0%5d},{$sellermap%5b1%5d}&zoom={$sellermap%5b2%5d}&size=512x512&maptype=mobile&markers={$sellerm00b58b9d24>config['default_googlemapkey']}&sensor=false","512","512","true","","true","img")
 });
 });
 </script>

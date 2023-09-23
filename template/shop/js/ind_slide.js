@@ -19,18 +19,18 @@ Object.extend = function(destination, source) {
 
 var TransformView = Class.create();
 TransformView.prototype = {
-  //ÈİÆ÷¶ÔÏó,»¬¶¯¶ÔÏó,ÇĞ»»²ÎÊı,ÇĞ»»ÊıÁ¿
+  //å®¹å™¨å¯¹è±¡,æ»‘åŠ¨å¯¹è±¡,åˆ‡æ¢å‚æ•°,åˆ‡æ¢æ•°é‡
   initialize: function(container, slider, parameter, count, options) {
 	if(parameter <= 0 || count <= 0) return;
 	var oContainer = $$$(container), oSlider = $$$(slider), oThis = this;
 
-	this.Index = 0;//µ±Ç°Ë÷Òı
+	this.Index = 0;//å½“å‰ç´¢å¼•
 	
-	this._timer = null;//¶¨Ê±Æ÷
-	this._slider = oSlider;//»¬¶¯¶ÔÏó
-	this._parameter = parameter;//ÇĞ»»²ÎÊı
-	this._count = count || 0;//ÇĞ»»ÊıÁ¿
-	this._target = 0;//Ä¿±ê²ÎÊı
+	this._timer = null;//å®šæ—¶å™¨
+	this._slider = oSlider;//æ»‘åŠ¨å¯¹è±¡
+	this._parameter = parameter;//åˆ‡æ¢å‚æ•°
+	this._count = count || 0;//åˆ‡æ¢æ•°é‡
+	this._target = 0;//ç›®æ ‡å‚æ•°
 	
 	this.SetOptions(options);
 	
@@ -48,20 +48,20 @@ TransformView.prototype = {
 	oSlider.style.position = "absolute";
 	oSlider.style.top = oSlider.style.left = 0;
   },
-  //ÉèÖÃÄ¬ÈÏÊôĞÔ
+  //è®¾ç½®é»˜è®¤å±æ€§
   SetOptions: function(options) {
-	this.options = {//Ä¬ÈÏÖµ
-		Up:			true,//ÊÇ·ñÏòÉÏ(·ñÔòÏò×ó)
-		Step:		5,//»¬¶¯±ä»¯ÂÊ
-		Time:		20,//»¬¶¯ÑÓÊ±
-		Auto:		true,//ÊÇ·ñ×Ô¶¯×ª»»
-		Pause:		2000,//Í£¶ÙÊ±¼ä(AutoÎªtrueÊ±ÓĞĞ§)
-		onStart:	function(){},//¿ªÊ¼×ª»»Ê±Ö´ĞĞ
-		onFinish:	function(){}//Íê³É×ª»»Ê±Ö´ĞĞ
+	this.options = {//é»˜è®¤å€¼
+		Up:			true,//æ˜¯å¦å‘ä¸Š(å¦åˆ™å‘å·¦)
+		Step:		5,//æ»‘åŠ¨å˜åŒ–ç‡
+		Time:		20,//æ»‘åŠ¨å»¶æ—¶
+		Auto:		true,//æ˜¯å¦è‡ªåŠ¨è½¬æ¢
+		Pause:		2000,//åœé¡¿æ—¶é—´(Autoä¸ºtrueæ—¶æœ‰æ•ˆ)
+		onStart:	function(){},//å¼€å§‹è½¬æ¢æ—¶æ‰§è¡Œ
+		onFinish:	function(){}//å®Œæˆè½¬æ¢æ—¶æ‰§è¡Œ
 	};
 	Object.extend(this.options, options || {});
   },
-  //¿ªÊ¼ÇĞ»»ÉèÖÃ
+  //å¼€å§‹åˆ‡æ¢è®¾ç½®
   Start: function() {
 	if(this.Index < 0){
 		this.Index = this._count - 1;
@@ -71,7 +71,7 @@ TransformView.prototype = {
 	this.onStart();
 	this.Move();
   },
-  //ÒÆ¶¯
+  //ç§»åŠ¨
   Move: function() {
 	clearTimeout(this._timer);
 	var oThis = this, style = this.Up ? "top" : "left", iNow = parseInt(this._slider.style[style]) || 0, iStep = this.GetStep(this._target, iNow);
@@ -85,14 +85,14 @@ TransformView.prototype = {
 		if (this.Auto) { this._timer = setTimeout(function(){ oThis.Index++; oThis.Start(); }, this.Pause); }
 	}
   },
-  //»ñÈ¡²½³¤
+  //è·å–æ­¥é•¿
   GetStep: function(iTarget, iNow) {
 	var iStep = (iTarget - iNow) / this.Step;
 	if (iStep == 0) return 0;
 	if (Math.abs(iStep) < 1) return (iStep > 0 ? 1 : -1);
 	return iStep;
   },
-  //Í£Ö¹
+  //åœæ­¢
   Stop: function(iTarget, iNow) {
 	clearTimeout(this._timer);
 	this._slider.style[this.Up ? "top" : "left"] = this._target + "px";
@@ -106,7 +106,7 @@ window.onload=function(){
 	
 	var objs = $$$("idNum").getElementsByTagName("li");
 	var tv = new TransformView("idTransformView", "idSlider", 170, 3, {
-		onStart : function(){ Each(objs, function(o, i){ o.className = tv.Index == i ? "on" : ""; }) }//°´Å¥ÑùÊ½
+		onStart : function(){ Each(objs, function(o, i){ o.className = tv.Index == i ? "on" : ""; }) }//æŒ‰é’®æ ·å¼
 	});
 	
 	tv.Start();

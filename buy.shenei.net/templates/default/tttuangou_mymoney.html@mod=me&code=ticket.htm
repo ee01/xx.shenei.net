@@ -3,12 +3,12 @@
 <div class="t_l">
 <div class="ts_menu_2">
 <ul>
-<li class="ts3_mbtn2"><a href="tttuangou_mymoney.html@mod=me&code=ticket.htm">�ҵ��Ź�ȯ</a></li>
-<li class="ts3_mbtn2"><a href="tttuangou_mymoney.html@mod=me&code=order.htm">�ҵĶ���</a></li>
-<li class="ts3_mbtn1"><a href="tttuangou_mymoney.html@mod=me&code=money.htm">�ҵ����</a></li>
-<li class="ts3_mbtn2"><a href="tttuangou_mymoney.html@mod=me&code=info.htm">�˻�����</a></li>
+<li class="ts3_mbtn2"><a href="tttuangou_mymoney.html@mod=me&code=ticket.htm">我的团购券</a></li>
+<li class="ts3_mbtn2"><a href="tttuangou_mymoney.html@mod=me&code=order.htm">我的订单</a></li>
+<li class="ts3_mbtn1"><a href="tttuangou_mymoney.html@mod=me&code=money.htm">我的余额</a></li>
+<li class="ts3_mbtn2"><a href="tttuangou_mymoney.html@mod=me&code=info.htm">账户设置</a></li>
 {if UCENTER}
-<li class="ts3_mbtn2"><a href="tttuangou_mymoney.html@mod=me&code=face.htm">�ҵ�ͷ��</a></li>
+<li class="ts3_mbtn2"><a href="tttuangou_mymoney.html@mod=me&code=face.htm">我的头像</a></li>
 {/if}
 </ul>
 <div class="clear"></div>
@@ -25,20 +25,20 @@ $(this).next("tr").toggle();
 $(this).find(".arrow").toggleClass("up");
 });
 });
-//jquery ģ�������´���
+//jquery 模拟点击打开新窗口
 $("a[rel=external]").attr('target', '_blank');
 </script>
-<div class="nleftL"><span class="B">����ǰ���ʻ������ <em class="R"> {$money['money']}</em> Ԫ</span> <a href="tttuangou_mymoney.html@mod=me&code=addmoney.htm">&lt;����Ϊ�˻���ֵ&gt;</a> </div>
+<div class="nleftL"><span class="B">您当前的帐户余额是 <em class="R"> {$money['money']}</em> 元</span> <a href="tttuangou_mymoney.html@mod=me&code=addmoney.htm">&lt;点我为账户充值&gt;</a> </div>
 <div class="nleftL">
 <table id="report">
 <tr>
-<th>ժҪ</th>
-<th>����</th>
-<th>��Ԫ��</th>
+<th>摘要</th>
+<th>日期</th>
+<th>金额（元）</th>
 <th></th>
 </tr>
 {if empty($usermoney)}
-<tr><td colspan="7">����ʱ��û���˻���Ϣ������ֵ�����Ʒ����Ϣ������������ʾŶ��</td></tr>
+<tr><td colspan="7">您暂时还没有账户信息，您充值购买产品的信息都会在这里显示哦！</td></tr>
 {/if}
 {loop $usermoney $i $value}
 <tr class="Bor">
@@ -49,7 +49,7 @@ $("a[rel=external]").attr('target', '_blank');
 </tr>
 <tr class="Bor">
 <td colspan="4"><span>
-<h4>ժҪ����</h4>
+<h4>摘要详情</h4>
 <p><b>{$value['intro']}</b></p>
 </span> </td>
 </tr>
@@ -63,12 +63,12 @@ $("a[rel=external]").attr('target', '_blank');
 <div class="t_r">
 <!--{template "tttuangou_myfinder"}-->
 <div class="t_area_out">
-<h1>��������</h1>
+<h1>常见问题</h1>
 <div class="t_area_in" style="font-size:12px;">
-<h3 class="first">ʲô���ʻ���</h3>
-<p>�ʻ����������{conf site_name}���Ź�ʱ������֧���Ľ�</p>
-<h3>������������</h3>
-<p><a href="tttuangou_mymoney.html@mod=list&code=finder.htm">�������</a>���{$this->config['default_payfinder']} Ԫ��������ֵ���ʻ�����С�</p>
+<h3 class="first">什么是帐户余额？</h3>
+<p>帐户余额是你在{conf site_name}网团购时可用于支付的金额。</p>
+<h3>怎样才能有余额？</h3>
+<p><a href="tttuangou_mymoney.html@mod=list&code=finder.htm">邀请好友</a>获得{$this->config['default_payfinder']} 元返利将充值到帐户余额中。</p>
 </div>
 </div>
 </div>

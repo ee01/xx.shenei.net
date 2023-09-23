@@ -14,15 +14,15 @@ function numkeyup(numi,numsum,price) {
 		oncemax=surplusnum;
 	}
 	if($('#num'+numi).val()<=0){
-		alert('´íÎó£¬¹ºÂòÊıÁ¿±ØĞë´óÓÚµÈÓÚ1');
+		alert('é”™è¯¯ï¼Œè´­ä¹°æ•°é‡å¿…é¡»å¤§äºç­‰äº1');
 		$('#num'+numi).val(1);
 	}
 	if(isNaN($('#num'+numi).val())){
-		alert('´íÎó£¬ÊıÁ¿±ØĞëÊÇÒ»¸öÊı×Ö'+numi);
+		alert('é”™è¯¯ï¼Œæ•°é‡å¿…é¡»æ˜¯ä¸€ä¸ªæ•°å­—'+numi);
 		$('#num'+numi).val(1);
 	}
 	if(oncemax != 0 && oncemax < $('#num'+numi).val()){
-		alert('¶Ô²»Æğ,Äú×î¶à¹ºÂò'+oncemax+'¸öÉÌÆ·');
+		alert('å¯¹ä¸èµ·,æ‚¨æœ€å¤šè´­ä¹°'+oncemax+'ä¸ªå•†å“');
 		$('#num'+numi).val(oncemax);
 	}
 	$("#price").html($('#num'+numi).val()*price);
@@ -38,20 +38,20 @@ function choosenum(numi,price) {
 <div class="t_l">
 <div class="t_area_out">
 <div class="t_area_in">
-<p class="cur_title">Ìá½»¶©µ¥</p>
+<p class="cur_title">æäº¤è®¢å•</p>
 <div class="sect">
 <form action="{$action}" method="post" enctype="multipart/form-data">
 {if $product['otherprice']}
 <table id="report">
 <tr>
 <th>&nbsp;</th>
-<th>ÍÅ¹ºÏîÄ¿</th>
-<th>¼Û¸ñ</th>
-<th>ÊıÁ¿</th>
+<th>å›¢è´­é¡¹ç›®</th>
+<th>ä»·æ ¼</th>
+<th>æ•°é‡</th>
 <th>&nbsp;</th>
-<th>¶¨½ğ</th>
+<th>å®šé‡‘</th>
 <th>&nbsp;</th>
-<th>×Ü¼Û</th>
+<th>æ€»ä»·</th>
 </tr>
 {loop $product['otherprice'] $i $value}
 <script language="javascript">
@@ -71,17 +71,17 @@ $(document).ready(function(){
 </tr>
 {/loop}
 </table>
-<div class="nleftL"><span class="SR B R">Ó¦¸¶×Ü¶î£º&yen; <span id='price'>{$product['otherprice'][1]['earnest']}</span></span></div>
+<div class="nleftL"><span class="SR B R">åº”ä»˜æ€»é¢ï¼š&yen; <span id='price'>{$product['otherprice'][1]['earnest']}</span></span></div>
 {else}
 <table id="report">
 <tr>
-<th>ÍÅ¹ºÏîÄ¿</th>
-<th>¼Û¸ñ</th>
-<th>ÊıÁ¿</th>
+<th>å›¢è´­é¡¹ç›®</th>
+<th>ä»·æ ¼</th>
+<th>æ•°é‡</th>
 <th>&nbsp;</th>
-<th>{if $product['earnest']==$product['nowprice']}µ¥¼Û{else}¶¨½ğ{/if}</th>
+<th>{if $product['earnest']==$product['nowprice']}å•ä»·{else}å®šé‡‘{/if}</th>
 <th>&nbsp;</th>
-<th>×Ü¼Û</th>
+<th>æ€»ä»·</th>
 </tr>
 <tr class="Bor">
 <td width="35%">{$product['name']}</td>
@@ -93,11 +93,11 @@ $(document).ready(function(){
 <td width="15%"><span class="B">&yen; <span id='price2'>{$product['earnest']}</span></span></td>
 </tr>
 </table>
-<div class="nleftL"><span class="SR B R">Ó¦¸¶×Ü¶î£º&yen; <span id='price'>{$product['earnest']}</span></span></div>
+<div class="nleftL"><span class="SR B R">åº”ä»˜æ€»é¢ï¼š&yen; <span id='price'>{$product['earnest']}</span></span></div>
 {/if}
 <div class="nleftL">
 <input type="hidden" value="{$id}" name="id" />
-<input type="submit" value="È·ÈÏÎŞÎó£¬¹ºÂò" name="buy" class="formbutton">  	
+<input type="submit" value="ç¡®è®¤æ— è¯¯ï¼Œè´­ä¹°" name="buy" class="formbutton">  	
 </div>
 </form>
 </div>

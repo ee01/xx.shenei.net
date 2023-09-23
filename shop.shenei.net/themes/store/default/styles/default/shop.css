@@ -41,14 +41,14 @@ ul, ol { list-style-type:none; }
 
 /*
 * -------------------------------------------------------
-* ******************** µÍ∆Ã√˚≥∆”ÎÕ¯÷∑ ***********************
+* ******************** Â∫óÈì∫ÂêçÁß∞‰∏éÁΩëÂùÄ ***********************
 * -------------------------------------------------------
 */
 #nav .banner H2 {
-        MARGIN-TOP: 30px; FONT-SIZE: 20px; LEFT: 0px; COLOR: #cf521a; TEXT-INDENT: 30px; LINE-HEIGHT: 40px; FONT-FAMILY: "Œ¢»Ì—≈∫⁄", "∫⁄ÃÂ", "ÀŒÃÂ"; POSITION: absolute; TOP: 0px; HEIGHT: 40px
+        MARGIN-TOP: 30px; FONT-SIZE: 20px; LEFT: 0px; COLOR: #cf521a; TEXT-INDENT: 30px; LINE-HEIGHT: 40px; FONT-FAMILY: "ÂæÆËΩØÈõÖÈªë", "Èªë‰Ωì", "ÂÆã‰Ωì"; POSITION: absolute; TOP: 0px; HEIGHT: 40px
 }
 #nav .banner H4 {
-        MARGIN-TOP: 30px; FONT-SIZE: 20px; LEFT: 0px; COLOR: #cf521a; TEXT-INDENT: 30px; LINE-HEIGHT: 40px; FONT-FAMILY: "Œ¢»Ì—≈∫⁄", "∫⁄ÃÂ", "ÀŒÃÂ"; POSITION: absolute; TOP: 0px; HEIGHT: 40px
+        MARGIN-TOP: 30px; FONT-SIZE: 20px; LEFT: 0px; COLOR: #cf521a; TEXT-INDENT: 30px; LINE-HEIGHT: 40px; FONT-FAMILY: "ÂæÆËΩØÈõÖÈªë", "Èªë‰Ωì", "ÂÆã‰Ωì"; POSITION: absolute; TOP: 0px; HEIGHT: 40px
 }
 #nav .banner H2 {
         LEFT: -1px; COLOR: #fadfd3; TOP: -1px
@@ -281,7 +281,7 @@ ul, ol { list-style-type:none; }
 .group_major .time { width: 139px; padding-left: 25px; height: 30px; line-height: 30px; color: #5eb3a0; font-weight: bold; margin: 0 auto; }
 
 
-.major .more { font-family: "ÂÆã‰Ωì"; text-align: right; padding-right: 30px; margin-bottom: 20px; }
+.major .more { font-family: "ÁÄπÂ¨©Á∂ã"; text-align: right; padding-right: 30px; margin-bottom: 20px; }
 .major .more a { color: #285bcc; }
 .major .more a:hover { position: relative; top: 1px; }
 
@@ -318,7 +318,7 @@ ul, ol { list-style-type:none; }
 
 
 
-.general .more { font-family: "ÂÆã‰Ωì"; text-align: right; padding-right: 30px; margin-bottom: 20px; }
+.general .more { font-family: "ÁÄπÂ¨©Á∂ã"; text-align: right; padding-right: 30px; margin-bottom: 20px; }
 .general .more a { color: #285bcc; }
 .general .more a:hover { position: relative; top: 1px; }
 

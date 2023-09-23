@@ -1,19 +1,19 @@
 #description{display:block;line-height:30px;border-left:1px solid #E4E4E4;text-align:left;padding-left:4px;float:left;margin-top:22px}
-#description h1{font-size:22px;overflow:hidden;font-family:"Î¢ÈíÑÅºÚ";}
-/*ÕûÌå²¼¾Ö*/
+#description h1{font-size:22px;overflow:hidden;font-family:"å¾®è½¯é›…é»‘";}
+/*æ•´ä½“å¸ƒå±€*/
 #connter1{float:left;width:160px;}
 #connter2{border-left:1px solid #CECECE;padding-left:6px;height:100%;overflow:hidden;float:left}/*IE,3px;bug*/
-#connter2left{float:left;}/*±ê×¼594px£¨±ß¿ò1px£©*/
+#connter2left{float:left;}/*æ ‡å‡†594pxï¼ˆè¾¹æ¡†1pxï¼‰*/
 #connter2left2{background:#888;float:left}/**/
-#connter2right{float:right;width:200px;}/*±ê×¼198£¨±ß¿ò1px£©*/
+#connter2right{float:right;width:200px;}/*æ ‡å‡†198ï¼ˆè¾¹æ¡†1pxï¼‰*/
 
-/*Ãæ°üĞ¼*/
+/*é¢åŒ…å±‘*/
 #msg{background:url(http://xx.shenei.net/images/msgbg.gif) repeat-x bottom;height:35px;line-height:35px;}
 .msg1{margin-left:2px;}
 .msg1 a{color:#333;text-decoration:underline;}
 .msg2{width:550px;text-align:right;margin-right:2px}
 
-/*×ó±ßµ¼º½*/
+/*å·¦è¾¹å¯¼èˆª*/
 #connter1 ul li a{font-size:13px;text-decoration:underline;display:block;margin:0px;padding:0px;}
 #connter1  li{line-height:28px;height:100%;overflow:hidden}
 #connter1  li :hover {background:#F0EFF7;text-decoration:none;color:#F54100;font-weight:bold;}
@@ -21,25 +21,25 @@
 #connter1 .listnavon a{text-decoration:none;color:#F54100}
 .listad1 img{margin-bottom:12px;border:1px solid #D9E0ED}
 
-/*ÓÒ±ßµÄÄÚÈİÇøÓò*/
-	/*ÉÏÃæµÄLISTMSG*/
+/*å³è¾¹çš„å†…å®¹åŒºåŸŸ*/
+	/*ä¸Šé¢çš„LISTMSG*/
 
 #listmsg{height:100%;overflow:hidden}
 #listmsgrss{float:left}
 #listmsgopen{float:right}
-/*ÖĞ¼ä*/
+/*ä¸­é—´*/
 #listmsg{line-height:25px}
 #listmsg a{}
 #listmsgrss a{color:#008000;text-decoration:underline}
 #listmsgmore{background:#F0EFF7;padding-left:10px;padding:5px}
 .searchinput{height:23px;line-height:23px;width:300px;;padding-left:5px}
-/*Àà±ğÑ¡Ôñ*/
+/*ç±»åˆ«é€‰æ‹©*/
 #listchoice{line-height:30px;border-bottom:1px solid #CECECE;height:100%;overflow:hidden}
 #listchoice li{margin-right:6px;}
 #listchoice li a{display:block;float:left;white-space:nowrap;text-decoration:underline;padding-right:15px;}
 #listchoice li a:hover{background:url(../../../images/iconbg.gif) no-repeat -32px right ;}
 .listchoiceon{background:url(../../../images/iconbg.gif) no-repeat -32px right ;text-decoration:none!important;color:#F54100}
-/*ĞÅÏ¢ÁĞ±í*/
+/*ä¿¡æ¯åˆ—è¡¨*/
 #listinfoul li {margin:6px 0 6px 0;clear:both;border-bottom:1px dashed  #CECECE;height:100%;overflow:hidden}
 .listfloor{float:left;color:#F54100;margin-right:5px}
 .listfloor b{font-size:18px;line-height:25px;}
@@ -55,15 +55,15 @@
 .listinfoto span{color:#F54100;}
 .listinfoto b{font-weight:normal}
 
-/*¶©ÔÄÌáĞÑ*/
+/*è®¢é˜…æé†’*/
 #listmail{padding:5px;line-height:20px;}
 #listmail span{color:#F54100}
 #listmail span a{text-decoration:underline}
 #listtop{float:right}
 
-/* ÓÒ±ßÀ¸*/
+/* å³è¾¹æ */
 
-/*¹«¸æ*/
+/*å…¬å‘Š*/
 #boxbutton{line-height:25px;text-align:right;padding-right:25px;background:#F6F6F6}
 #listnotice {}
 #listnotice span {line-height:18px;padding:5px;display:block}
@@ -71,10 +71,10 @@
 /* add 788 */
 .listmaxwidth { width:782px;}
 .listminwidth { width:581px;}
-/*ÆäËûÊôĞÔ*/
+/*å…¶ä»–å±æ€§*/
 .h3ico{height:20px!important;border:none!important;width:20px!important;padding:0px!important;margin:0px!important;vertical-align:middle;margin-left:6px!important}
 
-/*2009.2.19ÈÕĞÂÔö*/
+/*2009.2.19æ—¥æ–°å¢*/
 .listrighttop{height:100%;overflow:hidden;border:1px solid #E2E2E2;margin-top:6px;clear:both;width:196px;}
 .listrighttop h2{background:#F6F6F6;height:35px;text-indent:-500px;margin:1px;}
 .listrighttop ul{background:url(http://xx.shenei.net/images/listtop.gif) no-repeat 5px 5px;padding:0 5px 5px 5px}

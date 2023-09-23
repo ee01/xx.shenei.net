@@ -1,5 +1,5 @@
 /* document */
-body{ font-size:12px; color:#333; background:#fff; font-family:Arial, "ËÎÌå", sans-serif;margin:0px; padding:0px; }
+body{ font-size:12px; color:#333; background:#fff; font-family:Arial, "å®‹ä½“", sans-serif;margin:0px; padding:0px; }
 a{ color:#00c; text-decoration:none;} a:hover{ color:#f60; text-decoration:underline;}
 a.link_red{ color:#f00; text-decoration:none;} a.link_red:hover{ color:#f60; text-decoration:underline;}
 h1,h2,h3,h4,p,ul,ol,dl,p{ margin:0px; padding:0px; list-style:none;}
@@ -47,7 +47,7 @@ h1,h2,h3,h4,p,ul,ol,dl,p{ margin:0px; padding:0px; list-style:none;}
 #next_page a:hover{ text-decoration:underline; color:#f00;}
 #next_page a.noneStrong{ font-weight:lighter;}
 
-/* ÓÒ²à±ß¿ò */
+/* å³ä¾§è¾¹æ¡† */
 .r_box{ padding:0px 10px 10px;}
 .r_box p{ margin:0px; padding:0px; line-height:24px; color:#666; margin-top:10px;}
 .r_box p a{ text-decoration:underline;}
@@ -114,7 +114,7 @@ a.loginin{ font-size:14px; font-weight:bold;}
 .obBtm { height:40px; background:#f2faff; border-top:1px solid #ddeaf2; padding:6px 10px;  position:absolute; bottom:0;}
 .txtAera {overflow-y:auto; font-size:13px; line-height:18px; font-family:Verdana, Arial, Helvetica, sans-serif; height:60px;}
 .abIfr{width:100%; height:90%;border:0;position:absolute;filter:alpha(opacity=0);top:10%;left:-2px;visibility:inherit;	display:block;	z-index:0;}
-/*µ¯³ö²ã*/
+/*å¼¹å‡ºå±‚*/
 #winOver {
 	position: absolute;
 	top: 0;
@@ -147,7 +147,7 @@ a.loginin{ font-size:14px; font-weight:bold;}
 	position:relative;
 	}
 
-/*¿Ø¼ş²ÎÊı*/
+/*æ§ä»¶å‚æ•°*/
 input{ line-height:18px; vertical-align:middle;}
 .allTitle{ width:250px;}
 .age{ width:25px;}
@@ -177,7 +177,7 @@ select{ vertical-align:middle;}
 .xingqu{ width:155px;}
 .jineng{ width:200px;}
 
-/*·¿Ô´ËùÔÚĞ¡ÇøÊµÊ±ÌáÊ¾*/
+/*æˆ¿æºæ‰€åœ¨å°åŒºå®æ—¶æç¤º*/
 .active{ min-height:22px; position:relative;}
 .shadow{ border:1px solid #aacaf2; background:#fafdff; padding:8px 10px; z-index:10; width:420px; overflow:hidden; position:absolute; left:0; top:23px;}
 .shadow p{ border-bottom:1px solid #eee; line-height:18px; height:18px; margin-bottom:5px;}
@@ -198,7 +198,7 @@ select{ vertical-align:middle;}
 width:60px;
 }
 
-/*--¸¡¶¯¿ò--*/
+/*--æµ®åŠ¨æ¡†--*/
 .fudong{ position:relative;}
 .fudong iframe{ position:absolute; z-index:0; top:0; left:0; width:410px; height:100px; background:#fff; margin:0; padding:0;}
 .fudong1{ position:absolute; z-index:10; top:0; left:0; width:400px; background:#fff; border:2px solid #D9E7F9; padding:5px 0 5px 10px;}
@@ -214,7 +214,7 @@ ul.zpli li.zp{ width:65px; height:21px; font-weight:bold; float:left; font-size:
 .tishi_zh a{ text-decoration:underline}
 .c_left h3{ font-size:12px; color:#666; background:#F6FBFF; padding:6px 0 3px 10px; margin-top:10px;}
 
-/*--Í¼Æ¬--*/
+/*--å›¾ç‰‡--*/
 .add_pic1 {padding:0 0 20px 80px;}
 .add_pic1 li{ width:87px; text-align:center; margin-right:10px; float:left;}
 .add_pic1 li a{ font-size:12px; text-decoration:underline}

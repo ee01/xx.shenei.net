@@ -5,16 +5,16 @@
 <div class="t_area_in" style="overflow:hidden;_width:695px; _height:100%">
 <p class="cur_title">{$this->Title}</p>
 <div class="sect">
-<p class="B2">ÓÊ¼şÔ¤¶¨×îĞÂÍÅÃëĞÅÏ¢£¬ÁË½âÍÅÃëµÚÒ»ÊÖ×ÊÑ¶¡£</p>
+<p class="B2">é‚®ä»¶é¢„å®šæœ€æ–°å›¢ç§’ä¿¡æ¯ï¼Œäº†è§£å›¢ç§’ç¬¬ä¸€æ‰‹èµ„è®¯ã€‚</p>
 <div class="enter_address">
-<p class="B2 R">{conf site_name}ÔËĞĞÖĞ£¬»¶Ó­Í¨¹ıÓÊ¼ş¶©ÔÄ×îĞÂÍÅÃëĞÅÏ¢£¡</p>
+<p class="B2 R">{conf site_name}è¿è¡Œä¸­ï¼Œæ¬¢è¿é€šè¿‡é‚®ä»¶è®¢é˜…æœ€æ–°å›¢ç§’ä¿¡æ¯ï¼</p>
 <div class="enter_address_c">
 <form action="{$action}" enctype="multipart/form-data" method="post" onsubmit="return check()">
 <script language="javascript">
 function checkEmail(email){
 var emailRegExp = new RegExp(            "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
 if (!emailRegExp.test(email)||email.indexOf('.')==-1){
-alert('emailµØÖ·¸ñÊ½´íÎóÁËÅ¶~~');
+alert('emailåœ°å€æ ¼å¼é”™è¯¯äº†å“¦~~');
 $('#email').val('');
 }else{
 return true;
@@ -28,19 +28,19 @@ return true;
 }
 </script>
 <div class="mail">
-<label>ÓÊ¼şµØÖ·£º</label>
+<label>é‚®ä»¶åœ°å€ï¼š</label>
 <input name="email" type="text" class="f_input f_mail" id="email" size="20">
-<span class="tip">ÓÊ¼şµØÖ·²»»á±»¹«¿ª»ò·¢À¬»øÓÊ¼ş¡£</span> 
+<span class="tip">é‚®ä»¶åœ°å€ä¸ä¼šè¢«å…¬å¼€æˆ–å‘åƒåœ¾é‚®ä»¶ã€‚</span> 
 </div>
 <div class="product">
-<label>Ñ¡ÔñÄú¹Ø×¢µÄ³ÇÊĞ£º</label>
+<label>é€‰æ‹©æ‚¨å…³æ³¨çš„åŸå¸‚ï¼š</label>
 <select name="city" style="text" class="f_product">
 {loop $this->cityary $i $value}
 <option value="{$value['cityid']}" {if $this->city==$value['cityid']}selected{/if}>{$value['cityname']}</option>
 {/loop}
 </select>
 &nbsp;&nbsp;
-<input type="submit" value="¶©ÔÄ" class="formbutton">
+<input type="submit" value="è®¢é˜…" class="formbutton">
 </div>
 </form>
 </div>
@@ -53,8 +53,8 @@ return true;
 <div class="t_r">
 <!--{template "tttuangou_myfinder"}-->
 <div class="t_area_out">
-<h1>ÍÅÃëÎÊ´ğ</h1>
-<div class="t_area_in"> <a target="_blank" href="tttuangou_email.html@mod=list&code=question.htm#q_form">ÎÒÒªÌáÎÊ</a> | <a target="_blank" href="tttuangou_email.html@mod=list&code=question.htm">²é¿´È«²¿</a> {loop $question $i $value} <a target="_blank" class="txt13" href="tttuangou_email.html@mod=list&code=question.htm#id{$value['id']}">{$value['content']}£¿</a> {/loop} </div>
+<h1>å›¢ç§’é—®ç­”</h1>
+<div class="t_area_in"> <a target="_blank" href="tttuangou_email.html@mod=list&code=question.htm#q_form">æˆ‘è¦æé—®</a> | <a target="_blank" href="tttuangou_email.html@mod=list&code=question.htm">æŸ¥çœ‹å…¨éƒ¨</a> {loop $question $i $value} <a target="_blank" class="txt13" href="tttuangou_email.html@mod=list&code=question.htm#id{$value['id']}">{$value['content']}ï¼Ÿ</a> {/loop} </div>
 </div>
 <!--{template tttuangou_mail}-->
 </div>

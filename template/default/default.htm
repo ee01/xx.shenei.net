@@ -12,33 +12,33 @@
 <body class="home-page" bgcolor="#e6e6e6">
 <div class="wrapper">
 {include file="default/inc_head.html"}
-<!-- Ö÷Ìå -->
+<!-- ä¸»ä½“ -->
 <div id="content">
 <!--<div id="top3adv" class="clearfix" style="margin-bottom:8px; margin-top:0px; padding:0; clear:both;">
-950*55 ¶¥²¿Í¨À¸¹ã¸æ,ÄãµÄ¹ã¸æ¿ÉÒÔ·ÅÔÚÕâÀï£¬²¢½«×¢ÊÍÈ¥µô
+950*55 é¡¶éƒ¨é€šæ å¹¿å‘Š,ä½ çš„å¹¿å‘Šå¯ä»¥æ”¾åœ¨è¿™é‡Œï¼Œå¹¶å°†æ³¨é‡Šå»æ‰
 </div>-->
-<!-- µÚÒ»ÆÁ -->
+<!-- ç¬¬ä¸€å± -->
 <div class="grid_c1 clearfix">
 <div class="col_main">
 <div class="clearfix">
 <div class="left">
-<!-- ÎÂÜ°ÌáÊ¾ -->
+<!-- æ¸©é¦¨æç¤º -->
 <div class="tips">
-<div class="hd">ÎÂÜ°ÌáÊ¾:</div>
-<div class="bd">Çë×ñÊØ»¥ÁªÍø·¨¹æ£¬Îğ·¢Î¥·¨ĞÅÏ¢£¬<font style="color:#f30532;">Î¥ÕßÉ¾³ı¡£</font></div>
+<div class="hd">æ¸©é¦¨æç¤º:</div>
+<div class="bd">è¯·éµå®ˆäº’è”ç½‘æ³•è§„ï¼Œå‹¿å‘è¿æ³•ä¿¡æ¯ï¼Œ<font style="color:#f30532;">è¿è€…åˆ é™¤ã€‚</font></div>
 </div>
-<!-- ·ÖÀàÁĞ±í -->
+<!-- åˆ†ç±»åˆ—è¡¨ -->
 <div class="category_list">
 <span class="bk_tp"></span>
 <div class="bd">
-<!-- ÌìÆø+ÑÕÉ«ÇĞ»» -->
+<!-- å¤©æ°”+é¢œè‰²åˆ‡æ¢ -->
 <div class="weather_changeColor">
 <div class="weather_bd">
-½ñÌìÊÇ<script type="text/javascript" src="http://xx.shenei.net/template/default/template/default/js/current_date.js"></script>
-£¬×£ÄúÒ»ÇĞË³Àû£¡</div></div>
+ä»Šå¤©æ˜¯<script type="text/javascript" src="http://xx.shenei.net/template/default/template/default/js/current_date.js"></script>
+ï¼Œç¥æ‚¨ä¸€åˆ‡é¡ºåˆ©ï¼</div></div>
 
-<!-- ÁĞ±í -->
-<div class="category_hd clearfix"><a href="http://xx.shenei.net/template/default/member/info.php?part=input" class="category_fb">Ãâ·Ñ·¢²¼ĞÅÏ¢</a><span class="category_hd_info">¹²ÓĞĞÅÏ¢<b>{$count_info}</b>Ìõ</span></div>
+<!-- åˆ—è¡¨ -->
+<div class="category_hd clearfix"><a href="http://xx.shenei.net/template/default/member/info.php?part=input" class="category_fb">å…è´¹å‘å¸ƒä¿¡æ¯</a><span class="category_hd_info">å…±æœ‰ä¿¡æ¯<b>{$count_info}</b>æ¡</span></div>
 <div class="category_bd">
 {foreach item=first_cat from=$category}
 <h3><a href="http://xx.shenei.net/template/default/{$first_cat.uri}" target="_blank" title="{$mymps_global.SiteCity}{$first_cat.catname}">{$mymps_global.SiteCity}{$first_cat.catname}</a><span> </span></h3>
@@ -51,97 +51,97 @@
 </div>
 </div>
 <span class="bk_ft"></span>	
-<!------ ¹ã¸æ ---340X160------>	
+<!------ å¹¿å‘Š ---340X160------>	
 <div style=" margin-top:5px;"><a href="#" target="_blank"></a></div>
-<!------ ¹ã¸æ ---340X180------>
+<!------ å¹¿å‘Š ---340X180------>
 </div>
 </div>
 <div class="right">
-<!-- ÇĞ»»banner -->
+<!-- åˆ‡æ¢banner -->
 <div class="container" id="idTransformView">
 <ul class="slider" id="idSlider">
 {foreach from=$focus item=focus}<li><a href="http://xx.shenei.net/template/default/{$mymps_global.siteurl}{$focus.url}" target="_blank"><img src="http://xx.shenei.net/template/default/{$mymps_global.siteurl}{$focus.image}" alt="{$focus.words}"/></a></li>{/foreach}
 </ul>
 <ul class="num" id="idNum"><li>1</li><li>2</li><li>3</li></ul>
 </div>
-<!-- Í·°æĞÅÏ¢ -->
+<!-- å¤´ç‰ˆä¿¡æ¯ -->
 <div class="news_module">
-<div class=hd><span class=largefont>Í·°æ</span><span 
-class=smallfont>Í·Ìõ</span></div>
+<div class=hd><span class=largefont>å¤´ç‰ˆ</span><span 
+class=smallfont>å¤´æ¡</span></div>
 <div class="bd">
 <ul>
 {foreach from=$info_list_top item=info_list_top}
 <li><a href="http://xx.shenei.net/template/default/{$info_list_top.uri}" target="_blank" title="{$info_list_top.title}" {if $info_list_top.info_level > 1}style="color:red"{/if}>{$info_list_top.title}</a>
 <span>{$info_list_top.catname}</span>
 </li>
-{foreachelse}<li>ÔİÎŞÏà¹ØĞÅÏ¢</li>
+{foreachelse}<li>æš‚æ— ç›¸å…³ä¿¡æ¯</li>
 {/foreach}
 </ul>
 </div>
 <div class="ft">
-<a href="http://xx.shenei.net/template/public/about.php?part=faq&id=19" class="info_more">ÏëÉÏÍ·Ìõ£¿</a>							</div>
+<a href="http://xx.shenei.net/template/public/about.php?part=faq&id=19" class="info_more">æƒ³ä¸Šå¤´æ¡ï¼Ÿ</a>							</div>
 </div>
-<!-- Í·°æĞÂÎÅ -->
+<!-- å¤´ç‰ˆæ–°é—» -->
 <div class="news_module">
-<div class=hd><span class=largefont>×îĞÂ</span><span 
-class=smallfont>·¢²¼</span></div>
+<div class=hd><span class=largefont>æœ€æ–°</span><span 
+class=smallfont>å‘å¸ƒ</span></div>
 <div class="bd bd_c">
 <ul>
 {foreach from=$info_list item=info_list}
-   <li>[{$info_list.begintime|date_format:'%m-%d'}] <a href="http://xx.shenei.net/template/default/{$info_list.uri}" target="_blank" title="{$info_list.title}">{$info_list.title}</a></li>{foreachelse}<li>ÔİÎŞÏà¹ØĞÅÏ¢</li>
+   <li>[{$info_list.begintime|date_format:'%m-%d'}] <a href="http://xx.shenei.net/template/default/{$info_list.uri}" target="_blank" title="{$info_list.title}">{$info_list.title}</a></li>{foreachelse}<li>æš‚æ— ç›¸å…³ä¿¡æ¯</li>
 {/foreach}
 </ul>
 </div>
 <div class="ft">
-<a href="http://xx.shenei.net/template/public/info.php" class="news_more">¸ü¶àĞÅÏ¢ ?</a>							</div>
+<a href="http://xx.shenei.net/template/public/info.php" class="news_more">æ›´å¤šä¿¡æ¯ ?</a>							</div>
 </div>
 </div>
 </div>
-<!-- Æ·ÅÆÉÌ¼Ò -->
+<!-- å“ç‰Œå•†å®¶ -->
 </div>
 <div class="col_sub">
-<!--ÍøÕ¾¹«¸æ-->
+<!--ç½‘ç«™å…¬å‘Š-->
 <div class="site_notice">
-<div class="hd"><span class="tit">ÍøÕ¾¹«¸æ</span></div>
+<div class="hd"><span class="tit">ç½‘ç«™å…¬å‘Š</span></div>
 <div class="bd">
 <ul><!--sss-->
-{foreach from=$announce_global item=announce_global}<li><a href="http://xx.shenei.net/template/default/{$announce_global.uri}" target="_blank"><font color="{$announce_global.titlecolor}" title="{$announce_global.title}">{$announce_global.title}</font></a></li>{foreachelse}<li>ÔİÎŞÍøÕ¾¹«¸æ</li>{/foreach}
+{foreach from=$announce_global item=announce_global}<li><a href="http://xx.shenei.net/template/default/{$announce_global.uri}" target="_blank"><font color="{$announce_global.titlecolor}" title="{$announce_global.title}">{$announce_global.title}</font></a></li>{foreachelse}<li>æš‚æ— ç½‘ç«™å…¬å‘Š</li>{/foreach}
 </ul>
 </div>
-<div class="ft"><a href="http://xx.shenei.net/template/default/{$about.announce_uri}" class="more">¸ü¶à ?</a></div>
+<div class="ft"><a href="http://xx.shenei.net/template/default/{$about.announce_uri}" class="more">æ›´å¤š ?</a></div>
 </div>
-<!-- ĞÂÊÖ+¿Í·ş -->
+<!-- æ–°æ‰‹+å®¢æœ -->
 <div class="tiro_service">
 <div class="tiro_zone">
-<div class="hd"><span class="tit">ĞÂÊÖÉÏÂ·</span></div>
+<div class="hd"><span class="tit">æ–°æ‰‹ä¸Šè·¯</span></div>
 <div class="bd">
 <ul>
-{foreach from=$faq_list item=faq_list}<li><a href="http://xx.shenei.net/template/default/{$faq_list.uri}" target="_blank" title="{$faq_list.title}">{$faq_list.title}</a></li>{foreachelse}<li>ÔİÎŞ°ïÖúÖ÷Ìâ</li>
+{foreach from=$faq_list item=faq_list}<li><a href="http://xx.shenei.net/template/default/{$faq_list.uri}" target="_blank" title="{$faq_list.title}">{$faq_list.title}</a></li>{foreachelse}<li>æš‚æ— å¸®åŠ©ä¸»é¢˜</li>
 {/foreach} 
 </ul>
 </div>
-<div class="ft"><a href="http://xx.shenei.net/template/default/{$about.faq_uri}" class="more">¸ü¶à ?</a></div>
+<div class="ft"><a href="http://xx.shenei.net/template/default/{$about.faq_uri}" class="more">æ›´å¤š ?</a></div>
 </div>
 <div class="service_zone">
-<div class="hd"><span class="tit">¿Í·şÖĞĞÄ</span></div>
+<div class="hd"><span class="tit">å®¢æœä¸­å¿ƒ</span></div>
 <div class="bd">
 <ul>
-<li class="ser_tel">ÈÈÏßµç»°£º{$mymps_global.SiteTel}</li>
-<li class="ser_qq">¿Í·şQQ£º<a href="http://xx.shenei.net/template/default/tencent://message/?uin={$mymps_global.siteqq}%20&site=&menu=yes">{$mymps_global.SiteQQ}</a></li>
-<li class="ser_qq">µç×ÓÓÊÏä£º{$mymps_global.SiteEmail} </li>
-<!--<li class="ser_qqs">QQÈº£º1212497 39182663</li>-->
+<li class="ser_tel">çƒ­çº¿ç”µè¯ï¼š{$mymps_global.SiteTel}</li>
+<li class="ser_qq">å®¢æœQQï¼š<a href="http://xx.shenei.net/template/default/tencent://message/?uin={$mymps_global.siteqq}%20&site=&menu=yes">{$mymps_global.SiteQQ}</a></li>
+<li class="ser_qq">ç”µå­é‚®ç®±ï¼š{$mymps_global.SiteEmail} </li>
+<!--<li class="ser_qqs">QQç¾¤ï¼š1212497 39182663</li>-->
 </ul>
 </div>
-<div class="ft"><a href="http://xx.shenei.net/template/default/{$about.guestbook_uri}" class="more">ÁôÑÔ½¨Òé</a></div>
+<div class="ft"><a href="http://xx.shenei.net/template/default/{$about.guestbook_uri}" class="more">ç•™è¨€å»ºè®®</a></div>
 </div>
 </div>
-<!-- ÈÈÃÅĞÅÏ¢ÅÅĞĞ -->
+<!-- çƒ­é—¨ä¿¡æ¯æ’è¡Œ -->
 <div class="bbs_top">
-<div class="hd"><span class="tit">Ò»ÖÜÈËÆøĞÅÏ¢</span></div>
+<div class="hd"><span class="tit">ä¸€å‘¨äººæ°”ä¿¡æ¯</span></div>
 <div class="bd">
 {foreach from=$info_list_hot item=info_list_hot}
 <li><span class="title"><a href="http://xx.shenei.net/template/default/{$info_list_hot.uri}" target="_blank" title="{$info_list_hot.title}">{$info_list_hot.title|truncate:27}</a></span>[{$info_list_hot.begintime|date_format:'%m-%d'}]</li>
-{foreachelse}<li><span class="title">ÔİÎŞÏà¹ØĞÅÏ¢</span></li>
+{foreachelse}<li><span class="title">æš‚æ— ç›¸å…³ä¿¡æ¯</span></li>
 {/foreach}
 
 </div>
@@ -149,41 +149,41 @@ class=smallfont>·¢²¼</span></div>
 </div>
 </div>
 </div>
-<!-- µÚ¶şÆÁ -->
+<!-- ç¬¬äºŒå± -->
 
 <!--<div style=" margin-top:5px;"><a href="http://www.iwzz.net/" target="_blank">
-950*55 Î²²¿Í¨À¸¹ã¸æ,ÄãµÄ¹ã¸æ¿ÉÒÔ·ÅÔÚÕâÀï£¬²¢½«×¢ÊÍÈ¥µô
+950*55 å°¾éƒ¨é€šæ å¹¿å‘Š,ä½ çš„å¹¿å‘Šå¯ä»¥æ”¾åœ¨è¿™é‡Œï¼Œå¹¶å°†æ³¨é‡Šå»æ‰
 </div>-->
 
 <div class="grid_c2">			
-<!-- Éú»î°Ù±¦Ïä Äã¿ÉÒÔÔÚÏß±à¼­Õâ¸öµØ·½£¬ÈçÒªÏÔÊ¾°Ù±¦Ïä£¬Çë½« style="display:none" È¥³ı¼´¿É -->
+<!-- ç”Ÿæ´»ç™¾å®ç®± ä½ å¯ä»¥åœ¨çº¿ç¼–è¾‘è¿™ä¸ªåœ°æ–¹ï¼Œå¦‚è¦æ˜¾ç¤ºç™¾å®ç®±ï¼Œè¯·å°† style="display:none" å»é™¤å³å¯ -->
 <div class="live_box clearfix" style="display:none">
-<h2>Éú»î°Ù±¦Ïä</h2>
+<h2>ç”Ÿæ´»ç™¾å®ç®±</h2>
 <div class="p_left">
 <div class="nav_box">
 <ul>
-<li><a href="#"  target=_blank><span><img src="http://xx.shenei.net/template/default/template/default/images/2009428231311392.gif" alt="Ö£ÖİÍø°É" /></span>Ö£ÖİÍø°É</a></li>
-<li><a href="#"  target=_blank><span><img src="http://xx.shenei.net/template/default/template/default/images/2009428231434778.gif" alt="²éÉí·İÖ¤" /></span>²éÉí·İÖ¤</a></li>
-<li><a href="#"  target=_blank><span><img src="http://xx.shenei.net/template/default/template/default/images/2009428231542207.gif" alt="ÌìÆøÔ¤±¨" /></span>ÌìÆøÔ¤±¨</a></li>
-<li><a href="#"  target=_blank><span><img src="http://xx.shenei.net/template/default/template/default/images/200942823234277.gif" alt="»úÆ±²éÑ¯" /></span>»úÆ±²éÑ¯</a></li>
-<li><a href="#"  target=_blank><span><img src="http://xx.shenei.net/template/default/template/default/images/2009428232114434.gif" alt="¹«½»²éÑ¯" /></span>¹«½»²éÑ¯</a></li>
-<li><a href="#"  target=_blank><span><img src="http://xx.shenei.net/template/default/template/default/images/2009428232251736.gif" alt="µçÊÓ½ÚÄ¿" /></span>µçÊÓ½ÚÄ¿</a></li>
-<li><a href="#"  target=_blank><span><img src="http://xx.shenei.net/template/default/template/default/images/2009428232387820.gif" alt="Ö£ÖİÓ°Ñ¶" /></span>Ö£ÖİÓ°Ñ¶</a></li>
-<li><a href="#"  target=_blank><span><img src="http://xx.shenei.net/template/default/template/default/images/2009428232487664.gif" alt="×¡·¿»ù½ğ" /></span>×¡·¿»ù½ğ</a></li>
+<li><a href="#"  target=_blank><span><img src="http://xx.shenei.net/template/default/template/default/images/2009428231311392.gif" alt="éƒ‘å·ç½‘å§" /></span>éƒ‘å·ç½‘å§</a></li>
+<li><a href="#"  target=_blank><span><img src="http://xx.shenei.net/template/default/template/default/images/2009428231434778.gif" alt="æŸ¥èº«ä»½è¯" /></span>æŸ¥èº«ä»½è¯</a></li>
+<li><a href="#"  target=_blank><span><img src="http://xx.shenei.net/template/default/template/default/images/2009428231542207.gif" alt="å¤©æ°”é¢„æŠ¥" /></span>å¤©æ°”é¢„æŠ¥</a></li>
+<li><a href="#"  target=_blank><span><img src="http://xx.shenei.net/template/default/template/default/images/200942823234277.gif" alt="æœºç¥¨æŸ¥è¯¢" /></span>æœºç¥¨æŸ¥è¯¢</a></li>
+<li><a href="#"  target=_blank><span><img src="http://xx.shenei.net/template/default/template/default/images/2009428232114434.gif" alt="å…¬äº¤æŸ¥è¯¢" /></span>å…¬äº¤æŸ¥è¯¢</a></li>
+<li><a href="#"  target=_blank><span><img src="http://xx.shenei.net/template/default/template/default/images/2009428232251736.gif" alt="ç”µè§†èŠ‚ç›®" /></span>ç”µè§†èŠ‚ç›®</a></li>
+<li><a href="#"  target=_blank><span><img src="http://xx.shenei.net/template/default/template/default/images/2009428232387820.gif" alt="éƒ‘å·å½±è®¯" /></span>éƒ‘å·å½±è®¯</a></li>
+<li><a href="#"  target=_blank><span><img src="http://xx.shenei.net/template/default/template/default/images/2009428232487664.gif" alt="ä½æˆ¿åŸºé‡‘" /></span>ä½æˆ¿åŸºé‡‘</a></li>
 </ul>
 </div>
-<div class="nav_side"><a href='#' target=_blank>Ö£ÖİÍø</a><a href='#' target=_blank>Ê×¶¼Ö®´°</a><a href='#' target=_blank>Êı×ÖÖ£Öİ</a><a href='#' target=_blank>Ö£ÖİÈÈÏß</a><a href='#' target=_blank>¾©±¨Íø</a><a href='#' target=_blank>ÉÌÒµÒøĞĞ</a><a href='#' target=_blank>ÕĞÉÌÒøĞĞ</a><a href='#' target=_blank>ÖĞ¹úÒøĞĞ</a><a href='#' target=_blank>¹¤ÉÌÒøĞĞ</a><a href='#' target=_blank>½¨ÉèÒøĞĞ</a><a href='#' target=_blank>Å©ÒµÒøĞĞ</a><a href='#' target=_blank>Æ½°²±£ÏÕ</a><a href='#' target=_blank>ÊĞÌåÓı¾Ö</a><a href='#' target=_blank>ÌåÓı¹ã²¥</a><a href='#' target=_blank>Ö£Öİ¹ú°²</a><a href='#' target=_blank>ÖĞ¹úÌå²Ê</a><a href='#' target=_blank>Ö£ÖİµçÊÓÌ¨</a><a href='#' target=_blank>ÍøÂçµçÊÓ</a><a href='#' target=_blank>ÈËÃñ¹ã²¥</a><a href='#' target=_blank>Ö£Öİ½»Í¨Ì¨</a><a href='#' target=_blank>Ö£ÖİÒ½Ôº</a><a href='#' target=_blank>Ğ­ºÍÒ½Ôº</a><a href='#' target=_blank>ÈËÃñÒ½Ôº</a><a href='#' target=_blank>Í¬ÈÊÒ½Ôº</a><a href='#' target=_blank>¹Ê¹¬²©ÎïÔº</a></div>
+<div class="nav_side"><a href='#' target=_blank>éƒ‘å·ç½‘</a><a href='#' target=_blank>é¦–éƒ½ä¹‹çª—</a><a href='#' target=_blank>æ•°å­—éƒ‘å·</a><a href='#' target=_blank>éƒ‘å·çƒ­çº¿</a><a href='#' target=_blank>äº¬æŠ¥ç½‘</a><a href='#' target=_blank>å•†ä¸šé“¶è¡Œ</a><a href='#' target=_blank>æ‹›å•†é“¶è¡Œ</a><a href='#' target=_blank>ä¸­å›½é“¶è¡Œ</a><a href='#' target=_blank>å·¥å•†é“¶è¡Œ</a><a href='#' target=_blank>å»ºè®¾é“¶è¡Œ</a><a href='#' target=_blank>å†œä¸šé“¶è¡Œ</a><a href='#' target=_blank>å¹³å®‰ä¿é™©</a><a href='#' target=_blank>å¸‚ä½“è‚²å±€</a><a href='#' target=_blank>ä½“è‚²å¹¿æ’­</a><a href='#' target=_blank>éƒ‘å·å›½å®‰</a><a href='#' target=_blank>ä¸­å›½ä½“å½©</a><a href='#' target=_blank>éƒ‘å·ç”µè§†å°</a><a href='#' target=_blank>ç½‘ç»œç”µè§†</a><a href='#' target=_blank>äººæ°‘å¹¿æ’­</a><a href='#' target=_blank>éƒ‘å·äº¤é€šå°</a><a href='#' target=_blank>éƒ‘å·åŒ»é™¢</a><a href='#' target=_blank>åå’ŒåŒ»é™¢</a><a href='#' target=_blank>äººæ°‘åŒ»é™¢</a><a href='#' target=_blank>åŒä»åŒ»é™¢</a><a href='#' target=_blank>æ•…å®«åšç‰©é™¢</a></div>
 </div>
 <div class="p_right">
 <ul class="fb">
-<li>Ö£Öİ¹«½»²éÑ¯ µç»°:<span class="tel"> 0371-63881333 </span></li><li>Ö£Öİº½°à²éÑ¯ µç»°:<span class="tel"> 400-60-96666</span></li><li>Ö£Öİ»ğ³µ²éÑ¯ µç»°:<span class="tel"> 0371-68356666</span></li><li>Ö£ÖİÆû³µ²éÑ¯ µç»°:<span class="tel"> 0371 - 96269</span></li><li>Ö£ÖİÎ¥ÕÂ²éÑ¯ µç»°:<span class="tel"> 0371-87000787</span></li>
+<li>éƒ‘å·å…¬äº¤æŸ¥è¯¢ ç”µè¯:<span class="tel"> 0371-63881333 </span></li><li>éƒ‘å·èˆªç­æŸ¥è¯¢ ç”µè¯:<span class="tel"> 400-60-96666</span></li><li>éƒ‘å·ç«è½¦æŸ¥è¯¢ ç”µè¯:<span class="tel"> 0371-68356666</span></li><li>éƒ‘å·æ±½è½¦æŸ¥è¯¢ ç”µè¯:<span class="tel"> 0371 - 96269</span></li><li>éƒ‘å·è¿ç« æŸ¥è¯¢ ç”µè¯:<span class="tel"> 0371-87000787</span></li>
 </ul>
 </div>
 </div>
 
-<!-- ÓÑÇéÁ´½Ó -->
+<!-- å‹æƒ…é“¾æ¥ -->
 <div class="friend_link">
-<div class="hd">ÓÑÇéÁ´½Ó</div>
+<div class="hd">å‹æƒ…é“¾æ¥</div>
 <div class="bd">
 {if $img_link neq ''}
 <ul class="pic clearfix">
@@ -197,10 +197,10 @@ class=smallfont>·¢²¼</span></div>
 </div>
 <div class="ft"></div>
 </div>
-<!-- ½áÊø -->
+<!-- ç»“æŸ -->
 </div>
 </div>
-<!-- Ö÷Ìå ½áÊø -->
+<!-- ä¸»ä½“ ç»“æŸ -->
 {include file="default/inc_foot.html"}
 </div>
 <script type="text/javascript" src="http://xx.shenei.net/template/default/template/default/js/ind_slide.js"></script>

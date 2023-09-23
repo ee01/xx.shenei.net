@@ -4,15 +4,15 @@ function checkEmail(email){
 if(email=='')return false;
 var emailRegExp = new RegExp(            "[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?");
 if (!emailRegExp.test(email)||email.indexOf('.')==-1){
-alert('emailµØÖ·¸ñÊ½´íÎóÁËÅ¶~~');
+alert('emailåœ°å€æ ¼å¼é”™è¯¯äº†å“¦~~');
 $('#email').val('');
 return false;
 }else{
-//Á´½Ó·şÎñÆ÷ÑéÖ¤ÊÇ·ñÒÑ¾­´æÔÚ
+//é“¾æ¥æœåŠ¡å™¨éªŒè¯æ˜¯å¦å·²ç»å­˜åœ¨
 $.get("ajax.php", { mod: "check", code: "email" ,email:$("#email").val() },
 function(data){
 if(data==1){
-alert('emailµØÖ·ÒÑ¾­±»×¢²áÁË~~');
+alert('emailåœ°å€å·²ç»è¢«æ³¨å†Œäº†~~');
 $('#email').val('');
 return false;
 }
@@ -26,7 +26,7 @@ if($("#truename").val()=='')return false;
 $.get("ajax.php", { mod: "check", code: "truename" ,username:$("#truename").val() },
 function(data){
 if(data==1){
-alert('ÓÃ»§ÃûÒÑ¾­±»×¢²áÁË~~');
+alert('ç”¨æˆ·åå·²ç»è¢«æ³¨å†Œäº†~~');
 $('#truename').val('');
 return false;
 }
@@ -35,27 +35,27 @@ return false;
 }
 function check(){
 if($('#email').val()==''){
-alert('ÇëÊäÈëÄúµÄ³£ÓÃEmailµØÖ·');
+alert('è¯·è¾“å…¥æ‚¨çš„å¸¸ç”¨Emailåœ°å€');
 return false;
 }
 if($('#pwd').val()==''){
-alert('ÇëÊäÈëÄúµÄÃÜÂë');
+alert('è¯·è¾“å…¥æ‚¨çš„å¯†ç ');
 return false;
 }
 if($('#truename').val().replace(/[^\x00-\xff]/g,"**").length<4 || $('#truename').val().length>16){
-alert('ÓÃ»§Ãû±ØĞëÔÚ4Î»µ½16Î»');
+alert('ç”¨æˆ·åå¿…é¡»åœ¨4ä½åˆ°16ä½');
 return false;
 }
 if($('#pwd').val().length<4){
-alert('ÃÜÂë×î¶Ì4Î»Êı');
+alert('å¯†ç æœ€çŸ­4ä½æ•°');
 return false;
 }
 if($('#pwd').val()!=$('#ckpwd').val()){
-alert('Á½´ÎÃÜÂëÊäÈë²»Ò»ÖÂ');
+alert('ä¸¤æ¬¡å¯†ç è¾“å…¥ä¸ä¸€è‡´');
 return false;
 }
 if($('#truename').val()==''){
-alert('ÓÃ»§Ãû²»¿ÉÒÔÎª¿ÕÅ¶');
+alert('ç”¨æˆ·åä¸å¯ä»¥ä¸ºç©ºå“¦');
 return false;
 }
 return true;
@@ -65,67 +65,67 @@ return true;
 <div class="t_l">
 <div class="t_area_out">
 <div class="t_area_in">
-<p class="cur_title">×¢²á</p>
+<p class="cur_title">æ³¨å†Œ</p>
 <div class="sect">
-<p>ÎÒÓĞ<a href="../../../www.shenei.net/default.htm" target="_blank">ÉáÄÚÍø</a>µÄÕËºÅ£¬ÎŞĞè×¢²á¿ÉÖ±½Ó<a href="tttuangou_register.html@mod=login.htm">µÇÂ¼</a>àŞ£¡</p>
+<p>æˆ‘æœ‰<a href="../../../www.shenei.net/default.htm" target="_blank">èˆå†…ç½‘</a>çš„è´¦å·ï¼Œæ— éœ€æ³¨å†Œå¯ç›´æ¥<a href="tttuangou_register.html@mod=login.htm">ç™»å½•</a>å™¢ï¼</p>
 <form action="{$action}" method="post" onsubmit="return check();" enctype="multipart/form-data" >
 <div class="nleftL">
 <div class="field">
 <label>E-mail</label>
 <input type="text" name="email" id="email"  class="f_input" value="{$email}" onblur="checkEmail(this.value);"  size="30"><span class="require">*</span>
-<span class="hint">µÇÂ¼¼°ÕÒ»ØÃÜÂëÓÃ</span> </div>
+<span class="hint">ç™»å½•åŠæ‰¾å›å¯†ç ç”¨</span> </div>
 <div class="field">
-<label>ÓÃ»§Ãû</label>
+<label>ç”¨æˆ·å</label>
 <input type="text" name="truename" id="truename" onblur="checkuname();" class="f_input"size="30"><span class="require">*</span>
-<span class="hint">4-16 ¸ö×Ö·û£¬Ò»¸öºº×ÖÎªÁ½¸ö×Ö·û</span> </div>
+<span class="hint">4-16 ä¸ªå­—ç¬¦ï¼Œä¸€ä¸ªæ±‰å­—ä¸ºä¸¤ä¸ªå­—ç¬¦</span> </div>
 <div class="field">
-<label>ÃÜÂë</label>
+<label>å¯†ç </label>
 <input name="pwd" type="password" class="f_input" id="pwd"  size="30"><span class="require">*</span>
-<span class="hint">×îÉÙ 4 ¸ö×Ö·û</span> </div>
+<span class="hint">æœ€å°‘ 4 ä¸ªå­—ç¬¦</span> </div>
 <div class="field">
-<label>È·ÈÏÃÜÂë</label>
+<label>ç¡®è®¤å¯†ç </label>
 <input name="ckpwd" type="password" class="f_input" id="ckpwd"  size="30"><span class="require">*</span>
 </div>
 <div class="field">
-<label>ÊÖ»ú</label>
+<label>æ‰‹æœº</label>
 <input type="text" name="phone" id="phone" class="f_input"size="30"><span class="require">*</span>
-<span class="hint">ÇëÎñ±ØÌîĞ´ÕıÈ·£¬ÍÅÃë³É¹¦Ê±Ğè´ËÁªÏµ</span> </div>
+<span class="hint">è¯·åŠ¡å¿…å¡«å†™æ­£ç¡®ï¼Œå›¢ç§’æˆåŠŸæ—¶éœ€æ­¤è”ç³»</span> </div>
 <div class="field">
-<label>£Ñ£Ñ</label>
+<label>ï¼±ï¼±</label>
 <input type="text" name="qq" id="qq" class="f_input"size="30">
-<span class="hint">ÇëÌîĞ´ÄúµÄQQºÅÂë£¬·½±ã¿Í·şÓëÄúÁªÏµ</span> </div>
+<span class="hint">è¯·å¡«å†™æ‚¨çš„QQå·ç ï¼Œæ–¹ä¾¿å®¢æœä¸æ‚¨è”ç³»</span> </div>
 <div class="field">
-<label>ËùÔÚ³ÇÊĞ</label>
+<label>æ‰€åœ¨åŸå¸‚</label>
 <select name="city" class="f_product" id="city" >
 {loop $city $i $value}
 <option  value="{$value['cityid']}">{$value['cityname']}</option>
 {/loop}
-<option value="0">ÆäËû</option>
+<option value="0">å…¶ä»–</option>
 </select>
 <select name="school" class="f_product" id="school">
-<option value="">ÆäËûÑ§Ğ£</option>
-<option  value="¸£Öİ´óÑ§">¸£Öİ´óÑ§</option>
-<option  value="¸£½¨¹¤³ÌÑ§Ôº">¹¤³ÌÑ§Ôº</option>
-<option  value="¸£½¨Ê¦·¶´óÑ§">Ê¦·¶´óÑ§</option>
-<option  value="Ò½¿Æ´óÑ§">Ò½¿Æ´óÑ§</option>
-<option  value="ÖĞÒ½Ñ§Ôº">ÖĞÒ½Ñ§Ôº</option>
-<option  value="½­ÏÄÑ§Ôº">½­ÏÄÑ§Ôº</option>
-<option  value="»ªÄÏÅ®×ÓÑ§Ôº">»ªÄÏÅ®×Ó</option>
-<option  value="Ãö½­Ñ§Ôº">Ãö½­Ñ§Ôº</option>
-<option  value="Å©ÁÖ´óÑ§">Å©ÁÖ´óÑ§</option>
+<option value="">å…¶ä»–å­¦æ ¡</option>
+<option  value="ç¦å·å¤§å­¦">ç¦å·å¤§å­¦</option>
+<option  value="ç¦å»ºå·¥ç¨‹å­¦é™¢">å·¥ç¨‹å­¦é™¢</option>
+<option  value="ç¦å»ºå¸ˆèŒƒå¤§å­¦">å¸ˆèŒƒå¤§å­¦</option>
+<option  value="åŒ»ç§‘å¤§å­¦">åŒ»ç§‘å¤§å­¦</option>
+<option  value="ä¸­åŒ»å­¦é™¢">ä¸­åŒ»å­¦é™¢</option>
+<option  value="æ±Ÿå¤å­¦é™¢">æ±Ÿå¤å­¦é™¢</option>
+<option  value="åå—å¥³å­å­¦é™¢">åå—å¥³å­</option>
+<option  value="é—½æ±Ÿå­¦é™¢">é—½æ±Ÿå­¦é™¢</option>
+<option  value="å†œæ—å¤§å­¦">å†œæ—å¤§å­¦</option>
 </select>
 </div>
 <div class="field">
-<label>ÏêÏ¸µØÖ·</label>
+<label>è¯¦ç»†åœ°å€</label>
 <input type="text" name="address" id="address"  class="f_input" size="30">
-<span class="hint">Îñ±ØÌîĞ´ ±ãÓÚ½»Ò×£¡ ÀıÈç£º¸£½¨¹¤³ÌÑ§Ôº±±ÇøE2#416</span> </div>
+<span class="hint">åŠ¡å¿…å¡«å†™ ä¾¿äºäº¤æ˜“ï¼ ä¾‹å¦‚ï¼šç¦å»ºå·¥ç¨‹å­¦é™¢åŒ—åŒºE2#416</span> </div>
 <div class="field autologin">
 <input name="showemail" type="checkbox" class="f_check" id="showemail" value="1" checked="checked" >
-¶©ÔÄÃ¿ÈÕ×îĞÂÍÅ¹ºĞÅÏ¢ 
+è®¢é˜…æ¯æ—¥æœ€æ–°å›¢è´­ä¿¡æ¯ 
 </div>
 <div class="clear"></div>
 <div class="act">
-<input type="submit" class="formbutton"  value="×¢²á">
+<input type="submit" class="formbutton"  value="æ³¨å†Œ">
 </div>
 </div>
 </form>
@@ -134,16 +134,16 @@ return true;
 </div>  </div>
 <div class="t_r">
 <div class="t_area_out">
-<h1>ÒÑÓĞ{conf site_name}ÕÊ»§£¿</h1>
+<h1>å·²æœ‰{conf site_name}å¸æˆ·ï¼Ÿ</h1>
 <div class="t_area_in">
-<p>ÇëÖ±½Ó<a href="tttuangou_register.html@mod=login.htm">µÇÂ¼</a>¡£</p>
+<p>è¯·ç›´æ¥<a href="tttuangou_register.html@mod=login.htm">ç™»å½•</a>ã€‚</p>
 </div>
 </div>
 <div class="t_area_out">
-<h1>ÒÑÓĞÉáÄÚÍøÕËºÅ£¿</h1>
+<h1>å·²æœ‰èˆå†…ç½‘è´¦å·ï¼Ÿ</h1>
 <div class="t_area_in">
-<p>Ò²ÇëÖ±½Ó<a href="tttuangou_register.html@mod=login.htm">µÇÂ¼</a>¡£</p>
-<p>ÌØ±ğÌáĞÑ£º<br>ÉáÄÚÍøÆôÓÃÍ¨ĞĞÖ¤»úÖÆ¡£ËùÓĞ°üÀ¨ÉáÄÚ¼ÒÔ°¡¢ÉáÄÚÍøµê¡¢ÉáÄÚĞÅÏ¢µÈÕËºÅ¶¼¿ÉÒÔÍ¨ÓÃ£¡</p>
+<p>ä¹Ÿè¯·ç›´æ¥<a href="tttuangou_register.html@mod=login.htm">ç™»å½•</a>ã€‚</p>
+<p>ç‰¹åˆ«æé†’ï¼š<br>èˆå†…ç½‘å¯ç”¨é€šè¡Œè¯æœºåˆ¶ã€‚æ‰€æœ‰åŒ…æ‹¬èˆå†…å®¶å›­ã€èˆå†…ç½‘åº—ã€èˆå†…ä¿¡æ¯ç­‰è´¦å·éƒ½å¯ä»¥é€šç”¨ï¼</p>
 </div>
 </div>
 </div>

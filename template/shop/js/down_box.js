@@ -1,4 +1,4 @@
-﻿$(function(){
+$(function(){
 	$("#bbg").click(function(){
 	if($("#note").hasClass('close')){
 		$("#note").animate({height:'402px'},500,function(){$(this).css({height:"402px" }).removeClass('close');});

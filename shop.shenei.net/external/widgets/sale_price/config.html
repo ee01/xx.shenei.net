@@ -27,28 +27,28 @@ function switchRecommend(recomId, selectName)
 }
 </script>
 <div class="field_item">
-    <label>Í¼Æ¬ÍÆ¼öÀàÐÍ:</label>
+    <label>å›¾ç‰‡æŽ¨èç±»åž‹:</label>
     <p><select name="img_recom_id">
-        <option value="0">ÇëÑ¡Ôñ...</option>
+        <option value="0">è¯·é€‰æ‹©...</option>
         <!-- {foreach from=$recommends key=recom_id item=recom_name} -->
         <option value="{$recom_id}"{if $options.img_recom_id eq $recom_id} selected="selected"{/if}>{$recom_name|escape}</option>
         <!-- {/foreach} -->
     </select>
     <select name="img_cate_id">
-        <option value="0">ÇëÑ¡Ôñ·ÖÀà...</option>
+        <option value="0">è¯·é€‰æ‹©åˆ†ç±»...</option>
         <!-- {html_options options=$gcategories selected=$options.img_cate_id} -->
     </select></p>
 </div>
 <div class="field_item">
-    <label>ÎÄ×ÖÍÆ¼öÀàÐÍ:</label>
+    <label>æ–‡å­—æŽ¨èç±»åž‹:</label>
     <p><select name="txt_recom_id">
-        <option value="0">ÇëÑ¡Ôñ...</option>
+        <option value="0">è¯·é€‰æ‹©...</option>
         <!-- {foreach from=$recommends key=recom_id item=recom_name} -->
         <option value="{$recom_id}"{if $options.txt_recom_id eq $recom_id} selected="selected"{/if}>{$recom_name|escape}</option>
         <!-- {/foreach} -->
     </select>
     <select name="txt_cate_id">
-        <option value="0">ÇëÑ¡Ôñ·ÖÀà...</option>
+        <option value="0">è¯·é€‰æ‹©åˆ†ç±»...</option>
         <!-- {html_options options=$gcategories selected=$options.txt_cate_id} -->
     </select></p>
 </div>

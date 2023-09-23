@@ -3,9 +3,9 @@
 <div class="t_l">
 <div class="t_area_out">
 <div class="t_area_in">
-<p class="cur_title">È·ÈÏÖ§¸¶</p>
+<p class="cur_title">ç¡®è®¤æ”¯ä»˜</p>
 <div class="sect">
-<div class="nleftL"><span class="B R">Ó¦¸¶×Ü¶î£º {$price}Ôª</span>  <span class="B R">¶©µ¥±àºÅ£º {$orderid}</span></div>
+<div class="nleftL"><span class="B R">åº”ä»˜æ€»é¢ï¼š {$price}å…ƒ</span>  <span class="B R">è®¢å•ç¼–å·ï¼š {$orderid}</span></div>
 <div class="sect">
 <ul class="typelist">
 {if $order['paytype']==1 }
@@ -16,10 +16,10 @@
 <li><img src="images/chinabank.gif" /></li>
 {elseif $order['paytype']==4}
 <li><img src="images/kuaiqian.bmp" /></li>
-<!--Ò»¿¨Í¨Ö§¸¶-->
+<!--ä¸€å¡é€šæ”¯ä»˜-->
 {elseif $order['paytype']==6}
 <li><img src="images/card.gif" /></li>
-<!--Ò»¿¨Í¨Ö§¸¶-->
+<!--ä¸€å¡é€šæ”¯ä»˜-->
 {else}
 <li><img src="images/offline.gif" /></li>
 {/if}
@@ -31,7 +31,7 @@
 {else}
 {$bottom}
 {/if}
-<a style="margin-left: 1em;" href="tttuangou_pay.html@mod=index&code=order&orderid={$order%5b'orderid'%5d}.htm"> &raquo;  ·µ»ØÑ¡ÔñÆäËû·½Ê½Ö§¸¶</a> 
+<a style="margin-left: 1em;" href="tttuangou_pay.html@mod=index&code=order&orderid={$order%5b'orderid'%5d}.htm"> &raquo;  è¿”å›é€‰æ‹©å…¶ä»–æ–¹å¼æ”¯ä»˜</a> 
 </p>
 </div>
 </div>
@@ -41,7 +41,7 @@
 <div class="t_r">
 <!--{template "tttuangou_myfinder"}-->
 <div class="t_area_out">
-<h1>³£¼ûÎÊÌâ</h1>
+<h1>å¸¸è§é—®é¢˜</h1>
 <div class="t_area_in">
 </div>
 </div>

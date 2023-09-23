@@ -3,22 +3,22 @@ function CheckSubmit()
 	if(document.form1.webname.value=="")
 	{
    		document.form1.webname.focus();
-   		alert("ÍøÕ¾Ãû³Æ²»ÄÜÎª¿Õ£¡");
+   		alert("ç½‘ç«™åç§°ä¸èƒ½ä¸ºç©ºï¼");
    		return false;
 	}
 	if(document.form1.url.value=="")
 	{
    		document.form1.url.focus();
-   		alert("ÍøÖ·µØÖ·²»ÄÜÎª¿Õ£¡");
+   		alert("ç½‘å€åœ°å€ä¸èƒ½ä¸ºç©ºï¼");
    		return false;
 	}
 	if(document.form1.checkcode.value=="0")
 	{
    		document.form1.checkcode.focus();
-   		alert("ÇëÊäÈëÑéÖ¤Âë");
+   		alert("è¯·è¾“å…¥éªŒè¯ç ");
    		return false;
 	}
 	document.form1.mymps.disabled=true;
-	document.form1.mymps.value="Ìá½»ÖĞ...";
+	document.form1.mymps.value="æäº¤ä¸­...";
 	return true;
 }// JavaScript Document

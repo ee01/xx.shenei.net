@@ -2,10 +2,10 @@
 <div class="m960">
 <div class="ts_menu_2 w960">
 <ul>
-<li class="ts3_mbtn2"><a href="tttuangou_ticketlist.html@mod=magseller.htm">ÍÅ¹ºÏîÄ¿</a></li>
-<li class="ts3_mbtn{$p1}"><a href="tttuangou_ticketlist.html@mod=magseller&code=ticket&id={$id}.htm">È«²¿</a></li>
-<li class="ts3_mbtn{$p2}"><a href="tttuangou_ticketlist.html@mod=magseller&code=ticket&id={$id}&use=0.htm">Î´Ïû·Ñ</a></li>
-<li class="ts3_mbtn{$p3}"><a href="tttuangou_ticketlist.html@mod=magseller&code=ticket&id={$id}&use=1.htm">ÒÑÏû·Ñ</a></li>
+<li class="ts3_mbtn2"><a href="tttuangou_ticketlist.html@mod=magseller.htm">å›¢è´­é¡¹ç›®</a></li>
+<li class="ts3_mbtn{$p1}"><a href="tttuangou_ticketlist.html@mod=magseller&code=ticket&id={$id}.htm">å…¨éƒ¨</a></li>
+<li class="ts3_mbtn{$p2}"><a href="tttuangou_ticketlist.html@mod=magseller&code=ticket&id={$id}&use=0.htm">æœªæ¶ˆè´¹</a></li>
+<li class="ts3_mbtn{$p3}"><a href="tttuangou_ticketlist.html@mod=magseller&code=ticket&id={$id}&use=1.htm">å·²æ¶ˆè´¹</a></li>
 </ul>
 <div class="clear"></div>
 </div>
@@ -14,12 +14,12 @@
 <div class="nleftL w916">
 <table id="report">
 <tr>
-<th>ÍÅ¹ºÈ¯±àºÅ</th>
-<th>ÃÜÂë</th>
-<th>ÏîÄ¿</th>
-<!--{if $ticket[0]['name2']}--><th>²úÆ·</th><!--{/if}-->
-<th>×´Ì¬</th>
-<th>¹ıÆÚÊ±¼ä</th>
+<th>å›¢è´­åˆ¸ç¼–å·</th>
+<th>å¯†ç </th>
+<th>é¡¹ç›®</th>
+<!--{if $ticket[0]['name2']}--><th>äº§å“</th><!--{/if}-->
+<th>çŠ¶æ€</th>
+<th>è¿‡æœŸæ—¶é—´</th>
 </tr>
 {loop $ticket $i $value}
 <tr class="Bor">
@@ -31,7 +31,7 @@
 <!--{else}-->
 <td width="40%">{$value['name']}</td>
 <!--{/if}-->
-<td width="20%">{if $value['status']==1}Õı³£ <a href="tttuangou_ticketlist.html@mod=magseller&code=sendmail&id={$value%5b'ticketid'%5d}.htm">(ÓÊ¼şÌáÊ¾ÓÃ»§Ïû·Ñ)</a>{elseif $value['status']==2}¹ıÆÚ{else}ÒÑÊ¹ÓÃ ({$value['usetime']}){/if}</td>
+<td width="20%">{if $value['status']==1}æ­£å¸¸ <a href="tttuangou_ticketlist.html@mod=magseller&code=sendmail&id={$value%5b'ticketid'%5d}.htm">(é‚®ä»¶æç¤ºç”¨æˆ·æ¶ˆè´¹)</a>{elseif $value['status']==2}è¿‡æœŸ{else}å·²ä½¿ç”¨ ({$value['usetime']}){/if}</td>
 <td width="15%"><img src="images/alarm.gif" /> {$value['perioddate']}</td>
 </tr>
 {/loop}

@@ -1,5 +1,5 @@
-/*Í¨ÓÃÑùÊ½*/
-body {text-align:center; font-family:"arial",ËÎÌå;margin:0 auto; padding:0; background: #FFF; font-size:12px; color:#000;word-break:break-all}
+/*é€šç”¨æ ·å¼*/
+body {text-align:center; font-family:"arial",å®‹ä½“;margin:0 auto; padding:0; background: #FFF; font-size:12px; color:#000;word-break:break-all}
 div,form,img,ul,ol,li,dl,dt,dd,td,tr{margin: 0; padding: 0; border: 0;}
 h1,h2,h3,h4,h5,h6,p,select,input{ margin:0px; padding:0px;}
 table,td,tr,th{font-size:12px;}
@@ -8,35 +8,35 @@ select,input{vertical-align:middle}
 td,tr{vertical-align:top;line-height:25px;}
 .inputbox{border-top:1px solid #666;border-right:1px solid #DDDDDD;border-left:1px solid #666;border-bottom:1px solid #DDDDDD;margin:0px;padding:0px;width:468px;height:165px;}
 
-/* Á´½ÓÑÕÉ« */
+/* é“¾æ¥é¢œè‰² */
 a{color: #000099; text-decoration:none;}
 a:hover {color: #F54100;text-decoration:underline;}
 a:active {color: #999999;}
 
-/* ÑÕÉ«ÊôĞÔ [¶¨Òå¹æÔò]*/
-.fred,.fred a{color:#ff0000;}/*Í»³öÑÕÉ«ºìÉ«*/
+/* é¢œè‰²å±æ€§ [å®šä¹‰è§„åˆ™]*/
+.fred,.fred a{color:#ff0000;}/*çªå‡ºé¢œè‰²çº¢è‰²*/
 .forange,.forange a{color:#F54100!important;}
 .fgreen,.fgreen a{color:#008000}
 .fblue,.fblue a{color:#000099}
 .fblack,.fblack a{color:#333}
 .fgray,fgray a{color:#666}
-/* ×ÖÌåÊôĞÔ [¶¨Òå¹æÔò£¬Ğ¡Ğ´f¼ÓÊôĞÔÃû³Æ] */
+/* å­—ä½“å±æ€§ [å®šä¹‰è§„åˆ™ï¼Œå°å†™fåŠ å±æ€§åç§°] */
 .fb {font-weight: bold;}
 .fi {font-style: italic;}
 .fbno{font-weight:normal}
-/* ×ÖÌå´óĞ¡*/
+/* å­—ä½“å¤§å°*/
 .f12px{ font-size:12px;}
 .f14px{ font-size:14px;}
 .f15px{ font-size:15px;}
 .f16px{ font-size:16px;}
 .f18px{ font-size:18px;}
-/*¼ä¾à*/
+/*é—´è·*/
 .top6px{margin-top:6px}
 .right6px{margin-right:6px}
 .left6px{margin-left:6px}
 .bottom6px{margin-bottom:6px}
 
-/* ÆäËûÊôĞÔ */
+/* å…¶ä»–å±æ€§ */
 .tleft{text-align:left}
 .tright{text-align:right}
 .left{ float: left;}
@@ -52,7 +52,7 @@ a:active {color: #999999;}
 .numbg{background:url(../../../images/iconbg.gif) no-repeat -5px -77px;padding:5px;margin-right:5px}
 .numbg2{background:url(../../../images/iconbg.gif) no-repeat -5px -114px;padding:5px;margin-right:5px;color:#fff}
 .clew{font-size:12px;color:#008000;background:url(../../../images/iconbg.gif) no-repeat -10px -451px;15px;padding-left:15px;line-height:18px;}
-/*ÕûÌå²¼¾Ö*/
+/*æ•´ä½“å¸ƒå±€*/
 #wrapper{width:960px;margin:0 auto;text-align:left}
 
 /*header*/
@@ -109,22 +109,22 @@ a:active {color: #999999;}
 .listad1 img{width:150px;overflow:hidden}
 
 
-/* ÓÒ±ßÀ¸*/
+/* å³è¾¹æ */
 .listrightbox{padding:5px;padding-top:0px;border-bottom:1px solid #E2E2E2;border-top:1px solid #fff;overflow:hidden;background:#F6F6F6;border-left:1px solid #F0EFF5}
 .listrightbox h2{font-size:13px;line-height:30px;}
 
-/*ÄÚÈİÒ³ºÍÁĞ±íÒ³ÏêÏ¸ËÑË÷*/
+/*å†…å®¹é¡µå’Œåˆ—è¡¨é¡µè¯¦ç»†æœç´¢*/
 #listsearch dt{float:left;line-height:30px;height:30px;width:60px;text-align:right;clear:both}
 #listsearch dd{height:30px;line-height:30px;}
 #listsearch dd select{width:120px;}
 #listsearchinput{width:114px;height:20px;}
 #listsearch dd.tright{padding-right:8px}
 
-/*ÄÚÈİÒ³ºÍÁĞ±íÒ³ÈÈÃÅËÑË÷*/
+/*å†…å®¹é¡µå’Œåˆ—è¡¨é¡µçƒ­é—¨æœç´¢*/
 #listhotsearch span{ }
 #listhotsearch span a,#listaboutsearch span a{padding:5px;line-height:20px;word-break:keep-all }
 
-/*·­Ò³*/
+/*ç¿»é¡µ*/
 #navbar{ margin-bottom:10px; border-bottom:1px solid #CECECE}
 #navbar div{background:url(http://xx.shenei.net/images/tiboolist.jpg) no-repeat;overflow:hidden;height:40px; }
 #navbar .nr{background-position:-94px 0;width:18px}
@@ -137,7 +137,7 @@ a:active {color: #999999;}
 /* add */
 .color00 { color:#000;}
 .colorcc { color:#ccc;}
-/* ¸¡¶¯´°¿Ú */
+/* æµ®åŠ¨çª—å£ */
 #floatwin { border:6px solid #FF6600;  display:none; position:absolute;background:#fff;Z-INDEX: 100;width:400px; height:300px; font-size:13px; }
 #floatwin a {color:#ff6600;}
 #fw_title { border-bottom:1px solid #ff6600;height:26px; line-height:26px; text-align:left;padding-left:5px; background:#FFF2D6;cursor:move; }
@@ -147,7 +147,7 @@ a:active {color: #999999;}
 #fw_button input { color:#fff;background:url(http://xx.shenei.net/images/userico/button.gif); border:0px; width:68px;height:26px;line-height:26px; margin:5px;text-align:center; CURSOR: hand}
 #fw_load {display:none; color:#ff6600}
 
-/*ÓÑÇéÁ´½Ó*/
+/*å‹æƒ…é“¾æ¥*/
 #links{line-height:18px;border-top:1px solid #D9E0ED;padding-top:6px}
 #links a{padding:0 5px;color:#666}
 

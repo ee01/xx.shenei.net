@@ -2,7 +2,7 @@
 <div class="m960">
 <div class="ts_menu_2 w960">
 <ul>
-<li class="ts3_mbtn1"><a href="seller_manage.html@mod=magseller.htm">ÍÅ¹ºÏîÄ¿</a></li>
+<li class="ts3_mbtn1"><a href="seller_manage.html@mod=magseller.htm">å›¢è´­é¡¹ç›®</a></li>
 </ul>
 <div class="clear"></div>
 </div>
@@ -11,19 +11,19 @@
 <div class="nleftL w916" style="width:926px;">
 <table id="report">
 <tr>
-<th>ÏîÄ¿</th>
-<th>ÏêÏ¸</th>
+<th>é¡¹ç›®</th>
+<th>è¯¦ç»†</th>
 </tr>
 {loop $product $i $value}
 <tr class="Bor">
 <td width="75%">{$value['name']}</td>
 <td width="25%">
 {if $value['status']==0 ||  $value['status']==3}
-Ê§°ÜµÄÍÅ¹º
+å¤±è´¥çš„å›¢è´­
 {elseif $value['status']==2}
-<a href="seller_manage.html@mod=magseller&code=ticket&id={$value%5b'id'%5d}.htm">³É¹¦µÄÍÅ¹º  (²é¿´Ïû·ÑÈ¯)</a>
+<a href="seller_manage.html@mod=magseller&code=ticket&id={$value%5b'id'%5d}.htm">æˆåŠŸçš„å›¢è´­  (æŸ¥çœ‹æ¶ˆè´¹åˆ¸)</a>
 {else}
-Õı³£µÄÍÅ¹º
+æ­£å¸¸çš„å›¢è´­
 {/if}
 </td>
 </tr>

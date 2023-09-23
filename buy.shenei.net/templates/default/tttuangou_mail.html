@@ -2,7 +2,7 @@
 function checkEmail2(email){
 var emailRegExp = new RegExp(            "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
 if (!emailRegExp.test(email)||email.indexOf('.')==-1){
-alert('EmailµØÖ·¸ñÊ½´íÎó£¡');
+alert('Emailåœ°å€æ ¼å¼é”™è¯¯ï¼');
 $('#email2').val('');
 }else{
 return true;
@@ -16,16 +16,16 @@ return true;
 }
 </script>
 <div class="t_area_out">
-<h1>ÓÊ¼ş¶©ÔÄ</h1>
+<h1>é‚®ä»¶è®¢é˜…</h1>
 <div id="emailcontain" style="margin-top: 0pt;" class="t_area_in">
-¶©ÔÄÏÂÆÚÍÅ¹ºĞÅÏ¢
+è®¢é˜…ä¸‹æœŸå›¢è´­ä¿¡æ¯
 <form style="float: left; clear: both;" action="tttuangou_mail.html@mod=list&code=sendemail" method="post" onsubmit="return check2()" enctype="multipart/form-data">
 <input name="email" id="email2" type="text" class="email" size="30" /> 
 <input name="add" type="submit"  value="" class="btn_dy"/>  
 <input name="del" type="submit"  value="" class="btn_td"/>
 </form>
 <br>
-ÓĞĞÂ¾ªÏ²ÎÒÃÇ»áÓÃÓÊ¼şÍ¨ÖªÄú¡£<br>
-<span class="orange">*´Ë·şÎñ¿ÉÒÔËæÊ±È¡Ïû</span>
+æœ‰æ–°æƒŠå–œæˆ‘ä»¬ä¼šç”¨é‚®ä»¶é€šçŸ¥æ‚¨ã€‚<br>
+<span class="orange">*æ­¤æœåŠ¡å¯ä»¥éšæ—¶å–æ¶ˆ</span>
 </div>
 </div>

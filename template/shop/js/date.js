@@ -6,7 +6,7 @@ var Current_Date = new Date();
 var Current_Month = Current_Date.getMonth(); 
 
 var Days_in_Month = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31); 
-var Month_Label = new Array('1ÔÂ', '2ÔÂ', '3ÔÂ', '4ÔÂ', '5ÔÂ', '6ÔÂ', '7ÔÂ', '8ÔÂ', '9ÔÂ', '10ÔÂ', '11ÔÂ', '12ÔÂ'); 
+var Month_Label = new Array('1æœˆ', '2æœˆ', '3æœˆ', '4æœˆ', '5æœˆ', '6æœˆ', '7æœˆ', '8æœˆ', '9æœˆ', '10æœˆ', '11æœˆ', '12æœˆ'); 
 
 var Current_Year = Current_Date.getYear();
 Current_Year = (Current_Year<1900?(1900+Current_Year):Current_Year); 
@@ -19,7 +19,7 @@ if ((Year % 400 == 0) || ((Year % 4 == 0) && (Year % 100 != 0))) {
 Days_in_Month[1] = 29; 
 } 
 } 
-var Header_String = Year + 'Äê' + Month_Label[Month]; 
+var Header_String = Year + 'å¹´' + Month_Label[Month]; 
 return Header_String; 
 } 
 
@@ -39,9 +39,9 @@ var Rows = 5;
 } 
 
 var HTML_String = '<table width="100%" border="0" cellpadding="2" cellspacing="1">'; 
-HTML_String += '<tr><td colspan="7"><a href="javascript:void(0)" onClick=Skip("-") title="ÉÏÔÂ">&laquo;</a> ' + Heading + '</font> <a href="javascript:void(0)" onClick=Skip("+") title="ÏÂÔÂ">&raquo;</a></td></tr>'; 
-HTML_String += '<tr><td>ÈÕ</td><td>Ò»</td><td>¶ş</td><td>Èı</td>'; 
-HTML_String += '<td>ËÄ</td><td>Îå</td><td>Áù</td></tr>';
+HTML_String += '<tr><td colspan="7"><a href="javascript:void(0)" onClick=Skip("-") title="ä¸Šæœˆ">&laquo;</a> ' + Heading + '</font> <a href="javascript:void(0)" onClick=Skip("+") title="ä¸‹æœˆ">&raquo;</a></td></tr>'; 
+HTML_String += '<tr><td>æ—¥</td><td>ä¸€</td><td>äºŒ</td><td>ä¸‰</td>'; 
+HTML_String += '<td>å››</td><td>äº”</td><td>å…­</td></tr>';
 
 var Day_Counter = 1; 
 var Loop_Counter = 1; 

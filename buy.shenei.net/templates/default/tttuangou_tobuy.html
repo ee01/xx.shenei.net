@@ -3,38 +3,38 @@
 <div class="t_l">
 <div class="t_area_out">
 <div class="t_area_in">
-<p class="cur_title">�Ź�ָ��</p>
+<p class="cur_title">团购指南</p>
 <div class="sect guide">
 <ul class="guide_steps">
 <li>
-<h3 class="step1">�鿴�����Ź�</h3>
-<p class="text">����ÿ���Ƴ�һ����Ʒ���ѣ�������ҳ���ɿ�����Ҳ����ͨ���ʼ����ĵڶ������Ϣ��</p>
+<h3 class="step1">查看本期团购</h3>
+<p class="text">我们每天推出一单精品消费，访问首页即可看到；也可以通过邮件订阅第二天的信息。</p>
 </li>
 <li>
-<h3 class="step2">����</h3>
-<p class="text"> �Ա��ڵ��Ź�����Ȥ��ֻҪ�������ť��������ʾ������о�OK�� <img style="margin-left: -9px;" src="images/buy_guide.gif" width="290px;" height="200px;"> </p>
+<h3 class="step2">购买</h3>
+<p class="text"> 对本期的团购有兴趣？只要点击购买按钮，按照提示步骤进行就OK！ <img style="margin-left: -9px;" src="images/buy_guide.gif" width="290px;" height="200px;"> </p>
 <div class="bubble">
 <div class="bubble_top">
 <ol class="buy">
-<li>�Ź�����ֹʱ��ͽ������е��Ź������������ޣ��ȵ��ȵã�</li>
-<li>�Ź��������������������һ������ɣ����ܻ��{$this->config['default_payfinder']} Ԫ������</li>
-<li class="last">�Ź�����ʱ��δ�ﵽ�������Ҫ�����Ź���ʧ���ˣ����ǻ�����ȫ���˿</li>
+<li>团购到截止时间就结束了有的团购还有数量上限，先到先得！</li>
+<li>团购人数还不够？邀请好友一起来买吧，还能获得{$this->config['default_payfinder']} 元返利。</li>
+<li class="last">团购结束时还未达到最低人数要求，那团购就失败了，我们会立即全额退款。</li>
 </ol>
 </div>
 <div class="bubble_bottom"></div>
 </div>
 </li>
 <li>
-<h3 class="step3">��ȡ�Ź�ȯ������</h3>
-<p class="text"> �Ź��ɹ���Ϳɡ��ҵ����롱ҳ��鿴��<img style="margin-left: -9px;" src="images/buy_yhq.gif" ></p>
+<h3 class="step3">获取团购券和密码</h3>
+<p class="text"> 团购成功后就可“我的团秒”页面查看！<img style="margin-left: -9px;" src="images/buy_yhq.gif" ></p>
 <div class="bubble">
-<div class="bubble_top"> ��ȡ�Ź��Ź�ȯ�����ַ�ʽ��
+<div class="bubble_top"> 获取团购团购券有两种方式：
 <ol class="coupon">
-<li><strong>�ֹ���¼</strong><br>
-<p>��¼���Ź�ȯ�����뼴��</p>
+<li><strong>手工记录</strong><br>
+<p>记录好团购券和密码即可</p>
 </li>
-<li><strong>���ߴ�ӡ</strong>
-<p>��ӡ�Ź��Ź�ȯֱ�ӳ�ʾ</p>
+<li><strong>在线打印</strong>
+<p>打印团购团购券直接出示</p>
 </li>
 </ol>
 </div>
@@ -42,8 +42,8 @@
 </div>
 </li>
 <li>
-<h3 class="step4">ȥ�̼�����</h3>
-<p class="text"> ��¼���Ź�ȯ�����룬����Ч����ȥ�̼����ѣ�����֪�̼ҽ��к˶Ժ����ѣ� </p>
+<h3 class="step4">去商家消费</h3>
+<p class="text"> 记录好团购券和密码，在有效期内去商家消费，并告知商家进行核对和消费！ </p>
 </li>
 </ul>
 </div>
@@ -53,8 +53,8 @@
 <div class="t_r">
 <!--{template "tttuangou_myfinder"}-->
 <div class="t_area_out">
-<h1>�����ʴ�</h1>
-<div class="t_area_in"> <a target="_blank" href="tttuangou_tobuy.html@mod=list&code=question.htm#q_form">��Ҫ����</a> | <a target="_blank" href="tttuangou_tobuy.html@mod=list&code=question.htm">�鿴ȫ��</a> {loop $question $i $value} <a target="_blank" class="txt13" href="tttuangou_tobuy.html@mod=list&code=question.htm#id{$value['id']}">{$value['content']}��</a> {/loop} </div>
+<h1>团秒问答</h1>
+<div class="t_area_in"> <a target="_blank" href="tttuangou_tobuy.html@mod=list&code=question.htm#q_form">我要提问</a> | <a target="_blank" href="tttuangou_tobuy.html@mod=list&code=question.htm">查看全部</a> {loop $question $i $value} <a target="_blank" class="txt13" href="tttuangou_tobuy.html@mod=list&code=question.htm#id{$value['id']}">{$value['content']}？</a> {/loop} </div>
 </div>
 <!--{template tttuangou_mail}-->
 </div>

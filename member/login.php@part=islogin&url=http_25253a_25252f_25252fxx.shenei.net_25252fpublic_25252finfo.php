@@ -1,1 +1,1 @@
-document.writeln("<li><a href=\"http://xx.shenei.net/http://xx.shenei.net/member/login.php?url=http%3a%2f%2fxx.shenei.net%2fpublic%2finfo.php\">µÇÂ¼<\/a><\/li><li><a href=\"../http_3a//xx.shenei.net/member/login.php@part=register\">×¢²á<\/a><\/li>")
+document.writeln("<li><a href=\"http://xx.shenei.net/http://xx.shenei.net/member/login.php?url=http%3a%2f%2fxx.shenei.net%2fpublic%2finfo.php\">ç™»å½•<\/a><\/li><li><a href=\"../http_3a//xx.shenei.net/member/login.php@part=register\">æ³¨å†Œ<\/a><\/li>")

@@ -8,7 +8,7 @@
 .page_title { padding-top:10px;}
 .page_title .left { float:left;}
 .page_title .right { float:right;}
-.page_title .title { font-size:22px; color:#003399; font-family:"Î¢ÈíÑÅºÚ"; font-weight:bold}
+.page_title .title { font-size:22px; color:#003399; font-family:"å¾®è½¯é›…é»‘"; font-weight:bold}
 .page_title .yellow_skin { font-weight:bold; color:#f60;}
 .page_title .test1 { margin-top:7px;}
 .page_title .red_skin { color:#f30;}
@@ -37,7 +37,7 @@
 .table_2 td a { text-decoration:underline!important;}
 .warm_tips { border:1px solid #cce3f1; padding:4px; margin-top:10px;}
 .warm_tips .hd { background:url(../images/all950bg2.gif) no-repeat 0 -13px; height:23px; line-height:23px; text-indent:.5em; font-size:14px; font-weight:bold; color:#ffffff; text-align:left;}
-.warm_tips .bd { padding:10px 5px; line-height:24px; color:#333; font-family:"ËÎÌå"; text-align:left;}
+.warm_tips .bd { padding:10px 5px; line-height:24px; color:#333; font-family:"å®‹ä½“"; text-align:left;}
 .interested_box { position:relative; margin-top:10px; border:1px solid #e6e5e5; padding:5px 8px;}
 .interested_box .hd { font-size:14px; font-weight:bold; text-align:left;}
 .interested_box .hd span.title { padding-left:10px; background:url(../images/icon.gif) no-repeat 0 -75px; color:#3d5c9b;}
@@ -108,7 +108,7 @@
 	color:#fff;
 }
 
-/*»Ø¸´*/
+/*å›å¤*/
 .posttitle{line-height:20px;overflow:hidden;height:100%;border-bottom:1px solid #E2E2E2;}
 .posttitle h2{display:block; background-position:0 -432px; padding-left:17px; font-size:14px; font-weight:bold; color:#333; padding-bottom:3px;}
 #postrestorelist li{margin:6px 0;float:left}
@@ -119,7 +119,7 @@
 #postrestorelist .postrestorelistc a{padding:0 5px;text-decoration:underline;color:#008001}
 .postrestoreusern{overflow:hidden;height:100%;background:url(http://xx.shenei.net/images/iconbg.gif) no-repeat   65px  -850px; padding-top:10px;}
 .postrestoreuserbg{background:#F5F8FF;overflow:hidden;height:100%;padding:10px;line-height:20px}
-/*ÎÒÀ´»Ø¸´*/
+/*æˆ‘æ¥å›å¤*/
 #postleave form{background:#FAFCFF;border:1px solid #D8E0ED;margin-top:6px;padding:6px;overflow:hidden;height:100%;}
 #postleave form dl{float:left;width:580px;}
 #postleave form dl dt{float:left;clear:both;width:60px;text-align:right;line-height:30px;height:28px;}

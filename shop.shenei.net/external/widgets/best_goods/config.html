@@ -22,15 +22,15 @@ function switchRecommend(recomId, selectName)
 }
 </script>
 <div class="field_item">
-    <label>推荐类型:</label>
+    <label>鎺ㄨ崘绫诲瀷:</label>
     <p><select name="img_recom_id" onchange="switchRecommend(this.value)">
-        <option value="0">请选择...</option>
+        <option value="0">璇烽�夋嫨...</option>
         <!-- {foreach from=$recommends key=recom_id item=recom_name} -->
         <option value="{$recom_id}"{if $options.img_recom_id eq $recom_id} selected="selected"{/if}>{$recom_name|escape}</option>
         <!-- {/foreach} -->
     </select>
     <select name="img_cate_id">
-        <option value="0">请选择分类...</option>
+        <option value="0">璇烽�夋嫨鍒嗙被...</option>
         <!-- {html_options options=$gcategories selected=$options.img_cate_id} -->
     </select></p>
 </div>

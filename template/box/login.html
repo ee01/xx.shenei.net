@@ -14,26 +14,26 @@
 <input name="url" type="hidden" value="../public/box.php?part=upgrade&id=<?=$id?>">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td width="60" height="40">��¼�ʺ�</td>
+    <td width="60" height="40">登录帐号</td>
     <td><b style=color:red><input name="userid" type="text" maxlength="16"></b></td>
   </tr>
   <tr>
-    <td width="60" height="40">��¼����</td>
+    <td width="60" height="40">登录密码</td>
     <td><input name="userpwd" type="password" maxlength="16" /></td>
   </tr>
 <?php if($mymps_imgcode['login']['open'] == 1) {?>
   <tr>
-    <td width="60" height="40">��֤�룺</td>
-    <td><input type="text" name="checkcode" style="width:60px"/> <img src="http://xx.shenei.net/template/include/chkcode.php" alt="�����壬����ˢ��" width="70" height="25" align="absmiddle" style="cursor:pointer;" onClick="this.src=this.src+'?'"/></td>
+    <td width="60" height="40">验证码：</td>
+    <td><input type="text" name="checkcode" style="width:60px"/> <img src="http://xx.shenei.net/template/include/chkcode.php" alt="看不清，请点击刷新" width="70" height="25" align="absmiddle" style="cursor:pointer;" onClick="this.src=this.src+'?'"/></td>
  </td>
 <?}?>
   <tr>
     <td></td>
-    <td><label for="memory"><input name="memory" type="checkbox" value="on"  id="memory"/> ��ס���룬�����������ã�</label></td>
+    <td><label for="memory"><input name="memory" type="checkbox" value="on"  id="memory"/> 记住密码，公共场所慎用！</label></td>
   </tr>
   <tr>
     <td height="40">&nbsp;</td>
-    <td><input type="submit" class="mymps mini" value="������¼" /></td>
+    <td><input type="submit" class="mymps mini" value="立即登录" /></td>
   </tr>
 </table>
 <br />

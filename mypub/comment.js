@@ -3,16 +3,16 @@ function checkreply()
 	if(document.form1.content.value=="")
 	{
    		document.form1.content.focus();
-   		alert("ÇëÌîĞ´ÆÀÂÛÄÚÈİ£¡");
+   		alert("è¯·å¡«å†™è¯„è®ºå†…å®¹ï¼");
    		return false;
 	}
 	if(document.form1.checkcode.value=="")
 	{
    		document.form1.checkcode.focus();
-   		alert("ÇëÊäÈëÑéÖ¤Âë£¡");
+   		alert("è¯·è¾“å…¥éªŒè¯ç ï¼");
    		return false;
 	}
 	document.form1.mymps.disabled=true;
-	document.form1.mymps.value="Ìá½»ÖĞ...";
+	document.form1.mymps.value="æäº¤ä¸­...";
 	return true;
 }// JavaScript Document

@@ -13,7 +13,7 @@ if (height > xl ) mypic.height = xl;
 <div class="t_l">
 <div class="t_area_out">
 <div class="t_area_in" style="overflow:hidden; _width:695px; _height:90%;">
-<p class="cur_title">ÍùÆÚ{$TITLE}</p>
+<p class="cur_title">å¾€æœŸ{$TITLE}</p>
 <ul class="deal_list">
 {loop $product $i $value}
 <li>
@@ -21,11 +21,11 @@ if (height > xl ) mypic.height = xl;
 <h4><a target="_blank" href="tttuangou_back.html@mod=list&code=history&id={$value%5b'id'%5d}.htm">{$value['name']}</a></h4>
 <div class="pic2"> <a target="_blank" href="tttuangou_back.html@mod=list&code=history&id={$value%5b'id'%5d}.htm"><img src="images/product/{$value%5b'img'%5d}" onload="changeImg(this)" /></a> </div>
 <div class="info">
-<p class="total"><strong class="count">{$value['totalnum']}</strong>ÈË¹ºÂò</p>
-<p class="price">Ô­¼Û£º<strong class="old">&yen;{$value['price']}</strong><br>
-ÕÛ¿Û£º<strong class="discount">{eval echo round(10/($value['price']/$value['nowprice']),1)}ÕÛ</strong><br>
-ÏÖ¼Û£º<strong>&yen;{$value['nowprice']}</strong><br>
-½ÚÊ¡£º<strong>&yen;{eval echo ($value['price']-$value['nowprice'])}</strong><br>
+<p class="total"><strong class="count">{$value['totalnum']}</strong>äººè´­ä¹°</p>
+<p class="price">åŸä»·ï¼š<strong class="old">&yen;{$value['price']}</strong><br>
+æŠ˜æ‰£ï¼š<strong class="discount">{eval echo round(10/($value['price']/$value['nowprice']),1)}æŠ˜</strong><br>
+ç°ä»·ï¼š<strong>&yen;{$value['nowprice']}</strong><br>
+èŠ‚çœï¼š<strong>&yen;{eval echo ($value['price']-$value['nowprice'])}</strong><br>
 </p>
 </div>
 </li>
@@ -38,8 +38,8 @@ if (height > xl ) mypic.height = xl;
 <div class="t_r">
 <!--{template "tttuangou_myfinder"}-->
 <div class="t_area_out">
-<h1>ÍÅÃëÎÊ´ğ</h1>
-<div class="t_area_in"><a target="_blank" href="#q_form">ÎÒÒªÌáÎÊ</a> | <a target="_blank" href="tttuangou_back.html@mod=list&code=question.htm">²é¿´È«²¿</a> {loop $question $i $value} <a target="_blank" class="txt13" href="#id{$value['id']}">{$value['content']}£¿</a>
+<h1>å›¢ç§’é—®ç­”</h1>
+<div class="t_area_in"><a target="_blank" href="#q_form">æˆ‘è¦æé—®</a> | <a target="_blank" href="tttuangou_back.html@mod=list&code=question.htm">æŸ¥çœ‹å…¨éƒ¨</a> {loop $question $i $value} <a target="_blank" class="txt13" href="#id{$value['id']}">{$value['content']}ï¼Ÿ</a>
 </li>
 {/loop} </div>
 </div>

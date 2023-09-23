@@ -3,16 +3,16 @@
 <div class="t_l">
 <div class="t_area_out">
 <div class="t_area_in">
-<p class="cur_title">�ύ����</p>
+<p class="cur_title">提交订单</p>
 <div class="sect">
 <table id="report">
 <tr>
-<th>�Ź���Ŀ</th>
-<th>����</th>
+<th>团购项目</th>
+<th>数量</th>
 <th>&nbsp;</th>
-<th>�۸�</th>
+<th>价格</th>
 <th>&nbsp;</th>
-<th>�ܼ�</th>
+<th>总价</th>
 </tr>
 <tr class="Bor">
 <td width="35%">{$productname}</td>
@@ -24,56 +24,56 @@
 </tr>
 </table>
 <div class="nleftL">
-<span>���������֧�����޶���ȷֶ��<a href="tttuangou_order.html@mod=me&code=addmoney.htm" target=_blank>���˻���ֵ</a>��Ȼ��ˢ�±�ҳʹ�����֧���� ��ǰ�˻���� <span style="color:#FF0000;">{$self['money']}Ԫ</span>��ʹ�������</span><span class="SR B R">��Ӧ֧����&yen; {$totalprice2}Ԫ </span>
+<span>（如果在线支付有限额，可先分多次<a href="tttuangou_order.html@mod=me&code=addmoney.htm" target=_blank>对账户充值</a>，然后刷新本页使用余额支付） 当前账户余额 <span style="color:#FF0000;">{$self['money']}元</span>，使用余额付款后，</span><span class="SR B R">还应支付金额：&yen; {$totalprice2}元 </span>
 </div>
 <div class="nleftL">
 <form action="{$action}" method="post" enctype="multipart/form-data">
 <div class="order_check_form ">
-<p class="choose_pay_type">��ѡ��֧����ʽ��</p>
+<p class="choose_pay_type">请选择支付方式：</p>
 <table width="100%" border="0" class="orderT">
 {loop $pay $i $value}
-<!--һ��֧ͨ��-->
+<!--一卡通支付-->
 {if $value['pay_id'] == 6 and 0}
 <tr>
 <td width="4%"><input name="paytype" type="radio" value="6" {if $order['paytype']==6 ||  $order['paytype']==''}checked="checked"{/if}></td>
 <td width="20%"><img src="images/card.gif" /></td>
-<td width="66%">ʹ�� У԰һ��ͨ����֧������</td>
+<td width="66%">使用 校园一卡通网络支付功能</td>
 </tr>
 {/if}
-<!--һ��֧ͨ��-->
+<!--一卡通支付-->
 {if $value['pay_id'] == 1}
 <tr>
 <td width="4%"><input name="paytype" type="radio" value="1" {if $order['paytype']==1 ||  $order['paytype']==''}checked="checked"{/if}></td>
 <td width="20%"><img src="images/alipay.gif" /></td>
-<td width="66%">�Ƽ�֧�������������û�ʹ��</td>
+<td width="66%">推荐支付宝或者网银用户使用</td>
 </tr>
 {/if}
 {if $value['pay_id'] == 2}
 <tr>
 <td><input name="paytype" type="radio" value="2" {if $order['paytype']==2}checked="checked"{/if} ></td>
 <td><img src="images/tenpay.gif" /></td>
-<td>�Ƽ��Ƹ�ͨ����ѶQQ�û�ʹ��</td>
+<td>推荐财付通或腾讯QQ用户使用</td>
 </tr>
 {/if}
 {if $value['pay_id'] == 3}
 <tr>
 <td><input name="paytype" type="radio" value="3" {if $order['paytype']==3}checked="checked"{/if}></td>
 <td><img src="images/chinabank.gif" /></td>
-<td>֧���������е�ת�˻��������֧��ҳ��</td>
+<td>支持主流银行的转账汇款，详见购买支付页面</td>
 </tr>
 {/if}
 {if $value['pay_id'] == 4}
 <tr>
 <td><input name="paytype" type="radio" value="4" {if $order['paytype']==4}checked="checked"{/if}></td>
 <td><img src="images/kuaiqian.bmp" /></td>
-<td>�Ƽ���Ǯ���������û�ʹ��</td>
+<td>推荐快钱或者网银用户使用</td>
 </tr>
 {/if}
 {if $value['pay_id'] == 5}
 <tr>
 <td><input name="paytype" type="radio" value="5" {if $order['paytype']==5}checked="checked"{/if}></td>
 <td><img src="images/offline.gif" /></td>
-<td>���µ��渶�ֽ�</td>
+<td>线下当面付现金！</td>
 </tr>
 {/if}
 {/loop}
@@ -83,8 +83,8 @@
 <input name="priceradio" type="hidden" value="{$priceradio}">
 <input name="num" type="hidden" value="{$num}">
 <input name="id" type="hidden" value="{$id}">
-<input type="submit" class="formbutton" value="{if {$totalprice2}==0}�˻������㣬ֱ�Ӹ��ͨ{else}ȷ�����ɶ��������븶��ҳ{/if}">
-<a style="margin-left: 1em;" href="tttuangou_order.html@mod=index&code=buy&editnum={$num}&id={$id}.htm">�����޸Ķ���</a> 
+<input type="submit" class="formbutton" value="{if {$totalprice2}==0}账户余额充足，直接付款开通{else}确认生成订单，进入付款页{/if}">
+<a style="margin-left: 1em;" href="tttuangou_order.html@mod=index&code=buy&editnum={$num}&id={$id}.htm">返回修改订单</a> 
 </p>
 </div>
 </form>

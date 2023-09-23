@@ -3,14 +3,14 @@
 <div class="t_l">
 <div class="t_area_out">
 <div class="t_area_in">
-<p class="cur_title">�����н�</p>
+<p class="cur_title">邀请有奖</p>
 <div class="sect">
-<p>�����ѽ����������룬��{conf site_name}��վ���״γɹ�����ϵͳ���� 24 Сʱ�ڷ��� {$this->config['default_payfinder']} Ԫ�����ĸ��������ʻ����´��Ź�ʱ��ֱ������֧����û���������ƣ�����Խ�࣬����Խ�ࡣ</p>
-<p>��������ר���������ӣ���ͨ�� MSN �� QQ ���͸����ѣ�</p>
+<p>当好友接受您的邀请，在{conf site_name}网站上首次成功购买，系统会在 24 小时内返还 {$this->config['default_payfinder']} 元到您的个人中心帐户，下次团购时可直接用于支付。没有数量限制，邀请越多，返利越多。</p>
+<p>这是您的专用邀请链接，请通过 MSN 或 QQ 发送给好友：</p>
 <p>
 <input id="inviteURL" type="text" size="20" class="f_input inviteP"  value="{eval echo $this->Config[site_url]; }/?u={MEMBER_ID}" onclick="copyText(this.value);">
 &nbsp;&nbsp;
-<input type="submit" value="����" class="formbutton" onclick="copyText($('#inviteURL').val());">
+<input type="submit" value="复制" class="formbutton" onclick="copyText($('#inviteURL').val());">
 </p>
 </div>
 </div>
@@ -18,22 +18,22 @@
 </div>
 <div class="t_r">
 <div class="t_area_out">
-<h1>��������</h1>
+<h1>常见问题</h1>
 <div class="t_area_in" style="font-size:12px;">
-<h3 class="first">��������Կ����ҵķ�����</h3>
-<p>�������ɹ����ڱ�ҳ��ῴ���ɹ������б�����"�ʻ����"ҳ���ɿ�����Ŀǰ�����ʻ��������������֣������´��Ź�ʱ����֧����</p>
-<h3>����������ˣ�ʲôʱ���յ�������</h3>
-<p>�������� 24 Сʱ�ڷ���������{conf site_name}�ʻ������ᷢ�ʼ�֪ͨ����</p>
-<h3>��Щ����ᵼ�����뷵��ʧЧ��</h3>
+<h3 class="first">在哪里可以看到我的返利？</h3>
+<p>如果邀请成功，在本页面会看到成功邀请列表。在"帐户余额"页，可看到您目前电子帐户的余额。返利金额不返现，可在下次团购时用于支付。</p>
+<h3>我邀请好友了，什么时候收到返利？</h3>
+<p>返利会在 24 小时内返还到您的{conf site_name}帐户，并会发邮件通知您。</p>
+<h3>哪些情况会导致邀请返利失效？</h3>
 <ul class="invalid">
-<li>���ѵ���������Ӻ󳬹� 72 Сʱ�Ź���</li>
-<li>���ѹ���֮ǰ����������˵���������</li>
-<li>���ѵı��ι������״ι���</li>
-<li>���ͺ����໥����ʱ����һ�˿��Ի���</li>
-<li>���������Ź�����û�дﵽ�������ޣ������Ź�ȡ��</li>
+<li>好友点击邀请链接后超过 72 小时才购买</li>
+<li>好友购买之前点击了其他人的邀请链接</li>
+<li>好友的本次购买不是首次购买</li>
+<li>您和好友相互邀请时，仅一人可以获返利</li>
+<li>由于最终团购人数没有达到人数下限，本次团购取消</li>
 </ul>
-<h3>�Լ������Լ�Ҳ�ܻ�÷�����</h3>
-<p>�����ԡ����ǻ��˹��˲飬���ڲ�ʵ��������Ϊ���۳�һ�з�������ȡ�����뷵�����ʸ�</p>
+<h3>自己邀请自己也能获得返利吗？</h3>
+<p>不可以。我们会人工核查，对于查实的作弊行为，扣除一切返利，并取消邀请返利的资格。</p>
 </div>
 </div>
 </div>

@@ -3,20 +3,20 @@ date = tmpDate.getDate();
 month= tmpDate.getMonth() + 1 ;
 year= tmpDate.getYear();
 document.write(year);
-document.write("Äê");
+document.write("å¹´");
 document.write(month);
-document.write("ÔÂ");
+document.write("æœˆ");
 document.write(date);
-document.write("ÈÕ ");
+document.write("æ—¥ ");
 
 myArray=new Array(6);
-myArray[0]="ĞÇÆÚÈÕ"
-myArray[1]="ĞÇÆÚÒ»"
-myArray[2]="ĞÇÆÚ¶ş"
-myArray[3]="ĞÇÆÚÈı"
-myArray[4]="ĞÇÆÚËÄ"
-myArray[5]="ĞÇÆÚÎå"
-myArray[6]="ĞÇÆÚÁù"
+myArray[0]="æ˜ŸæœŸæ—¥"
+myArray[1]="æ˜ŸæœŸä¸€"
+myArray[2]="æ˜ŸæœŸäºŒ"
+myArray[3]="æ˜ŸæœŸä¸‰"
+myArray[4]="æ˜ŸæœŸå››"
+myArray[5]="æ˜ŸæœŸäº”"
+myArray[6]="æ˜ŸæœŸå…­"
 weekday=tmpDate.getDay();
 if (weekday==0 | weekday==6)
 {

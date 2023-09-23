@@ -3,12 +3,12 @@
 <div class="t_l">
 <div class="ts_menu_2">
 <ul>
-<li class="ts3_mbtn2"><a href="tttuangou_myorder.html@mod=me&code=ticket.htm">ÎÒµÄÍÅ¹ºÈ¯</a></li>
-<li class="ts3_mbtn1"><a href="tttuangou_myorder.html@mod=me&code=order.htm">ÎÒµÄ¶©µ¥</a></li>
-<li class="ts3_mbtn2"><a href="tttuangou_myorder.html@mod=me&code=money.htm">ÎÒµÄÓà¶î</a></li>
-<li class="ts3_mbtn2"><a href="tttuangou_myorder.html@mod=me&code=info.htm">ÕË»§ÉèÖÃ</a></li>
+<li class="ts3_mbtn2"><a href="tttuangou_myorder.html@mod=me&code=ticket.htm">æˆ‘çš„å›¢è´­åˆ¸</a></li>
+<li class="ts3_mbtn1"><a href="tttuangou_myorder.html@mod=me&code=order.htm">æˆ‘çš„è®¢å•</a></li>
+<li class="ts3_mbtn2"><a href="tttuangou_myorder.html@mod=me&code=money.htm">æˆ‘çš„ä½™é¢</a></li>
+<li class="ts3_mbtn2"><a href="tttuangou_myorder.html@mod=me&code=info.htm">è´¦æˆ·è®¾ç½®</a></li>
 {if UCENTER}
-<li class="ts3_mbtn2"><a href="tttuangou_myorder.html@mod=me&code=face.htm">ÎÒµÄÍ·Ïñ</a></li>
+<li class="ts3_mbtn2"><a href="tttuangou_myorder.html@mod=me&code=face.htm">æˆ‘çš„å¤´åƒ</a></li>
 {/if}
 </ul>
 <div class="clear"></div>
@@ -25,29 +25,29 @@ $(this).next("tr").toggle();
 $(this).find(".arrow").toggleClass("up");
 });
 });
-//jquery Ä£Äâµã»÷´ò¿ªĞÂ´°¿Ú
+//jquery æ¨¡æ‹Ÿç‚¹å‡»æ‰“å¼€æ–°çª—å£
 $("a[rel=external]").attr('target', '_blank');
-//jQueryµÈ±ÈÀıËõ·ÅÍ¼Æ¬´óĞ¡
+//jQueryç­‰æ¯”ä¾‹ç¼©æ”¾å›¾ç‰‡å¤§å°
 function DrawImg(boxWidth,boxHeight)
 {
 var imgWidth=$("#img1").width();
 var imgHeight=$("#img1").height();
-//±È½ÏimgBoxµÄ³¤¿í±ÈÓëimgµÄ³¤¿í±È´óĞ¡
+//æ¯”è¾ƒimgBoxçš„é•¿å®½æ¯”ä¸imgçš„é•¿å®½æ¯”å¤§å°
 if((boxWidth/boxHeight)>=(imgWidth/imgHeight))
 {
-//ÖØĞÂÉèÖÃimgµÄwidthºÍheight
+//é‡æ–°è®¾ç½®imgçš„widthå’Œheight
 $("#img1").width((boxHeight*imgWidth)/imgHeight);
 $("#img1").height(boxHeight);
-//ÈÃÍ¼Æ¬¾ÓÖĞÏÔÊ¾
+//è®©å›¾ç‰‡å±…ä¸­æ˜¾ç¤º
 var margin=(boxWidth-$("#img1").width())/2;
 $("#img1").css("margin-left",margin);
 }
 else
 {
-//ÖØĞÂÉèÖÃimgµÄwidthºÍheight
+//é‡æ–°è®¾ç½®imgçš„widthå’Œheight
 $("#img1").width(boxWidth);
 $("#img1").height((boxWidth*imgHeight)/imgWidth);
-//ÈÃÍ¼Æ¬¾ÓÖĞÏÔÊ¾
+//è®©å›¾ç‰‡å±…ä¸­æ˜¾ç¤º
 var margin=(boxHeight-$("#img1").height())/2;
 $("#img1").css("margin-top",margin);
 }
@@ -55,40 +55,40 @@ $("#img1").css("margin-top",margin);
 </script>
 <ul class="nleftL">
 <div style="float: right;">
-<li>·ÖÀà:</li>
-<li class="liL_{$t1}"><a href="tttuangou_myorder.html@mod=me&code=order.htm">È«²¿</a></li>
+<li>åˆ†ç±»:</li>
+<li class="liL_{$t1}"><a href="tttuangou_myorder.html@mod=me&code=order.htm">å…¨éƒ¨</a></li>
 <li class="liLine">|</li>
-<li class="liL_{$t2}"><a href="tttuangou_myorder.html@mod=me&code=order&type=payed.htm">ÒÑ¸¶¿î</a></li>
+<li class="liL_{$t2}"><a href="tttuangou_myorder.html@mod=me&code=order&type=payed.htm">å·²ä»˜æ¬¾</a></li>
 <li class="liLine">|</li>
-<li class="liL_{$t3}"><a href="tttuangou_myorder.html@mod=me&code=order&type=nopay.htm">Î´¸¶¿î</a></li>
+<li class="liL_{$t3}"><a href="tttuangou_myorder.html@mod=me&code=order&type=nopay.htm">æœªä»˜æ¬¾</a></li>
 </div>
 </ul>
 <!--{if $order==''}-->
-<div class="nleftL"><span class="B2">Äú»¹Ã»ÓĞ¶©µ¥</span></div>
+<div class="nleftL"><span class="B2">æ‚¨è¿˜æ²¡æœ‰è®¢å•</span></div>
 <!--{/if}-->
 <div class="nleftL">
 <table id="report">
 <tr>
-<th>ÍÅ¹ºÏîÄ¿</th>
-<th>ÊıÁ¿</th>
-<th>×Ü¼Û</th>
-<th>¶©µ¥×´Ì¬</th>
-<th>²Ù×÷</th>
+<th>å›¢è´­é¡¹ç›®</th>
+<th>æ•°é‡</th>
+<th>æ€»ä»·</th>
+<th>è®¢å•çŠ¶æ€</th>
+<th>æ“ä½œ</th>
 <th></th>
 </tr>
 {if empty($order)}
-<tr><td colspan="7">ÄúÔİÊ±»¹Ã»ÓĞ¶©µ¥£¬Äú¿ÉÒÔÈ¥ÍÅ¹ºÄúÏ²»¶µÄÉÌÆ·£¬ÕâÑù¾Í»áÓĞ¶©µ¥ÏÔÊ¾³öÀ´£¡</td></tr>
+<tr><td colspan="7">æ‚¨æš‚æ—¶è¿˜æ²¡æœ‰è®¢å•ï¼Œæ‚¨å¯ä»¥å»å›¢è´­æ‚¨å–œæ¬¢çš„å•†å“ï¼Œè¿™æ ·å°±ä¼šæœ‰è®¢å•æ˜¾ç¤ºå‡ºæ¥ï¼</td></tr>
 {/if}
 <!--{loop $order $i $value}-->
 <tr class="Bor">
 <td width="30%"><span class="R">{$value['name2']}</span></td>
 <td width="10%">{$value['productnum']}</td>
-<td width="15%">&yen; {$value['price']}Ôª</td>
-<td width="20%">{if $value['pay']==1 && $value['status']==1}<img src="images/sue.gif" />ÒÑ¸¶¿î{else}<img src="images/no2.gif" />
-{if $value['status']==0}ÒÑÈ¡Ïû{elseif $value['status']==2}ÒÑ¹ıÆÚ{elseif $value['status']==3}Ê§°Ü{else}Î´¸¶¿î{/if}
+<td width="15%">&yen; {$value['price']}å…ƒ</td>
+<td width="20%">{if $value['pay']==1 && $value['status']==1}<img src="images/sue.gif" />å·²ä»˜æ¬¾{else}<img src="images/no2.gif" />
+{if $value['status']==0}å·²å–æ¶ˆ{elseif $value['status']==2}å·²è¿‡æœŸ{elseif $value['status']==3}å¤±è´¥{else}æœªä»˜æ¬¾{/if}
 {/if}
 </td>
-<td width="15%">{if $value['pay']==1}-----{elseif $value['status']==0 || $value['status']==2}-----{else}<a href="tttuangou_myorder.html@mod=index&code=pay&orderid={$value%5b'orderid'%5d}.htm" rel="external">¸¶¿î</a> <a href="tttuangou_myorder.html@mod=me&code=cancel&orderid={$value%5b'orderid'%5d}.htm">È¡Ïû</a>{/if}</td>
+<td width="15%">{if $value['pay']==1}-----{elseif $value['status']==0 || $value['status']==2}-----{else}<a href="tttuangou_myorder.html@mod=index&code=pay&orderid={$value%5b'orderid'%5d}.htm" rel="external">ä»˜æ¬¾</a> <a href="tttuangou_myorder.html@mod=me&code=cancel&orderid={$value%5b'orderid'%5d}.htm">å–æ¶ˆ</a>{/if}</td>
 <td width="10%"><div class="arrow"></div></td>
 </tr>
 <tr class="Bor">
@@ -99,9 +99,9 @@ $("#img1").css("margin-top",margin);
 </div>
 </div>
 <div class="order_info">
-<h4>¶©µ¥ÏêÇé</h4>
-<p><b>{$value['name']}</b>£¨¶©µ¥ÈÕÆÚ£º{$value['time']}£©{$value['intro']}<br/>
-¶©µ¥±àºÅ£º{$value['orderid']}
+<h4>è®¢å•è¯¦æƒ…</h4>
+<p><b>{$value['name']}</b>ï¼ˆè®¢å•æ—¥æœŸï¼š{$value['time']}ï¼‰{$value['intro']}<br/>
+è®¢å•ç¼–å·ï¼š{$value['orderid']}
 </p>
 </div> </td>
 </tr>
@@ -115,12 +115,12 @@ $("#img1").css("margin-top",margin);
 <div class="t_r">
 <!--{template "tttuangou_myfinder"}-->
 <div class="t_area_out">
-<h1>³£¼ûÎÊÌâ</h1>
+<h1>å¸¸è§é—®é¢˜</h1>
 <div class="t_area_in" style="font-size:12px;">
-<h3 class="first">ÎÒÒÑÖ§¸¶³É¹¦£¬ÎªÊ²Ã´Ã»ÓĞ{conf site_name}È¯£¿</h3>
-<p>ÒòÎª»¹Ã»ÓĞµ½´ï×îµÍÍÅ¹ºÈËÊı£¬Ò»µ©´Õ¹»ÈËÊı£¬Äú¾Í»á¿´µ½{conf site_name}È¯ÁË¡£</p>
-<h3>Ê²Ã´ÊÇÒÑ¹ıÆÚ¶©µ¥£¿</h3>
-<p>Èç¹ûÄ³¸ö¶©µ¥Î´¼°Ê±¸¶¿î£¬ÄÇÃ´µÈÍÅ¹º½áÊøÊ±¾ÍÎŞ·¨ÔÙ¸¶¿îÁË£¬ÕâÖÖ¶©µ¥¾ÍÊÇ¹ıÆÚ¶©µ¥¡£</p>
+<h3 class="first">æˆ‘å·²æ”¯ä»˜æˆåŠŸï¼Œä¸ºä»€ä¹ˆæ²¡æœ‰{conf site_name}åˆ¸ï¼Ÿ</h3>
+<p>å› ä¸ºè¿˜æ²¡æœ‰åˆ°è¾¾æœ€ä½å›¢è´­äººæ•°ï¼Œä¸€æ—¦å‡‘å¤Ÿäººæ•°ï¼Œæ‚¨å°±ä¼šçœ‹åˆ°{conf site_name}åˆ¸äº†ã€‚</p>
+<h3>ä»€ä¹ˆæ˜¯å·²è¿‡æœŸè®¢å•ï¼Ÿ</h3>
+<p>å¦‚æœæŸä¸ªè®¢å•æœªåŠæ—¶ä»˜æ¬¾ï¼Œé‚£ä¹ˆç­‰å›¢è´­ç»“æŸæ—¶å°±æ— æ³•å†ä»˜æ¬¾äº†ï¼Œè¿™ç§è®¢å•å°±æ˜¯è¿‡æœŸè®¢å•ã€‚</p>
 </div>
 </div>
 </div>

@@ -1,11 +1,11 @@
 function LoginForm(){
 	if(document.formLogin.userid.value==""){
-		alert("ÓÃ»§Ãû²»ÄÜÎª¿Õ!");
+		alert("ç”¨æˆ·åä¸èƒ½ä¸ºç©º!");
 		document.formLogin.userid.focus();
 		return false;
 	}		
 	if(document.formLogin.userpwd.value==""){
-		alert("µÇÂ¼ÃÜÂë²»ÄÜÎª¿Õ!");
+		alert("ç™»å½•å¯†ç ä¸èƒ½ä¸ºç©º!");
 		document.formLogin.userpwd.focus();
 		return false;
 	}

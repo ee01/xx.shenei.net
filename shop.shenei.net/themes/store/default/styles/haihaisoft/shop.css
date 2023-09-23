@@ -41,14 +41,14 @@ ul, ol { list-style-type:none; }
 
 /*
 * -------------------------------------------------------
-* ******************** 店铺名称与网址 ***********************
+* ******************** 搴楅摵鍚嶇О涓庣綉鍧� ***********************
 * -------------------------------------------------------
 */
 #nav .banner H2 {
-        MARGIN-TOP: 30px; FONT-SIZE: 20px; LEFT: 0px; COLOR: #cf521a; TEXT-INDENT: 30px; LINE-HEIGHT: 40px; FONT-FAMILY: "微软雅黑", "黑体", "宋体"; POSITION: absolute; TOP: 0px; HEIGHT: 40px
+        MARGIN-TOP: 30px; FONT-SIZE: 20px; LEFT: 0px; COLOR: #cf521a; TEXT-INDENT: 30px; LINE-HEIGHT: 40px; FONT-FAMILY: "寰蒋闆呴粦", "榛戜綋", "瀹嬩綋"; POSITION: absolute; TOP: 0px; HEIGHT: 40px
 }
 #nav .banner H4 {
-        MARGIN-TOP: 30px; FONT-SIZE: 20px; LEFT: 0px; COLOR: #cf521a; TEXT-INDENT: 30px; LINE-HEIGHT: 40px; FONT-FAMILY: "微软雅黑", "黑体", "宋体"; POSITION: absolute; TOP: 0px; HEIGHT: 40px
+        MARGIN-TOP: 30px; FONT-SIZE: 20px; LEFT: 0px; COLOR: #cf521a; TEXT-INDENT: 30px; LINE-HEIGHT: 40px; FONT-FAMILY: "寰蒋闆呴粦", "榛戜綋", "瀹嬩綋"; POSITION: absolute; TOP: 0px; HEIGHT: 40px
 }
 #nav .banner H2 {
         LEFT: -1px; COLOR: #fadfd3; TOP: -1px

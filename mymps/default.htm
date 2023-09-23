@@ -10,13 +10,13 @@ function CheckForm()
 {
 	if(document.Login.username.value=="")
 	{
-		alert("ÇëÊäÈëÓÃ»§Ãû£¡");
+		alert("è¯·è¾“å…¥ç”¨æˆ·åï¼");
 		document.Login.username.focus();
 		return false;
 	}
 	if(document.Login.password.value == "")
 	{
-		alert("ÇëÊäÈëÃÜÂë£¡");
+		alert("è¯·è¾“å…¥å¯†ç ï¼");
 		document.Login.password.focus();
 		return false;
 	}
@@ -28,8 +28,8 @@ function CheckForm()
 <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
   <tr height="70px">
     <td><div class="top">
-    <a href="javascript:;" title="ÉèÖÃÉáÄÚ·ÖÀàĞÅÏ¢ºóÌ¨µÇÂ¼Îªä¯ÀÀÆ÷Ê×Ò³" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('..');">ÉèÎªÊ×Ò³</a>&nbsp;&nbsp;
-    <a href="../default.htm" target="_blank">ÍøÕ¾Ê×Ò³</a>&nbsp;&nbsp;
+    <a href="javascript:;" title="è®¾ç½®èˆå†…åˆ†ç±»ä¿¡æ¯åå°ç™»å½•ä¸ºæµè§ˆå™¨é¦–é¡µ" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('..');">è®¾ä¸ºé¦–é¡µ</a>&nbsp;&nbsp;
+    <a href="../default.htm" target="_blank">ç½‘ç«™é¦–é¡µ</a>&nbsp;&nbsp;
         
     </div></td>
   </tr>
@@ -38,19 +38,19 @@ function CheckForm()
         <div class="login">
           
           <div class="input">
-            <div class="logo"><img src="images/mymps.gif" style="margin:20px 0 0 20px" alt="mymps·ÖÀàĞÅÏ¢ÏµÍ³ºóÌ¨¹ÜÀíÏµÍ³"></div>
+            <div class="logo"><img src="images/mymps.gif" style="margin:20px 0 0 20px" alt="mympsåˆ†ç±»ä¿¡æ¯ç³»ç»Ÿåå°ç®¡ç†ç³»ç»Ÿ"></div>
 
 			<form name="Login" action="index.php@part=chk&url=&go=mymps_right" method="post" onSubmit="return CheckForm();">
             <input name="do" value="login" type="hidden">
 			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="logTb">
               <tr>
-                <th>ÓÃ»§Ãû</th>
+                <th>ç”¨æˆ·å</th>
                 <td>
                 <input type="text" name="username" maxlength="20" class="input-border" style="ime-mode:disabled" />
                 </td>
               </tr>
               <tr>
-                <th>ÃÜ&nbsp;&nbsp;&nbsp;&nbsp;Âë</th>
+                <th>å¯†&nbsp;&nbsp;&nbsp;&nbsp;ç </th>
                 <td width="90"><input type="password" name="password" maxlength="20" class="input-border"></td>
               </tr>
                             <tr>
@@ -62,10 +62,10 @@ function CheckForm()
               </tr>
 <tr>
                 <th></th>
-                <td><br>°æÈ¨ËùÓĞ:<a href="http://www.mymps.com.cn/" target="_blank">mymps</a></td>
+                <td><br>ç‰ˆæƒæ‰€æœ‰:<a href="http://www.mymps.com.cn/" target="_blank">mymps</a></td>
               </tr>
               <tr>
-                 <td colspan="2"><br>ÎªÌá¸ßÏµÍ³¼æÈİĞÔ£¬ÑéÖ¤ÂëÊäÈëÄ¬ÈÏ¹Ø±Õ£¬Äã¿ÉÒÔÔÚºóÌ¨¿ªÆô</td>
+                 <td colspan="2"><br>ä¸ºæé«˜ç³»ç»Ÿå…¼å®¹æ€§ï¼ŒéªŒè¯ç è¾“å…¥é»˜è®¤å…³é—­ï¼Œä½ å¯ä»¥åœ¨åå°å¼€å¯</td>
               </tr>
             </table>
 			</form>
