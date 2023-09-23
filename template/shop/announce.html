@@ -1,0 +1,56 @@
+{$mymps_global_header}
+<title>{$announce.title} - 网站公告 - {$SiteName}</title>
+<link href="../template/shop/css/_g.css" type="text/css" rel="stylesheet" />
+<link href="../template/shop/css/style.css" type="text/css" rel="stylesheet" />
+<link href="../template/shop/css/_noticeShow.css" type="text/css" rel="stylesheet" />
+</head>
+<body onLoad="Defaults();" class="home-page">
+{include file="shop/inc_head.html"}
+<div class="wrapper">
+	<!-- 主体 -->
+	<div id="content">
+		<div class="clearfix">
+			<div class="notice_title">
+				<span class="left">{$announce.title}</span>
+				<span class="right"><b>管理员</b> 发表于{$announce.pubdate|date_format:'%y年%m月%d日'}</span>
+			</div>
+			<!-- 日历 -->
+			<script type="text/javascript" src="../template/shop/js/date.js"></script>
+			<div class="date_box">
+				<form name="when">
+<div id="Calendar"></div>
+<input name="month" type="hidden" />
+<input type="hidden" name="year" />
+</form> 
+			</div>
+		</div>
+		<div class="cont_notice clearfix">
+			<div class="col_main">
+				<div class="text_box">
+					{$announce.content}
+				</div>
+			</div>
+			<div class="col_sub">
+				<!-- 公告列表 -->
+				<span class="rc_tp"></span>
+				<div class="notice_list">
+					<div class="hd">公告列表</div>
+					<div class="bd">
+						<ul id="note" class="close">
+                        {foreach from=$announce_list item=announce_list}<li><span>[{$announce_list.pubdate|date_format:'%m月%d日'}]</span><a href="{$announce_list.uri}" target="_blank"><font color="{$announce_list.titlecolor}">{$announce_list.title}</font></a></li>{foreachelse}<li>暂无网站公告</li>{/foreach}
+                            
+						</ul>
+					</div>
+					<div class="ft" id="bbg"><a href="javascript:void(0);">点我试试</a></div>
+				</div>
+				<span class="rc_ft"></span>
+			</div>
+		</div>
+	</div>
+	<!-- 主体 结束 -->
+{include file="shop/inc_foot.html"}
+</div>
+<script src="../template/shop/js/jquery.pack.js" type="text/javascript"></script>
+<script type="text/javascript" src="../template/shop/js/down_box.js"></script>
+</body>
+</html>

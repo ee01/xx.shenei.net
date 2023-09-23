@@ -1,0 +1,61 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<script language='javascript'>
+function CheckSubmit()
+{
+	if(document.form1.typename.value=="")
+	{
+   		document.form1.typename.focus();
+   		alert("栏目名称不能为空！");
+   		return false;
+	}
+	return true;
+}
+</script>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+    <tr class="firstr">
+      <td align="center" valign="top">栏目编号</td>
+      <td align="center" valign="top">栏目顺序</td>
+      <td align="center" valign="top">栏目名称</td>
+      <td align="center">相关操作</td>
+    </tr>
+    <?php 
+    foreach($about AS $row){
+    ?>
+  <form action="?do=type" method="post" name="form2";>
+    <input name="part" value="update" type="hidden"/>
+    <input name="id" value="<?=$row[id]?>" type="hidden"/>
+    <tr bgcolor="#f5fbff" onMouseOver="this.className='Ipt IptIn'"  onmouseout="this.className='Ipt'">
+      <td height="24" align="center"><?=$row[id]?></td>
+      <td height="24" align="center"><input name="typeid" value="<?=$row[typeid]?>" type="text" size="10"/></td>
+      <td height="24" valign="top"><input name="typename" value="<?=$row[typename]?>" type="text" class='pubinputs'  /> </td>
+      <td align="center">
+      <input type="submit" value="保 存" class="gray mini">　
+      <input type="button" onClick="location.href='?part=edit&id=<?=$row[id]?>'" class="gray mini" value="填充内容">
+      　<input type="button" onClick="location.href='?do=type&part=delete&id=<?=$row[id]?>'" class="gray mini" value="删 除">
+        </td>
+    </tr>
+  </form>
+    <?php
+	}
+	?>
+    <tr class="firstr">
+      <td height="24" colspan="5" valign="top"><strong>新增一个栏目：</strong></td>
+    </tr>
+  <form action="?do=type" method="post" name="form1" onSubmit="return CheckSubmit();";>
+    <input name="part" value="insert" type="hidden"/>
+    <tr bgcolor="#f5fbff" onMouseOver="this.className='Ipt IptIn'"  onmouseout="this.className='Ipt'">
+      <td colspan="4" align="center">
+      栏目顺序：
+      <input name="typeid" type="text" />　　栏目名称：
+      <input name="typename" type="text"/>   　　   
+      <input type="submit" name="submit" value="新 增" class="mymps mini">   </td>
+    </tr>
+  </form>
+    <tr>
+      <td height="34" colspan="5" align="center" bgcolor="white">
+      　<input type="button" onClick=history.back() value="返 回" class="mymps mini">    </td>
+    </tr>
+</table>
+</div>
+<?php echo mymps_admin_tpl_global_foot();?>

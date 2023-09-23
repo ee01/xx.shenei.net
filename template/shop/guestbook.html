@@ -1,0 +1,51 @@
+{$mymps_global_header}
+<title>网站留言 - {$SiteName}</title>
+<link href="../template/shop/css/_g.css" type="text/css" rel="stylesheet" />
+<link href="../template/shop/css/style.css" type="text/css" rel="stylesheet" />
+<link href="../template/shop/css/_guestbook.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="home-page">
+	{include file="shop/inc_head.html"}
+<div class="wrapper">
+	<!-- 主体 -->
+	<div id="content">
+    <form name="form1" method="post" action="../public/about.php?part=guestbook&action=insert" onSubmit="return CheckSubmit();">
+       <input name="ismember" type="hidden" value="{$ismember}">
+		<div class="write_guest">
+            <textarea name="content" require="true" {$write.disabled}></textarea>
+			<div class="ft clearfix">
+				
+				<span class="right"><span class="left">姓　名：{$write.s_uid} QQ:<input name="qq" type="text" size="25" value="{$write.qq}" {$write.disabled}> 
+                 主　页：<input name="homepage" type="text" size="25" value="{$write.homepage}" {$write.disabled}>&nbsp;</span><span class="left"> 验证码：<input type="text" name="checkcode" style="width:70px" {$write.disabled}/> <img src="../include/chkcode.php" alt="看不清，请点击刷新" width="70" height="25" align="absmiddle" style="cursor:pointer;" onClick="this.src=this.src+'?'"  {$write.disabled}/>&nbsp;</span><input type="submit" class="mymps mini" value="提 交" name="mymps" {$write.disabled}></span>
+			</div>
+		</div>
+		</form>
+		<div class="read_guest">
+			<div class="hd">用户留言</div>
+			<div class="bd">
+            {foreach item=message from=$message name=oop}
+				<div class="comments">
+					<div class="user_import">
+						<p class="title clearfix"><span class="right">第{$smarty.foreach.oop.iteration}楼</span>用户 <b>{if $message.ismember eq '1'}<a href="{$message.homepage}" target="_blank">{$message.userid}</a>{else}{$message.userid}{/if}</b> 发表于：{$message.addtime|date_format:'%Y-%m-%d'}</p>
+						<p>{if $message.hidden eq "1"}<br /><b style="color:red">【对不起该留言为悄悄话，只有网站管理员方能看见】</b>{else}{$message.content}{/if}</p>
+					</div>
+                    {if $message.reply neq ''}
+					<div class="admin_answer">
+						<p>{$message.reply}</p>
+						<p style="text-align:right;">管理员回复于{$message.replytime|date_format:'%Y-%m-%d'}</p>
+					</div>
+                    {/if}
+				</div>
+                {/foreach}
+				<!-- 分页 -->
+				<div class="pagination">{$pageview}</div>
+			</div>
+		</div>
+	</div>
+	<!-- 主体 结束 -->
+{include file="shop/inc_foot.html"}
+
+
+</div>
+</body>
+</html>

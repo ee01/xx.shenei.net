@@ -1,0 +1,10 @@
+#infobox{ text-align:center}
+#infobox ul{width:550px; text-align:left;}
+#infobox .title{padding:7px 15px;height:30;font-size:10pt; margin:1px; background:#e0f0f9; border-bottom:1px solid #a6cbe7;}
+#mr{ height:350px; text-align:center}
+#mr .h{height:75px; line-height:75px; text-align:center; margin:30px 0; font-size:24px;}
+#mr h1{ background:url(../images/info_icons.png) no-repeat 90px 12px; color:#4EBB24; font-weight:bold}
+#mr h2{ background:url(../images/info_icons.png) no-repeat 90px -120px; color:red; font-weight:bold}
+#mr h3{ background:url(../images/info_icons.png) no-repeat 90px -55px; color:red; font-weight:bold}
+#mr p{ height:35px; line-height:35px; color:#666; margin:0 auto;}/* CSS Document */
+

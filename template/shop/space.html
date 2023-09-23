@@ -1,0 +1,84 @@
+{$mymps_global_header}
+<title>{$member.userid}的个人主页 - {$SiteName}</title>
+<link href="../template/shop/css/space.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="header">
+<div class="w">
+<div id="logo"><h1><a href="{$mymps_global.SiteUrl}">{$member.userid}的用户空间</a></h1></div>
+<!--
+<div id="nav">
+<ul>
+<li class="current"><a href="#">空间首页</a></li>
+<li><a href="#info" target="_self">分类信息</a></li>
+<li><a href="#self"  target="_self">个人资料</a></li>
+</ul></div>
+-->
+<p id="loginBar"><a href="../member/login.php" target="_blank">管理</a> <a href="../member/info.php?part=input" target="_blank">免费发布信息</a></p>
+</div>
+</div>
+<div class="w main">
+<div class="left">
+<div id="user_head_zone">
+<dl><dt><img src="{$member.prelogo}" alt="{$member.userid}的头像" /></dt></dl>
+</div>
+</div>
+
+<div class="right">
+    <h3><a name="info"></a>{$member.userid}发布的分类信息</h3>
+    <div class="r_ct" id="recenter_list">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="info">
+      <tr>
+        <th scope="col">信息标题</th>
+        <th scope="col">信息类别</th>
+        <th scope="col">流量</th>
+        <th scope="col">发布时间</th>
+      </tr>
+      {foreach from=$info_list item=info_list}
+      <tr>
+        <td><a href="{$info_list.uri}" target="_blank">{$info_list.title}</a></td>
+        <td>{$info_list.catname}</td>
+        <td>{$info_list.hit}</td>
+        <td>{$info_list.begintime}</td>
+      </tr>
+      {foreachelse}<tr><td colspan="4">暂无相关信息</td></tr>
+      {/foreach}
+    </table>
+    </div><!--分类信息end-->
+<h3><a name="#self"></a>联系方式</h3>
+<div class="user_base_info">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th width="13%" scope="row">用户名：</th>
+    <td width="87%">{$member.userid}</td>
+  </tr>
+  <tr>
+    <th scope="row">真实姓名：</th>
+    <td><span class="fGrey1">{$member.cname}</span></td>
+  </tr>
+  <tr>
+    <th width="13%" scope="row">性别：</th>
+    <td width="87%">{$member.sex}</td>
+  </tr>
+  <tr>
+    <th scope="row">联系电话：</th>
+    <td><span class="fGrey1"><script type="text/javascript" src="/dat/script.php?part=space&userid={$member.userid}&action=tel"></script></span></td>
+  </tr>
+  <tr>
+    <th width="13%" scope="row">QQ：</th>
+    <td width="87%"><script type="text/javascript" src="/dat/script.php?part=space&userid={$member.userid}&action=qq"></script></td>
+  </tr>
+  <tr>
+    <th width="13%" scope="row">Email：</th>
+    <td width="87%"><script type="text/javascript" src="/dat/script.php?part=space&userid={$member.userid}&action=email"></script></td>
+  </tr>
+</table>
+</div>
+    </div>
+
+    </div>
+</div>
+<br>
+<div id="footer">&copy;2009 {$mymps_global.SiteName} powered by <a href="http://www.mymps.com.cn" target="_blank">mymps</a> <a href="http://bbs.mymps.com.cn" target="_blank">{$MPS_VERSION}</a></div>
+</body>
+</html>

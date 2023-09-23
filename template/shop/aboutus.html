@@ -1,0 +1,31 @@
+{$mymps_global_header}
+<title>关于我们 - {$SiteName}</title>
+<link href="../template/shop/css/_g.css" type="text/css" rel="stylesheet" />
+<link href="../template/shop/css/style.css" type="text/css" rel="stylesheet" />
+<link href="../template/shop/css/_siteInfo.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="home-page">
+	{include file="shop/inc_head.html"}
+<div class="wrapper">
+	<!-- 主体 -->
+	<div id="content">
+		<div class="site_info">
+			<div class="hd">
+				<ul class="clearfix">
+					{foreach from=$aboutus_all item=aboutus_all}
+                    <li {if $aboutus_all.typeid eq $aboutus.id}class="current"{/if}><a href="{$aboutus_all.uri}">{$aboutus_all.typename}</a></li>
+                    {/foreach}
+				</ul>
+			</div>
+			<div class="bd">
+				{$aboutus.content}
+			</div>
+		</div>
+	</div>
+	<!-- 主体 结束 -->
+{include file="shop/inc_foot.html"}
+
+
+</div>
+</body>
+</html>

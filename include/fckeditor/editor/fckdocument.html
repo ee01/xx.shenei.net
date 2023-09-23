@@ -1,0 +1,16 @@
+<script>
+	window.onload = function()
+	{
+		document.designMode = 'on' ;
+
+		document.execCommand( 'useCSS', false, !window.parent.FCKConfig.GeckoUseSPAN ) ;
+
+		window.parent.FCK.OnAfterSetHTML() ;
+	}
+	
+	if ( window.parent._TempHtml )
+	{
+		document.write( window.parent._TempHtml ) ;
+		window.parent._TempHtml = null ;
+	}
+</script>

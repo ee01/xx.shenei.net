@@ -1,0 +1,61 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<div  class="ccc2">
+	<ul>
+  	<?php foreach($options as $k =>$value){?> <input type="button" onClick="location.href='?classid=<?=$value[optionid]?>'" value="<?=$value[title]?>" class="gray mini">&nbsp;&nbsp;
+    <?php }?>
+    <input type="button" onClick="location.href='?part=option_type'" value="类别管理" class="mymps mini">
+	</ul>
+</div>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm" onmouseover="addMouseEvent(this);">
+  <form name='form1' method='post' action='?'>
+  	<input name="part" value="option_delall" type="hidden">
+    <input name="url" value="<?=GetUrl()?>" type="hidden">
+    <tr class="firstr">
+    <td colspan="7"><b><?=$detail['title']?></b> - 分类信息选项管理</td>
+    </tr>
+    <tr style="font-weight:bold; height:24px; background-color:#dff6ff">
+      <td>选择</td>
+      <td>编号</td>
+      <td>名称</td>
+      <td>变量名</td>
+      <td>类型</td>
+      <td>显示顺序</td>
+      <td>编辑</td>
+    </tr>
+<?php foreach($option as $k =>$value){?>
+    <tr bgcolor="#f5fbff">
+      <td><input type='checkbox' name='id[]' value='<?=$value[optionid]?>' id="<?=$value[optionid]?>"></td>
+      <td><?=$value[optionid]?></td>
+      <td><?=$value[title]?></td>
+      <td><?=$value[identifier]?></td>
+      <td><?=$var_type[$value[type]]?>(<?=$value[type]?>)</td>
+      <td ><?=$value[displayorder]?></td>
+      <td><a href="?part=option_edit&optionid=<?=$value[optionid]?>">详情</a></td>
+    </tr>
+<?}?>
+    <tr bgcolor="#ffffff" height="28">
+    <td align="center" style="border-right:1px #fff solid;"><input name="checkall" type="checkbox" id="checkall" onClick="CheckAll(this.form)"/></td>
+    <td colspan="9"><input type="submit" onClick="if(!confirm('确定要操作吗？\n\n此操作不可以恢复！'))return false;" value="批量删除" class="mymps mini" name="deloption"/>   
+    </td>
+    </tr>
+  </form>
+  <form action="?part=option_add" method="post" name="form2">
+    <tr bgcolor="#f5fbff" onMouseOver="this.className='Ipt IptIn'"  onMouseOut="this.className='Ipt'">
+      <td>新增</td>
+      <td>&nbsp;</td>
+      <td><input name="title"></td>
+      <td><input name="identifier"></td>
+      <td>
+      	<select name="type">
+		<?=get_type_option()?>
+        </select>
+      </td>
+      <td><input name="displayorder" size="5"></td>
+      <td><input type="submit" value="新增" class="mymps mini" name="optionnew"/></td>
+    </tr>
+    <input name="classid" value="<?=$detail[optionid]?>" type="hidden" />
+    </form>
+</table>
+</div>
+<?php echo mymps_admin_tpl_global_foot();?>

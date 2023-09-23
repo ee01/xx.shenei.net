@@ -1,0 +1,77 @@
+<wml>
+<card id="post" title="发布信息">
+<p><B>发布信息：</B>您好,请不要发布虚假信息！</p>
+<p>所属分类：<?=$catinfo[catname]?></p>
+<p>信息标题：</p>
+<p>
+<input id=bt maxLength=80 size=50 name=bt value=""> 
+</p>
+
+<p>所在地区：</p>
+<p>
+<select name=areaid id="areaid">
+<option value=0>请选择地区</option>
+<?php
+echo $area_option;
+?>
+</select>
+</p>
+<p>有效期：</p>
+<p>
+<input name=enddate type=text id=enddate value="30" size="8" maxlength=20> 天</p>
+<p>信息详细内容：</p>
+<p>
+<input id=content name="content" size="50" type="text" value="">
+</p>
+<p>地址：</p>
+<p>
+  <input name="address" type="text" id="address" size="50" value="" />
+</p>
+
+<p>联系人：</p>
+<p>
+<input name=linkman type=text id=linkman maxLength=20 value="">
+</p>
+
+<p>电话：</p>
+<p>
+<input name=phone type=text id=phone maxLength=20 value="">
+</p>
+<p>QQ：</p>
+<p>
+<input id=qq type=text maxLength=15 name=qq value="">
+</p>
+<p>邮箱：</p>
+<p>
+<input id=email type=text maxLength=50 name=email value="">
+</p>
+
+
+
+
+<input name=mappoint type=hidden value=''>
+<input name=password type=hidden id=password value='dbcn'> 
+<input type=hidden name=catid value='<?=$catid?>'>
+<input type=hidden name=act value=postok>
+<anchor>立即发布
+ <go href="post.php?act=postok" method="post">
+  <postfield name="bt" value="$bt" />
+  <postfield name="areaid" value="$areaid" />
+  <postfield name="enddate" value="$enddate" />
+  <postfield name="content" value="$content" />
+  <postfield name="linkman" value="$linkman" />
+  <postfield name="phone" value="$phone" />
+  <postfield name="qq" value="$qq" />
+  <postfield name="email" value="$email" />
+  <postfield name="address" value="$address" />
+  <postfield name="mappoint" value="$mappoint" />
+  <postfield name="password" value="$password" />
+  <postfield name="catid" value="$catid" />
+  <postfield name="act" value="$act" />
+</go>
+</anchor>
+<anchor>返回首页
+ <go href="default.php"></go>
+</anchor>
+</card>
+</wml>

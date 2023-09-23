@@ -1,0 +1,64 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<script language='javascript'>
+	function checkSubmit()
+  {
+     if(document.form1.uname.value==""){
+	     alert("用户名不能为空！");
+	     document.form1.uname.focus();
+	     return false;
+     }
+     if(document.form1.pwd.value==""){
+	     alert("用户密码不能为空！");
+	     document.form1.pwd.focus();
+	     return false;
+     }
+     return true;
+ }
+</script>
+<div id="<?=MPS_SOFTNAME?>">
+<table width="100%"  border="0" cellspacing="0" cellpadding="0" class="vbm">
+<form name="form1" action="member.php" method="post" onSubmit="return checkSubmit();">
+<input type="hidden" name="part" value="update" />
+  <input type="hidden" name="id" value="<?=$id?>" />
+   	  <tr bgcolor="#f5fbff">
+        <td width="16%" height="30">用户帐号：</td>
+        <td width="84%">
+        <input name="userid" type="text" id="userid" size="16" value="<?=$edit[userid]?>" style="width:200px"/>
+        （非必要请勿修改）
+        </td>
+      </tr>
+      <tr bgcolor="#f5fbff">
+        <td width="16%" height="30">用户姓名：</td>
+        <td width="84%">
+        <input name="cname" type="text" id="userid" size="16" value="<?=$edit[cname]?>" style="width:200px"/>
+        </td>
+      </tr>
+      <tr bgcolor="#f5fbff">
+      <td height="30">电子邮箱：</td>
+      <td><input name="email" type="text" size="16" value="<?=$edit[email]?>" style="width:200px"/> </td>
+    </tr>
+    	  <tr bgcolor="#f5fbff">
+      <td height="30">登录密码：</td>
+      <td><input name="userpwd" type="text" size="16" style="width:200px" />        &nbsp;（留空则不修改，只能用'0-9a-zA-Z.@_-!'以内范围的字符） </td>
+    </tr>
+    <tr bgcolor="#f5fbff">
+      <td height="30">拥有金币：</td>
+      <td><input name="money_own" type="text" size="16" style="width:50px" value="<?=$edit[money_own]?>"/> <img src="../member/images/mymps_icon_incomes.gif" align="absmiddle"></td>
+    </tr>
+    <tr bgcolor="#f5fbff">
+            <td height="30">所在用户组</td>
+            <td>
+			    <?php echo get_member_level($edit[levelid]);?>
+                【<a href="member.php?do=group">设置用户组权限</a>】
+		    </td>
+        </tr>
+        <tr bgcolor="#f5fbff">
+          <td height="60">&nbsp;</td>
+          <td><input type="submit" value="保存修改" class="mymps mini">
+                　<input type="button" onClick=history.back() value="返 回" class="mymps mini">
+          </td>
+        </tr>
+      </form>
+</table>
+</div>
+<?php echo mymps_admin_tpl_global_foot();?>

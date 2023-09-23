@@ -1,0 +1,23 @@
+{$mymps_global_header}
+<link href="../template/css/infobox.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../mypub/messagebox.js"></script>
+<title>{$mymps_box.seotitle} - {$SiteName}</title>
+</head>
+<body>
+<div id="container">
+    <div id="wrap">
+        {include file="inc_head.html"}
+            <div style="clear:both; height:10px"></div>
+            <div class="c_border">
+                <center id="infobox">
+                    <ul>
+                        
+                        <div id="mr">
+                            {$mymps_box.notice}
+                            {$mymps_box.content}
+                        </div>
+                    </ul>
+                </center>
+            </div>
+            <div style="clear:both; height:10px"></div>
+{include file="inc_foot.html"}

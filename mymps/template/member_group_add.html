@@ -1,0 +1,36 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+<form name="form1" action="member.php?do=group&part=insert" onSubmit="return checkSubmit();" method="post">
+  <tr class="firstr">
+  <td height="24" colspan="4">会员用户组基本设置</td>
+  </tr>
+  <tr bgcolor="#f5fbff">
+    <td width="15%" height="30">用户组名称：</td>
+    <td ><input name="levelname" type="text" size="16" style="width:200px;" value=""/></td>
+  </tr>
+  <tr class="firstr">
+  <td height="24" colspan="4">用户组权限设置</td>
+  </tr>
+  <?php echo mymps_member_purview();?>
+  <tr class="firstr">
+  <td height="24" colspan="4">其它设置</td>
+  </tr>
+  <tr bgcolor="#f5fbff">
+    <td height="30">默认拥有金币数</td>
+    <td ><input name="money_own" type="text" size="16" style="width:50px;" value=""/> <img src="../member/images/mymps_icon_incomes.gif" align="absmiddle"> </td>
+  </tr>
+  <tr bgcolor="#f5fbff">
+    <td height="30">每天至多发布信息数</td>
+    <td ><input name="perday_maxpost" type="text" size="16" style="width:200px;" value=""/></td>
+  </tr>
+  <tr bgcolor="#f5fbff">
+    <td height="60">&nbsp;</td>
+    <td>
+    <input type="submit" name="Submit" class="mymps mini" value="确认提交"/>
+    　<input type="button" onClick=history.back() class="mymps mini" value="返 回">           </td>
+  </tr>  
+    </form>
+    </table>
+</div>
+<?php echo mymps_admin_tpl_global_foot();?>

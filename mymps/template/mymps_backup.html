@@ -1,0 +1,63 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+  <tr class="firstr">
+  	<td colspan="2">技巧提示</td>
+  </tr>
+  <tr bgcolor="#ffffff">
+    <td>
+  <li style="color:#FF6600;">服务器备份目录为 <font color="#006acd"><b><? echo "/dat".$mymps_global[cfg_backup_dir]?></b></font> ,数据备份还原时请注意您的系统表前缀</li>
+  <li>对于较大的数据表，强烈建议使用分卷备份</li>
+  <li>只有选择备份到服务器，才能使用分卷备份功能</li>
+    </td>
+  </tr>
+</table>
+</div>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+  <form name="form1" method="post" action="">
+    <input name="hiddenField" type="hidden" value="ok" />
+    <tr class="firstr">
+    <td colspan="4">mymps 数据库备份</td>
+    </tr>
+    <label for="all_quanbubiao">
+    <tr bgcolor="#ffffff">
+      <td width="56" height="24" class="bd_txt">数据库</td>
+      <td>
+<input name="bfzl" type="radio" value="all_quanbubiao" id="all_quanbubiao"> 备份[全部]数据表</td>
+      </tr>
+    </label>
+    <label for="my_quanbubiao">
+    <tr bgcolor="#ffffff">
+      <td width="56" height="24" class="bd_txt">&nbsp;</td>
+      <td>
+<input name="bfzl" type="radio" value="my_quanbubiao" id="my_quanbubiao" checked="checked"> 备份[mymps]数据表</td>
+      </tr>
+	</label>
+    <label for="fenjuan">
+    <tr bgcolor="#ffffff">
+      <td width="56" height="24" class="bd_txt">分 卷</td>
+      <td class="txt">
+      <input type="checkbox" name="fenjuan" value="yes" id="fenjuan">
+      <input name="filesize" type="text" value="2000" size="10">
+      KB</td>
+      </tr>
+    </label>
+    <tr bgcolor="#ffffff">
+      <td width="56" height="24" class="bd_txt">备份到</td>
+      <td class="txt">
+       <label for="server">
+       <input type="radio" name="weizhi" value="server" id="server" checked>
+       服务器       </label>
+       <label for="localpc">
+       <input type="radio" name="weizhi" value="localpc" id="localpc">
+        本地        </label></td>
+    </tr>
+    <tr bgcolor="#ffffff">
+      <td width="56" height="30" class="bd_txt">&nbsp;</td>
+      <td><input class="mymps mini" type="submit" name="act" value="备 份"></td>
+    </tr>
+  </form>
+</table>
+</div>
+<?php echo mymps_admin_tpl_global_foot();?>

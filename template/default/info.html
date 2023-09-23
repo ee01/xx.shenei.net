@@ -1,0 +1,176 @@
+{$mymps_global_header}
+<title>{$info.title} - {$SiteName}</title>
+<link href="../template/default/css/_g.css" type="text/css" rel="stylesheet" />
+<link href="../template/default/css/style.css" type="text/css" rel="stylesheet" />
+<link href="../template/default/css/_liveShow.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../template/default/js/common.js"></script>
+<script type="text/javascript" src="../mypub/messagebox.js"></script>
+</head>
+<body class="home-page" bgcolor="#e6e6e6">
+<div class="wrapper"><!-- topBar -->
+{include file="default/inc_head.html"}
+<!-- 主体 -->
+<div id="content">
+<!-- 小图banner -->
+<!--<div class="lineAdv_box clearfix">
+<ul>
+<li><a href="#" target=_blank title="注释文字" ><img src='images/gg/1.png' width='126' height='63' border=0></a></li>
+<li><a href="#" target=_blank title="注释文字" ><img src='images/gg/2.png' width='126' height='63' border=0></a></li>
+<li><a href="#" target=_blank title="注释文字" ><img src='images/gg/3.png' width='126' height='63' border=0></a></li>
+<li><a href="#" target=_blank title="注释文字" ><img src='images/gg/4.png' width='126' height='63' border=0></a></li>
+<li><a href="#" target=_blank title="注释文字" ><img src='images/gg/5.png' width='126' height='63' border=0></a></li>
+<li><a href="#" target=_blank title="注释文字" ><img src='images/gg/6.png' width='126' height='63' border=0></a></li>
+<li><a href="#" target=_blank title="注释文字" ><img src='images/gg/7.png' width='126' height='63' border=0></a></li>
+</ul>
+</div>-->
+<!-- 主体 -->
+<div class="clearfix">
+<div class="col_main">
+<div class=page_title>
+<div class=clearfix>
+<span class=left>
+<span class=title><strong>{$info.title}</strong></span>　信息编号：<span 
+class=yellow_skin>{$info.id}</span></span> <!--<span class="right test1">下一条：<a href="live_129.html">VI、画册等平面设计...</a></span>--></div>
+<div class=clearfix style="MARGIN-TOP: 8px"><span class=left>{$info.begintime} 由<span 
+class=red_skin>{$info.member}</span>发布，有效期 {$info.lifetime}</span> <span 
+class=right>
+<UL class="menu clearfix">
+  <li class=text>已阅读<span class=yellow_skin><script language="javascript" src="../dat/script.php?id={$info.id}"></script></span>次 </li>
+  <li><a class=report href="javascript:setbg('举报信息内容',450,270,'../public/box.php?part=report&id={$info.id}&infotitle={$info.title}');">举 报</a> 
+  </li>
+  <li><a class=send href="javascript:setbg('置顶该信息',710,430,'../public/box.php?part=upgrade&id={$info.id}&do=setbg&url={php}echo urlencode(urlencode(getUrl())){/php}');">置 顶</a> </li>
+  <li>{$info.del} </li>
+  <li>{$info.edit} </li>
+  </ul>
+  </span>
+ </div>
+</div>
+<!---->
+<div class="page_cont">
+<div class="top_table">
+<table class=table_1 cellSpacing=0 width="100%" border=0>
+  {$info.extra}
+</table>
+</div>
+<!-- 广告位置 -->
+<!--<div class="zd_html">
+广告位置
+</div>-->
+<div class="cont_main">
+    {$info.content}
+    <ul class="pic_list clearfix">
+    {foreach from=$image item=image}
+    <li><a href="{$image.path}" target="_blank"><img src="{$mymps_global.SiteUrl}{$image.prepath}" class="postinfoimg" width="180" height="130"/></a></li>
+    {/foreach}
+    </ul>
+</div>
+<!-- 联系方式 -->
+<span class="rc_bg"></span>
+<div class="content_box">
+<ul id="postinfousertel" style="margin-top:5px;">
+{if $info.lifetime eq '已过期'}
+<div id="red-notice"><b style="color:red">该信息已过期</b>，该信息用户联系方式已被关闭，{$mymps_global.SiteName}猜测以下信息对你有所帮助<br><font style="font-size:14px; float:left;">最新<a href="{$mymps_global.SiteUrl}/public/info.php?catid={$info.catid}">{$info.catname}</a>信息</font> <font style="font-size:14px;  float:right;">最新<a href="{$mymps_global.SiteUrl}/public/info.php?catid={$info.bcatid}">{$info.bcatname}</a>信息</font></div>
+{else}
+<table width="100%" class="table_2" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="53%"><b>联系人：</b>{$info.contact_who}<span class="test" style="display:none"><a href="#">查看该用户发布的其他信息</a></span></td>
+    <td width="47%"><b>手机：</b>{$info.tel}</span></td>
+  </tr>
+  <tr>
+    <td><b>QQ：</b><a href="tencent://message/?uin={$info.qq}&Site=&Menu=yes"><img src="../template/default/images/qq_08.gif" alt="点击即可直接和发布者对话" />{$info.qq}</a><span class="test">点击即可直接和发布者对话</span></td>
+    <td><b>电子邮件：</b>{$info.email}</td>
+  </tr>
+  <tr>
+    <td colspan="2"><b>发布者IP：</b>{$info.ip}<span class="test">IP归属：<span class="blue_skin">{$info.ip2area}</span></span></td>
+  </tr>
+  <tr>
+    <td colspan="2"><b>小技巧：</b>联系说来自{$mymps_global.SiteName}将会获得更好的效果</td>
+  </tr>
+</table>
+{/if}
+</ul>
+</div>
+<!-- 温馨提示 -->
+<div class=warm_tips>
+<div class=hd>温馨提示：</div>
+<div class=bd>
+<P><FONT 
+color=#ff0000>{$mymps_global.SiteName}提示：请务必认真审核信息的真实性！</FONT><BR>本站信息均为网友个人发布，与{$mymps_global.SiteName}无关， 
+本站不保证信息的真实性和可靠性。<BR>如果您发现网友所发布信息侵害了您的权益，请和客服联系，我们会在第一时间删除此信息。 </P></div></div>
+
+<!--评论开始-->
+
+<!-- 评论 -->
+<div class=warm_tips>
+<div class=hd>网友回复：</div>
+<div class=bd>
+<div class="info_detail">
+<script type="text/javascript" src="../public/comment.php?do=js&part=info&id={$info.id}"></script> 
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col_sub">
+<!-- 信息分类 -->
+<div class="category_menu">
+<div class="hd">{$info.bcatname}分类</div>
+<div class="bd">
+<ul>
+{foreach from=$info_cat_list item=info_cat_list}
+<li {if $info_cat_list.catid eq $info.catid}class="current"{/if}><a href="{$info_cat_list.uri}" target="_blank" title="{$mymps_global.SiteCity}{$info_cat_list.catname}">{$info_cat_list.catname}</a></li>
+{foreachelse}
+<li>暂无相关信息</li>
+{/foreach}
+</ul>
+</div>
+</div>
+
+<!-- 最新发布 -->
+<div class="searchz_box">
+<div class="hd">{$mymps_global.SiteCity}{$info.catname}最新信息</div>
+<div class="bd tiexin" style="padding:8px;">
+<ul>
+{foreach from=$info_list_cat item=info_list_cat}
+<li {if $info_cat_list.catid eq $info.catid}class="current"{/if}><a href="{$info_list_cat.uri}" target="_blank" title="{$info_list_cat.title}">{$info_list_cat.title}</a></li>
+{foreachelse}
+<li>暂无相关信息</li>
+{/foreach}
+</ul>
+</div>
+</div>
+
+<!-- 详细搜索 -->
+<div class="searchz_box">
+    <div class="hd">{$mymps_global.SiteCity}{$info.catname}详细搜索</div>
+    <div class="bd">
+    <form action="?" method="get" onSubmit="return SearchSubmit();" name="forms"/>
+        <ul>
+            <li>选类别：<select name="catid">
+            <option value="">所属类别</option>
+            {$cat_option}
+            </select></li>
+            <li>选区域：<select name="areaid">
+               <option value="">所属地区</option>
+              {$area_option}
+              </select></li>
+            <li>选时间：{$right.GetInfoPostTime}</li>
+            <li>关键字：<input type="text" name="keywords" size="26" value="{$right.keywords}"/></li>
+            <input type="hidden" name="colname" value="1">
+            <li style="text-align:right"><input class="mymps mini" type="submit" value="立即搜索"> </li>
+        </ul>
+    </form>
+    </div>
+</div>	
+<!-- 警察 -->
+<!-- <div class="jincha"><img src="../template/default/images/live_new_70.png" alt="" /></div>-->
+
+</div>
+</div>
+<!-- 主体 结束 -->
+{include file="default/inc_foot.html"}
+</div>
+<div class="floatBar"><a href="#"><img src="../template/default/images/top_go.png" alt="返回顶部"></a></div>
+</div>
+</body>
+</html>

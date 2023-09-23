@@ -1,0 +1,76 @@
+{$mymps_global_header}
+<title>友情链接 - {$SiteName}</title>
+<link href="../template/default/css/_g.css" type="text/css" rel="stylesheet" />
+<link href="../template/default/css/style.css" type="text/css" rel="stylesheet" />
+<link href="../template/default/css/_link.css" type="text/css" rel="stylesheet" />
+<script language="javascript" src="../template/default/js/flink.js"></script>
+</head>
+
+<body class="home-page" bgcolor="#e6e6e6">
+<div class="wrapper">
+{include file="default/inc_head.html"}
+<div id="bodyarea"  class="clearfix">
+	<div class="leftarea">
+	  <p>LOGO（88X31像素）或要链接的文字，链接指定的URL，以及您认为必要的其它资料。 
+并请在贵网站适当位置加入下列HTML链接代码（显示结果如图例为88*31像素大小Logo标示）<br>
+<br><span style="color:red">若申请文字链接，网站LOGO则不需填写</span><br /><br />
+<h1>申请链接：</h1>
+<form name="form1" method="post" action="../public/about.php?part=friendlink&action=insert" onSubmit="return CheckSubmit();">
+<ul>
+	<li><label for="sitetype">网站类型:
+        <select name=typeid>
+        {section name=ltype loop=$ltype}
+        <option value="{$ltype[ltype].id}">{$ltype[ltype].typename}</option>
+        {/section}
+        </select></label>
+    </li>
+	<li><label for="webname">网站名称:</label> 
+    <input name="webname" type="text" maxlength="50" />
+	</li>
+    <li><label for="sitenurl">网站地址:</label>
+      <input name="url" type="text" maxlength="50" value="http://" />
+      <span style="color:red">*</span>    </li>
+    <li>
+      <label for="sitelogo">L O G O:</label> <input name="weblogo" type="text" maxlength="50" value="" />
+    </li>
+	<li><label for="sitesm">网站说明:</label> <input name="msg"></input>
+	</li>
+    <li>
+      <label for="sitepr">网站PR值:</label>{$apply_flink_pr}
+    </li>
+    <li>
+      <label for="sitepr">网站日IP:</label>{$apply_flink_dayip}
+    </li>
+    <li>
+      <label for="imgcode">验 证 码:</label><input type="text" name="checkcode" style="width:70px"/> <img src="../include/chkcode.php" alt="看不清，请点击刷新" width="70" height="25" align="absmiddle" style="cursor:pointer;" onClick="this.src=this.src+'?'"/>
+    </li>
+<br><br>
+<li><input type="submit" class="mymps mini" name="mymps" value="提 交" style="width:70px"></li>
+</ul>
+    </form>
+</p>
+	</div>
+	<div class="rightarea">
+	{section name=link loop=$link}
+	  <div class="nav_title">
+	    <h1>{$link[link].typename}</h1><span></span></div>
+	    <div class="linkcontent">
+	  
+        {section name=link2 loop=$link[link].flink}
+        {if $link[link].flink[link2].weblogo eq ''}
+        <li><a href="{$link[link].flink[link2].url}">{$link[link].flink[link2].webname}</a></li>
+        {else}
+        <li><a href="{$link[link].flink[link2].url}" target="_blank"><img src="{$link[link].flink[link2].weblogo}" border="0" width="88" height="31"></a></li>
+        {/if}
+        {/section}
+	
+	  </div>
+	 {/section}
+	</div>
+</div>
+{include file="default/inc_foot.html"}
+</div>
+<div class="floatBar"><a href="#"><img src="../template/default/images/top_go.png" alt="返回顶部"></a></div>
+
+</body>
+</html>

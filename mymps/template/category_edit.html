@@ -1,0 +1,130 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<script language=javascript>
+function chkform(){
+	if(document.form1.catname.value==""){
+		alert('请输入栏目标题！');
+		document.form1.catname.focus();
+		return false;
+	}
+	if(document.form1.cat.value==""){
+		alert('请选择栏目！');
+		document.form1.cat.focus();
+		return false;
+	}
+}
+function do_copy(){
+  ff = document.form1;
+  ff.title.value=document.getElementById("catname").value;
+  ff.keywords.value=document.getElementById("catname").value;
+  ff.description.value=document.getElementById("catname").value;
+}
+function copyoption(s1, s2) {
+	var s1 = $(s1);
+	var s2 = $(s2);
+	var len = s1.options.length;
+	for(var i=0; i<len; i++) {
+		op = s1.options[i];
+		if(op.selected == true && !optionexists(s2, op.value)) {
+			o = op.cloneNode(true);
+			s2.appendChild(o);
+		}
+	}
+}
+
+function optionexists(s1, value) {
+	var len = s1.options.length;
+		for(var i=0; i<len; i++) {
+			if(s1.options[i].value == value) {
+				return true;
+			}
+		}
+	return false;
+}
+</script>
+<form method=post onSubmit="return chkform()" name="form1" action="category.php?part=update">
+<input name="catid" value="<?=$cat[catid]?>" type="hidden">
+<div id="<?=MPS_SOFTNAME?>">
+<table width="100%"  border="0" cellspacing="0" cellpadding="0" class="vbm">
+<tr class="firstr">
+<td colspan="2">
+    <div class="left"><a href="javascript:collapse_change('1')">栏目基本信息</a></div>
+    <div class="right"><a href="javascript:collapse_change('1')"><img id="menuimg_1" src="images/menu_reduce.gif"/></a></div>
+</td>
+</tr>
+<tbody id="menu_1">
+<tr bgcolor="#f5fbff">
+  <td width="15%">栏目名称： </td>
+  <td><input name="catname" type="text" id="catname" value="<?=$cat[catname]?>" size="30"> <font color="red">*</font></td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td>栏目选择： </td>
+  <td><select name="parentid" id="parentid" >
+    <option value="0">作为根栏目</option>
+<?php
+foreach ($cats AS $cats)
+{
+    if($cats['catid'] == $cat['parentid'])
+	{
+		echo "<option value='$cats[catid]' selected style=background-color:#6EB00C;color:white>$cats[catname]</option>\n";
+	}else{
+		echo "<option value='$cats[catid]'>$cats[catname]</option>\n";
+	}
+}
+?>
+  </select>  </td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td>栏目排序： </td>
+  <td><input name="catorder" type="text" id="catorder" value="<?=$cat[catorder]?>" size="13"></td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td width="15%">栏目提示信息： </td>
+  <td> <?php echo $acontent;?> </td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td>所属模型： </td>
+  <td><select name="modid"><?php echo info_typemodels($cat[modid])?></select> [<a href="info_type.php?part=mod">模型管理</a>]</td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td width="15%">是否开启图片上传模块： </td>
+  <td>
+  <label for="1"><input type="radio" value="1" id="1" name="if_upimg" <?php if($cat[if_upimg]=='1'){?>checked="checked"<?}?>>开启</label> 
+  <label for="0"><input type="radio" value="0" id="0" name="if_upimg" <?php if($cat[if_upimg]=='0'){?>checked="checked"<?}?>>关闭</label></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="<?=MPS_SOFTNAME?>">
+<table cellpadding="0" cellspacing="0" class="vbm">
+<tr class="firstr">
+<td colspan="2">
+    <div class="left"><a href="javascript:collapse_change('2')">SEO优化设置<font style="color:#FF6600; font-weight:100">(若与栏目名称相同，
+<label for="copy">
+点此<input name="radio" id="copy" type="radio" onClick="do_copy();" />复制</label>
+)</font></div>
+    <div class="right"><a href="javascript:collapse_change('2')"><img id="menuimg_2" src="images/menu_reduce.gif"/></a></div>
+</td>
+</tr>
+<tbody id="menu_2">
+<tr bgcolor="#f5fbff">
+  <td width="15%">显示标题(title)： </td>
+  <td> <input name="title" type="text" id="title" value="<?=$cat[title]?>" size="50"> <font color="red">*</font>(<font style="color:#FF6600">范例：二手车求购_二手车买卖</font>,不超过15个字符)
+  </td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td>关键词(keyword)： </td>
+  <td><input name="keywords" type="text" id="keywords" value="<?=$cat[keywords]?>" size="50">   (多个关键字以","隔开)</td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td>介绍(description)： </td>
+  <td><textarea name="description" cols="49" rows="5" id="description"><?=$cat[description]?></textarea> (适当出现关键字，最好是完整的句子，不超过200字符)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<center>
+<input type="submit" name="addcategory" value="保存修改" class="mymps mini" />　
+<input type="button" onClick=history.back() value="返 回" class="mymps mini">
+</center>
+</form>
+<?php echo mymps_admin_tpl_global_foot();?>

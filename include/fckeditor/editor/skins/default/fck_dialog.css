@@ -1,0 +1,112 @@
+body
+{
+	margin: 0px;
+	padding: 10px;
+}
+
+body, td, input, select, textarea
+{
+	font-size: 11px;
+	font-family: 'Microsoft Sans Serif' , Arial, Helvetica, Verdana;
+}
+
+body, .BackColor
+{
+	background-color: #ffffff;
+}
+
+.PopupBody
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+.PopupTitle
+{
+	font-weight: bold;
+	font-size: 14pt;
+	color: #737357;
+	background-color: #d9e7f9;
+	padding: 3px 10px 3px 10px;
+}
+
+.PopupButtons
+{
+	border-top: #b3ccdd 1px solid;
+	background-color: #d9e7f9;
+	padding: 7px 10px 7px 10px;
+}
+
+.Button
+{
+	border-right: #4c9542 1px solid;
+	border-top: #4c9542 1px solid;
+	border-left: #4c9542 1px solid;
+	color: #ffffff;
+	border-bottom: #4c9542 1px solid;
+	background-color: #89bf01;
+}
+
+.DarkBackground
+{
+	background-color: #d7d79f;
+}
+
+.LightBackground
+{
+	background-color: #d9e7f9;
+}
+
+.PopupTitleBorder
+{
+	border-bottom: #b3ccdd 1px solid;
+}
+
+.PopupTabArea
+{
+	color: #737357;
+	background-color: #d9e7f9;
+}
+
+.PopupTabEmptyArea
+{
+	padding-left: 10px ;
+	border-bottom: #b3ccdd 1px solid;
+}
+
+.PopupTab, .PopupTabSelected
+{
+	border-right: #b3ccdd 1px solid;
+	border-top: #b3ccdd 1px solid;
+	border-left: #b3ccdd 1px solid;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-bottom: 3px;
+	padding-top: 3px;
+	color: #737357;
+}
+
+.PopupTab
+{
+	margin-top: 1px;
+	border-bottom: #b3ccdd 1px solid;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.PopupTabSelected
+{
+	font-weight:bold;
+	cursor: default;
+	padding-top: 4px;
+	border-bottom: #ffffff 1px solid;
+	background-color: #ffffff;
+}
+
+.PopupSelectionBox
+{
+	border: #ff9933 1px solid;
+	background-color: #fffacd;
+	cursor: pointer;
+	cursor: hand;
+}

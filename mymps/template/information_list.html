@@ -1,0 +1,68 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<script type="text/javascript" src="../mypub/messagebox.js"></script>
+<div class="ccc2">
+<ul>
+      <form action="?" method="get">
+         关键字
+ 		<input name="title" type="input" value="<?php echo $title; ?>"> 
+         <select name="catid">
+         	<option value="">请选择所属分类</option>
+         	<?=get_cat_options($catid)?>
+         </select>
+         <select name="areaid">
+       		<option value="">请选择所属地区</option>
+         	<?=area_options($areaid)?>
+         </select>
+         <?=GetInfoLevel($info_level)?>
+         <input type="submit" class="mymps mini" value="检索信息">
+       </form>
+	</ul>
+</div>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm" onmouseover="addMouseEvent(this);">
+    <tr class="firstr">
+    <td width="30">选择</td>
+    <td height="24">ID</td>
+    <td>信息标题</td>
+    <td width="100">发布人</td>
+    <td width="100">ip</td>
+    <td>所属类别</td>
+    <td>信息状态</td>
+    <td>置顶状态</td>
+    <td>发布时间</td>
+    <td>管理项</td>
+  </tr>
+<form action="?action=pm" method="post">
+<input name="url" type="hidden" value="<?=GetUrl()?>">
+<?php foreach($information AS $row){?>
+    <tr bgcolor="#f5fbff" >
+    <td><input type='checkbox' name='id[]' value='<?=$row[id]?>' class='np' id="<?=$row[id]?>"></td>
+    <td><?=$row[id]?></td>
+    <td align="left"  width="120"><a href="../public/info.php?id=<?=$row[id]?>" target="_blank" title="<?=$row[title]?>"><?=substring($row[title],0,15)?></a></td>
+    <td><?=$row[contact_who]?></td>
+    <td><?=$row[ip]?></td>
+    <td><a href="?catid=<?=$row[catid]?>"><?=$row[catname]?></a></td>
+    <td><?=$row[info_level]?></td>
+    <td><?=$row[upgrade_type]?></td>
+    <td><?=$row[begintime]?></td>
+    <td>
+     <a href='?action=edit&id=<?=$row[id]?>'>编辑</a>
+    </td>
+  </tr>
+<?}?>
+<tr bgcolor="#ffffff" height="28">
+    <td style="border-right:1px #fff solid;"><input name="checkall" type="checkbox" id="checkall" onClick="CheckAll(this.form)"/></td>
+    <td colspan="10">
+    <label for="delall">
+      <input type="radio" value="delall" id="delall" name="do_action">批量删除</label> 
+    <?php foreach($information_level as $k => $v){?>
+    <label for="level<?=$k?>"><input type="radio" value="level.<?=$k?>" id="level<?=$k?>" name="do_action">转为<?=$v?></label> 
+    <?php }?>
+      <input type="submit" value="执行操作" class="mymps mini"/>
+    </td>
+</tr>
+</form>
+</table>
+</div>
+<div class="pagination"><?php echo page2();?></div>
+<?php echo mymps_admin_tpl_global_foot();?>

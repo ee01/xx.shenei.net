@@ -1,0 +1,20 @@
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=<?=$charset?>'>
+<title><?=$here?>  - powered by <?=MPS_SOFTNAME?></title>
+<link href='css/<?=MPS_SOFTNAME?>.css' rel='stylesheet' type='text/css'>
+</head>
+<body <?php if($go == 'mymps_config'){echo "onLoad=\"parent.framRight.location='mymps_config.php'\"";}?>>
+<div class='bodytitle'>
+    <div class='bodytitleleft'></div>
+    <div class='bodytitletxt'><?=$here?></div>
+    <div class='bodytitleright'></div>
+    <div class='iicon'>
+        <a href='javascript:window.location.reload();'><img src='images/mymps_icon_refresh.gif'align=absbottom> 刷新</a>
+        <a href='javascript:history.back();'><img src='images/mymps_icon_back.gif' align=absbottom> 后退</a>
+        <a href='javascript:history.go(1);'><img src='images/mymps_icon_ahead.gif' align=absbottom> 前进</a>
+    </div>
+</div>
+<script type='text/javascript' src='../mypub/mymps.js'></script>
+<script type='text/javascript' src='../mypub/mymps_noerr.js'></script>
+<script type="text/javascript" src="../mypub/messagebox.js"></script>

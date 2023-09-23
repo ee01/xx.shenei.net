@@ -1,0 +1,59 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<script language='javascript'>
+function CheckSubmit()
+{
+	if(document.form1.typeid.value=="")
+	{
+   		document.form1.typeid.focus();
+   		alert("请选择帮助分类！");
+   		return false;
+	}
+	if(document.form1.title.value=="")
+	{
+   		document.form1.title.focus();
+   		alert("请填写主题标题！");
+   		return false;
+	}
+
+	if(document.form1.content.value=="")
+	{
+   		document.form1.content.focus();
+   		alert("请填写主题内容！");
+   		return false;
+	}
+
+	return true;
+}
+</script>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+<form method=post  name="form1" action="faq.php?part=insert" onSubmit="return CheckSubmit();">
+<tr bgcolor="#f5fbff" >
+  <td width="12%" align="right">所属类别： </td>
+  <td colspan="3">
+  <select name="typeid">
+  	<?php foreach($faq_type as $k){?>
+    <option value="<?=$k[id]?>"><?=$k[typename]?></option>
+    <?}?>
+  </select> <font color="red">*</font></td>
+</tr>
+<tr bgcolor="#f5fbff" >
+  <td width="12%" align="right">主题标题： </td>
+  <td colspan="3"> <input name="title" type="text" value="" size="50"> <font color="red">*</font></td>
+</tr>
+
+<tr bgcolor="#f5fbff" >
+  <td align="right">主题内容： </td>
+  <td colspan="3">
+  <?php echo $acontent?>  </td>
+</tr>
+<tr bgcolor="#f5fbff" >
+<td align="right">&nbsp;</td>
+<td colspan="3">
+<input type="submit" value="提 交" class="mymps mini"/>　
+<input type="button" onClick=history.back() value="返 回" class="mymps mini"></td>
+</tr>
+</form>
+</table>
+</div>
+<?php echo mymps_admin_tpl_global_foot();?>

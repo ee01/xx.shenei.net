@@ -1,0 +1,56 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+  <tr class="firstr">
+  	<td colspan="2">相关说明</td>
+  </tr>
+  <tr bgcolor="#ffffff">
+    <td>
+ <li>为了让系统有更强的兼容性，如果你的空间不支持GD库，请关闭相关页面的验证码显示</li>
+ <li style="color:#FF6600; margin-top:3px">会员登录后发布信息和修改信息是不需要填写验证码的，这里无法对该功能修改</li>
+    </td>
+  </tr>
+</table>
+</div>
+<form action="?part=imgcode" method="post">
+<input name="action" type="hidden" value="do_post">
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+    <tr class="firstr">
+      <td width="40%">针对页面</td>
+      <td>是否开启验证码</td>
+    </tr>
+    <?foreach ($imgcode_arr as $k =>$a)
+    {
+    ?>
+<tr bgcolor="#dff6ff">
+      <td align="left">
+        <b><?=$imgcode_array[$k]?> (<?=$k?>)</b>
+       </td>
+      <td align="left">&nbsp;</td>
+    </tr>
+    <?
+  	  foreach ($a as $q => $w)
+      {
+          if(is_array($w))
+            {
+    ?>
+    <tr bgcolor="#f5fbff">
+      <td align="left">
+        <?=$w["name"]?> (<?=$q?>)      </td>
+      <td align="left">
+      <label for="<?=$q."0"?>"><input name="<?=$q."_open"?>" type="radio" value="0" id="<?=$q."0"?>" <?if ($mymps_imgcode[$q][open]=='0'){echo "checked";}?>>关闭</label>
+      <label for="<?=$q."1"?>"><input name="<?=$q."_open"?>" type="radio" value="1" id="<?=$q."1"?>" <?if ($mymps_imgcode[$q][open]=='1'){echo "checked";}?>>开启</label>
+      </td>
+    </tr>
+    <?}
+    }}?>
+</table>
+</div>
+<div align="left" style="margin:15px;">
+<input class="mymps mini" value="保存设置" type="submit" > &nbsp;
+<input type="button" onClick="history.back()"value="返回" class="mymps mini">
+
+</div>
+</form>
+<?php echo mymps_admin_tpl_global_foot();?>

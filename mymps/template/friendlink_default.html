@@ -1,0 +1,42 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<div class="ccc2">
+	<ul>
+    <input class="gray mini" type="button" onClick="location.href='friendlink.php?part=add'" value="增加友情链接" />
+    <input class="gray mini" type="button" onClick="location.href='friendlink.php?do=type'" value="网站类型管理" />
+    </ul>
+</div>
+  <form method='post' action='?part=delall'>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+    <tr class="firstr">
+      <td width="60"><input name="checkall" type="checkbox" class="checkbox" id="checkall" onClick="CheckAll(this.form)"/> 删?</td>
+      <td width="60">编号</td>
+      <td width="140">网站名称</td>
+      <td>网站地址</td>
+      <td>网站logo</td>
+      <td width="100">时间</td>
+      <td width="40">状态</td>
+      <td width="40">顺序</td>
+      <td width="100">管理</td>
+    </tr>
+    <?php foreach($links AS $row){?>
+    <tr align="center" bgcolor="#f5fbff">
+      <td><input type='checkbox' name='id[]' value='<?=$row[id]?>' class="checkbox" id="<?=$row[id]?>"></td>
+      <td><?=$row[id]?></td>
+      <td><?=$row[webname]?></td>
+      <td align="left"><a href="mymps_config.php?part=http&url=<?=$row[url]?>&msg=<?=$row[webname]?>">
+        <?=$row[url]?>
+      </a></td>
+      <td><?if (!empty($row[weblogo])){?><a href="mymps_config.php?part=http&url=<?=$row[weblogo]?>&msg=<?=$row[weblogo]?>"><img src="<?=$row[weblogo]?>" width="85" height="35" border="0" alt="点击查看图片完整大小"/></a><?}else{?>文字链接<?}?></td>
+      <td><?=GetTime($row[createtime])?></td>
+      <td><? if ($row[ischeck]=="1") echo"<font color=red>待审</font>";elseif($row[ischeck]=="2") echo"<font color=green>正常</font>";?></td>
+      <td><?=$row[ordernumber]?></td>
+      <td><a href='friendlink.php?id=<?=$row[id]?>&part=edit'>更改</a> / <a href='friendlink.php?id=<?=$row[id]?>&part=delete' onClick="return confirm('您确定要删除该链接吗，如不确定请点取消')">删除</a> </td>
+    </tr>
+    <?}?>
+</table>
+</div>
+<center style='margin:10px'><input type="submit" onClick="if(!confirm('确定要操作吗？\n\n此操作不可以恢复！'))return false;" value="提 交"  class="mymps large"/> </center>
+</form>
+<div class="pagination"><?php echo page2()?></div>  
+<?php echo mymps_admin_tpl_global_foot();?>

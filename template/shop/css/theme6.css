@@ -1,0 +1,3 @@
+#nav .nav_zone { background-position:0 -165px;}
+#nav .nav_zone li a { background-position:right -165px;}
+#nav .nav_zone li.current { background-position:center -165px;}

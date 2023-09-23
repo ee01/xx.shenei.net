@@ -1,0 +1,37 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<script type="text/javascript" src="../mypub/messagebox.js"></script>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm" onmouseover="addMouseEvent(this);">
+  <form name='form1' method='post' action='?do=<?=$do?>&part=<?=$part?>&type=<?=$type?>' onSubmit='return checkSubmit();'>
+  <input name="url" type="hidden" value="<?=GetUrl()?>">
+  <input name="action" type="hidden" value="delall">
+    <tr class="firstr">
+      <td width="30">选择</td>
+      <td width="30">编号</td>
+   	  <td>用户名</td>
+      <td>项目</td>
+      <td>金额变化</td>
+      <td>操作时间</td>
+    </tr>
+<?php foreach($get AS $v){?>
+    <tr align="center" bgcolor="#f5fbff" onMouseOver="this.className='Ipt IptIn'"  onMouseOut="this.className='Ipt'">
+      <td><input type='checkbox' name='id[]' value='<?=$v[id]?>' class='np' id="<?=$v[id]?>"></td>
+      <td><?=$v[id]?></td>
+      <td><a href="
+javascript:setbg('Mymps会员中心',400,110,'/public/box.php?part=member&userid=<?=$v[userid]?>')"><?=$v[userid]?></a></td>
+	  <td><?=$v[subject]?></td>
+      <td><?=$v[paycost]?></td>
+      <td><?=$v[pubtime]?></td>
+    </tr>
+<?php }?>
+    <tr bgcolor="#ffffff" height="28">
+    <td align="center" style="border-right:1px #fff solid;"><input name="checkall" type="checkbox" id="checkall" onClick="CheckAll(this.form)"/></td>
+    <td colspan="10">
+      <input type="submit" onClick="if(!confirm('确定要操作吗？'))return false;" value="执行操作" class="mymps mini"/>
+    </td>
+    </tr>
+  </form>
+</table>
+</div>
+<div class="pagination"><?=page2()?></div>
+<?php echo mymps_admin_tpl_global_foot();?>

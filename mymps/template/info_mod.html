@@ -1,0 +1,39 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm" onmouseover="addMouseEvent(this);">
+  <form name='form1' method='post' action='?part=mod&action=delall'>
+    <tr class="firstr">
+      <td width="30">选择</td>
+      <td width="30">编号</td>
+      <td>名称</td>
+      <td>显示顺序</td>
+      <td>编辑</td>
+    </tr>
+<?php foreach($mod as $k =>$value){?>
+    <tr align="center" bgcolor="#f5fbff">
+      <td><input type='checkbox' name='id[]' value='<?=$value[id]?>'<?php if($value[type]=='1'){echo "disabled";}?>/></td>
+      <td><?=$value[id]?></td>
+      <td><?=$value[name]?></td>
+      <td ><?=$value[displayorder]?></td>
+      <td><a href="?part=mod&action=edit&id=<?=$value[id]?>">详情</a></td>
+    </tr>
+<?}?>
+    <tr bgcolor="#ffffff" height="28">
+    <td align="center" style="border-right:1px #fff solid;"><input name="checkall" type="checkbox" id="checkall" onClick="CheckAll(this.form)"/></td>
+    <td colspan="4">　
+      <input type="submit" onClick="if(!confirm('确定要操作吗？\n\n此操作不可以恢复！'))return false;" value="批量删除" class="mymps mini"/>      
+    </td>
+    </tr>
+  </form>
+<form action="?part=mod&action=insert" method="post" name="form2">
+    <tr bgcolor="#f5fbff" onMouseOver="this.className='Ipt IptIn'"  onMouseOut="this.className='Ipt'">
+      <td>新增</td>
+      <td>&nbsp;</td>
+      <td><input name="name"></td>
+      <td><input name="displayorder" size="5"></td>
+      <td><input type="submit" value="新增模型" class="mymps mini"/></td>
+    </tr>
+    </form>
+</table>
+</div>
+<?php echo mymps_admin_tpl_global_foot();?>

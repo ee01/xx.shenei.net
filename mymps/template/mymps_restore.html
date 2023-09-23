@@ -1,0 +1,56 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+  <tr class="firstr">
+  	<td colspan="2">技巧提示</td>
+  </tr>
+  <tr bgcolor="#ffffff">
+    <td style="line-height:20px">
+<li><font style="color:#FF6600;">恢复备份数据的同时将覆盖原有数据！！！！</font></li>
+<li>数据恢复功能只能恢复由本系统导出的数据文件</li>
+<li>从本地恢复数据需要服务器支持上传并保证数据小于上传上限</li>
+<li>如果您使用了分卷备份导入文件卷1其他数据文件会自动导入</li>
+<li>数据还原数据失败时请检查您的系统表前缀与之前安装时的前缀是否一致（如当前前缀为my_，之前前缀却为mymps_），/dat/config.db.php可修改该前缀</li>
+    </td>
+  </tr>
+</table>
+</div>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+  <form action="" method="post" enctype="multipart/form-data" name="restore.php">
+    <input name="hiddenField" type="hidden" value="ok" />
+    <input name="act" type="hidden" value="dodo">
+    <tr class="firstr">
+    <td colspan="5">Mymps 数据库还原</td>
+    </tr>
+    <label for="server">
+    <tr bgcolor="#ffffff">
+      <td width="56" height="24" class="bd_txt">服务器</td>
+      <td width="15"><input type="radio" name="restorefrom" value="server" checked id="server"></td>
+            <td><select name="serverfile" size="20" style="width:300px">
+<?
+    $handle=opendir($backup_dir);
+    while ($file = readdir($handle)) {
+        if (FileExt($file) == 'sql') echo "<option value='$file'>$file</option>";
+    }
+    closedir($handle); 
+?>
+              </select></td>
+    </tr>
+    </label>
+    <label for="localpc">
+    <tr bgcolor="#ffffff">
+      <td width="56" height="24" class="bd_txt">本 地</td>
+      <td><input type="radio" name="restorefrom" value="localpc" id="localpc"></td>
+      <td><input name="myfile" type="file" class="bd_in352" /></td>
+    </tr>
+    </label>
+    <tr bgcolor="#ffffff">
+      <td width="56" height="30" class="bd_txt">&nbsp;
+        <input type="hidden" name="MAX_FILE_SIZE" value="1500000"></td>
+      <td colspan="2"><input class="mymps mini" type="submit" value="恢 复"></td>
+    </tr>
+  </form>
+</table>
+</div>
+<?php echo mymps_admin_tpl_global_foot();?>

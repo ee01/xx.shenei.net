@@ -1,0 +1,162 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<script type="text/javascript" src="/template/js/upimg_preview.js"></script>
+<script type="text/javascript" src="/template/js/mymps_info_input.js"></script>
+<style>
+.extra{}
+.extra li{ width:100%!important; padding:0; margin:0}
+.extra span{ margin:0; padding:0}
+h2{ font-size:14px; margin-bottom:0}
+.mymps_td td{ background-color:#f5fbff}
+.upload_img{width:100%; height:auto; padding:30px 60px}
+.upload_img input{margin-top:5px}
+.upload_img ul{float:left; margin:10px; text-align:center; }
+.upload_img .preview{height:125px; border:1px #ccc solid; width:125px }
+.upload_img .preview img {width:120px;}
+.upload_img ul{margin-top:0; padding-top:0;}
+.upload_img li{margin:0 0 10px 0}
+.upload_img .img_input{width:130px;height:22px}
+
+.span.span_1 { display:block; float:left; text-align:left; width:100px; color:#000; color:#000000!important; font-size:12px!important; font-weight:100!important; margin-left:0}
+.span.span_2 { display:block; float:left; color:#000000!important; font-size:12px!important;font-weight:100!important; margin-left:0}
+</style>
+<form action="?action=edit" method="post" enctype="multipart/form-data" name="form1" onSubmit="return CheckSubmit();";>
+    <input name="do" value="post" type="hidden">
+    <input name="id" value="<?=$post[id]?>" type="hidden">
+    <input name="ismember" value="<?=$post[ismember]?>" type="hidden">
+    <input name="userid" value="<?=$post[userid]?>" type="hidden">
+<div id="<?=MPS_SOFTNAME?>">
+<table width="100%" cellspacing="0" cellpadding="0" class="vbm">
+      <tr class="firstr">
+        <td colspan="5">
+        <div class="left"><a href="javascript:collapse_change('1')">基本信息</a></div>
+        <div class="right"><a href="javascript:collapse_change('1')"><img id="menuimg_1" src="images/menu_reduce.gif"/></a></div>
+        </td>
+      </tr>
+      <tbody id="menu_1">
+	  <tr bgcolor="#f5fbff">
+        <td width="100" height="25">信息类别：</td>
+        <td>
+        <select name="catid">
+        <?=get_cat_options($catid)?>
+        </select>
+        </td>
+      </tr>
+      <tr bgcolor="#f5fbff">
+        <td height="25">所属地区：</td>
+        <td>
+		<select name="areaid">
+        <?=area_options($areaid)?>
+        </select>
+        </td>
+      </tr>
+      <tr bgcolor="#f5fbff">
+        <td height="25">信息标题：</td>
+        <td>
+        	<input type="text" name="title" class="text" value="<?=$post[title]?>"/></td>
+      </tr>
+      <tr bgcolor="#f5fbff">
+      <td colspan="2" class="extra">
+        <?=$post[mymps_extra_value]?>
+      </td>
+      </tr>
+      <tr bgcolor="#f5fbff">
+        <td height="25">描述：</td>
+        <td><?=$acontent?></td>
+      </tr>
+      <tr bgcolor="#f5fbff">
+        <td height="25">有效期：</td>
+        <td>
+        <?=$post[GetInfoLastTime]?>
+        </td>
+      </tr>
+      </tbody>
+      </table>
+</div>
+<div id="<?=MPS_SOFTNAME?>">
+<table width="100%" cellspacing="0" cellpadding="0" class="vbm">
+      <tr class="firstr">
+      <td colspan="3">
+        <div class="left"><a href="javascript:collapse_change('2')">联系方式</a></div>
+        <div class="right"><a href="javascript:collapse_change('2')"><img id="menuimg_2" src="images/menu_reduce.gif"/></a></div>
+       </td>
+      </tr>
+      <tbody id="menu_2">
+      <tr bgcolor="#f5fbff">
+        <td height="25" width="100">联系人：</td>
+        <td>
+        	<input type="text" name="contact_who" class="text" value="<?=$post[contact_who]?>"/>        </td>
+      </tr>
+      <tr bgcolor="#f5fbff">
+        <td height="25">手机或电话：</td>
+        <td>
+        	<input type="text" name="tel" class="text" value="<?=$post[tel]?>"/>        </td>
+      </tr>
+      <tr bgcolor="#f5fbff">
+        <td height="25">电子邮件：</td>
+        <td>
+        	<input type="text" class="text" value="<?=$post[email]?>" name="email"/>        </td>
+      </tr>
+      <tr bgcolor="#f5fbff">
+        <td height="25">QQ：</td>
+        <td>
+        	<input type="text" class="text" value="<?=$post[qq]?>" name="qq"/>        </td>
+      </tr>
+      </tbody>
+      </table>
+</div>
+<?php if($post[upload_img]){?>
+<div id="<?=MPS_SOFTNAME?>">
+<table width="100%" cellspacing="0" cellpadding="0" class="vbm">
+     <tr class="firstr">
+        <td colspan="3">
+         <div class="left"><a href="javascript:collapse_change('3')">相关图片</a></div>
+         <div class="right"><a href="javascript:collapse_change('3')"><img id="menuimg_3" src="images/menu_reduce.gif"/></a></div>
+        </td>
+      </tr>
+      <tbody id="menu_3">
+      <tr class="mymps_td">
+      <td colspan="2" bgcolor="#f5fbff">
+		<?=$post[upload_img]?>
+      </td>
+      </tr>
+      </tbody>
+    </table>
+</div>
+<?php }?>
+<div id="<?=MPS_SOFTNAME?>">
+<table width="100%" cellspacing="0" cellpadding="0" class="vbm">
+     <tr class="firstr">
+        <td colspan="3">
+         <div class="left"><a href="javascript:collapse_change('4')">其他设置</a></div>
+         <div class="right"><a href="javascript:collapse_change('4')"><img id="menuimg_4" src="images/menu_reduce.gif"/></a></div>
+        </td>
+      </tr>
+      <tbody id="menu_4">
+        <?=$post[manage_pwd]?>
+        <tr bgcolor="#f5fbff">
+        <td height="25" width="100">信息状态：</td>
+        <td>
+        	<?=GetInfoLevel($post[info_level])?>
+        </td>
+        </tr>
+        <tr bgcolor="#f5fbff">
+        <td height="25" width="100">是否置顶：</td>
+        <td>
+        	<?=$post[upgrade_type]?>
+        </td>
+        </tr>
+        <tr bgcolor="#f5fbff">
+        <td height="25" width="100">置顶期限：</td>
+        <td>
+        	<?=GetUpgradeTime($post[upgrade_time])?>（若选择不置顶，可不选择该项目）
+        </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<center>
+<input type="submit" name="mymps" value="修 改" class="mymps mini" />
+&nbsp;&nbsp;<input type="button" onClick=history.back() value="返 回" class="mymps mini"> 
+</center>
+</form>
+<?php echo mymps_admin_tpl_global_foot();?>

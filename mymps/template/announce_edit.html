@@ -1,0 +1,85 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<script language='javascript'>
+function CheckSubmit()
+{
+	if(document.form1.title.value=="")
+	{
+   		document.form1.title.focus();
+   		alert("请填写公告标题！");
+   		return false;
+	}
+	if(document.form1.source.value=="")
+	{
+   		document.form1.source.focus();
+   		alert("请填写文章来源！");
+   		return false;
+	}
+	if(document.form1.author.value=="")
+	{
+   		document.form1.author.focus();
+   		alert("请填写文章作者！");
+   		return false;
+	}
+	if(document.form1.hits.value=="")
+	{
+   		document.form1.hits.focus();
+   		alert("请填写起始点击数！");
+   		return false;
+	}
+	if(document.form1.content.value=="")
+	{
+   		document.form1.content.focus();
+   		alert("请填写公告内容！");
+   		return false;
+	}
+
+	return true;
+}
+</script>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+<form method=post  name="form1" action="announce.php?part=edit" onSubmit="return CheckSubmit();">
+<input name="action" value="dopost" type="hidden">
+<input name="id" value="<?=$edit[id]?>" type="hidden">
+<tr bgcolor="#f5fbff" >
+  <td width="12%" align="right">公告标题： </td>
+  <td colspan="3"> <input name="title" type="text" value="<?=$edit[title]?>" size="50"> 
+  <select name="titlecolor">
+  <option value="">默认标题颜色</option>
+  <?foreach ($mymps_title_color as $k){?>
+  <option value="<?=$k?>" style="background-color:<?=$k?>;" <?if ($k == $edit[titlecolor]){echo "selected";}?>></option>
+  <?}?>
+  </select>
+  <font color="red">*</font></td>
+</tr>
+<tr bgcolor="#f5fbff" >
+  <td width="12%" align="right">跳转地址：</td>
+  <td>
+    <input name="redirecturl" type="text" value="<?=$edit[redirecturl]?>" size="50"> 若填写了此处，以下部分则不需填写
+  </td>
+</tr>
+<tr bgcolor="#f5fbff" >
+  <td width="12%" align="right">作者：</td>
+  <td><input name="author" type="text" size="20" value="<?=$edit[author]?>"><font color="red">*</font></td>
+  </tr>
+<tr bgcolor="#f5fbff" >
+  <td width="12%" align="right">评论状态：</td>
+  <td>
+  <label for="1"><input id="1" type="radio" value="1" name="ifcomment" <?php if($edit[ifcomment] == "1"){echo "checked";}?>>允许评论</label>
+  <label for="0"><input type="radio" id="0" value="0" name="ifcomment" <?php if($edit[ifcomment] == "0"){echo "checked";}?>>禁止评论</label><font color="red">*</font></td>
+  </tr>
+<tr bgcolor="#f5fbff" >
+  <td align="right">公告内容： </td>
+  <td colspan="3">
+  <?php echo $acontent?>  </td>
+</tr>
+<tr bgcolor="#f5fbff" >
+<td align="right">&nbsp;</td>
+<td colspan="3">
+<input type="submit" value="提 交" class="mymps mini"/>　
+<input type="button" onClick=history.back() value="返 回" class="mymps mini"></td>
+</tr>
+</form>
+</table>
+</div>
+<?php echo mymps_admin_tpl_global_foot();?>

@@ -1,0 +1,48 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>网友评论 - powered by mymps</title>
+<link href="../mypub/css/mymps.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="../mypub/comment.js"></script>
+</head>
+
+<body>
+<div id='comment'>
+    <div id="postrestore">
+        <ul id="postrestorelist">
+        {foreach from=$comment_all item=comment_all name=oop}
+        <li>
+        <div style="width:100%;">
+        <span class="postrestoreuser"><b class="forange">{if $page neq 1}{$page}-{/if}{$smarty.foreach.oop.iteration}楼</b>{$comment_all.prelogo} {$comment_all.area} {$comment_all.ip} {$comment_all.userid}</span>
+        <span style="float:right;width:150px">  发表于 {$comment_all.pubtime} </span>
+        </div>
+        <div style="clear:both"></div>
+        <div class="postrestoreusern">
+        <div class="postrestoreuserbg">
+        <span class="postrestorelistc"><a href="#comment_write" >&darr; 评论</a></span>
+        {$comment_all.content}
+        </div>
+        </div>
+        </li>
+        {foreachelse}
+        &nbsp;&nbsp;暂无评论！
+        {/foreach}
+        </ul>
+        <div class="pagination" style="width:100%">{$comment.pageview}</div>
+    </div>
+    <div style="clear:both"></div>
+    <div id="postleave" class="top6px">
+    <a name="comment_write"></a>
+        <form action="?part={$comment.part}&action=write&id={$comment.id}" method="post" onSubmit="return checkreply()" name="form1">
+            <dl>
+                <dt>回复内容：</dt><dd><textarea name="content" {$comment.disabled}/></textarea></dd>
+                <dt>验证码：</dt><dd><input type="text" name="checkcode" class="input" style="width:70px" {$comment.disabled}/> <img src="../include/chkcode.php" alt="看不清，请点击刷新" width="70" height="25" align="absmiddle" style="cursor:pointer;" onClick="this.src=this.src+'?' {$comment.disabled}"/>
+                </dd>
+                {$s_uid}
+                <dt></dt><dd><input type="submit" class="mymps large" value="提 交" style="line-height:18px" {$comment.disabled} name="mymps"></dd>
+            </dl>
+        </form> 
+    </div>
+</div>
+</body>
+</html>

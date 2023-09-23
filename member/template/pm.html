@@ -1,0 +1,31 @@
+<table border="0" cellspacing="0" cellpadding="0" id="box_all">
+    <tr style="background-image:url(images/tr_bg.jpg); border-bottom:1px #ccc solid;">
+        <th height="21" width="8%"><b>编号</b></th>
+        <th width="35%"><b>消息内容</b></th>
+        <th width="20%"><b>时间</b></th>
+        <th width="100"><b>阅读状态</b></th>
+        <th width="10%"><b>删除</b></th>
+    </tr>
+    <?php foreach($get AS $row){?>
+    <tr onmouseover="this.className='Ipt iptUser IptIn'"  onmouseout="this.className='Ipt iptUser'" bgcolor="#ffffff">
+        <td>
+        <?=$row['id']?>
+        </td>
+        <td align="center">
+        <?=$row['msg']?>
+        </td>
+        <td align="center">
+        <?=$row['pubtime']?>
+        </td>
+        <td align="center">
+        <?=$row['if_read']?>
+        </td>
+        <td align="center">
+        <a href="?part=del&id=<?=$row['id']?>" onClick="return confirm('您确定要删除吗，如不确定请点取消')">删除</a>
+        </td>
+      </tr>
+    <?}?>
+</table>
+<div class="pagination">&nbsp;&nbsp;<?php echo page2(); ?></div>
+</div>
+<br />

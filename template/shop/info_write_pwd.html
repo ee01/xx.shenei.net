@@ -1,0 +1,30 @@
+{$mymps_global_header}
+<title>{$title} - {$SiteName}</title>
+<link href="../template/shop/css/_g.css" type="text/css" rel="stylesheet" />
+<link href="../template/shop/css/style.css" type="text/css" rel="stylesheet" />
+<link href="../template/shop/css/_fabu.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body class="home-page">
+{include file="shop/inc_head.html"}
+<div class="wrapper">
+<!-- 主体 -->
+<div id="content">
+<div class="fbd">
+<div class="edit_box">
+    <ul>
+        <form name="postform" method="post" onSubmit="return submitForm();" action="?part={$post.part}&id={$post.id}">
+        <LI><SPAN class=span_1>输入管理密码</SPAN><SPAN class=span_2 
+        style="FONT-SIZE: 12px">请在输入框输入您发布信息时填写的管理密码，如果您忘记了密码，可联系本站客服</SPAN> </LI>
+        <LI><SPAN class=span_1>信息标题：</SPAN><SPAN class=span_2>{$post.title}</SPAN> </LI>
+        <LI><SPAN class=span_1>*管理密码：</SPAN><SPAN class=span_2><input type="password" class="textInt" style="width:250px" name="manage_pwd"/></SPAN> </LI>
+        <LI><SPAN class=span_1></SPAN><SPAN class=span_2><input type="button" name="mymps" onClick="javascript:history.back();"value="返回" class="mymps large">&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="mymps" value="下一步" class="mymps large"></SPAN> </LI>
+        </form>
+     </ul>
+</div>
+</div>
+<!-- 主体 结束 -->
+{include file="shop/inc_foot.html"}
+</div>
+</body>
+</html>

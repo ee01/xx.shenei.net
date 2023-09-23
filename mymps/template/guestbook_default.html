@@ -1,0 +1,85 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<script type="text/javascript" src="/mypub/messagebox.js"></script>
+<div class="ccc2">
+	<ul>
+    <form action="?part=list" method="get">
+    <select name="hidden">
+    <option value="">是否悄悄话</option>
+    <option value="1" <?php if($hidden == 1){echo "selected"; }?>>悄悄话</option>
+    <option value="0" <?php if($hidden != 1){echo "selected"; }?>>正常</option>
+    </select>
+    <select name="reply">
+    <option value="">回复状态</option>
+    <option value="1" <?php if($reply == 1){echo "selected"; }?>>已回复</option>
+    <option value="0" <?php if($reply != 1){echo "selected"; }?>>未回复</option>
+    </select>
+    <select name="msg_level">
+    <option value="">审核状态</option>
+    <option value="0" <?php if($_GET[msg_level] == 0){echo "selected"; }?>>待审</option>
+    <option value="1" <?php if($_GET[msg_level] == 1){echo "selected"; }?>>正常</option>
+    </select>
+    <input name="keywords" type="text" size="22"value="<?=$keywords?>">
+     &nbsp;&nbsp;<input type="submit" value="检索留言" class="gray mini">&nbsp;&nbsp; 
+     <input class="gray mini" type="button" onClick="location.href='mymps_config.php?part=http&url=/public/about.php?part=guestbook&msg=网站留言预览'" value="网站留言预览">
+    &nbsp;&nbsp;<input class="gray mini" type="button" onClick="location.href='mymps_config.php?part=http&url=<?=urlencode('/public/about.php?part=guestbook&action=write')?>&msg=网站留言提交表单'" value="外部提交表单">
+    </form>
+	</ul>
+</div>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm" onmouseover="addMouseEvent(this);">
+  <form name='form1' method='post' action='guestbook.php?part=delall'>
+  <input name="url" type="hidden" value="<?=GetUrl()?>">
+    <tr class="firstr">
+      <td width="40">选择</td>
+      <td width="40">编号</td>
+      <td>留言标题</td>
+      <td width="80">网友昵称</td>
+      <td width="100">留言时间</td>
+      <td>悄悄话?</td>
+      <td>回复状态</td>
+      <td>审核状态</td>
+      <td width="80">管理</td>
+    </tr>
+    <?
+foreach($links AS $row)
+{
+?>
+    <tr align="center" bgcolor="#f5fbff" >
+      <td><input type='checkbox' name='gid[]' id='<?=$row[gid]?>' value='<?=$row[gid]?>' class='np'></td>
+      <td><?=$row[gid]?></td>
+      <td><?=substring($row[title],0,20)?>...</td>
+      <td><?php 
+      if ($row[ismember]=='1')
+      {echo "<a href=\"javascript:setbg('Mymps会员中心',400,110,'../public/box.php?part=member&userid=".$row[username]."')\">".$row[username]."</a>";}else
+      {echo $row[username];}
+      ?></td>
+      <td><?=$row[addtime]?></td>
+      <td><? if ($row[hidden]=="1") echo"<font color=red>悄悄话</font>";else echo"<font color=green>正常</font>";?></td>
+      <td>
+      <?php 
+      if (empty($row[reply]))
+      {echo "<font color=red>未回复</font>";}else
+      {echo "<font color=green>已回复</font>";}
+      ?></td>
+      <td>
+      <?php 
+      if ($row[msg_level]==1)
+      {echo "<font color=green>正常</font>";}else
+      {echo "<font color=red>待审核</font>";}
+      ?></td>
+      <td><a href='guestbook.php?gid=<?=$row[gid]?>&part=reply'>回复</a> / <a href='?gid=<?=$row[gid]?>&part=delete&url=<?=GetUrl()?>' onClick="return confirm('您确定要删除吗，如不确定请点取消')">删除</a> </td>
+    </tr>
+    <?
+}
+?>
+    <tr bgcolor="#ffffff" height="28">
+    <td align="center" style="border-right:1px #fff solid;"><input name="checkall" type="checkbox" id="checkall" onClick="CheckAll(this.form)"/></td>
+    <td colspan="9">　
+      <input type="submit" onClick="if(!confirm('确定要操作吗？\n\n此操作不可以恢复！'))return false;" value="批量删除" class="mymps mini"/>      
+    </td>
+    </tr>
+  </form>
+</table>
+</div>
+<div class="pagination"><?echo page2()?></div>
+<?php echo mymps_admin_tpl_global_foot();?>

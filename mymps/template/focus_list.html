@@ -1,0 +1,30 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+    <tr class="firstr">
+    <td height="24" width="35" align="center">编号</td>
+    <td align="center">焦点图路径</td>
+    <td width="200" align="center">说明文字</td>
+    <td width="100" align="center">添加时间</td>
+    <td width="100" align="center">顺序</td>
+    <td width="100" align="center">管理项</td>
+  </tr>
+    <?php foreach($row AS $row){?>
+<div id="<?php echo $row[image]; ?>" style="display:none"><img src="<?php echo $row[image]; ?>" /></div>
+    <tr align="center" bgcolor="#f5fbff" onMouseOver="this.className='Ipt IptIn'"  onMouseOut="this.className='Ipt'">
+    <td><?=$row[id]?></td>
+    <td><a href="mymps_config.php?part=http&url=<?=$row[image]?>&msg=<?=$row[image]?>" onMouseOut="closediv('<?php echo $row[image]; ?>')" onMouseMove="showdiv('<?php echo $row[image]; ?>')"><?=$row[pre_image]?></a></td>
+    <td><?=$row[words]?></td>
+    <td><?=GetTime($row[pubdate])?></td>
+    <td><?=$row[focusorder]?></td>
+    <td>
+	  <a href='focus.php?part=edit&id=<?=$row[id]?>'><u>更改</u></a> |
+     <a href='focus.php?part=del&id=<?=$row[id]?>&image=<?=$row[image]?>&pre_image=<?=$row[pre_image]?>' onClick="return confirm('您确定要删除吗，如不确定请点取消')"><u>删除</u></a>　
+    </td>
+  </tr>
+    <?
+}
+?>
+</table>
+</div>
+<?php echo mymps_admin_tpl_global_foot();?>

@@ -1,0 +1,72 @@
+.bg-header{background-image: url(../images/login/login_top.gif);}
+
+#header_login{
+	width: 100%;
+	margin: 0 auto;
+}
+
+#header_login #logo a{
+	display: block;
+}
+
+#header_login #logo a span{
+	display: none;
+}
+
+body.market #header_login #logo{float: left;width: 258px;height: 50px; background-position:-35px top;overflow:hidden;}
+body.market #header_login #logo a{background: none;}
+body.market #header_login #top_nav{background-repeat: no-repeat;height: 50px;	overflow: hidden;background-position: -290px top;}
+
+#quick_links{ margin-top:30px;height: 60px;margin: 0 0 0 3px;}
+#quick_links ul{float: right;}
+#quick_links li{float: left;line-height: 14px;_line-height: 16px;padding: 0 7px;
+	border-left: 1px solid #E0E0E0;	_font-family: simsun;margin: 4px 0 0 0;}
+
+#quick_links li a:link, #quick_links li a:visited{color: #0245DC;}
+#quick_links li a:hover{color: #ff5500;}
+#quick_links li.myalimama{margin: 3px 0 0 0;}
+
+#quick_links li.myalimama a, #quick_links li.myalimama a span, #quick_links li.myalimama a span i, #top_nav_bar li a, #top_nav_bar li a span{
+	display: block;	float: left;background-repeat: no-repeat;cursor: pointer;}
+
+#quick_links li.myalimama a span{line-height: 16px;	*line-height: 17px;height: 17px;background-position: left -69px;padding: 0 4px 0 8px;}
+#quick_links li.today, #quick_links li.member, #quick_links li.myalimama{color: #666;border: 0 none;}
+
+
+#main_login{ margin:auto; background:url(../images/login/login_bg.jpg) left 50px no-repeat; width:760px; color:#868686; margin-top:10px;}
+#main_login .lc{ float:left;}
+		
+#main_login .lc dt,#main_login .lc dd,#main_login .login_head, #main_login .login_body,#main_login .login_bottom,#main_login .login_sub,.l_desc a,#main_login .login_top,.login_body2 h3,#wrongshow{ background-image:url(../images/login/login_bg2.gif); background-repeat:no-repeat; }
+#main_login .lc dt{ height:36px; width:140px;}
+#main_login .lc .buy{ background-position:left top;}
+#main_login .lc .buy{ background-position:left -40px;}
+#main_login .lc dl{  padding-bottom:10px; margin-bottom:20px; border-bottom:1px dotted #999;}
+#main_login .lc dd{ margin:6px 0; background-position:-220px 6px;*background-position:-220px 4px; padding-left:10px;}
+
+#main_login .rc{ margin-right:10px; float:right;}
+#main_login .login_div{ width:272px; text-align:left}
+#main_login .login_head{ background-position:left -160px; line-height:24px; font-weight:bolder; padding-left:30px; font-size:14px; padding-top:6px; color:#000;}
+
+#main_login .login_body{ background-position:left -240px; background-repeat:repeat-x;}
+#main_login .login_bottom{ background-position:left -220px; height:15px;}
+#main_login .login_top{ background-position:left -200px; height:8px;line-height:0px; font-size:0px;}
+	    
+	    
+#main_login .login_dl{ padding-top:20px;}
+#main_login .login_dl dt{ float:left; width:100px; text-align:right; margin-bottom:10px; padding-top:4px;}
+#main_login .login_dl dd{margin:0px 0 16px 100px;}
+#main_login .login_dl dd .text{ width:140px;}
+	    
+#main_login .login_sub{ margin:0; margin-bottom:-2px; padding:0; border:0 none; width:89px; height:37px; background-position:left -80px; background-color:Transparent; cursor:pointer;}
+#main_login .forget_password{ font-size:14px;}
+.l_desc{ margin:10px 10px 0 10px; text-align:center; border-top:1px dotted #fab984; padding:10px 0;}
+#main_login .l_desc a{ background-position: left -120px; display:block; height:24px; width:160px; font-size:14px; color:#000; margin-top:10px; padding-top:6px; margin-left:auto; margin-right:auto;}
+
+.login_right{border-left:1px #f6d897 solid;border-right:1px #f6d897 solid;}
+.l_desc a:hover{ text-decoration:none;}
+	    
+.login_body2{ padding:10px 20px; line-height:20px;}
+.login_body2 h3{ background-position:-220px -80px; line-height:34px; padding:0px 0 0 50px; font-size:20px; margin:0;}
+
+#main_login .login_dl dd#wrongTip{ margin-left:30px; margin-bottom:0;}
+#wrongshow{ background-position:-220px -36px; padding-left:26px; color:#ff0000; font-size:14px; line-height:28px; margin-bottom:10px;}

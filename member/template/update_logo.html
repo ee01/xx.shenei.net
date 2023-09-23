@@ -1,0 +1,43 @@
+<script language='javascript'>
+function CheckSubmit()
+{
+	if(document.form1.mymps_member_logo.value=="")
+	{
+   		document.form1.mymps_member_logo.focus();
+   		alert("请选择你要上传的文件！");
+   		return false;
+	}
+}
+</script>
+<table cellspacing="1" cellpadding="1"  width="97%" align="center" id="main_box">
+            <form method="post" name="form1" action="?part=logo&action=up" enctype="multipart/form-data" onsubmit="return CheckSubmit();">
+            <input name='oldlogo' type='hidden' value='<?php echo $logo; ?>' />
+            <input name='prelogo' type='hidden' value='<?php echo $prelogo; ?>' />
+            <tbody>
+              <tr>
+                <td align="right" valign="top">选择上传的文件：</td>
+                <td>
+                <input type=file name=mymps_member_logo size=45 onkeydown="return false" onpaste="return false" ondragenter="return false"><br />
+                  支持上传的类型：<?=$mymps_global[cfg_upimg_type]?>，图片尺寸：<?=$mymps_mymps[cfg_memberlogo_limit][width]?> * <?=$mymps_mymps[cfg_memberlogo_limit][height]?></td>
+              </tr>
+              <tr>
+                <td align="right" valign="top">原来的头像</td>
+                <td><div id='faceview' class='overflow mTB10 litPic' style="width:180px;height:180px;text-align:center;vertical-align:middle;line-height:180px;display:table-cell;">
+                    <?php
+       	if($prelogo!='') echo " <a href='$mymps_global[SiteUrl]$prelogo' target='_blank'><img src='$mymps_global[SiteUrl]$prelogo' border='0'/></a>\r\n";
+       	?>
+                  </div></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td height="45">&nbsp;</td>
+                <td height="45">
+                <input class="mymps mini" type="submit" value="更 新">
+                <input type="button" onclick="location.href='index.php'" class="mymps mini" value="返回首页">
+                </td>
+              </tr>
+            </tfoot>
+            </form>
+          </table>
+</div>

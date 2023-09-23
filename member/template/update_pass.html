@@ -1,0 +1,42 @@
+<form ACTION="update.php?part=password" METHOD="POST" name="form1">
+<table cellspacing="1" cellpadding="1"  width="97%" align="center" id="main_box">
+  <input type="hidden" name="action" value="chk">
+      <tr> 
+        <td width="110"> 您的会员帐号：</td>
+        <td> 
+          <input name="userid" readonly="readonly" value="<?=$s_uid?>" style=" background-color:#ddd" >
+          <font color="#FF0000">不可更改</font>
+       </td>
+      </tr>
+      <tr> 
+        <td> 密码保护问题：</td>
+        <td> 
+            <?php echo GetSafequestion($update[safequestion],'safequestion');?>
+        </td>
+      </tr>
+      <tr> 
+        <td> 密码保护答案：</td>
+        <td> 
+          <input name="safeanswer" type="text">
+          若不修改密码保护，请留空
+        </td>
+      </tr>
+      <tr> 
+        <td> 请输入新密码：</td>
+        <td> 
+          <input name="userpwd" type="password">
+          若不修改密码，请留空
+        </td>
+      </tr>
+      <tr> 
+        <td> 再次输入新密码：</td>
+        <td> <input name="reuserpwd" type="password"> 
+          若不修改密码，请留空</td>
+      </tr>
+    </table>
+    <div style="margin-left:150px">
+    <input name="Submit" type="submit" class="mymps mini" value="保存修改"> 
+    <input type="button" onclick="location.href='index.php'" class="mymps mini" value="返回首页">                			
+    </div>
+</form>
+</div>

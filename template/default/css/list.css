@@ -1,0 +1,89 @@
+#description{display:block;line-height:30px;border-left:1px solid #E4E4E4;text-align:left;padding-left:4px;float:left;margin-top:22px}
+#description h1{font-size:22px;overflow:hidden;font-family:"微软雅黑";}
+/*整体布局*/
+#connter1{float:left;width:160px;}
+#connter2{border-left:1px solid #CECECE;padding-left:6px;height:100%;overflow:hidden;float:left}/*IE,3px;bug*/
+#connter2left{float:left;}/*标准594px（边框1px）*/
+#connter2left2{background:#888;float:left}/**/
+#connter2right{float:right;width:200px;}/*标准198（边框1px）*/
+
+/*面包屑*/
+#msg{background:url(/images/msgbg.gif) repeat-x bottom;height:35px;line-height:35px;}
+.msg1{margin-left:2px;}
+.msg1 a{color:#333;text-decoration:underline;}
+.msg2{width:550px;text-align:right;margin-right:2px}
+
+/*左边导航*/
+#connter1 ul li a{font-size:13px;text-decoration:underline;display:block;margin:0px;padding:0px;}
+#connter1  li{line-height:28px;height:100%;overflow:hidden}
+#connter1  li :hover {background:#F0EFF7;text-decoration:none;color:#F54100;font-weight:bold;}
+#connter1 .listnavon {font-weight:bold;background:#F0EFF7;}
+#connter1 .listnavon a{text-decoration:none;color:#F54100}
+.listad1 img{margin-bottom:12px;border:1px solid #D9E0ED}
+
+/*右边的内容区域*/
+	/*上面的LISTMSG*/
+
+#listmsg{height:100%;overflow:hidden}
+#listmsgrss{float:left}
+#listmsgopen{float:right}
+/*中间*/
+#listmsg{line-height:25px}
+#listmsg a{}
+#listmsgrss a{color:#008000;text-decoration:underline}
+#listmsgmore{background:#F0EFF7;padding-left:10px;padding:5px}
+.searchinput{height:23px;line-height:23px;width:300px;;padding-left:5px}
+/*类别选择*/
+#listchoice{line-height:30px;border-bottom:1px solid #CECECE;height:100%;overflow:hidden}
+#listchoice li{margin-right:6px;}
+#listchoice li a{display:block;float:left;white-space:nowrap;text-decoration:underline;padding-right:15px;}
+#listchoice li a:hover{background:url(/images/iconbg.gif) no-repeat -32px right ;}
+.listchoiceon{background:url(/images/iconbg.gif) no-repeat -32px right ;text-decoration:none!important;color:#F54100}
+/*信息列表*/
+#listinfoul li {margin:6px 0 6px 0;clear:both;border-bottom:1px dashed  #CECECE;height:100%;overflow:hidden}
+.listfloor{float:left;color:#F54100;margin-right:5px}
+.listfloor b{font-size:18px;line-height:25px;}
+#listinfoul li h3{float:left;line-height:25px;font-weight:normal;width:432px;font-size:16px;}
+#listinfoul li h3 a:link{text-decoration:underline;color:#000099}
+#listinfoul li h3 a:visited{text-decoration:underline;color:#666;}
+#listinfoul li h3 span{font-size:12px;margin-left:5px;color:#666}
+.listtime{line-height:25px;width:84px;text-align:right;float:right}
+#listinfoul li img{width:48px;height:48px;border:1px solid #F0EFF7;padding:2px;margin-left:6px;margin-top:6px;margin-bottom:4px}
+.listimg{float:right}
+#listinfoul li  p{line-height:20px;margin-top:6px}
+.listinfoto{line-height:22px;}
+.listinfoto span{color:#F54100;}
+.listinfoto b{font-weight:normal}
+
+/*订阅提醒*/
+#listmail{padding:5px;line-height:20px;}
+#listmail span{color:#F54100}
+#listmail span a{text-decoration:underline}
+#listtop{float:right}
+
+/* 右边栏*/
+
+/*公告*/
+#boxbutton{line-height:25px;text-align:right;padding-right:25px;background:#F6F6F6}
+#listnotice {}
+#listnotice span {line-height:18px;padding:5px;display:block}
+#listnotice ul{padding:5px;}
+/* add 788 */
+.listmaxwidth { width:782px;}
+.listminwidth { width:581px;}
+/*其他属性*/
+.h3ico{height:20px!important;border:none!important;width:20px!important;padding:0px!important;margin:0px!important;vertical-align:middle;margin-left:6px!important}
+
+/*2009.2.19日新增*/
+.listrighttop{height:100%;overflow:hidden;border:1px solid #E2E2E2;margin-top:6px;clear:both;width:196px;}
+.listrighttop h2{background:#F6F6F6;height:35px;text-indent:-500px;margin:1px;}
+.listrighttop ul{background:url(/images/listtop.gif) no-repeat 5px 5px;padding:0 5px 5px 5px}
+.listrighttop li{line-height:23px;padding-left:25px;border-bottom:1px dotted #CCC}
+.bottomnone{border-bottom:none!important}
+#top1{background:url(/images/top1.jpg) no-repeat;}
+#top2{background:url(/images/top2.jpg) no-repeat;}
+.listrightdiv{height:100%;overflow:hidden;border:1px solid #E2E2E2;margin-top:6px;clear:both;width:196px;}
+.listrightdiv h2{background:#F6F6F6;font-size:13px;height:30px;line-height:30px;padding-left:6px;border-bottom:1px solid #E2E2E2}
+.listrightdiv h2 a{color:#000}
+.listrightul{overflow:hidden;height:100%;padding:5px 0;}
+.listrightul li{line-height:20px;padding-left:14px;height:20px;background:url(/images/iconbg.gif) no-repeat   -8px  -536px;}

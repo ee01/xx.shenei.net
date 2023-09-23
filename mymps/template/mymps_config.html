@@ -1,0 +1,56 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<style>
+.ccc2 ul input{margin:2px 0}
+</style>
+<div  class="ccc2">
+	<ul>
+  	<?=get_mymps_config_menu()?>
+    <input type="button" onClick="location.href='#禁止词语过滤设置'" value="禁止词语过滤设置" class="gray mini">
+	</ul>
+</div>
+<form action="?part=update" method="post" name="form1">
+<?=get_mymps_config_input()?>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+<tr class="firstr">
+<td colspan="5">
+<a name="#禁止词语过滤设置"></a>
+    <div class="left">
+    <a href="javascript:collapse_change('10')">脏话，禁止词语过滤设置</a></div>
+    <div class="right"><a href="javascript:collapse_change('10')"><img id="menuimg_10" src="images/menu_reduce.gif"/></a></div>
+</td>
+</tr>
+	<tbody id="menu_10" style="display:">
+    <tr bgcolor="#f5fbff" onMouseOver="this.className='Ipt IptIn'"  onMouseOut="this.className='Ipt'">
+      <td style="width:35%; line-height:22px">
+      信息中禁止出现的词语，用","分开 </td>
+      <td colspan="2">
+      <textarea name="cfg_badwords0"  class="input" style="height:100px"><?=$cfg_badwords[0]?></textarea>
+      </td>
+
+    </tr>
+   <tr bgcolor="#f5fbff" onMouseOver="this.className='Ipt IptIn'"  onMouseOut="this.className='Ipt'">
+   <td colspan="2" style="width:35%; line-height:22px">
+      禁止词语的替代词语
+      </td>
+      <td>
+       <input name="cfg_badwords1" value="<?=$cfg_badwords[1]?>" class="input"/>
+      </td> 
+   </tr>
+<tr bgcolor="#f5fbff" onMouseOver="this.className='Ipt IptIn'"  onMouseOut="this.className='Ipt'">
+   <td colspan="2" style="width:35%; line-height:22px">
+      当出现违禁词语时，是否自动转为待审核状态<br />（包括分类信息、分类信息评论、网站留言）<font color="red">0</font>为否，<font color="red">1</font>为是<br />
+<i style="color:red">注意：该设置在您关闭了信息审核和评论审核的功能下生效 </i>     </td>
+      <td>
+       <input name="cfg_badwords2" value="<?=$cfg_badwords[2]?>"  class="input"/>
+      </td> 
+   </tr>
+</tbody>
+</table>
+</div>
+<div align="center" style="margin:15px;">
+<input class="mymps mini" value="保存设置" type="submit" > 
+<input type="button" onClick="history.back()"value="返回" class="mymps mini">
+</div>
+</form>
+<?php echo mymps_admin_tpl_global_foot();?>

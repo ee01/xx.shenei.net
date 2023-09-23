@@ -1,0 +1,41 @@
+.notice_title { float:left; background:url(../images/notice_03.gif) no-repeat 0 0; width:662px; height:206px;}
+.notice_title span.left { float:left; display:inline; padding-left:20px; background:url(../images/notice_06.gif) no-repeat 0 2px; font-size:14px; font-weight:bold; color:#f30; margin:85px 0 0 50px;}
+.notice_title span.right { display:inline; float:right; margin:85px 45px 0 0; color:#999;}
+.notice_title span.right b { font-weight:normal; color:#666;}
+.date_box { float:right; width:246px;}
+.date_box table {}
+.date_box table td { background:#ededed; height:28px; text-align:center;}
+.date_box table td.today { font-weight:bold; background:#f50; color:#000;} 
+
+.cont_notice { margin-top:10px; border-top:1px dashed #ccc;}
+.col_main { float:left; width:694px;}
+.col_sub { float:right; width:246px;}
+.text_box { text-align:left; font-size:14px; line-height:170%; color:#333; padding:10px;}
+.text_box p { margin-bottom:25px;}
+.fot_navpage { color:#36c; margin-top:-15px;}
+.fot_navpage span.left { float:left; background:url(../images/icon.gif) no-repeat 10px -246px; padding-left:24px;}
+.fot_navpage span.right { float:right; display:inline; margin-right:10px; background:url(../images/icon.gif) no-repeat 0 -293px; padding-left:14px;}
+.fot_navpage a { color:#333; text-decoration:underline!important;}
+.fot_navpage a:hover { color:#f50; text-decoration:underline;}
+.notice_list { border-left:1px solid #a9ccde; border-right:1px solid #a9ccde; text-align:left;}
+.rc_tp { margin-top:10px; display:block; height:4px; background:url(../images/notice_07.gif) no-repeat 0 0; overflow:hidden;}
+.rc_ft { display:block; height:4px; background:url(../images/notice_14.gif) no-repeat 0 0; overflow:hidden;}
+.notice_list .hd { height:25px; background:#f1f9fe url(../images/notice_15.gif) no-repeat 9px 7px; padding:3px 0 0 17px; color:#5e8d51;}
+.notice_list .bd { padding:8px;}
+.notice_list .bd li { line-height:24px; height:24px; overflow:hidden; background:url(../images/dian.gif) no-repeat 0 10px; padding-left:8px;}
+.notice_list .bd li span { display:block; float:right; color:#5e8d51;}
+.notice_list .ft { background:#d8f1fd; height:28px;}
+.notice_list .ft a { display:block; padding-left:28px; padding-top:7px; background:url(../images/notice_11.gif) no-repeat 10px 10px; height:20px;}
+#note { height:114px; overflow:hidden;}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,86 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<script language='javascript'>
+function CheckSubmit()
+{
+	if(document.form1.url.value=="http://"||document.form1.url.value=="")
+	{
+   		document.form1.url.focus();
+   		alert("网址不能为空！");
+   		return false;
+	}
+	if(document.form1.webname.value=="")
+	{
+   		document.form1.webname.focus();
+   		alert("网站名称不能为空！");
+   		return false;
+	}
+	return true;
+}
+</script>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+<form action="friendlink.php?part=insert" method="post" enctype="multipart/form-data" name="form1" onSubmit="return CheckSubmit();";>
+<input type="hidden" name="createtime" value="<?=date("Y-m-d H:i:s", time())?>">
+<tr class="firstr">
+<td colspan="2">网站概况</td>
+</tr>
+  <tr bgcolor="#f5fbff">
+    <td width="19%" height="25">网址：</td>
+    <td width="81%">
+        <input name="url" type="text" id="url" value="http://" size="30" />
+    </td>
+  </tr>
+  <tr bgcolor="#f5fbff">
+    <td height="25">网站名称：</td>
+    <td>
+        <input name="webname" type="text" id="webname" size="30" />
+    </td>
+  </tr>
+  <tr bgcolor="#f5fbff">
+    <td height="25">网站LOGO：</td>
+    <td>
+        <input name="weblogo" type="text" id="weblogo" size="30"/> 尺寸80*35,若显示文字链接则不需添加logo地址
+    </td>
+  </tr>
+<tr class="firstr">
+<td colspan="5">链接状况</td>
+</tr>
+  <tr bgcolor="#f5fbff">
+    <td height="25">网站类型：</td>
+    <td>
+    <select name="typeid" id="typeid">
+<?php 
+foreach($links AS $row){
+?>
+    <option value="<?=$row[id]?>"><?=$row[typename]?></option>
+<?php
+}
+?>
+    </select>
+    </td>
+  </tr>
+  <tr bgcolor="#f5fbff">
+    <td width="19%" height="25">排列位置：</td>
+    <td width="81%">
+    <input name="ordernumber" type="text" id="order" size="10" style='width:60px' />
+    (数值越小，排列越靠前)
+    </td>
+  </tr>
+  <tr bgcolor="#f5fbff">
+    <td height="25">链接状态：</td>
+    <td>
+    <label for="1"><input type='radio' name='ischeck' value="1" id="1"/> 待审</label>
+    <label for="2"><input type='radio' name='ischeck' value="2" checked id="2"/> 正常</label>
+    </td>
+  </tr>
+  <tr bgcolor="#f5fbff">
+    <td height="51">&nbsp;</td>
+    <td>
+        <input type="submit" name="Submit" value="提 交" class="mymps mini"/>
+      &nbsp;&nbsp;<input type="button" onClick=history.back() value="返 回" class="mymps mini">
+     </td>
+  </tr>
+  </form>
+</table>
+</div>
+<?php echo mymps_admin_tpl_global_foot();?>

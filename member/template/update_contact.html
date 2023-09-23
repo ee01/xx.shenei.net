@@ -1,0 +1,86 @@
+<script language="javascript">
+function submitForm(){
+	if(document.form1.cname.value==""){
+		alert("您的姓名不能为空!");
+		document.form1.cname.focus();
+		return false;
+	}		
+	if(document.form1.tel.value==""){
+		alert("联系电话不能为空!");
+		document.form1.tel.focus();
+		return false;
+	}		
+	if(document.form1.qq.value==""){
+		alert("QQ号码不能为空!");
+		document.form1.qq.focus();
+		return false;
+	}	
+	if(document.form1.areaid.value==""){
+		alert("所属地区不能为空!");
+		document.form1.areaid.focus();
+		return false;
+	}		
+	return true;
+}
+</script>
+<form ACTION="update.php?part=contact&url=<?=$url?>" METHOD="POST" name="form1" onSubmit="return submitForm();">
+<table cellspacing="1" cellpadding="1" align="center" id="main_box">
+<input name="action" value="contactchk" type="hidden">
+   <tr> 
+     <td align="center">用户名</td>
+     <td><b><?=$s_uid?><b></td>
+   </tr>
+    <tr>
+        <td align="center">您的性别</td>
+        <td><label for="male"><input id=male type="radio" name="sex" value="男" <?if ($update[sex]=="男") {echo "checked";}?>>先生</label> 
+      <label for="formale"><input type="radio" id=formale name="sex" value="女" <?if ($update[sex]=="女") {echo "checked";}?>>女士</label></td>
+    </tr>
+    <tr> 
+      <td align="center">您的姓名</td>
+      <td colspan="2">
+      <input name="cname" type="text" value="<?=$update[cname]?>"> 
+      <font color="#FF0000">*</font>只能输入汉字
+      </td>
+    </tr>
+<tr> 
+      <td align="center">联系电话</td>
+      <td colspan="2"> 
+      <input name="tel" type="text" value="<?=$update[tel]?>">
+      <font color="#FF0000">*</font>
+      </td>
+    </tr>
+    <tr> 
+      <td align="center">QQ号码</td>
+      <td colspan="2">
+      <input name="qq" type="text" value="<?=$update[qq]?>">
+      <font color="#FF0000">*</font>
+      </td>
+    </tr>
+    <tr> 
+      <td align="center">电子邮件</td>
+      <td colspan="2">
+      <input name="email" type="text" value="<?=$update[email]?>">				  </td>
+    </tr>
+   <tr> 
+     <td width="85" align="center">所属地区</td>
+     <td bgcolor="#ffffff">
+    <select name="areaid">
+    <option value="">您所在的地区</option>
+    <?=$info_area?>
+    </select>
+    <font color="#FF0000">*</font>
+    </td>
+    </tr>
+    <tr> 
+      <td align="center">详细地址</td>
+      <td colspan="2">
+      <input name="address" value="<?=$update[address]?>">
+      </td>
+    </tr>
+    </table>
+    <div style="margin-left:150px">
+    <input name="Submit" type="submit" class="mymps mini" value="保存修改"> 
+    <input type="button" onclick="location.href='index.php'" class="mymps mini" value="返回首页">                			
+    </div>
+</form>       
+</div>

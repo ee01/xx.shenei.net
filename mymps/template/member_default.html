@@ -1,0 +1,52 @@
+<?=mymps_admin_tpl_global_head();?>
+<div class="ccc2">
+	<ul>
+    <form action="member.php" method="get" >用户名
+    <input name="userid" type="text" size="20" value="<?=$userid?>">&nbsp;状态
+     <?php echo get_member_level($levelid);?>
+     &nbsp;&nbsp;<input type="submit" value="检索会员" class="gray mini">&nbsp;&nbsp;<input type="button" onClick="location.href='member.php?part=add'" value="新增会员" class="mymps mini">
+    </form>
+   </ul>
+</div>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm" onmouseover="addMouseEvent(this);">
+  <form name='form1' method='post' action='member.php' onSubmit='return checkSubmit();'>
+    <input type='hidden' name='part' value='delall'/>
+    <input name="url" type="hidden" value="<?=GetUrl()?>">
+    <tr class="firstr">
+      <td width="30">选择</td>
+      <td width="30">编号</td>
+      <td>用户名</td>
+      <td>金币数</td>
+      <td>用户组</td>
+      <td>注册地IP</td>
+      <td>注册时间</td>
+      <td>上次登录</td>
+      <td>相关操作</td>
+    </tr>
+<?php foreach($member AS $member){
+?>
+    <tr align="center" bgcolor="#f5fbff">
+      <td><input type='checkbox' name='id[]' value='<?=$member[id]?>' class='np' id="<?=$member[id]?>"></td>
+      <td><?=$member[id]?></td>
+	  <td><a href="
+javascript:setbg('Mymps会员中心',400,110,'../public/box.php?part=member&userid=<?=$member[userid]?>')"><?=$member[userid]?></a></td>
+	  <td><img src="../member/images/mymps_icon_incomes.gif" align="absmiddle"> <?=$member[money_own]?></td>
+      <td><?=$member[levelname]?></td>
+      <td><?=$member[joinip]?></td>
+      <td><?=$member[jointime]?></td>
+      <td><?=$member[logintime]?></td>
+      <td><a href="member.php?part=edit&id=<?=$member[id]?>">修改资料</a></td>
+    </tr>
+<?php }?>
+    <tr bgcolor="#ffffff" height="28">
+    <td align="center" style="border-right:1px #fff solid;"><input name="checkall" type="checkbox" id="checkall" onClick="CheckAll(this.form)"/></td>
+    <td colspan="10">　
+      <input type="submit" onClick="if(!confirm('确定要操作吗？\n\n此操作不可以恢复！'))return false;" value="批量删除" class="mymps mini"/>
+    </td>
+    </tr>
+  </form>
+</table>
+</div>
+<div class="pagination"><?=page2()?></div>
+<?=mymps_admin_tpl_global_foot();?>

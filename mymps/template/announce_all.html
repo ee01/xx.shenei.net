@@ -1,0 +1,48 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<div class="ccc2">
+	<ul>
+      <form action="announce.php?part=all" method="get">
+      标题 
+        <input name="title" type="text" size="30" value="<?php echo $title; ?>"> 
+        作者 
+        <input name="author" type="text" size="15" value="<?php echo $author; ?>">　<input type="submit" value="检索公告" class="gray mini"> &nbsp;&nbsp;<input type="button" class="mymps mini" onClick="location.href='announce.php?part=add'" value="发布公告">
+       </form>
+	</ul>
+</div>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm" onmouseover="addMouseEvent(this);">
+  <form name='form1' method='post' action='announce.php' onSubmit='return checkSubmit();'>
+    <input type='hidden' name='part' value='delall'/>
+    <input type="hidden" name="url" value="<?=GetUrl()?>" />
+    <tr class="firstr">
+      <td width="30">选择</td>
+      <td width="30">编号</td>
+      <td>公告标题</td>
+      <td>公告作者</td>
+      <td>点击次数</td>
+      <td>添加时间</td>
+      <td>操作</td>
+    </tr>
+<?php foreach($announce AS $announce){?>
+	<tr bgcolor="#f5fbff">
+   	  <td><input type='checkbox' name='id[]' value='<?=$announce[id]?>' id="<?=$announce[id]?>" class='np'></td>
+	  <td><label><?=$announce[id]?></label></td>
+	  <td align="left"><a href="../public/about.php?part=announce&id=<?=$announce[id]?>" target="_blank"><?=$announce[title]?></a></td>
+      <td align="left"><?=$announce[author]?></td>
+      <td align="left"><?=$announce[hits]?></td>
+      <td align="left"><?=$announce[pubdate]?></td>
+	  <td align="center"><a href="announce.php?part=edit&id=<?=$announce[id]?>">编辑</a> / <a href="announce.php?part=delete&id=<?=$announce[id]?>&url=<?=GetUrl()?>" onClick="if(!confirm('确定要删除吗？\n\n此操作不可以恢复！'))return false;">删除</a>
+	  </td>
+	</tr>
+<?}?>
+    <tr bgcolor="#ffffff" height="28">
+    <td align="center" style="border-right:1px #fff solid;"><input name="checkall" type="checkbox" id="checkall" onClick="CheckAll(this.form)"/></td>
+    <td colspan="10">　
+<input type="submit" onClick="if(!confirm('确定要操作吗？\n\n此操作不可以恢复！'))return false;" value="批量删除" class="mymps mini"/>      
+    </td>
+    </tr>
+  </form>
+</table>
+</div>
+<div class="pagination"><?php echo page2()?></div>  
+<?php echo mymps_admin_tpl_global_foot();?>

@@ -1,0 +1,84 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<script type="text/javascript" src="/mypub/messagebox.js"></script>
+<div id="<?=MPS_SOFTNAME?>">
+<table width="100%"  border="0" cellspacing="0" cellpadding="0" class="vbm">
+<form method=post onSubmit="return chkform()" name="form" action="?part=update">
+<input name="gid" type="hidden" value="<?=$row[gid]?>">
+<tr class="firstr">
+<td colspan="2">留言人联系方式</td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td>网友昵称： </td>
+  <td>&nbsp;<?php 
+      if ($row[ismember]=='1')
+      {echo "<a href=\"javascript:setbg('Mymps会员中心',400,110,'/public/box.php?part=member&userid=".$row[username]."')\">".$row[username]."</a>";}else
+      {echo $row[username];}
+      ?></td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td>网友QQ： </td>
+  <td>&nbsp;<?=$row[qq]?></td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td>网友邮箱： </td>
+  <td>&nbsp;<?=$row[email]?></td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td>网友网站： </td>
+  <td>&nbsp;<?=$row[homepage]?></td>
+</tr>
+<tr class="firstr">
+<td colspan="2">留言基本状态</td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td>留言IP： </td>
+  <td>&nbsp;<?=$row[ip]?></td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td>留言时间： </td>
+  <td>&nbsp;<?=GetTime($row[addtime])?></td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td>网友ＩＰ： </td>
+  <td>&nbsp;<?=$row[ip]?></td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td>是否悄悄话： </td>
+  <td>&nbsp;<?=$hidden?>
+  </td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td>审核状态： </td>
+  <td>&nbsp;<?=$msg_level?>
+  </td>
+</tr>
+<tr class="firstr">
+<td colspan="2">留言内容回复</td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td>留言标题： </td>
+  <td><input name="title" value="<?=$row[title]?>" size="35"/>
+  </td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td>留言内容： </td>
+  <td><textarea name="content" cols="65" rows="5"><?=de_textarea_post_change($row[content])?></textarea>
+  </td>
+</tr>
+<tr bgcolor="#f5fbff">
+    <td>回复： </td>
+    <td>
+    <textarea name="reply" cols="65" rows="5"><?=$row[reply]?></textarea></td>
+    </td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td>&nbsp;</td>
+  <td>
+  <input type="submit"  class="mymps" value= "回复">　
+  <input type="button" onclick="history.back()" value="返回" class="mymps"/>
+  </td>
+</tr>
+</form>
+</table>
+</div>
+<?php echo mymps_admin_tpl_global_foot();?>

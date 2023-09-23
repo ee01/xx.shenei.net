@@ -1,0 +1,44 @@
+{$mymps_global_header}
+<title>会员登录 - {$SiteName}</title>
+<link href="../template/shop/css/_g.css" type="text/css" rel="stylesheet" />
+<link href="../template/shop/css/style.css" type="text/css" rel="stylesheet" />
+<link href="../template/shop/css/_fabu.css" type="text/css" rel="stylesheet" />
+<script language="javascript" src="../template/shop/js/forgetpass.js"></script>
+</head>
+
+<body class="home-page">
+{include file="shop/inc_head.html"}
+<div class="wrapper">
+<!-- 主体 -->
+<div id=content>
+<div class=fbd>
+<div class="tips clearfix">● 若您还未设置密码保护或者忘记密保答案，可以通过以下途径获得帮助： <BR>&nbsp;&nbsp;1. 客服QQ号：<a href="tencent://message/?uin={$mymps_global.SiteQQ}&Site={$mymps_global.SiteName}&Menu=yes">{$mymps_global.SiteQQ}</a> 点击直接对话。<BR>&nbsp;&nbsp;2. 致电 {$mymps_global.SiteTel} 联系客服帮您重设密码。<BR>&nbsp;&nbsp;3. <a href="{$about.guestbook_uri}">在线留言</a>本站，以寻求帮助。 
+</div>
+<div class=form_box>
+
+<form name="submitForm" method="post" action="?part=forgetpass" onSubmit="return submitcheck();">
+<input name="action" type="hidden" value="doreset">
+<p><label for=user_name>用户名：</label><input name="userid" type="text" size="25" class="mymps_input"></p>
+<p><label for=user_password>提示问题：</label>
+{$safequestion}
+</p>
+<p><label for=user_password>提示答案：</label><input name="safeanswer" id="safeanswer" class="mymps_input" size="25"></p>
+<p><label for=user_password>新密码：</label><input name="userpwd" class="mymps_input" size="25" type="password"></p>
+<p><label for=user_password>再次输入：</label><input name="reuserpwd" class="mymps_input" size="25" type="password"></p>
+{if $mymps_imgcode.open eq '1'}
+<p><label for=user_password>验证码：</label><input type="text" name="checkcode" class="mymps_input" style="width:50px"/> <img src="../include/chkcode.php" alt="看不清，请点击刷新" width="70" height="25" align="absmiddle" style="cursor:pointer;" onClick="this.src=this.src+'?'"/></p>
+{/if}
+<br>
+<p><label>&nbsp;</label><input type="submit" class="mymps large" value="确认修改" name="mymps"></p>
+</form>
+
+</div>
+</div>
+</div>
+<!-- 主体 结束 -->
+{include file="shop/inc_foot.html"}
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{$mymps_global_header}
+<title>帮助中心 - {$SiteName}</title>
+<link href="../template/shop/css/_g.css" type="text/css" rel="stylesheet" />
+<link href="../template/shop/css/style.css" type="text/css" rel="stylesheet" />
+<link href="../template/shop/css/_help.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="home-page">
+{include file="shop/inc_head.html"}
+<div class="wrapper">
+	<!-- 主体 -->
+	<div id="content">
+	<table summary="FAQ" class="portalbox" cellpadding="0" cellspacing="1">
+		<tr>			
+        {foreach item=faq_type from=$faq_type}
+        <td>
+        <h3>{$faq_type.typename}</h3>
+        <ul style="margin: 2px auto;">
+			{foreach item=faq2 from=$faq_type.faq}
+            <li><a target="_blank" href="{$faq2.uri}">{$faq2.title}</a></li>
+            {/foreach}   
+        </ul>
+        </td>
+        {/foreach}
+		</tr>
+	</table>
+	</div>
+	<!-- 主体 结束 -->
+{include file="shop/inc_foot.html"}
+</div>
+</body>
+</html>

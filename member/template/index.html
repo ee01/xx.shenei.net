@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?=$charset?>" />
+<title><?=$s_uid?> - 用户管理中心 - <?=$mymps_global[SiteName]?> - 福州|大学城分类信息 - 舍内网</title>	<!--Modify By 01-->
+<link href="template/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../mypub/messagebox.js"></script>
+<script type="text/javascript" src="../mypub/mymps.js"></script>
+</head>
+
+<body>
+<div id="mymps_main">
+    <div id="head">
+        <div id="head1">
+            <div class="logo"><a href="../" target="_blank"><img src="<?=$mymps_global[SiteLogo]?>" alt="<?=$mymps_global[SiteName]?> 用户管理中心" border="0"></a></div>
+            <ul>
+            <li>欢迎您！ <img src="images/mymps_icon_member.gif" align="absmiddle"> <a href="update.php?part=contact"><?=$s_uid?></a>　<a href="login.php?part=out">[退出]</a></li>
+            <li><img src="images/icon_mymps_home.gif" align="absmiddle" border="0"> <a href="index.php">管理首页</a> | <a href="<?=$mymps_global[SiteUrl]?>/public/space.php?user=<?=$s_uid?>" target="_blank">我的空间</a>
+            </li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="show_info">
+        <div id="left">
+            <?=mymps_member_menu()?>
+        </div>
+        <div id="right">
+        <div id="main_info2">
+            <div class="ts">
+            <img src="images/icon_mymps_home.gif" align="absmiddle"> 
+            <a href="index.php">会员管理中心</a> &raquo; <?=$here?>
+            </div>
+        </div>
+        <?php include $tpl?>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="footer">
+    <ul>
+    <?=$mymps_global[SiteName]?>用户管理中心<br />
+    Copyright 2009 All rights reserved
+    </ul>
+    </div>
+    <br /><br />
+</div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<form action="friendlink.php?part=update&id=<?=$link[id]?>" method="post" enctype="multipart/form-data" name="form1" onSubmit="return CheckSubmit();";>
+    <input type="hidden" name="createtime" value="<?=date("Y-m-d H:i:s", time()) 
+?>">
+<div id="<?=MPS_SOFTNAME?>">
+<table width="100%" cellspacing="0" cellpadding="0" class="vbm">
+      <tr class="firstr">
+        <td colspan="5">
+        <div class="left"><a href="javascript:collapse_change('1')">网站概况</a></div>
+        <div class="right"><a href="javascript:collapse_change('1')"><img id="menuimg_1" src="images/menu_reduce.gif"/></a></div>
+        </td>
+      </tr>
+      <tbody id="menu_1">
+	  <tr bgcolor="#f5fbff">
+        <td width="19%" height="25">网址：</td>
+        <td>
+        	<input name="url" type="text" id="url" value="<?=$link[url]?>" size="30" />        </td>
+      </tr>
+      <tr bgcolor="#f5fbff">
+        <td height="25">网站名称：</td>
+        <td>
+        	<input name="webname" type="text" id="webname" size="30" value="<?=$link[webname]?>"/>        </td>
+      </tr>
+      <tr bgcolor="#f5fbff">
+        <td height="25">网站LOGO：</td>
+        <td>
+        	<input name="weblogo" type="text" id="webname" size="30" value="<?=$link[weblogo]?>"/>
+            尺寸:80*35，若显示文字链接则不需添加logo地址        </td>
+      </tr>
+      <tr bgcolor="#f5fbff">
+        <td width="19%" height="25">PR值</td>
+        <td>
+		<?=apply_flink_pr($link[pr]);?>	
+        </td>
+      </tr>
+      <tr bgcolor="#f5fbff">
+        <td width="19%" height="25">日IP</td>
+        <td>
+        <?=apply_flink_dayip($link[dayip]);?>	    
+		</td>
+      </tr>
+      <tr bgcolor="#f5fbff">
+        <td height="25">网站简况：</td>
+        <td><textarea name="msg" cols="50" rows="5" id="msg"><?=de_textarea_post_change($link[msg])?></textarea></td>
+      </tr>
+      </tbody>
+      </table>
+</div>
+<div id="<?=MPS_SOFTNAME?>">
+<table width="100%" cellspacing="0" cellpadding="0" class="vbm">
+      <tr class="firstr">
+      <td colspan="3">
+        <div class="left"><a href="javascript:collapse_change('2')">联系方式</a></div>
+        <div class="right"><a href="javascript:collapse_change('2')"><img id="menuimg_2" src="images/menu_reduce.gif"/></a></div>
+       </td>
+      </tr>
+      <tbody id="menu_2">
+      <tr bgcolor="#f5fbff">
+        <td height="25" width="19%">站长姓名：</td>
+        <td>
+        	<input name="name" type="text" id="name" size="30"  value="<?=$link[name]?>"/>        </td>
+      </tr>
+      <tr bgcolor="#f5fbff">
+        <td height="25">站长QQ：</td>
+        <td>
+        	<input name="qq" type="text" id="qq" size="30"  value="<?=$link[qq]?>"/>        </td>
+      </tr>
+      <tr bgcolor="#f5fbff">
+        <td height="25">站长Email：</td>
+        <td>
+        	<input name="email" type="text" id="email" size="30"  value="<?=$link[email]?>"/>        </td>
+      </tr>
+      </tbody>
+      </table>
+</div>
+<div id="<?=MPS_SOFTNAME?>">
+<table width="100%" cellspacing="0" cellpadding="0" class="vbm">
+     <tr class="firstr">
+        <td colspan="3">
+         <div class="left"><a href="javascript:collapse_change('3')">其他属性</a></div>
+         <div class="right"><a href="javascript:collapse_change('3')"><img id="menuimg_3" src="images/menu_reduce.gif"/></a></div>
+        </td>
+      </tr>
+      <tbody id="menu_3">
+      <tr bgcolor="#f5fbff">
+        <td height="25">网站类型：</td>
+        <td>
+        <select name="typeid" id="typeid">
+	<?php 
+    foreach($links AS $row){
+    ?>
+        <option value="<?=$row[id]?>"<?php if($row[id]==$link[typeid]){echo "selected";}?>><?=$row[typename]?></option>
+    <?php
+	}
+	?>
+        </select>
+        </td>
+      </tr>
+      <tr bgcolor="#f5fbff">
+        <td height="25">链接状态：</td>
+        <td>
+        <label><input type='radio' name='ischeck' value="1" <?php if ($link[ischeck]=="1") echo"checked='checked'";?>> 待审</label>
+        <label><input type='radio' name='ischeck' value="2" <? if ($link[ischeck]=="2") echo"checked='checked'";?>> 正常</label>
+                </td>
+      </tr>
+      <tr bgcolor="#f5fbff">
+        <td width="19%" height="25">排列序号：</td>
+        <td>
+<input name="ordernumber" type="text" id="order" size="10" style='width:60px'  value="<?=$link[ordernumber]?>"/>        
+(由小到大排列)        
+		</td>
+      </tr>
+      <tr bgcolor="#f5fbff">
+        <td height="51">&nbsp;</td>
+        <td>
+        	<input type="submit" name="Submit" value="修 改" class="mymps mini" />
+          &nbsp;&nbsp;<input type="button" onClick=history.back() value="返 回" class="mymps mini">         </td>
+      </tr>
+      </tbody>
+    </table>
+</div>
+</form>
+<?php echo mymps_admin_tpl_global_foot();?>

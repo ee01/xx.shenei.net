@@ -1,0 +1,91 @@
+<link href="{$Shop_url}themes/mall/default/styles/default/css/ecmall.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$Shop_url}index.php?act=jslang"></script>
+<script type="text/javascript" src="{$Shop_url}includes/libraries/javascript/jquery.js" charset="utf-8"></script>
+<script type="text/javascript" src="{$Shop_url}themes/mall/default/styles/default/js/nav.js" charset="utf-8"></script>
+<script type="text/javascript" src="{$Shop_url}themes/mall/default/styles/default/js/select.js" charset="utf-8"></script>
+
+<div id="head">
+    {if $cat.catid eq 4}
+	<h1 title="兼职协会"><a href="{$Shop_url}index.php"><img alt="兼职协会" src="{$mymps_global.SiteUrl}/images/logo_jianzhi.gif" /></a></h1>
+	{else}
+	<h1 title="【舍内分类信息】 - 福州|大学城分类信息 - 舍内网"><a href="{$Shop_url}index.php"><img alt="【舍内分类信息】 - 福州|大学城分类信息 - 舍内网" src="/images/logo.gif" /></a></h1><!--"{$Shop_url}data/files/mall/settings/site_logo.gif" /></a></h1>-->
+	{/if}
+<div style="float:right">
+    <div class="menu2">
+<ul>
+	 <script type="text/javascript" src="{$mymps_global.SiteUrl}/member/login.php?part=islogin&url={php}echo urlencode(urlencode(getUrl())){/php}"></script>
+     <li><a href="{$mymps_global.SiteUrl}/member/info.php?part=input" title="立即免费发布信息" ><b>立即免费发布信息</b></a></li>
+     <li><a href="{$Shop_url}index.php?app=article&amp;code=help">帮助中心</a></li>
+     <li><a href="http://u.shenei.net/" target="_blank">家园</a></li>
+
+</ul>
+    </div>
+</div>
+</div>
+
+<ul id="nav">
+    <div class="nav1"></div>
+    <div class="nav2"></div>
+	{if $cat.catid eq 4}
+    <li><a class="link" href="http://jianzhi.shenei.net/"><span>兼职首页</span></a></li>
+    <li><a class="hover" href="{$mymps_global.SiteUrl}/public/about.php?part=aboutus&id=4" target="_blank"><span>协会介绍</span></a></li>
+    <li><a class="hover" href="http://jianzhi.q.shenei.net/" target="_blank"><span>协会论坛</span></a></li>
+        <li><a class="hover" href="{$mymps_global.SiteUrl}" target="_blank"><span>更多信息</span></a></li>
+        <li><a class="hover" href="http://u.shenei.net/" target="_blank"><span>兼职家园</span></a></li>
+        <li><a class="hover" href="{$Shop_url}" target="_blank"><span>开店创业</span></a></li>
+	{else}
+    <li><a class="hover" href="http://www.shenei.net" target="_blank"><span>主页</span></a></li>
+    <li><a class="{if $count_info}link{else}hover{/if}" href="{$mymps_global.SiteUrl}"><span>〖分类信息〗</span></a></li>
+		<li><a class="hover" href="{$Shop_url}index.php" target="_blank"><span>〖舍内网店〗</span></a></li>
+        <li><a class="hover" href="http://buy.shenei.net" target="_blank"><span>〖团购秒杀〗</span></a></li>
+        <li><a class="hover" href="http://u.shenei.net/" target="_blank"><span>〖用户家园〗</span></a></li>
+        <li><a class="hover" href="{$Shop_url}index.php?app=category" target="_blank"><span>商品分类</span></a></li>
+        <li><a class="hover" href="{$Shop_url}index.php?act=store&keyword=&app=search" target="_blank"><span>店铺一条街</span></a></li>
+	{/if}
+    </ul>
+
+<div class="search">
+    <div class="search1"></div>
+    <div class="search2"></div>
+    <div class="wrap">
+        <form method="GET" action="{$Shop_url}">
+            <div class="border">
+                <div class="select_js">
+                    <p>搜索信息</p>
+                    <div class="ico"></div>
+                    <ul>
+                        <li ectype="index">搜索商品</li>
+                        <li ectype="store">搜索店铺</li>
+                        <li ectype="groupbuy">搜索团购</li>
+                        <li ectype="mymps">搜索信息</li>
+                    </ul>
+                    <input type="hidden" name="act" value="mymps" />
+                </div>
+                <input type="text" name="keyword" class="text2" />
+            </div>
+            <input type="hidden" name="app" value="search" />
+            <input type="submit" name="Submit" value="搜索" class="btn" />
+        </form>
+        <p><a href="{$Shop_url}index.php?app=category">商品分类</a><br /><a href="{$Shop_url}index.php?app=category&amp;act=store">店铺分类</a></p>
+    </div>
+    <div class="nav">
+        <div class="nav1"></div>
+        <div class="nav2"></div>
+        <a href="{$Shop_url}index.php?app=cart" class="buy">购物车</a>
+        <a href="{$Shop_url}index.php?app=my_favorite" class="buyline">收藏夹</a>
+        <a href="{$Shop_url}index.php?app=buyer_order" class="buyline">我的订单</a>
+    </div>
+</div>
+<div class="keyword">
+    <div class="keyword1"></div>
+    <div class="keyword2"></div>
+    热门搜索:
+        <a href="{$mymps_global.SiteUrl}/public/info.php?part=search&keywords=%BC%E6%D6%B0">兼职</a>
+        <a href="{$mymps_global.SiteUrl}/public/info.php?part=search&keywords=%D5%D0%C6%B8">招聘</a>
+        <a href="{$mymps_global.SiteUrl}/public/info.php?part=search&keywords=%C3%E2%B7%D1">免费</a>
+        <a href="{$mymps_global.SiteUrl}/public/info.php?part=search&keywords=%D1%A7%C9%FA">学生</a>
+        <a href="{$mymps_global.SiteUrl}/public/info.php?part=search&keywords=%B7%A2%B5%A5">发单</a>
+        <a href="{$mymps_global.SiteUrl}/public/info.php?part=search&keywords=%C9%CF%C3%C5">上门</a>
+        <a href="{$mymps_global.SiteUrl}/public/info.php?part=search&keywords=%D7%AA%C8%C3">转让</a>
+        <a href="{$mymps_global.SiteUrl}/public/info.php?part=search&keywords=%D1%B0%D5%D2">寻找</a>
+    </div>

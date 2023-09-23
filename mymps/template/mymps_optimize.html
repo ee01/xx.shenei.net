@@ -1,0 +1,113 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+  <tr class="firstr">
+  	<td colspan="2">技巧提示</td>
+  </tr>
+  <tr bgcolor="#ffffff">
+    <td>
+		数据表优化可以去除数据文件中的碎片，使记录排列紧密，提高读写速度。
+    </td>
+  </tr>
+</table>
+</div>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+    <tr class="firstr">
+        <td width="20%">数据表名称</td>
+        <td width="20%">创建时间</td>
+        <td width="20%">最后更新时间</td>
+        <td width="10%">记录数</td>
+        <td width="10%">数据</td>
+        <td width="10%">索引</td>
+        <td width="10%"><div class="left">碎片</div> <div style="float:right"><a href="javascript:collapse_change('10')"><img id="menuimg_10" src="images/menu_reduce.gif"/></a></div></td>
+    </tr>
+    <tbody id="menu_10" style="display:">
+    <? if($mymps_table_info) { foreach($mymps_table_info as $info) { ?>
+    <tr bgcolor="white">
+        <td><?=$info['Name']?></td>
+        <td><?=$info['Create_time']?></td>
+        <td><?=$info['Check_time']?>&nbsp;</td>
+        <td><?=$info['Rows']?></td>
+        <td><?=sizeunit($info['Data_length'])?></td>
+        <td><?=sizeunit($info['Index_length'])?></td>
+        <td><?=sizeunit($info['Data_free'])?></td>
+    </tr>
+    <? } ?>
+    <tr bgcolor="white">
+        <td><strong>合计:</strong>&nbsp;<?=count($mymps_table_info)?>个表</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td><?=$mymps_rows_total?></td>
+        <td><?=sizeunit($mymps_Data_length)?></td>
+        <td><?=sizeunit($mymps_Index_length)?></td>
+        <td><?=sizeunit($mymps_Data_free)?></td>
+    </tr>
+    <? } ?>
+    </tbody>
+</table>
+</div>
+<?if($other_table_info) {?>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+    <tr class="firstr">
+        <td width="20%">数据表名称</td>
+        <td width="20%">创建时间</td>
+        <td width="20%">最后更新时间</td>
+        <td width="10%">记录数</td>
+        <td width="10%">数据</td>
+        <td width="10%">索引</td>
+        <td width="10%"><div class="left">碎片</div> <div style="float:right"><a href="javascript:collapse_change('9')"><img id="menuimg_9" src="images/menu_reduce.gif"/></a></td>
+     </tr>
+     <tbody id="menu_9" style="display:">
+     <? foreach($other_table_info as $info) { ?>
+     <tr bgcolor="white">
+        <td><?=$info['Name']?></td>
+        <td><?=$info['Create_time']?></td>
+        <td><?=$info['Check_time']?>&nbsp;</td>
+        <td><?=$info['Rows']?></td>
+        <td><?=sizeunit($info['Data_length'])?></td>
+        <td><?=sizeunit($info['Index_length'])?></td>
+        <td><?=sizeunit($info['Data_free'])?></td>
+      </tr>
+      <? } ?>
+      <tr bgcolor="white">
+        <td><strong>合计:</strong>&nbsp;<?=count($other_table_info)?>个表</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td><?=$other_rows_total?></td>
+        <td><?=sizeunit($other_Data_length)?></td>
+        <td><?=sizeunit($other_Index_length)?></td>
+        <td><?=sizeunit($other_Data_free)?></td>
+       </tr>
+       </tbody>
+    </table>
+</div>
+<?}?>
+<form method="post" action="?part=<?=$part?>&action=do_mymps">
+<div id="<?=MPS_SOFTNAME?>">
+    <table class="vbm" border="0" cellspacing="0" cellpadding="0" onmouseover="addMouseEvent(this);">
+        <tr class="firstr">
+            <td colspan="2">请选择你要进行的操作</td>
+        </tr>
+        <tr>
+            <td width="5%" bgcolor="white"><input type="checkbox" name="optimize[]" value="check" /></td>
+            <td width="90%" bgcolor="white">检查表</td>
+        </tr>
+        <tr>
+            <td width="5%" bgcolor="white"><input type="checkbox" name="optimize[]" value="repair" /></td>
+            <td width="90%" bgcolor="white">修复表</td>
+        </tr>
+        <tr>
+            <td width="5%" bgcolor="white"><input type="checkbox" name="optimize[]" value="analyze" /></td>
+            <td width="90%" bgcolor="white">分析表</td>
+        </tr>
+        <tr>
+            <td width="5%" bgcolor="white"><input type="checkbox" name="optimize[]" value="optimize" checked="check" /></td>
+            <td width="90%" bgcolor="white">优化表</td>
+        </tr>
+    </table>
+</div>
+<center><input type="submit" name="toolssubmit" value=" 提交 " class="mymps large" /></center>
+</form>
+<?php echo mymps_admin_tpl_global_foot();?>

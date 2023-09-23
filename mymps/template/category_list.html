@@ -1,0 +1,48 @@
+<?=mymps_admin_tpl_global_head()?>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+    <tr class="firstr">
+      <td width="40">编号</td>
+      <td width="50%">名称</td>
+      <td width="80">排列顺序</td>
+      <td>操作</td>
+      <td>&nbsp;</td>
+    </tr>
+
+<?php
+foreach($cat AS $cat)
+{
+?>
+	  <tr bgcolor="#f5fbff">
+      <a name="#<?=$cat[catid]?>"></a>
+	  <td width="40"><label><?=$cat[catid]?></label></td>
+	  <td width="50%"><a href="javascript:collapse_change('<?=$cat[catid]?>')"><img id="menuimg_<?=$cat[catid]?>" src="images/menu_reduce.gif" align="absmiddle"/> <?=$cat[catname]?></a></td>
+      <td width="80"><label><?=$cat[catorder]?></label></td>
+	  <td><a href="category.php?part=edit&catid=<?=$cat[catid]?>">编辑</a> / <a href="category.php?part=delete&catid=<?=$cat[catid]?>" onClick="if(!confirm('确定要删除吗？\n\n此操作不可以恢复！'))return false;">删除</a> / <a href="/public/info.php?catid=<?=$cat[catid]?>" target="_blank">预览</a>      </td>
+      <td width="30"><a onclick="window.scrollTo(0,0);" style="cursor:pointer" title="至页面顶端">TOP</a></td>
+    </tr>
+<?
+	if(!empty($cat[children])) 
+	{
+    ?>
+    <tbody id="menu_<?=$cat[catid]?>" style="display:">
+    <?
+		foreach($cat[children] AS $child)
+		{
+?>  	
+	  <tr bgcolor="white" onMouseOver="this.className='Ipt IptIn'"  onmouseout="this.className='Ipt IptOut'">
+          <td width="40"><label><?=$child[id]?></label></td>
+          <td width="50%">&nbsp;&nbsp;&nbsp;&nbsp;<a name="<?=$child[id]?>"></a><img src="images/ico_2.gif" align="absmiddle">&nbsp;&nbsp;<?=$child[name]?></td>
+          <td width="80"><label><?=$child[order]?></label></td>
+          <td colspan="2"><a href="category.php?part=edit&catid=<?=$child[id]?>">编辑</a> / <a href="category.php?part=delete&catid=<?=$child[id]?>" onClick="if(!confirm('确定要删除吗？\n\n此操作不可以恢复！'))return false;">删除</a>  / <a href="/public/info.php?catid=<?=$child[id]?>" target="_blank">预览</a></td>
+	  </tr>
+<?php
+		}
+	} ?>
+    </tbody>
+    <?
+}
+?>
+</table>
+</div>
+<?=mymps_admin_tpl_global_foot()?>

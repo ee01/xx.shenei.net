@@ -1,0 +1,61 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+  <tr class="firstr">
+  	<td colspan="2">技巧提示</td>
+  </tr>
+  <tr bgcolor="#ffffff">
+    <td>
+  <li>若您添加了二级地区，请前往 <a href="mymps_config.php#分类信息设置" style="text-decoration:underline">系统配置</a> 开启 信息列表下拉框显示</li>
+    </td>
+  </tr>
+</table>
+</div>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+    <tr style="background: #e1f2fc; font-weight: bold; text-align:center">
+      <td width="40">编号</td>
+      <td>名称</td>
+      <td width="80">地区排序</td>
+      <td>操作</td>
+    </tr>
+
+<?php 
+if($area)
+{
+	foreach($area AS $area)
+	{
+?>
+	  <tr bgcolor="#f5fbff">
+	  <td width="40"><label><?=$area[areaid]?></label></td>
+	  <td width="60%" align="left"><a href="###" onclick="collapse_change('<?=$area[areaid]?>')"><img id="menuimg_<?=$area[areaid]?>" src="images/menu_reduce.gif" align="absmiddle"/> <?=$area[areaname]?> </a></td>
+      <td width="40"><label><?=$area[areaorder]?></label></td>
+	  <td><a href="area.php?part=edit&areaid=<?=$area[areaid]?>">编辑</a> / <a href="area.php?part=delete&areaid=<?=$area[areaid]?>" onClick="if(!confirm('确定要删除吗？\n\n此操作不可以恢复！'))return false;">删除</a></td>
+	</tr>
+<?
+	if(!empty($area[children])) 
+	{?>
+    <tbody id="menu_<?=$area[areaid]?>">
+    <?
+		foreach($area[children] AS $child)
+		{
+?>    	
+	  <tr bgcolor="white" onMouseOver="this.className='Ipt IptIn'"  onmouseout="this.className='Ipt IptOut'">
+			  <td width="40" style=" border-left-width:0;"><label><?=$child[id]?></label></td>
+			  <td width="60%" align="left">&nbsp;&nbsp;&nbsp;&nbsp;<a name="<?=$child[id]?>"></a><img src="images/ico_2.gif" align="absmiddle">&nbsp;&nbsp;<?=$child[name]?></td>
+			  <td width="40" style=" border-left-width:0;"><label><?=$child[order]?></label></td>
+			  <td><a href="area.php?part=edit&areaid=<?=$child[id]?>">编辑</a> / <a href="area.php?part=delete&areaid=<?=$child[id]?>" onClick="if(!confirm('确定要删除吗？\n\n此操作不可以恢复！'))return false;"   >删除</a></td>
+			</tr>
+
+<?php
+		}
+	} 
+    ?>
+   </tbody>
+    <?
+}
+} 
+?>
+</table>
+</div>
+<?php echo mymps_admin_tpl_global_foot();?>

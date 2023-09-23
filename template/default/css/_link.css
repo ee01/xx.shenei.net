@@ -1,0 +1,25 @@
+/* CSS Document */
+h1{ font-weight:bold}
+#bodyarea{  margin:10px 0; padding:0; text-align:left; height:100%;}
+.leftarea{ width:230px; float:right; background:#f1f8fe; border:1px #d2dde6 solid; padding:15px; height:100%; height:450px}
+.rightarea{float:right; margin-right:8px; width:680px}
+.foot{clear:both; border-top:3px solid #ADADAD; margin-top:8px; padding:15px; text-align:center; line-height:150%}
+.foot *{color:#666;}
+.nav_title{ height:29px; background:url(../images/link/nav_title_bg.gif) repeat-x; clear:left;}
+.nav_title span{width:7px; height:4px; float:right; margin-right:20px; background:url(../images/link/pointer.gif) no-repeat left top;}
+.nav_title h1{font-size:14px; line-height:25px; padding-left:25px; background:url(../images/link/ico_title.gif) no-repeat 10px 45%;}
+.linkcontent ul{margin-bottom:25px; clear:left;}
+.linkcontent li{ height:100%; line-height:30px; float:left; width:170px; border-bottom:1px dotted #ccc;border:none; list-style:none; list-style-type:none}
+.linkcontent li img{margin:5px 0;border:1px solid #ccc;padding:1px;}
+.linkcontent li a{font-size:14px; color:blue;}
+.leftarea{line-height:150%;}
+.width20 li{width:120px; text-align:left; border:none;}
+.copytxt{height:20px; line-height:20px; padding-left:5px; background:#eee; border:1px dashed #aaa; width:220px; font-family:Arial, Helvetica, sans-serif; color:#aaa; margin-bottom:5px;}
+.leftarea span{color:#aaa;}
+.leftarea li{ line-height:23px; margin:3px auto}
+.leftarea h1{margin-bottom:5px;}
+.leftarea li input{width:150px;}
+.leftarea .li{border:0;width:20px!important}
+.leftarea button{ margin:10px 5px 0 0;}
+.pstfrm{ height:18px; line-height:18px; font-family:Geneva, Arial, Helvetica, sans-serif;}
+.selectstyle{background:#eee; border:none; border-bottom:1px solid #ccc;}

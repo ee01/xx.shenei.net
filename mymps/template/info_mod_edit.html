@@ -1,0 +1,94 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<script type="text/javascript">
+function copyoption(s1, s2) {
+	var s1 = $(s1);
+	var s2 = $(s2);
+	var len = s1.options.length;
+	for(var i=0; i<len; i++) {
+		op = s1.options[i];
+		if(op.selected == true && !optionexists(s2, op.value)) {
+			o = op.cloneNode(true);
+			s2.appendChild(o);
+		}
+	}
+}
+
+function optionexists(s1, value) {
+	var len = s1.options.length;
+		for(var i=0; i<len; i++) {
+			if(s1.options[i].value == value) {
+				return true;
+			}
+		}
+	return false;
+}
+
+function removeoption(s1) {
+	var s1 = $(s1);
+	var len = s1.options.length;
+	for(var i=s1.options.length - 1; i>-1; i--) {
+		op = s1.options[i];
+		if(op.selected && op.selected == true) {
+			s1.removeChild(op);
+		}
+	}
+	return false;
+}
+
+function selectalloption(s1) {
+	var s1 = $(s1);
+	var len = s1.options.length;
+	for(var i=s1.options.length - 1; i>-1; i--) {
+		op = s1.options[i];
+		op.selected = true;
+	}
+}
+</script>
+<form method="post" name="form1" action="?part=mod&action=update" onsubmit="selectalloption('moptselect');">
+<input name="id" value="<?=$edit['id']?>" type="hidden">
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+    <tr class="firstr">
+    <td colspan="2">分类选项基本设置</td>
+    </tr>
+    <tr bgcolor="#f5fbff">
+      <td width="15%">分类模型名称</td>
+      <td bgcolor="#f5fbff"><input name="name" value="<?=$edit['name']?>"></td>
+    </tr>
+    <tr bgcolor="#f5fbff">
+      <td width="15%">显示顺序</td>
+      <td bgcolor="#f5fbff"><input name="displayorder" value="<?=$edit['displayorder']?>"></td>
+    </tr>
+</table>
+</div>
+<div id="<?=MPS_SOFTNAME?>">
+    <table border="0" cellpadding="0" cellspacing="0" class="vbm">
+    <tr class="firstr">
+    <td colspan="2">分类模型选项设置</td>
+    </tr>
+    <tr>
+    <td width="15%" bgcolor="#f5fbff"><b>模型选项</b></td>
+    <td bgcolor="#f5fbff">
+    <select name="options[]" size="10" multiple="multiple" style="width: 300px" id="moptselect">
+    <?php foreach ($options as $k=>$value){
+        $get=$db->getRow("SELECT optionid,title,type FROM `{$db_mymps}info_typeoptions` WHERE optionid = '$value'");
+    	?>
+        <option value="<?=$value?>"><?=$get[title]?>(<?=$get[type]?>)</option>
+	<?}?>
+    </select><br /><a href="###" onclick="removeoption('moptselect')">[删除]</a>
+    </td></tr>
+    <tr>
+    <td width="15%" bgcolor="#f5fbff"><b>可用系统选项</b></td>
+    <td bgcolor="#f5fbff">
+    <select name="" size="20" multiple="multiple" style="width: 300px" id="coptselect">
+    <?php echo $opt;?>
+    </select>
+    <br /><a href="###" onclick="copyoption('coptselect', 'moptselect')">[添加到模型选项]</a>
+    </td></tr>
+    </table>
+</div>
+<center>
+<input type="submit" value="保存修改" class="mymps mini" />　
+<input type="button" onClick=history.back() value="返 回" class="mymps mini">
+</center>
+<?php echo mymps_admin_tpl_global_foot();?>

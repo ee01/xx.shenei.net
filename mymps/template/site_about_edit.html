@@ -1,0 +1,48 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<script language='javascript'>
+function CheckSubmit()
+{
+	if(document.form1.content.value=="")
+	{
+   		document.form1.content.focus();
+   		alert("栏目内容不能为空！");
+   		return false;
+	}
+	return true;
+}
+</script>
+<div class="ccc2">
+	<ul>
+        <?php foreach($about_type as $k){?>
+        <input type="button" onClick="window.open('?id=<?=$k[id]?>','_self')" class="gray mini" value="<?=$k[typename]?>">&nbsp;&nbsp;
+        <?php }?>
+    </ul>
+</div>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+<form action="site_about.php" method="post" enctype="multipart/form-data" name="form1" onSubmit="return CheckSubmit();";>
+<input type="hidden" name="id" value="<?=$id?>">
+<input type="hidden" name="part" value="update" />
+  <tr bgcolor="#f5fbff">
+    <td width="12%" height="25">栏目名称：</td>
+    <td>
+    <?=$about[typename]?> 
+    </td>
+  </tr>
+  <tr bgcolor="#f5fbff">
+    <td height="25">栏目内容：</td>
+    <td>
+        <?php echo $acontent; ?>
+    </td>
+  </tr>
+  <tr bgcolor="#f5fbff">
+    <td height="51">&nbsp;</td>
+    <td>
+        <input type="submit" name="Submit" value="保存修改" class="mymps mini"/>
+      &nbsp;&nbsp;<input type="button" onClick=history.back() value="返 回" class="mymps mini">
+     </td>
+  </tr>
+  </form>
+</table>
+</div>
+<?php echo mymps_admin_tpl_global_foot();?>

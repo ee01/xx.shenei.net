@@ -1,0 +1,65 @@
+{$mymps_global_header}
+<title>{$title} - {$SiteName}</title>
+<link href="../template/default/css/_g.css" type="text/css" rel="stylesheet" />
+<link href="../template/default/css/style.css" type="text/css" rel="stylesheet" />
+<link href="../template/default/css/_fabu.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../template/default/js/info_post.js"></script>
+{if $onload neq ''}
+<script type="text/javascript" src="../mypub/messagebox.js"></script>
+{/if}
+</head>
+<body class="home-page" bgcolor="#e6e6e6"  onLoad="{$onload}">
+<div class="wrapper">
+{include file="default/inc_head.html"}
+	<!-- 主体 -->
+    <form name="postForm" method="post" enctype="multipart/form-data" onSubmit="return CheckSubmit();" action="?part={$post.part}">
+    <input name="ismember" value="{$post.ismember}" type="hidden">
+    <input name="userid" value="{$post.userid}" type="hidden">
+    <input name="catid" value="{$post.catid}" type="hidden">
+    <input name="id" value="{$post.id}" type="hidden">
+	<div id="content">
+		<div class="thd clearfix"><b>发布步骤：</b><span>1.选择分类</span><span class="current">2.填写内容</span><span>3.发布完成</span></div>
+		<div class="fbd">
+			<div class="edit_box">
+				<ul>
+					<li><span class="span_1">&nbsp;</span><span class="span_2" style="font-size:12px;">您的ip地址是：<span class="red_skin">{$post.ip}</span>，请真实填写信息内容</span></li>
+					<li><span class="span_1">所选类别：</span><span class="span_2"><b>{$post.location}</b> {if $post.part eq 'input'}<a href="../member/info.php?part=input">&raquo; 返回重选类别</a>{/if}</span></li>
+					<li><span class="span_1"><font color=red>*</font>选择地区：</span>
+                     <span class="span_2">
+                        <select name="areaid">
+                            <option value="">请选择所属地区</option>
+                            {$area_option}
+                        </select>
+                      </span>
+                      </li>
+					
+				  <li><span class="span_1"><font color=red>*</font>信息标题：</span><span class="span_2" style="font-size:12px; color:#888;"><input type="text" class="textInt" size="70"  name="title" onKeyUp="fontkeyup(this,40,'font1');"  value="{$post.title}" /> 不要超过40个文字</span></li>
+					<li><span class="span_1"><font color=red>*</font>信息内容：</span><span class="span_2" style="font-size:12px; color:#888;">{$acontent}</span></li>
+                     
+					{$post.mymps_extra_value}
+
+					<li><span class="span_1"><font color=red>*</font>有效期：</span><span class="span_2">{$post.GetInfoLastTime}</span></li>
+                    
+                    {$post.upload_img}
+                    
+					<li><span class="span_1"><font color=red>*</font>联系人：</span><span class="span_2"><input type="text" class="textInt" name="contact_who" value="{$post.contact_who}" size="40"/></span></li>
+					<li><span class="span_1">&nbsp;联系QQ：</span><span class="span_2"><input type="text" class="textInt" name="qq" value="{$post.qq}" size="40"/> 
+					选填</span></li>
+                    <li><span class="span_1">&nbsp;电子邮件：</span><span class="span_2"><input type="text" class="textInt" value="{$post.email}" name="email" size="40"/> 
+                    选填</span></li>
+					<li><span class="span_1"><font color=red>*</font>联系电话：</span><span class="span_2"><input type="text" class="textInt" name="tel" value="{$post.tel}" size="40"/></span></li>
+                    {$post.manage_pwd}
+					{$post.imgcode}
+					<li><span class="span_1">&nbsp;</span><span class="span_2"><input type="submit" name="mymps_submit" class="mymps fabu" value="{$post.submit}"/></span></li>
+				</ul>
+			</div>		
+		</div>
+	</div><input type="hidden" name="count" value="1" />
+	<!-- 主体 结束 -->
+	</form>
+	<!-- 页脚 -->
+{include file="default/inc_foot.html"}
+<!-- 页脚 结束 -->
+</div>
+</body>
+</html>

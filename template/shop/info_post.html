@@ -1,0 +1,45 @@
+{$mymps_global_header}
+<title>{$title} - {$SiteName}</title>
+<link href="../template/shop/css/_g.css" type="text/css" rel="stylesheet" />
+<link href="../template/shop/css/style.css" type="text/css" rel="stylesheet" />
+<link href="../template/shop/css/_fabu.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body class="home-page">
+{include file="shop/inc_head.html"}
+<div class="wrapper">
+<!-- 主体 -->
+<div id="content">
+<div class="thd clearfix"><b>本站信息发布步骤：</b><span class="current">1.选择信息分类</span><span>2.填写信息内容</span><span>3.完成信息发布</span><b>请确保信息发布的完整性。</b></div>
+<div class="fbd" id="YMenu">
+<div class="tips">
+1、请不要肆意发布垃圾信息、虚假信息、重复信息<br />
+2、所有信息发布必须严格遵守中华人民共和国所有法律法规及本地、本行业相关规定，严禁发布带有任何违法或违规色彩的信息<br />
+3、信息发布者必须自行对信息的有效性、真实性承担一切责任
+</div>
+    <div class="c_left1" id="YMenu">
+        <div class="conLli" id="YMenu-side">
+            <ul class="YM-mainmnu clearfix">
+            {foreach item=first_cat from=$category}
+                <li class="YM-Tab"><a href="#">{$first_cat.catname}</a>
+                    <ul class="YM-submnu">
+                       {foreach item=second_cat from=$scategory[$first_cat.catid]}
+                        <li><a href='../member/info.php?part=input&catid={$second_cat.catid}'>
+{$second_cat.catname}</a></li>
+                       {/foreach}
+                    </ul>
+                </li>
+               {/foreach}
+            </ul>
+            <div class="c">
+            </div>
+        </div>
+    </div>
+	<script language="javascript" type="text/javascript" src="../template/shop/js/boot.js"></script>
+</div>
+</div>
+<!-- 主体 结束 -->
+{include file="shop/inc_foot.html"}
+</div>
+</body>
+</html>

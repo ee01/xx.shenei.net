@@ -1,0 +1,8 @@
+.site_info {}
+.site_info .hd { background:url(../images/site_info_03.gif) no-repeat 0 0; height:39px; line-height:39px; padding:0 15px;}
+.site_info .hd li { font-size:14px; float:left; padding-left:18px; background:url(../images/site_info_04.gif) no-repeat 0 12px; padding-right:15px;}
+.site_info .hd li a { color:#156fbb; text-decoration:underline;}
+.site_info .hd li.current a { font-weight:bold; color:#f30; text-decoration:none;}
+.site_info .hd li a:hover { color:#f30;}
+.site_info .bd { margin-top:10px; padding:0 10px; text-align:left; font-size:14px; line-height:25px; color:#333;}
+.site_info .bd p { margin-bottom:15px;}

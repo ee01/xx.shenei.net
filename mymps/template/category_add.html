@@ -1,0 +1,78 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<script language="javascript" src="/mypub/prototype.js"></script>
+<script language=javascript>
+function chkform(){
+	if(document.form1.catname.value==""){
+		alert('请输入栏目标题！');
+		document.form1.catname.focus();
+		return false;
+	}
+	if(document.form.catname.value.length<2){
+		alert('栏目标题请控制在2个字节以上!');
+		document.form1.catname.focus();
+		return false;
+	}
+}
+function do_copy(){
+  ff = document.form1;
+  ff.title.value=document.getElementById("catname").value;
+  ff.keywords.value=document.getElementById("catname").value;
+  ff.description.value=document.getElementById("catname").value;
+}
+</script>
+
+<form method=post onSubmit="return chkform()" name="form1" action="category.php?part=insert">
+<div id="<?=MPS_SOFTNAME?>">
+<table width="100%"  border="0" cellspacing="0" cellpadding="0" class="vbm">
+<tr class="firstr">
+<td colspan="2">
+    <div class="left"><a href="javascript:collapse_change('1')">栏目基本信息</a></div>
+    <div class="right"><a href="javascript:collapse_change('1')"><img id="menuimg_1" src="images/menu_reduce.gif"/></a></div>
+</td>
+</tr>
+<tbody id="menu_1">
+<tr bgcolor="#f5fbff">
+  <td width="15%">栏目名称： </td>
+  <td><textarea rows="5" name="catname" cols="50"></textarea><br />
+<div style="margin-top:3px">支持行业分类批量添加，多个分类以 | 隔开 <br />
+<font color="red">范例：行业1|行业2|行业3|行业4|行业5</font></div></td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td>栏目选择： </td>
+  <td><select name="parentid" id="parentid" >
+    <option value="0">作为根栏目</option>
+<?php
+foreach ($cats AS $cats)
+{
+	echo "<option value='$cats[catid]'>$cats[catname]</option>\n";
+}
+?>
+  </select>  </td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td>栏目排序： </td>
+  <td><input name="catorder" type="text" id="catorder" value="<?=$maxorder?>" size="13"></td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td width="15%">栏目提示信息： </td>
+  <td> <?php echo $acontent;?> </td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td>所属模型： </td>
+  <td><select name="modid"><?php echo info_typemodels(); ?></select> [<a href="info_type.php?part=mod">模型管理</a>]</td>
+</tr>
+<tr bgcolor="#f5fbff">
+  <td width="15%">是否开启图片上传模块： </td>
+  <td>
+  <label for="1"><input type="radio" value="1" id="1" name="if_upimg" checked="checked">开启</label> 
+  <label for="0"><input type="radio" value="0" id="0" name="if_upimg">关闭</label></td>
+</tr>
+</tbody>
+</table>
+</div>
+<center>
+<input type="submit" value="确认提交" class="mymps mini" />　
+<input type="button" onClick=history.back() value="返 回" class="mymps mini">
+</center>
+</form>
+<?php echo mymps_admin_tpl_global_foot();?>

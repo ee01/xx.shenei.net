@@ -1,0 +1,94 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+  <tr class="firstr">
+  	<td colspan="2">技巧提示</td>
+  </tr>
+  <tr bgcolor="#ffffff">
+    <td>
+ <li style="color:#FF6600; font-weight:bold">注意：启用缓存功能后，在你设定的时间内，系统前台页面显示将不会发生变化</li>
+  <li>如您尚未完成系统的配置和初始化安装，建议关闭所有页面的缓存功能</li>
+  <li>开启系统缓存功能，可大大提高系统负载能力！缓存时间单位为秒，具体时间视你的网站访问量而自己拟定 </li>
+  <li style="color:#FF6600; font-weight:bold">当贵站数据量过万时，强烈建议开启系统缓存 </li>
+    </td>
+  </tr>
+</table>
+</div>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+  <tr class="firstr">
+  	<td colspan="2">清除系统缓存页面</td>
+  </tr>
+  <tr bgcolor="#ffffff">
+    <td width="55%">
+    <input type="button" value="更新系统缓存" class="gray mini" onClick="location.href='?part=update_cache'">　<input type="button" value="清除前台页面缓存" class="gray mini" onClick="location.href='?part=clearcache&action=all'">　<input type="button" value="清除网站首页缓存" class="gray mini" onClick="location.href='?part=clearcache&action=index.html'"></td>
+    <td><form action="?" method="get">
+<input name="part" value="clearcache" type="hidden">
+<input name="action" value="" type="text" class="text">　
+<input type="submit" value="清除指定页面缓存" class="mymps mini">
+</form></td>
+  </tr>
+</table>
+</div>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+  <tr class="firstr">
+  	<td colspan="2">缓存时间参考值</td>
+  </tr>
+  <tr bgcolor="#ffffff">
+    <td>
+    	一分钟：<font color="red">60秒</font> &nbsp;&nbsp; 半小时：<font color="red">1800秒</font> &nbsp;&nbsp; 一小时：<font color="red">3600秒</font> &nbsp;&nbsp; 三小时：<font color="red"><?php echo (3600*3); ?>秒</font> &nbsp;&nbsp; 半天：<font color="red"><?php echo (3600*12); ?>秒</font> &nbsp;&nbsp; 一天：<font color="red"><?php echo (3600*12*2); ?>秒</font> &nbsp;&nbsp; 两天：<font color="red"><?php echo (3600*12*2*2); ?>秒</font> &nbsp;&nbsp; 一周：<font color="red"><?php echo (3600*12*2*7); ?>秒</font>
+    </td>
+  </tr>
+</table>
+</div>
+<form action="?part=cacheupdate" method="post">
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+    <tr class="firstr">
+      <td>针对页面</td>
+      <td>缓存时间</td>
+      <td>缓存开启状态</td>
+      <td>相关说明</td>
+    </tr>
+    <?foreach ($admin_cache as $k =>$a)
+    {
+    ?>
+<tr bgcolor="#dff6ff">
+      <td align="left">
+        <b><?=$admin_cache_array[$k]?> (<?=$k?>)</b>
+       </td>
+      <td align="left">&nbsp;</td>
+      <td align="left">&nbsp;</td>
+      <td align="left" style="line-height:20px">&nbsp;</td>
+    </tr>
+    <?
+  	  foreach ($a as $q => $w)
+      {
+          if(is_array($w))
+            {
+    ?>
+    <tr bgcolor="#f5fbff">
+      <td align="left">
+        <?=$w["name"]?> (<?=$q?>)      </td>
+      <td align="left">
+       <input name="<?=$q."_time"?>" value='<?=$mymps_cache[$q][time]?>' style='border:1px #dedede solid; width:60px; '/> <font color="red">秒</font>       
+      </td>
+      <td align="left">
+      <label for="<?=$q."0"?>"><input name="<?=$q."_open"?>" type="radio" value="0" id="<?=$q."0"?>" <?if ($mymps_cache[$q][open]=='0'){echo "checked";}?>>关闭</label>
+      <label for="<?=$q."1"?>"><input name="<?=$q."_open"?>" type="radio" value="1" id="<?=$q."1"?>" <?if ($mymps_cache[$q][open]=='1'){echo "checked";}?>>开启</label>
+      </td>
+      <td align="left" style="line-height:20px">
+      <?=$w["des"]?>      </td>
+    </tr>
+    <?}
+    }}?>
+</table>
+</div>
+<div align="center" style="margin:15px;">
+<input class="mymps mini" value="保存设置" type="submit" > 
+<input type="button" onClick="history.back()"value="返回" class="mymps mini">
+
+</div>
+</form>
+<?php echo mymps_admin_tpl_global_foot();?>

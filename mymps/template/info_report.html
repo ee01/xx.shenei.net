@@ -1,0 +1,48 @@
+<?=mymps_admin_tpl_global_head();?>
+<script type="text/javascript" src="/mypub/messagebox.js"></script>
+<div class="ccc2">
+<ul>
+<?php foreach($report_type as $k => $v){?>
+<input type="button" onClick="location.href='?part=report&report_type=<?=$k?>'" value="<?=$v?>" class="gray mini">&nbsp;&nbsp;
+<?php }?>
+</ul>
+</div>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm" onmouseover="addMouseEvent(this);">
+  <form name='form1' method='post' action='?part=<?=$part?>' onSubmit='return checkSubmit();'>
+  <input name="url" type="hidden" value="<?=GetUrl()?>">
+  <input name="action" type="hidden" value="delall">
+    <tr class="firstr">
+      <td width="30">选择</td>
+      <td width="30">编号</td>
+   	  <td>举报对象</td>
+      <td>举报类型</td>
+      <td>附加描述</td>
+      <td>举报时间</td>
+      <td>举报IP</td>
+      <td>相关操作</td>
+    </tr>
+<?php foreach($report AS $v){
+?>
+    <tr align="center" bgcolor="#f5fbff">
+      <td><input type='checkbox' name='id[]' value='<?=$v[id]?>' class='np' id="<?=$v[id]?>"></td>
+      <td><?=$v[id]?></td>
+      <td><a href="../public/info.php?id=<?=$v[infoid]?>" target="_blank"><?=$v[infotitle]?></a></td>
+	  <td><?=$v[type]?></td>
+	  <td><?=$v[content]?></td>
+      <td><?=$v[pubtime]?></td>
+      <td><?=$v[ip]?></td>
+      <td><a href="?part=<?=$part?>&action=del&id=<?=$v[id]?>&url=<?=urlencode(GetUrl())?>" onClick="return confirm('您确定要删除吗，如不确定请点取消')">删除举报</a> | <a href="?title=<?=urlencode($v[infotitle])?>">查看该信息</a></td>
+    </tr>
+<?php }?>
+    <tr bgcolor="#ffffff" height="28">
+    <td align="center" style="border-right:1px #fff solid;"><input name="checkall" type="checkbox" id="checkall" onClick="CheckAll(this.form)"/></td>
+    <td colspan="10">
+      <input type="submit" onClick="if(!confirm('确定要操作吗？'))return false;" value="执行操作" class="mymps mini"/>
+    </td>
+    </tr>
+  </form>
+</table>
+</div>
+<div class="pagination"><?=page2()?></div>
+<?=mymps_admin_tpl_global_foot();?>

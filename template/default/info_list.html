@@ -1,0 +1,215 @@
+{$mymps_global_header}
+<meta name="keywords" content="{$cat.keywords}" />
+<meta name="description" content="{$cat.description}" />
+<title>{$CatTitle} - {$SiteName}</title>
+<link href="../template/default/css/_g.css" type="text/css" rel="stylesheet" />
+<link href="../template/default/css/style.css" type="text/css" rel="stylesheet" />
+<link href="../template/default/css/_liveNews.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../template/default/js/common.js"></script>
+</head>
+<body class="home-page" bgcolor="#e6e6e6">
+<div class="wrapper"><!-- topBar -->
+{include file="default/inc_head.html"}
+
+<!-- 主体 -->
+<div id="content">
+<!-- 小图banner -->
+<!--<div class="lineAdv_box clearfix">
+<ul>
+<li><a href="#" target=_blank title="注释文字" ><img src='../template/default/images/gg/1.png' width='126' height='63' border=0></a></li>
+<li><a href="#" target=_blank title="注释文字" ><img src='../template/default/images/gg/2.png' width='126' height='63' border=0></a></li>
+<li><a href="#" target=_blank title="注释文字" ><img src='../template/default/images/gg/3.png' width='126' height='63' border=0></a></li>
+<li><a href="#" target=_blank title="注释文字" ><img src='../template/default/images/gg/4.png' width='126' height='63' border=0></a></li>
+<li><a href="#" target=_blank title="注释文字" ><img src='../template/default/images/gg/5.png' width='126' height='63' border=0></a></li>
+<li><a href="#" target=_blank title="注释文字" ><img src='../template/default/images/gg/6.png' width='126' height='63' border=0></a></li>
+<li><a href="#" target=_blank title="注释文字" ><img src='../template/default/images/gg/7.png' width='126' height='63' border=0></a></li>
+</ul>
+</div>-->
+<div class="page_nav">
+<div class="menu left" id="LeftArr"><a href="javascript:void(0);">左移</a></div>
+<div class="bd clearfix" id="ISL_Cont_1">
+<ul>
+{foreach from=$category item=category}<li {if $category.catid eq $cat.catid}class="selected"{/if}><a href="{$category.uri}" title="{$mymps_global.SiteCity}{$category.catname}">{$category.catname}</a></li>{/foreach}
+</ul>
+</div>
+<div class="menu right" id="RightArr"><a href="javascript:void(0);">右移</a></div>
+</div>
+<div class="page_cont clearfix">
+<div class="col_sub">
+<!-- 类别列表 -->
+<div class="category_navigation">
+<div class="hd">{$mymps_global.SiteCity}{$cat.catname}</div>
+<div class="bd">
+<ul>
+{foreach from=$catlist item=catlist}<li {if $catlist.catid eq $catid}class="listnavon"{/if}><a href="{$catlist.uri}" >{$catlist.catname}</a></span>{/foreach}
+</ul>
+</div>
+</div>
+<!-- 自定html -->
+<!--<div class="zd_html">
+----黄金广告位----
+<p><a href="#"><img border="0" src="../template/default/images/gg/8.gif" width="140" height="678"></a></p>
+</div>-->
+</div>
+<div class="col_main bg_open" id="node_box">
+<div class="mainBar">
+<!-- 头部选择 -->
+<div class="top_selsct">
+{if $catid neq ''}
+<ul class="clearfix">
+<div class="address">区域查找：
+{if $mymps_global.cfg_arealoop_style eq 1}
+<select name="areaid" onChange="location.href=(this.options[this.selectedIndex].value)">
+ <option>请选择所属地区</option>
+{foreach from=$area item=area}
+<option value="{$area.uri}" 
+{if $areaid eq $area.areaid}selected="selected" style="background-color:#6eb00c; color:white!important;"{/if}{if $area.parentid eq '0'} style=color:#006acd>{$area.areaname}</option>{else}>&nbsp;&nbsp;&nbsp;&nbsp;{$area.areaname}</option>{/if}
+{/foreach}
+</select>
+{else}
+{foreach from=$area item=area}
+<a href="{$area.uri}" {if $areaid eq $area.areaid} class='selected'{/if}>{$area.areaname}</a>
+  {/foreach}
+{/if}
+</div>
+</ul>
+{/if}
+<div>
+</div>
+	
+</ul>
+<div>
+ </div>
+</div>
+<!-- 内容列表 -->
+<div class="zone clearfix" id="node_bg">    
+{foreach from=$info_list item=info_list name=oop} 
+<div class="list_module bg{if $info_list.upgrade_type > 1}2{/if}">
+  <div class="hd clearfix"><span class="right_f"><b class="time">{$info_list.begintime}</b>发布</span><span class="lou">{if $info_list.upgrade_type > 1 }&nbsp;<b>TOP</b>{else}<b>{$page}-{$smarty.foreach.oop.iteration}楼</b>{/if}</span>
+<span class="title"><a href="{$info_list.uri}" target="_blank">{$info_list.title}</a> 
+{if $info_list.info_level eq 2}<img src="../template/default/images/jian.gif" align="absmiddle">{/if}
+{if $info_list.img_count > 0}<span class="imgnum">{$info_list.img_count}图</span>{/if}
+</span>
+<span class="smallClass">{$info_list.catname}</span>
+</div>
+  <div class="bd clearfix">
+    <div class="pic"></div>
+    <div class="cont">
+      <div class="info">{$info_list.content}</div>
+      <div class="ft">
+<b>所属类别</b>
+{$info_list.catname}
+<b>所属地区</b>
+{$info_list.areaname}
+  <span class="right">{if $info_list.upgrade_type > 1 }<img src="../template/default/images/top.png" align="absmiddle">{/if}</span>
+  
+  </div>
+</div>
+ </div>  </div>     
+{/foreach}
+<div style="padding-top:10px">
+<div class="pagination">{$pageview}</div>
+<a style="float:right;border:0; color:#36c;" href="#top">返回顶部 ↑</a></div>	
+</div>
+</div>
+<div class="sideBar" id="sidebar">
+<div>
+<a href="../member/info.php?part=input" target="_blank"><img src="../template/default/images/fabu_06.gif" alt="快速发布信息" /></a>
+</div>
+<!-- 栏目介绍 -->
+<div class="searchz_box">
+
+{if $cat.notice neq ''}
+<div class="hd">{$mymps_global.SiteCity}{$cat.catname}说明</div>
+<div class="bd" style="padding:8px;">
+{$cat.notice}
+</div>
+{/if}
+</div>
+<!-- 跳蚤市场详细搜索 -->
+<div class="searchz_box">
+    <div class="hd">{$mymps_global.SiteCity}{$cat.catname}详细搜索</div>
+    <div class="bd">
+    <form action="{$mymps_global.SiteUrl}/public/info.php" method="get" onSubmit="return SearchSubmit();" name="forms"/>
+        <input type="hidden" name="part" value="search">
+        <ul>
+            <li>选类别：<select name="catid">
+            <option value="">所属类别</option>
+            {$cat_option}
+            </select></li>
+            <li>选区域：<select name="areaid">
+               <option value="">所属地区</option>
+              {$area_option}
+              </select></li>
+            <li>选时间：{$right.GetInfoPostTime}</li>
+            <li>关键字：<input type="text" name="keywords" size="13" value="{$right.keywords}"/></li>
+            <li style="text-align:right;"><input type="submit" class="search_menu" value="搜索" /></li>
+        </ul>
+    </form>
+    </div>
+</div>
+<!-- 客服 -->
+<div class="service_box">
+<span class="tp_bg"></span>
+<div class="bd">
+<div class="blank10"></div>
+<ul>
+<li><img src="../template/default/images/qq_online.gif" alt="" /> 联系客服：<a href="tencent://message/?uin={$mymps_global.SiteQQ}&Site=&Menu=yes">{$mymps_global.SiteQQ}</a></li>
+<li style="padding-left:8px;">TEL：{$mymps_global.SiteTel}</li>
+</ul>
+</div>
+<span class="ft_bg"></span>
+</div>
+<!-- 警察 -->
+<div class="jincha"><img src="../template/default/images/live_new_70.png" alt="" /></div>
+
+</div>
+<div class="fter"><a class="menu2" href="javascript:void(0);"><span id="guanbi">关闭边栏</span></a></div>
+</div>
+</div>
+</div>
+<!-- 主体 结束 -->
+<!-- 页脚 -->
+{include file="default/inc_foot.html"}
+<!-- 页脚 结束 -->
+
+
+</div>
+<script src="../template/default/js/ScrollPic.js" type="text/javascript"></script>
+<script type="text/javascript">
+var scrollPic_02 = new ScrollPic();
+scrollPic_02.scrollContId   = "ISL_Cont_1"; //内容容器ID
+scrollPic_02.arrLeftId      = "LeftArr";//左箭头ID
+scrollPic_02.arrRightId     = "RightArr"; //右箭头ID
+
+scrollPic_02.frameWidth     = 902;//显示框宽度
+scrollPic_02.pageWidth      = 90; //翻页宽度
+
+scrollPic_02.speed          = 10; //移动速度(单位毫秒，越小越快)
+scrollPic_02.space          = 10; //每次移动像素(单位px，越大越快)
+scrollPic_02.autoPlay       = false; //自动播放
+scrollPic_02.autoPlayTime   = 3; //自动播放间隔时间(秒)
+
+scrollPic_02.initialize(); //初始化
+</script>
+<script type="text/javascript" src="../template/default/js/jquery.js"></script>
+<script type="text/javascript" src="../template/default/js/hover_bg.js"></script>
+{literal}
+<script type="text/javascript">
+$(document).ready(function(){
+$('.menu2').click(function(){
+$('#node_box').toggleClass('bg_close');
+if($$("guanbi").innerHTML=="打开边栏"){
+$$("guanbi").innerHTML="关闭边栏";
+}
+else{
+$$("guanbi").innerHTML="打开边栏";
+}
+
+});
+});
+
+</script>
+{/literal}
+</body>
+</html>

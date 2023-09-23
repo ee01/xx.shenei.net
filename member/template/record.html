@@ -1,0 +1,22 @@
+<table border="0" cellspacing="0" cellpadding="0" id="box_all">
+    <tr style="background-image:url(images/tr_bg.jpg); border-bottom:1px #ccc solid;">
+        <th height="21"><b>项目</b></th>
+        <th><b>金额变化</b></th>
+        <th width="100"><b>操作日期</b></th>
+    </tr>
+    <?php foreach($get AS $row){?>
+    <tr onmouseover="this.className='Ipt iptUser IptIn'"  onmouseout="this.className='Ipt iptUser'" bgcolor="#ffffff">
+        <td>
+        <?=$row['subject']?>
+        </td>
+        <td align="center">&nbsp;
+        <?=$row['paycost']?>
+        </td>
+        <td align="center">&nbsp;
+        <?=$row['pubtime']?>
+        </td>
+      </tr>
+    <?}?>
+</table>
+<div class="pagination"><?php echo page2(); ?></div>
+</div>

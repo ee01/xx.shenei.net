@@ -1,0 +1,48 @@
+<table border="0" cellspacing="0" cellpadding="0" id="box_all">
+  <tr style="background-image:url(images/tr_bg.jpg); border-bottom:1px #ccc solid;">
+                <th><b>编号</b></th>
+                <th><b>标题</b></th>
+                <th><b>有效期</b></th>
+                <th><b>发布时间</b></th>
+                <th><b>浏览</b></th>
+                <th><b>信息状态</b></th>
+                <th><b>置顶状态</b></th>
+                <th><b>操作</b></th>
+              </tr>
+<?foreach($art AS $art){?>
+  <tr onmouseover="this.className='Ipt iptUser IptIn'"  onmouseout="this.className='Ipt iptUser'" bgcolor="#ffffff">
+  				<td width="30">&nbsp;
+                <?=$art['id']?>
+                </td>
+                <td width="190">
+                <a href="../public/info.php?id=<?=$art['id']?>" target="_blank"><?=$art['title']?></a><div class="des"><?=$art['content']?></div>
+                </td>
+                <td align="center">
+                <?=get_info_life_time($art['endtime'])?>
+                </td>
+                <td align="center">
+                <?=$art['begintime']?>
+                </td>
+				<td align="center">
+                <?=$art['hit']?>
+                </td>
+                <td align="center">
+                <?=$art['info_level']?>
+                </td>
+                <td align="center">
+                <?=$art['upgrade_type']?>
+                </td>
+                <td align="center"> 
+               <a href="?part=edit&id=<?=$art[id]?>"><img src="../images/ico/ico_mymps_info_edit.gif" title="修改"></a>
+               <a href="?part=del&id=<?=$art[id]?>" onClick="return confirm('您确定要删除吗？该操作不可恢复！\n\n如不确定请点取消')"><img src="../images/ico//ico_mymps_info_del.gif" title="删除"></a>
+               <a href="?part=refresh&id=<?=$art[id]?>&url=<?=urlencode(GetUrl())?>"><img src="../images/ico//ico_mymps_info_refresh.gif" title="刷新"></a>
+               <a href="?part=upgrade&id=<?=$art[id]?>"><img src="../images/ico//ico_mymps_info_upgrade.gif" title="置顶"></a>
+
+				  </td>
+              </tr>
+<?}?>
+            </table>
+<div class="pagination floatright" style="clear:none">
+<?php echo page2()?>&nbsp;&nbsp;        
+</div> 
+</div>

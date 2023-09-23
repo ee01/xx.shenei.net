@@ -1,0 +1,80 @@
+<script language='javascript'>
+function CheckSubmit()
+{
+	if(document.form1.title.value=="")
+	{
+   		document.form1.title.focus();
+   		alert("新闻标题不能为空！");
+   		return false;
+	}
+	if(document.form1.afrom.value=="")
+	{
+   		document.form1.afrom.focus();
+   		alert("新闻来源不能为空！");
+   		return false;
+	}
+	return true;
+}
+</script>
+<table cellspacing="1" cellpadding="1" align="center" id="main_box">
+                <form ACTION="info.php?part=edit&id=<?=$edit[id]?>" METHOD="POST" name="form1" onsubmit="return CheckSubmit();">
+                <input name="action" value="dopost" type="hidden">
+                <tr bgcolor="#ffffff"> 
+                  <td bgcolor="#f7f7f7">课程标题</td>
+                  <td colspan="3"><input name="title" type="text" size="50" value="<?=$edit[title]?>"> 
+                    <font color="#FF0000"> *</font></td>
+                </tr>
+                <tr> 
+                  <td bgcolor="#f7f7f7" width="10%">课程类别</td>
+                  <td><select name="catid">
+                                <option value="0">请选择分类</option>
+                                <?echo $info_cat?>
+                                </select>
+                    <font color="#FF0000">*</font></td>
+                  <td bgcolor="#f7f7f7" width="10%">开课地区</td>
+                  <td><select name="areaid">
+                                <option value="0">请选择地区</option>
+                                <?echo $info_area?>
+                                </select>
+                  <font color="#FF0000">*</font></td>
+                </tr>
+ <tr> 
+                  <td bgcolor="#f7f7f7">开课时间</td>
+                  <td>
+                  <input name="begintime" type="text" value="<?=$edit[begintime]?>">
+                    <font color="#FF0000">*</font>                  </td>
+                  <td bgcolor="#f7f7f7">截止时间</td>
+                  <td><input name="endtime" type="text" value="<?=$edit[endtime]?>">
+                    <font color="#FF0000">*</font></td>
+                </tr>
+                <tr> 
+                  <td bgcolor="#f7f7f7">课程原价</td>
+				  <td>
+				  <input name="oldprice" type="text" size="13" value="<?=$edit[oldprice]?>"> 
+                    <font color="#FF0000"> 元 </font></td>
+                  <td bgcolor="#f7f7f7">优惠价</td>
+				  <td>
+				  <input name="nowprice" type="text" size="13" value="<?=$edit[nowprice]?>"> 
+                    <font color="#FF0000"> 元 </font></td>
+                </tr>
+				 <tr>
+                  <td bgcolor="#f7f7f7">课程学制</td>
+                  <td colspan="3"><input name="xuezhi" type="text"  size="13" value="<?=$edit[xuezhi]?>"></td>
+                </tr>
+			    <tr>
+                  <td bgcolor="#f7f7f7">课程对象</td>
+                  <td colspan="3"><textarea name="forwho" cols="70"  rows="4"><?=$edit[forwho]?></textarea></td>
+                </tr>
+                <tr> 
+                  <td bgcolor="#f7f7f7"> 课程内容</td>
+                  <td colspan="3"><?php echo $content?></td>
+                </tr>
+                <tr> 
+                  <td height="30">&nbsp; </td>
+                  <td colspan="3"> 
+                  <input type="submit" value="保存修改" class="mymps mini"> 
+      			  <input type="button" onClick=history.back() value="返回" class="mymps mini">                  </td>
+                </tr>
+	           </form>
+              </table>
+</div>

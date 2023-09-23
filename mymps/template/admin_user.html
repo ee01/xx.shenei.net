@@ -1,0 +1,33 @@
+<?php echo mymps_admin_tpl_global_head();?>
+<div id="<?=MPS_SOFTNAME?>">
+<table border="0" cellspacing="0" cellpadding="0" class="vbm">
+    <tr class="firstr">
+    <td height="24" align="center">登录ID</td>
+    <td width="100" align="center">笔名</td>
+    <td width="100" align="center">真名</td>
+    <td width="50" align="center">用户组</td>
+    <td align="center">上次登陆</td>
+    <td align="center">管理项</td>
+  </tr>
+    <?
+foreach($admin AS $row)
+{
+?>
+    <tr align="center" bgcolor="#f5fbff" onMouseOver="this.className='Ipt IptIn'"  onMouseOut="this.className='Ipt'">
+    <td><?=$row[userid]?></td>
+    <td><?=$row[uname]?></td>
+    <td><?=$row[tname]?></td>
+    <td><?=$row[typename]?></td>
+    <td>时间：<?=date("Y-m-d H:i:s", "$row[logintime]")?>　IP：<?=$row[loginip]?></td>
+    <td>
+	  <a href='admin.php?do=user&part=edit&id=<?=$row[id]?>'><u>更改</u></a> |
+     <a href='admin.php?do=user&part=delete&id=<?=$row[id]?>' onClick="return confirm('您确定要删除该管理员吗，如不确定请点取消')"><u>删除</u></a>　
+    </td>
+  </tr>
+
+    <?
+}
+?>
+</table>
+</div>
+<?php echo mymps_admin_tpl_global_foot();?>
