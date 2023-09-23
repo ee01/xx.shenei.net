@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!-- saved from url=(0072)http://shop.shenei.net/index.php?app=store&id=271&act=search&cate_id=193 --><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base  />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7 charset=gbk" />
+<meta http-equiv="Content-Type" content="text/html;charset=gbk" />
+<title>商品列表 - 特爱美</title>
+<meta name="author" content="ecmall.shopex.cn" />
+<meta name="copyright" content="ShopEx Inc. All Rights Reserved" />
+<link href="themes/store/default/styles/style4/shop.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="index.php@act=jslang"></script>
+<script type="text/javascript" src="includes/libraries/javascript/jquery.js" charset="utf-8"></script>
+<script type="text/javascript" src="includes/libraries/javascript/ecmall.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+//<!CDATA[
+var SITE_URL = "./";
+var PRICE_FORMAT = '&#165;%s';
+
+$(function(){
+    var span = $("#child_nav");
+    span.hover(function(){
+        $("#float_layer:not(:animated)").show();
+    }, function(){
+        $("#float_layer").hide();
+    });
+});
+//]]>
+</script>
+</head>
+
+<body>
+
+<div id="head">
+    <h1 title="【舍内网店】 - 大学城学生网店 - 舍内网"><a href="index.php.htm"><img src="data/files/mall/settings/site_logo.gif" alt="ECMall" /></a></h1>
+
+    <div id="subnav">
+        <p>
+        您好,游客                [<a href="index.php@app=member&act=login&ret_url=.htm">登录</a>]
+        [<a href="index.php@app=member&act=register&ret_url=.htm">注册</a>]
+                </p>
+        <p>
+        <a class="shopping" href="index.php@app=cart.htm">购物车</a> <span>|</span>
+        <a class="favorite" href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmy_favorite.htm">收藏夹</a> <span>|</span>
+        <a class="note" href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmessage&act_253dnewpm.htm">站内消息</a> <span>|</span>
+        <a class="help" href="index.php@app=article&code=help.htm">帮助中心</a>
+                <span>|</span> <a class="user_defined" href="../xx.shenei.net/member/info.php@part=input.htm" target="_blank">发信息</a>
+                </p>
+    </div>
+
+    <div id="topbtn">
+        <div class="topbtn1"></div>
+        <div class="topbtn2"></div>
+        <span id="child_nav">
+            <a href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmember.htm" class="user">用户中心</a>
+            <ul id="float_layer">
+                <div id="adorn1"></div>
+                <div id="adorn2"></div>
+                <li><a href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dbuyer_order.htm">我的订单</a></li>
+                <li><a href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dbuyer_groupbuy.htm">我的团购</a></li>
+                <li><a href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmy_question.htm">我的咨询</a></li>
+            </ul>
+        </span>
+        <span>|</span>
+        <a href="index.php@app=category.htm">我要买</a> <span>|</span>
+        <a href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmy_goods&act_253dadd.htm">我要卖</a>
+    </div>
+
+    <div id="path">
+        当前位置:
+                        <a href="index.php.htm">首页</a> <span>&#8250;</span>
+                                <a href="index.php@app=search&act=store.htm">所有店铺</a> <span>&#8250;</span>
+                                <a href="index.php@app=store&id=271.htm">特爱美</a> <span>&#8250;</span>
+                                商品列表                    </div>
+
+    <div id="search">
+        <form id="" name="" method="get" action="index.php">
+            <div class="input">
+                <div class="input1"></div>
+                <div class="input2"></div>
+                <select name="act" class="select1">
+                <option value="index">搜索商品</option>
+                <option value="store">搜索店铺</option>
+                <option value="groupbuy">搜索团购</option>
+                </select>
+                <input type="hidden" name="app" value="search" />
+                <input type="text" class="search334" name="keyword" />
+            </div>
+            <input class="search_btn" type="submit" value="" />
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+//<!CDATA[
+$(function(){
+    $("select[ectype='order_by']").change(function(){
+        var params = location.search.substr(1).split('&');
+        var key    = 'order';
+        var value  = this.value;
+        var found  = false;
+        for (var i = 0; i < params.length; i++)
+        {
+            param = params[i];
+            arr   = param.split('=');
+            pKey  = arr[0];
+            if (pKey == 'page')
+            {
+                params[i] = 'page=1';
+            }
+            if (pKey == key)
+            {
+                params[i] = key + '=' + value;
+                found = true;
+            }
+        }
+        if (!found)
+        {
+            params.push(key + '=' + value);
+        }
+        location.assign(SITE_URL + '/index.php?' + params.join('&'));
+    });
+});
+//]]>
+</script>
+
+<SCRIPT type=text/javascript>
+function addBookmark(site, url) {
+        if (navigator.userAgent.toLowerCase().indexOf('ie') > -1) {
+                window.external.addFavorite(url, site)
+        } else if (navigator.userAgent.toLowerCase().indexOf('opera') > -1) {
+                return;
+        } else {
+                return;
+        }
+}
+
+function setCopy(_sTxt) {
+        if (navigator.userAgent.toLowerCase().indexOf('ie') > -1) {
+                clipboardData.setData('Text', _sTxt);
+                alert("网址“" + _sTxt + "”\n已经复制到您的剪贴板中\n您可以使用Ctrl+V快捷键粘贴到需要的地方");
+        } else {
+                prompt("请复制网站地址:", _sTxt);
+        }
+}
+</script>
+<div id="nav">
+        <div class="banner">
+                <img src="data/files/store_271/other/store_banner.jpg" width="1000" height="150" />
+        
+                <H2>特爱美</H2>
+                <H4>特爱美</H4>
+                <DIV class=siteurl>
+                                                <A title=复制地址 onclick="javascript:setCopy('@271');" href="javascript:;"><IMG alt=复制地址 src="themes/store/default/styles/default/images/icon_siteinfo.gif"></A>
+                        <A title=加入收藏 onclick="javascript:addBookmark('特爱美', '@271');" href="javascript:;"><IMG alt=加入收藏 src="themes/store/default/styles/default/images/icon_add.gif"></A>
+                        <A title=店铺地址 href="index.php@app=store&id=271.htm">http://shop.shenei.net/?271</A>
+                                        </DIV>
+    </div>
+
+    <ul>
+        <li><a class="normal" href="index.php@app=store&id=271.htm"><span>店铺首页</span></a></li>
+<!--
+        
+                <li><a class="normal" href="index.php?app=store&amp;id=271"><span>店铺首页</span></a></li>
+        -->
+        <li><a class="active" href="index.php@app=store&id=271&act=search.htm"><span>所有商品</span></a></li>
+        <li><a class="normal" href="index.php@app=store&act=groupbuy&id=271.htm"><span>团购活动</span></a></li>
+                <li><a class="normal" href="index.php@app=store&act=credit&id=271.htm"><span>信用评价</span></a></li>
+        <li><a class="normal" href="../u.shenei.net/271.htm" target="_blank"><span>店长博客</span></a></li>
+        <a class="collection" href="javascript:collect_store(271)">收藏该店铺</a>
+    </ul>
+
+    <div class="nav_bg"></div>
+</div>
+<div id="content">
+    <div id="left">
+        <div class="user">
+            <div class="user_photo">
+                <h2>特爱美</h2>
+                <div class="photo"><a href="index.php@app=store&id=271.htm"><img src="data/files/store_271/other/store_logo.jpg" width="100" height="100" /></a></div>
+                <p><a href="javascript:collect_store(271)">收藏该店铺</a></p>
+            </div>
+            
+            <div class="user_data">
+                <p>
+                    <span>店主: </span>特爱美                    <a target="_blank" href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmessage&act_253dsend&to_id_253d271.htm"><img src="themes/store/default/styles/style4/images/web_mail.gif" alt="发站内信" /></a>
+                </p>
+				
+								
+                <p>
+                    <span>信用度: </span><span class="fontColor1">0</span>
+                    <img src="themes/store/default/styles/style4/images/heart_1.gif" alt="" />                </p>
+                <p>店铺等级: 高级店铺</p>
+                                <p>商品数量: 0</p>
+					
+				<p>浏览次数: 86 次</p>
+				                <p>创店时间: 2010-05-07</p>
+                <p>所在地区: 大学城	福建工程学院</p>
+                                                <p>联系电话: 1234567</p>
+                                <p>
+                    <script type="text/javascript">
+function aliim() {
+window.open('http://webwwtb.im.alisoft.com/wangwang/ww1.htm?t=&uid=&tid='+escape(''));
+}
+</script>
+                                        					<br><br>联系时告诉我是从舍内网看到的！<br>并把商品链接(网址)发来~
+                </p>
+            </div>
+        
+            <div class="clear"></div>
+        </div>
+        
+        <div class="module_common">
+            <h2 class="common_title veins1">
+                <div class="ornament1"></div>
+                <div class="ornament2"></div>
+                <span class="ico1"><span class="ico2">店内搜索</span></span>
+            </h2>
+            <div class="wrap">
+                <div class="wrap_child">
+                    <div class="web_search">
+                        <form id="" name="" method="get" action="index.php">
+                            <input type="hidden" name="app" value="store" />
+                            <input type="hidden" name="act" value="search" />
+                            <input type="hidden" name="id" value="271" />
+                            <input class="text width4" type="text" name="keyword" />
+                            <input class="btn" type="submit" value="" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="module_common">
+            <h2 class="common_title veins1">
+                <div class="ornament1"></div>
+                <div class="ornament2"></div>
+                <span class="ico1"><span class="ico2">商品分类</span></span>
+            </h2>
+            <div class="wrap">
+                <div class="wrap_child">
+                    <ul class="submenu">
+                        <li><a class="none_ico" href="index.php@app=store&id=271&act=search.htm">全部商品</a></li>
+                                                                        <li><a class="none_ico" href="index.php@app=store&id=271&act=search&cate_id=189.htm">防晒</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=271&act=search&cate_id=190.htm"> JFIF  H H  </a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=271&act=search&cate_id=191.htm"></a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=271&act=search&cate_id=192.htm"></a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=271&act=search&cate_id=193.htm">		</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=271&act=search&cate_id=194.htm"></a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=271&act=search&cate_id=195.htm">B</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=271&act=search&cate_id=196.htm"></a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=271&act=search&cate_id=197.htm">[</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=271&act=search&cate_id=198.htm">|</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=271&act=search&cate_id=199.htm">}&quot;!P #</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=271&act=search&cate_id=200.htm"></a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=271&act=search&cate_id=201.htm">OW</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=271&act=search&cate_id=202.htm">u</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=271&act=search&cate_id=203.htm">Vrq</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=271&act=search&cate_id=204.htm">J3-</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=271&act=search&cate_id=205.htm">t(</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=271&act=search&cate_id=206.htm">r17I7</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=271&act=search&cate_id=207.htm">KN:vYit</a></li>
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+        
+                
+            </div>
+    
+    <div id="right">
+        <div class="module_special">
+            <h2 class="common_title veins2">
+                <div class="ornament1"></div>
+                <div class="ornament2"></div>
+                <span class="ico1"><span class="ico2">		</span></span>
+            </h2>
+            <div class="wrap">
+                <div class="wrap_child">
+                                        <div class="nothing"><p>很抱歉! 没有找到相关商品</p></div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="clear"></div>
+</div>
+
+<div id="footer">
+    <p>
+        <a href="index.php.htm">首页</a>
+                | <a href="../www.shenei.net/default.htm" target="_blank">舍内网</a>
+                | <a href="../u.shenei.net/default.htm" target="_blank">家园</a>
+                | <a href="../www.shenei.net/default.htm" target="_blank">【疯·神】工作室</a>
+                | <a href="http://www.fjut.info/" target="_blank">工院百科</a>
+            </p>
+    页面执行 0.837 秒， 查询 9 次，在线 106 人    ，Gzip 已禁用    ，占用内存 2.89 MB <br />
+    Powered by <a href="http://ecmall.shopex.cn/?pid=6&host=http%3A%2F%2Fshop.shenei.net" target="_blank">ECMall 2.2 final 20100108</a> &copy; 2003-2009 <a href="http://www.shopex.cn/" target="_blank">ShopEx Inc.</a>
+</div>
+
+<script type="text/javascript" src="../www.jiathis.com/code/jiathis_r.js@move=0&btn=r5.gif" charset=utf-8></script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<div class="module_common">
+    <h2><b style="background:url({$widget_root}/shops.gif) no-repeat;display:block;height:22px;width:130px;" title="Join最新加盟"></b></h2>
+    <div class="wrap">
+        <div class="wrap_child">
+            <ul class="particular">
+                <!-- {foreach from=$widget_data item=store} -->
+                <li>
+                    <div class="pic"><a href="http://shop.shenei.net/external/widgets/new_store/index.php?app=store&id={$store.store_id}"><img src="http://shop.shenei.net/external/widgets/new_store/{$store.store_logo}" width="65" height="65" /></a></div>
+                    <dl>
+                        <dt><a href="index.php@app=store&id={$store.store_id}" title="{$store.store_name|escape}">{$store.store_name|escape}</a></dt>
+                        <dd>店主: {$store.user_name|escape}</dd>
+                        <dd>商品: {$store.goods_count}</dd>
+                        <dd>信用: {$store.praise_rate}%</dd>
+                    </dl>
+                </li>
+                <!-- {/foreach} -->
+            </ul>
+        </div>
+    </div>
+</div>

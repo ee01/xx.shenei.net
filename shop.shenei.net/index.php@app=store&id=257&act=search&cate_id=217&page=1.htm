@@ -1,0 +1,439 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!-- saved from url=(0079)http://shop.shenei.net/index.php?app=store&id=257&act=search&cate_id=217&page=1 --><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base  />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7 charset=gbk" />
+<meta http-equiv="Content-Type" content="text/html;charset=gbk" />
+<title>商品列表 - 360科技网店</title>
+<meta name="author" content="ecmall.shopex.cn" />
+<meta name="copyright" content="ShopEx Inc. All Rights Reserved" />
+<link href="themes/store/default/styles/style4/shop.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="index.php@act=jslang"></script>
+<script type="text/javascript" src="includes/libraries/javascript/jquery.js" charset="utf-8"></script>
+<script type="text/javascript" src="includes/libraries/javascript/ecmall.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+//<!CDATA[
+var SITE_URL = "./";
+var PRICE_FORMAT = '&#165;%s';
+
+$(function(){
+    var span = $("#child_nav");
+    span.hover(function(){
+        $("#float_layer:not(:animated)").show();
+    }, function(){
+        $("#float_layer").hide();
+    });
+});
+//]]>
+</script>
+</head>
+
+<body>
+
+<div id="head">
+    <h1 title="【舍内网店】 - 大学城学生网店 - 舍内网"><a href="index.php.htm"><img src="data/files/mall/settings/site_logo.gif" alt="ECMall" /></a></h1>
+
+    <div id="subnav">
+        <p>
+        您好,游客                [<a href="index.php@app=member&act=login&ret_url=.htm">登录</a>]
+        [<a href="index.php@app=member&act=register&ret_url=.htm">注册</a>]
+                </p>
+        <p>
+        <a class="shopping" href="index.php@app=cart.htm">购物车</a> <span>|</span>
+        <a class="favorite" href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmy_favorite.htm">收藏夹</a> <span>|</span>
+        <a class="note" href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmessage&act_253dnewpm.htm">站内消息</a> <span>|</span>
+        <a class="help" href="index.php@app=article&code=help.htm">帮助中心</a>
+                <span>|</span> <a class="user_defined" href="../xx.shenei.net/member/info.php@part=input.htm" target="_blank">发信息</a>
+                </p>
+    </div>
+
+    <div id="topbtn">
+        <div class="topbtn1"></div>
+        <div class="topbtn2"></div>
+        <span id="child_nav">
+            <a href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmember.htm" class="user">用户中心</a>
+            <ul id="float_layer">
+                <div id="adorn1"></div>
+                <div id="adorn2"></div>
+                <li><a href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dbuyer_order.htm">我的订单</a></li>
+                <li><a href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dbuyer_groupbuy.htm">我的团购</a></li>
+                <li><a href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmy_question.htm">我的咨询</a></li>
+            </ul>
+        </span>
+        <span>|</span>
+        <a href="index.php@app=category.htm">我要买</a> <span>|</span>
+        <a href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmy_goods&act_253dadd.htm">我要卖</a>
+    </div>
+
+    <div id="path">
+        当前位置:
+                        <a href="index.php.htm">首页</a> <span>&#8250;</span>
+                                <a href="index.php@app=search&act=store.htm">所有店铺</a> <span>&#8250;</span>
+                                <a href="index.php@app=store&id=257.htm">360科技网店</a> <span>&#8250;</span>
+                                商品列表                    </div>
+
+    <div id="search">
+        <form id="" name="" method="get" action="index.php">
+            <div class="input">
+                <div class="input1"></div>
+                <div class="input2"></div>
+                <select name="act" class="select1">
+                <option value="index">搜索商品</option>
+                <option value="store">搜索店铺</option>
+                <option value="groupbuy">搜索团购</option>
+                </select>
+                <input type="hidden" name="app" value="search" />
+                <input type="text" class="search334" name="keyword" />
+            </div>
+            <input class="search_btn" type="submit" value="" />
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+//<!CDATA[
+$(function(){
+    $("select[ectype='order_by']").change(function(){
+        var params = location.search.substr(1).split('&');
+        var key    = 'order';
+        var value  = this.value;
+        var found  = false;
+        for (var i = 0; i < params.length; i++)
+        {
+            param = params[i];
+            arr   = param.split('=');
+            pKey  = arr[0];
+            if (pKey == 'page')
+            {
+                params[i] = 'page=1';
+            }
+            if (pKey == key)
+            {
+                params[i] = key + '=' + value;
+                found = true;
+            }
+        }
+        if (!found)
+        {
+            params.push(key + '=' + value);
+        }
+        location.assign(SITE_URL + '/index.php?' + params.join('&'));
+    });
+});
+//]]>
+</script>
+
+<SCRIPT type=text/javascript>
+function addBookmark(site, url) {
+        if (navigator.userAgent.toLowerCase().indexOf('ie') > -1) {
+                window.external.addFavorite(url, site)
+        } else if (navigator.userAgent.toLowerCase().indexOf('opera') > -1) {
+                return;
+        } else {
+                return;
+        }
+}
+
+function setCopy(_sTxt) {
+        if (navigator.userAgent.toLowerCase().indexOf('ie') > -1) {
+                clipboardData.setData('Text', _sTxt);
+                alert("网址“" + _sTxt + "”\n已经复制到您的剪贴板中\n您可以使用Ctrl+V快捷键粘贴到需要的地方");
+        } else {
+                prompt("请复制网站地址:", _sTxt);
+        }
+}
+</script>
+<div id="nav">
+        <div class="banner">
+                <img src="themes/store/default/styles/style4/images/banner.jpg"  />
+        
+                <H2>360科技网店</H2>
+                <H4>360科技网店</H4>
+                <DIV class=siteurl>
+                                                <A title=复制地址 onclick="javascript:setCopy('../360kj.shop.shenei.net');" href="javascript:;"><IMG alt=复制地址 src="themes/store/default/styles/default/images/icon_siteinfo.gif"></A>
+                        <A title=加入收藏 onclick="javascript:addBookmark('360科技网店', '../360kj.shop.shenei.net');" href="javascript:;"><IMG alt=加入收藏 src="themes/store/default/styles/default/images/icon_add.gif"></A>
+                        <A title=店铺地址 href="../360kj.shop.shenei.net/default.htm">http://360kj.shop.shenei.net</A>
+                                        </DIV>
+    </div>
+
+    <ul>
+        <li><a class="normal" href="index.php@app=store&id=257.htm"><span>店铺首页</span></a></li>
+<!--
+        
+                <li><a class="normal" href="http://360kj.shop.shenei.net"><span>店铺首页</span></a></li>
+        -->
+        <li><a class="active" href="index.php@app=store&id=257&act=search.htm"><span>所有商品</span></a></li>
+        <li><a class="normal" href="index.php@app=store&act=groupbuy&id=257.htm"><span>团购活动</span></a></li>
+                <li><a class="normal" href="index.php@app=store&act=article&id=18.htm"><span>本店简介</span></a></li>
+                <li><a class="normal" href="index.php@app=store&act=credit&id=257.htm"><span>信用评价</span></a></li>
+        <li><a class="normal" href="../u.shenei.net/257.htm" target="_blank"><span>店长博客</span></a></li>
+        <a class="collection" href="javascript:collect_store(257)">收藏该店铺</a>
+    </ul>
+
+    <div class="nav_bg"></div>
+</div>
+<div id="content">
+    <div id="left">
+        <div class="user">
+            <div class="user_photo">
+                <h2>360科技网店</h2>
+                <div class="photo"><a href="index.php@app=store&id=257.htm"><img src="data/files/store_5f257/other/store_logo.gif" width="100" height="100" /></a></div>
+                <p><a href="javascript:collect_store(257)">收藏该店铺</a></p>
+            </div>
+            
+            <div class="user_data">
+                <p>
+                    <span>店主: </span>360科技网店                    <a target="_blank" href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmessage&act_253dsend&to_id_253d257.htm"><img src="themes/store/default/styles/style4/images/web_mail.gif" alt="发站内信" /></a>
+                </p>
+				
+				                <p>
+                    <span>真实姓名: </span>相岳                </p>
+                				
+                <p>
+                    <span>信用度: </span><span class="fontColor1">15</span>
+                    <img src="themes/store/default/styles/style4/images/heart_2.gif" alt="" />                </p>
+                <p>店铺等级: 高级店铺</p>
+                                <p>商品数量: 180</p>
+					
+				<p>浏览次数: 1322 次</p>
+				                <p>创店时间: 2010-05-07</p>
+                <p>所在地区: 大学城	福建工程学院</p>
+                                                <p>联系电话: 15060676654</p>
+                                <p>
+                                        <a href="tencent_3a//message/@menu=yes&exe=&uin=735229929&websitename=360_25bf_25c6_25bc_25bc_25cd_25f8_25b5_25ea&info=&service=200&sig07a5c2439f" target="_blank"><img src="../pub.idqqimg.com/qconn/wpa/button/button_old_41.gif" alt="QQ"></a>
+                    <!--<a href="http://wpa.qq.com/msgrd?V=1&amp;Uin=735229929&amp;Site=360科技网店&amp;Menu=yes" target="_blank"><img src="http://wpa.qq.com/pa?p=1:735229929:4" alt="QQ"></a>-->
+					来Q我啊~
+                    <script type="text/javascript">
+function aliim() {
+window.open('http://webwwtb.im.alisoft.com/wangwang/ww1.htm?t=&uid=&tid='+escape(''));
+}
+</script>
+                                        					<br><br>联系时告诉我是从舍内网看到的！<br>并把商品链接(网址)发来~
+                </p>
+            </div>
+        
+            <div class="clear"></div>
+        </div>
+        
+        <div class="module_common">
+            <h2 class="common_title veins1">
+                <div class="ornament1"></div>
+                <div class="ornament2"></div>
+                <span class="ico1"><span class="ico2">店内搜索</span></span>
+            </h2>
+            <div class="wrap">
+                <div class="wrap_child">
+                    <div class="web_search">
+                        <form id="" name="" method="get" action="index.php">
+                            <input type="hidden" name="app" value="store" />
+                            <input type="hidden" name="act" value="search" />
+                            <input type="hidden" name="id" value="257" />
+                            <input class="text width4" type="text" name="keyword" />
+                            <input class="btn" type="submit" value="" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="module_common">
+            <h2 class="common_title veins1">
+                <div class="ornament1"></div>
+                <div class="ornament2"></div>
+                <span class="ico1"><span class="ico2">商品分类</span></span>
+            </h2>
+            <div class="wrap">
+                <div class="wrap_child">
+                    <ul class="submenu">
+                        <li><a class="none_ico" href="index.php@app=store&id=257&act=search.htm">全部商品</a></li>
+                                                                        <li>
+                            <a class="block_ico" href="index.php@app=store&id=257&act=search&cate_id=90.htm">联想笔记本</a>
+                            <ul>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=215.htm">y系列</a></li>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=284.htm">ThinkPad系列</a></li>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=216.htm">G系列</a></li>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=214.htm">u\s系列</a></li>
+                                                            </ul>
+                        </li>
+                                                                                                <li>
+                            <a class="block_ico" href="index.php@app=store&id=257&act=search&cate_id=91.htm">DIY配置</a>
+                            <ul>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=104.htm">cpu</a></li>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=105.htm">内存</a></li>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=106.htm">主板</a></li>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=107.htm">硬盘</a></li>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=109.htm">显卡</a></li>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=108.htm">电源机箱</a></li>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=111.htm">网卡，声卡，USB卡pci</a></li>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=332.htm">显示器</a></li>
+                                                            </ul>
+                        </li>
+                                                                                                <li>
+                            <a class="block_ico" href="index.php@app=store&id=257&act=search&cate_id=92.htm">电脑周边</a>
+                            <ul>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=95.htm">鼠标</a></li>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=96.htm">键盘</a></li>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=97.htm">散热器</a></li>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=112.htm">摄像头</a></li>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=98.htm">音箱，麦克</a></li>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=99.htm">耳机耳塞</a></li>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=100.htm">鼠标垫，各类保护膜</a></li>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=101.htm">线材</a></li>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=102.htm">网络器材</a></li>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=385.htm">游戏手柄</a></li>
+                                                            </ul>
+                        </li>
+                                                                                                <li>
+                            <a class="block_ico" href="index.php@app=store&id=257&act=search&cate_id=93.htm">闪存，u盘</a>
+                            <ul>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=103.htm">金士顿</a></li>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=113.htm">sony，台电</a></li>
+                                                            </ul>
+                        </li>
+                                                                                                <li>
+                            <a class="block_ico" href="index.php@app=store&id=257&act=search&cate_id=217.htm">手机\数码影音类</a>
+                            <ul>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=218.htm">mp3\5\5</a></li>
+                                                                <li><a href="index.php@app=store&id=257&act=search&cate_id=219.htm">手机\手机电池</a></li>
+                                                            </ul>
+                        </li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=257&act=search&cate_id=94.htm">二手电脑\及组装</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=257&act=search&cate_id=154.htm">组装整机</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=257&act=search&cate_id=473.htm">维修</a></li>
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+        
+                
+            </div>
+    
+    <div id="right">
+        <div class="module_special">
+            <h2 class="common_title veins2">
+                <div class="ornament1"></div>
+                <div class="ornament2"></div>
+                <span class="ico1"><span class="ico2">手机\数码影音类</span></span>
+            </h2>
+            <div class="wrap">
+                <div class="wrap_child">
+                                        <div class="major">
+                        <ul class="list">
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=2280.htm" target="_blank"><img src="data/files/store_5f257/goods_160/small_201005190432401126.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=2280.htm" target="_blank">诺基亚1682c（可上网\上Q\飞信\彩信）</a></h3>
+                                <p>&#165;248.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=1494.htm" target="_blank"><img src="data/files/store_5f257/goods_55/small_201005161237357595.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=1494.htm" target="_blank">飞毛腿精品商务电池（for Nokia 6100\n80\6101\6103\6125\6131）</a></h3>
+                                <p>&#165;45.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=1492.htm" target="_blank"><img src="data/files/store_5f257/goods_138/small_201005161005383919.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=1492.htm" target="_blank">清华紫光MZ301 （2G）</a></h3>
+                                <p>&#165;79.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=1490.htm" target="_blank"><img src="data/files/store_5f257/goods_157/small_201005160842376182.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=1490.htm" target="_blank">清华紫光MZ815（3.0寸\游戏\拍照\4g)</a></h3>
+                                <p>&#165;208.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=1489.htm" target="_blank"><img src="data/files/store_5f257/goods_175/small_201005160739352791.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=1489.htm" target="_blank">清华紫光MZ12（4.3寸\4G）摄像 PSP</a></h3>
+                                <p>&#165;299.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=1488.htm" target="_blank"><img src="data/files/store_5f257/goods_141/small_201005160735417569.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=1488.htm" target="_blank">清华紫光MZ960（3寸\4G）手感一流</a></h3>
+                                <p>&#165;208.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=1487.htm" target="_blank"><img src="data/files/store_5f257/goods_3/small_201005160730038982.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=1487.htm" target="_blank">清华紫光MZ908S（3寸\4G）</a></h3>
+                                <p>&#165;248.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=1486.htm" target="_blank"><img src="data/files/store_5f257/goods_22/small_201005160723427525.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=1486.htm" target="_blank">清华紫光MZ19（4.3寸HDD\4G）</a></h3>
+                                <p>&#165;298.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=1485.htm" target="_blank"><img src="data/files/store_5f257/goods_111/small_201005160715119977.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=1485.htm" target="_blank">清华紫光MZ935（4G\3.5寸\特价）</a></h3>
+                                <p>&#165;199.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=1484.htm" target="_blank"><img src="data/files/store_5f257/goods_186/small_201005160709464545.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=1484.htm" target="_blank">清华紫光MZ929超薄全钢外壳</a></h3>
+                                <p>&#165;199.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=1483.htm" target="_blank"><img src="data/files/store_5f257/goods_64/small_201005160704249038.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=1483.htm" target="_blank">清华紫光mz971</a></h3>
+                                <p>&#165;159.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=1482.htm" target="_blank"><img src="data/files/store_5f257/goods_169/small_201005160659299612.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=1482.htm" target="_blank">清华紫光mz535</a></h3>
+                                <p>&#165;99.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=1481.htm" target="_blank"><img src="data/files/store_5f257/goods_14/small_201005160656541979.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=1481.htm" target="_blank">清华紫光mz305</a></h3>
+                                <p>&#165;99.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=1480.htm" target="_blank"><img src="data/files/store_5f257/goods_51/small_201005160640516426.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=1480.htm" target="_blank">清华紫光（米奇四代）2G</a></h3>
+                                <p>&#165;95.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=1478.htm" target="_blank"><img src="data/files/store_5f257/goods_117/small_201005160631572145.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=1478.htm" target="_blank">道勤DQ-150（2GB）</a></h3>
+                                <p>&#165;96.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=1420.htm" target="_blank"><img src="data/files/store_5f257/goods_33/small_201005151107138774.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=1420.htm" target="_blank">台电C300（4GB）</a></h3>
+                                <p>&#165;268.00</p>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="shop_list_page">
+    <div class="page">
+        <a class="stat">共 22 个项目</a>
+                <span class="former_no"></span>
+                                <a class="page_hover" href="#module">1</a>
+                                <a class="page_link" href="index.php@app=store&id=257&act=search&cate_id=217&page=2.htm#module">2</a>
+                        <a class="nonce">1 / 2</a>
+                <a class="down" href="index.php@app=store&id=257&act=search&cate_id=217&page=2.htm#module">下一页</a>
+            </div>
+</div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="clear"></div>
+</div>
+
+<div id="footer">
+    <p>
+        <a href="index.php.htm">首页</a>
+                | <a href="../www.shenei.net/default.htm" target="_blank">舍内网</a>
+                | <a href="../u.shenei.net/default.htm" target="_blank">家园</a>
+                | <a href="../www.shenei.net/default.htm" target="_blank">【疯·神】工作室</a>
+                | <a href="http://www.fjut.info/" target="_blank">工院百科</a>
+            </p>
+    页面执行 0.277 秒， 查询 10 次，在线 283 人    ，Gzip 已禁用    ，占用内存 2.95 MB <br />
+    Powered by <a href="http://ecmall.shopex.cn/?pid=6&host=http%3A%2F%2Fshop.shenei.net" target="_blank">ECMall 2.2 final 20100108</a> &copy; 2003-2009 <a href="http://www.shopex.cn/" target="_blank">ShopEx Inc.</a>
+</div>
+
+<script type="text/javascript" src="../www.jiathis.com/code/jiathis_r.js@move=0&btn=r5.gif" charset=utf-8></script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!-- saved from url=(0058)http://www.multinara.com/shop/data/goods/0702240028_L1.jpg --><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <title>서비스 연결이 원활하지 않습니다.</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="//img.cafe24.com/css/warn.css" />
+</head>
+<body id="warn">
+<div id="skipNavigation">
+    <p><a href="#content">컨텐츠 바로가기</a></p>
+</div>
+<hr class="layout" />
+<div id="header">
+    <h1><a href="https://www.cafe24.com"><img src="http://img.cafe24.com/images/common/warn/logo_cafe24.gif" alt="cafe24" /></a></h1>
+</div>
+<hr class="layout" />
+<div id="container">
+    <div id="content">
+        <div class="icoWarn icoPage"><span></span></div>
+        <div class="mWarn">
+            <div class="inner">
+                <h2>서비스 연결이 <em>원활하지 않습니다.</em><br />잠시 후 다시 접속하시기 바랍니다.</h2>
+                <h3>[알림]</h3>
+                <p class="txtDesc center">새로고침 (F5)버튼을 눌러 다시 시도하거나,<br />현재 창을 닫은 후 새로운 창을 열어 접속해주세요.<br />동일한 현상이 지속된다면 고객센터로 문의해 주세요.</p>
+                <div class="mButton">
+                    <!-- 참고: 프론트인 경우 노출 -->
+                    <a href="#none" class="btnSubmit" id="preBtn"  onclick="preBtn()" style="display:none"><span>이전페이지 바로가기</span></a>
+                    <a href="#none" class="btnEm" id="mainBtn" onclick="mainBtn()" style="display:none"><span>메인페이지 바로가기</span></a><!-- //참고 -->
+                    <!-- 참고: 어드민인 경우 노출 -->
+                    <a href="https://ecsupport.cafe24.com/" class="btnSubmit" id="contBtn" style="display:none"><span>고객센터 바로가기</span></a><!-- //참고 -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr class="layout" />
+<div id="footer">Copyright&copy; <strong>Cafe24 Corp. </strong>All Rights Reserved.</div>
+</body>
+</html>
+
+<script>
+var getUrl = window.location;
+var is_admin = false;
+
+function preBtn(){
+history.back();
+}
+
+function mainBtn(){
+	location.href= getUrl.protocol + "//" + getUrl.host;
+}
+
+function isAdmin(){
+	if(getUrl.pathname.split('/')[1] == 'admin'){
+		is_admin = true;
+	}else{
+		is_admin = false;
+	}
+}
+isAdmin();
+
+function btnView(){
+	if(is_admin == true){
+		document.getElementById('contBtn').style.display='';
+	}else{
+		document.getElementById('preBtn').style.display='';
+		document.getElementById('mainBtn').style.display='';
+	}
+}
+btnView();
+</script>

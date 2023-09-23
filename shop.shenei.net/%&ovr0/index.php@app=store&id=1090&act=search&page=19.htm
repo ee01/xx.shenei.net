@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!-- saved from url=(0069)http://shop.shenei.net/index.php?app=store&id=1090&act=search&page=19 --><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base  />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7 charset=gbk" />
+<meta http-equiv="Content-Type" content="text/html;charset=gbk" />
+<title>商品列表 - 买双鞋呗</title>
+<meta name="author" content="ecmall.shopex.cn" />
+<meta name="copyright" content="ShopEx Inc. All Rights Reserved" />
+<link href="../themes/store/default/styles/style1/shop.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../index.php@act=jslang"></script>
+<script type="text/javascript" src="../includes/libraries/javascript/jquery.js" charset="utf-8"></script>
+<script type="text/javascript" src="../includes/libraries/javascript/ecmall.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+//<!CDATA[
+var SITE_URL = "../";
+var PRICE_FORMAT = '&#165;%s';
+
+$(function(){
+    var span = $("#child_nav");
+    span.hover(function(){
+        $("#float_layer:not(:animated)").show();
+    }, function(){
+        $("#float_layer").hide();
+    });
+});
+//]]>
+</script>
+</head>
+
+<body>
+
+<div id="head">
+    <h1 title="【舍内网店】 - 大学城学生网店 - 舍内网"><a href="../index.php.htm"><img src="../data/files/mall/settings/site_logo.gif" alt="ECMall" /></a></h1>
+
+    <div id="subnav">
+        <p>
+        您好,游客                [<a href="../index.php@app=member&act=login&ret_url=.htm">登录</a>]
+        [<a href="../index.php@app=member&act=register&ret_url=.htm">注册</a>]
+                </p>
+        <p>
+        <a class="shopping" href="../index.php@app=cart.htm">购物车</a> <span>|</span>
+        <a class="favorite" href="../index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmy_favorite.htm">收藏夹</a> <span>|</span>
+        <a class="note" href="../index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmessage&act_253dnewpm.htm">站内消息</a> <span>|</span>
+        <a class="help" href="../index.php@app=article&code=help.htm">帮助中心</a>
+                <span>|</span> <a class="user_defined" href="../../xx.shenei.net/member/info.php@part=input.htm" target="_blank">发信息</a>
+                </p>
+    </div>
+
+    <div id="topbtn">
+        <div class="topbtn1"></div>
+        <div class="topbtn2"></div>
+        <span id="child_nav">
+            <a href="../index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmember.htm" class="user">用户中心</a>
+            <ul id="float_layer">
+                <div id="adorn1"></div>
+                <div id="adorn2"></div>
+                <li><a href="../index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dbuyer_order.htm">我的订单</a></li>
+                <li><a href="../index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dbuyer_groupbuy.htm">我的团购</a></li>
+                <li><a href="../index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmy_question.htm">我的咨询</a></li>
+            </ul>
+        </span>
+        <span>|</span>
+        <a href="../index.php@app=category.htm">我要买</a> <span>|</span>
+        <a href="../index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmy_goods&act_253dadd.htm">我要卖</a>
+    </div>
+
+    <div id="path">
+        当前位置:
+                        <a href="../index.php.htm">首页</a> <span>&#8250;</span>
+                                <a href="../index.php@app=search&act=store.htm">所有店铺</a> <span>&#8250;</span>
+                                <a href="../index.php@app=store&id=1090.htm">买双鞋呗</a> <span>&#8250;</span>
+                                商品列表                    </div>
+
+    <div id="search">
+        <form id="" name="" method="get" action="index.php">
+            <div class="input">
+                <div class="input1"></div>
+                <div class="input2"></div>
+                <select name="act" class="select1">
+                <option value="index">搜索商品</option>
+                <option value="store">搜索店铺</option>
+                <option value="groupbuy">搜索团购</option>
+                </select>
+                <input type="hidden" name="app" value="search" />
+                <input type="text" class="search334" name="keyword" />
+            </div>
+            <input class="search_btn" type="submit" value="" />
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+//<!CDATA[
+$(function(){
+    $("select[ectype='order_by']").change(function(){
+        var params = location.search.substr(1).split('&');
+        var key    = 'order';
+        var value  = this.value;
+        var found  = false;
+        for (var i = 0; i < params.length; i++)
+        {
+            param = params[i];
+            arr   = param.split('=');
+            pKey  = arr[0];
+            if (pKey == 'page')
+            {
+                params[i] = 'page=1';
+            }
+            if (pKey == key)
+            {
+                params[i] = key + '=' + value;
+                found = true;
+            }
+        }
+        if (!found)
+        {
+            params.push(key + '=' + value);
+        }
+        location.assign(SITE_URL + '/index.php?' + params.join('&'));
+    });
+});
+//]]>
+</script>
+
+<SCRIPT type=text/javascript>
+function addBookmark(site, url) {
+        if (navigator.userAgent.toLowerCase().indexOf('ie') > -1) {
+                window.external.addFavorite(url, site)
+        } else if (navigator.userAgent.toLowerCase().indexOf('opera') > -1) {
+                return;
+        } else {
+                return;
+        }
+}
+
+function setCopy(_sTxt) {
+        if (navigator.userAgent.toLowerCase().indexOf('ie') > -1) {
+                clipboardData.setData('Text', _sTxt);
+                alert("网址“" + _sTxt + "”\n已经复制到您的剪贴板中\n您可以使用Ctrl+V快捷键粘贴到需要的地方");
+        } else {
+                prompt("请复制网站地址:", _sTxt);
+        }
+}
+</script>
+<div id="nav">
+        <div class="banner">
+                <img src="../data/files/store_1090/other/store_banner.jpg" width="1000" height="150" />
+        
+                <H2>买双鞋呗</H2>
+                <H4>买双鞋呗</H4>
+                <DIV class=siteurl>
+                                                <A title=复制地址 onclick="javascript:setCopy('@1090');" href="javascript:;"><IMG alt=复制地址 src="../themes/store/default/styles/default/images/icon_siteinfo.gif"></A>
+                        <A title=加入收藏 onclick="javascript:addBookmark('买双鞋呗', '@1090');" href="javascript:;"><IMG alt=加入收藏 src="../themes/store/default/styles/default/images/icon_add.gif"></A>
+                        <A title=店铺地址 href="../index.php@app=store&id=1090.htm">http://shop.shenei.net/?1090</A>
+                                        </DIV>
+    </div>
+
+    <ul>
+        <li><a class="normal" href="../index.php@app=store&id=1090.htm"><span>店铺首页</span></a></li>
+<!--
+        
+                <li><a class="normal" href="index.php?app=store&amp;id=1090"><span>店铺首页</span></a></li>
+        -->
+        <li><a class="active" href="../index.php@app=store&id=1090&act=search.htm"><span>所有商品</span></a></li>
+        <li><a class="normal" href="../index.php@app=store&act=groupbuy&id=1090.htm"><span>团购活动</span></a></li>
+                <li><a class="normal" href="../index.php@app=store&act=credit&id=1090.htm"><span>信用评价</span></a></li>
+        <li><a class="normal" href="../../u.shenei.net/1090.htm" target="_blank"><span>店长博客</span></a></li>
+        <a class="collection" href="javascript:collect_store(1090)">收藏该店铺</a>
+    </ul>
+
+    <div class="nav_bg"></div>
+</div>
+<div id="content">
+    <div id="left">
+        <div class="user">
+            <div class="user_photo">
+                <h2>买双鞋呗</h2>
+                <div class="photo"><a href="../index.php@app=store&id=1090.htm"><img src="../data/files/store_1090/other/store_logo.jpg" width="100" height="100" /></a></div>
+                <p><a href="javascript:collect_store(1090)">收藏该店铺</a></p>
+            </div>
+            
+            <div class="user_data">
+                <p>
+                    <span>店主: </span>包子和地瓜                    <a target="_blank" href="../index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmessage&act_253dsend&to_id_253d1090.htm"><img src="../themes/store/default/styles/style1/images/web_mail.gif" alt="发站内信" /></a>
+                </p>
+				
+				                <p>
+                    <span>真实姓名: </span>卢小兰                </p>
+                				
+                <p>
+                    <span>信用度: </span><span class="fontColor1">0</span>
+                    <img src="../themes/store/default/styles/style1/images/heart_1.gif" alt="" />                </p>
+                <p>店铺等级: 顶级商店</p>
+                                <p>商品数量: 838</p>
+					
+				<p>浏览次数: 321 次</p>
+				                <p>创店时间: 2010-10-27</p>
+                <p>所在地区: 大学城	闽江学院</p>
+                                <p>详细地址: 梅园2号楼104室</p>
+                                                <p>联系电话: 18950427207</p>
+                                <p>
+                                        <a href="../tencent_3a//message/@menu=yes&exe=&uin=405664803&websitename=_25c2_25f2_25cb_25ab_25d0_25ac_25df_25c2&info=&service=200&sigt=a0e2a19f3ad" target="_blank"><img src="../../pub.idqqimg.com/qconn/wpa/button/button_old_41.gif" alt="QQ"></a>
+                    <!--<a href="http://wpa.qq.com/msgrd?V=1&amp;Uin=405664803&amp;Site=买双鞋呗&amp;Menu=yes" target="_blank"><img src="http://wpa.qq.com/pa?p=1:405664803:4" alt="QQ"></a>-->
+					来Q我啊~
+                    <script type="text/javascript">
+function aliim() {
+window.open('http://webwwtb.im.alisoft.com/wangwang/ww1.htm?t=&uid=&tid='+escape('freesix2007'));
+}
+</script>
+                                        <a href="javascript:aliim();" ><img border="0" src="../../img.alicdn.com/tps/i1/t1b7m.xexuxxahnz_x-16-16.gif" alt="Wang Wang" /></a>
+                    <!--<a target="_blank" href="aliim:sendmsg?uid=cntaobao&touid=cntaobaofreesix2007&siteid=cntaobao&status=1&nick=买双鞋呗&uid_t=买双鞋呗&status=1&gid=0&suid=&fenliu=1" ><img border="0" src="http://amos.im.alisoft.com/online.aw?v=2&uid=freesix2007&site=cntaobao&s=2&charset=gbk" alt="Wang Wang" /></a>-->
+                    <!--<a target="_blank" href="http://amos.im.alisoft.com/msg.aw?v=2&uid=freesix2007&site=cntaobao&s=2&charset=gbk" ><img border="0" src="http://amos.im.alisoft.com/online.aw?v=2&uid=freesix2007&site=cntaobao&s=2&charset=gbk" alt="Wang Wang" /></a>-->
+					淘宝旺旺
+                                        					<br><br>联系时告诉我是从舍内网看到的！<br>并把商品链接(网址)发来~
+                </p>
+            </div>
+        
+            <div class="clear"></div>
+        </div>
+        
+        <div class="module_common">
+            <h2 class="common_title veins1">
+                <div class="ornament1"></div>
+                <div class="ornament2"></div>
+                <span class="ico1"><span class="ico2">店内搜索</span></span>
+            </h2>
+            <div class="wrap">
+                <div class="wrap_child">
+                    <div class="web_search">
+                        <form id="" name="" method="get" action="index.php">
+                            <input type="hidden" name="app" value="store" />
+                            <input type="hidden" name="act" value="search" />
+                            <input type="hidden" name="id" value="1090" />
+                            <input class="text width4" type="text" name="keyword" />
+                            <input class="btn" type="submit" value="" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="module_common">
+            <h2 class="common_title veins1">
+                <div class="ornament1"></div>
+                <div class="ornament2"></div>
+                <span class="ico1"><span class="ico2">商品分类</span></span>
+            </h2>
+            <div class="wrap">
+                <div class="wrap_child">
+                    <ul class="submenu">
+                        <li><a class="none_ico" href="../index.php@app=store&id=1090&act=search.htm">全部商品</a></li>
+                                                                        <li><a class="none_ico" href="../index.php@app=store&id=1090&act=search&cate_id=515.htm">男/女袜、长/短袜</a></li>
+                                                                                                <li><a class="none_ico" href="../index.php@app=store&id=1090&act=search&cate_id=516.htm">50-100价位</a></li>
+                                                                                                <li><a class="none_ico" href="../index.php@app=store&id=1090&act=search&cate_id=517.htm">100-150价位</a></li>
+                                                                                                <li><a class="none_ico" href="../index.php@app=store&id=1090&act=search&cate_id=518.htm">150-200价位</a></li>
+                                                                                                <li><a class="none_ico" href="../index.php@app=store&id=1090&act=search&cate_id=519.htm">200-250价位</a></li>
+                                                                                                <li><a class="none_ico" href="../index.php@app=store&id=1090&act=search&cate_id=520.htm">250-300价位</a></li>
+                                                                                                <li><a class="none_ico" href="../index.php@app=store&id=1090&act=search&cate_id=521.htm">300以上价位</a></li>
+                                                                                                <li><a class="none_ico" href="../index.php@app=store&id=1090&act=search&cate_id=523.htm">室内鞋、家居靴</a></li>
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+        
+                
+            </div>
+    
+    <div id="right">
+        <div class="module_special">
+            <h2 class="common_title veins2">
+                <div class="ornament1"></div>
+                <div class="ornament2"></div>
+                <span class="ico1"><span class="ico2">全部商品</span></span>
+            </h2>
+            <div class="wrap">
+                <div class="wrap_child">
+                                        <div class="major">
+                        <ul class="list">
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=3745.htm" target="_blank"><img src="../data/files/store_1090/goods_186/small_201010272243064967.jpeg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=3745.htm" target="_blank">匡威 JACK PURCELL 红布 开口笑 喜庆版 女鞋 匡威红布开口笑</a></h3>
+                                <p>&#165;148.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=3685.htm" target="_blank"><img src="../data/files/store_1090/goods_197/small_201010272239573353.jpeg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=3685.htm" target="_blank">李宁运动鞋包质量 特价运动鞋 男子专业篮球鞋 2BMD665-1</a></h3>
+                                <p>&#165;127.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=3686.htm" target="_blank"><img src="../data/files/store_1090/goods_66/small_201010272241063170.jpeg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=3686.htm" target="_blank">李宁运动鞋包质量 特价运动鞋 男子专业篮球鞋 2BMD665-2</a></h3>
+                                <p>&#165;127.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=3687.htm" target="_blank"><img src="../data/files/store_1090/goods_96/small_201010272241369226.jpeg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=3687.htm" target="_blank">李宁运动鞋包质量 特价篮球鞋 秋季新款 高帮篮球鞋 ABPE395-1</a></h3>
+                                <p>&#165;127.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=3688.htm" target="_blank"><img src="../data/files/store_1090/goods_95/small_201010272241351375.jpeg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=3688.htm" target="_blank">李宁运动鞋包质量 特价篮球鞋 秋季新款 高帮篮球鞋 ABPE395-3</a></h3>
+                                <p>&#165;127.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=3689.htm" target="_blank"><img src="../data/files/store_1090/goods_104/small_201010272241448944.jpeg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=3689.htm" target="_blank">匡威最新 刺绣金鱼水晶底 水晶底金鱼系列 白色 情侣款帆布鞋</a></h3>
+                                <p>&#165;128.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=3690.htm" target="_blank"><img src="../data/files/store_1090/goods_43/small_201010272240436308.jpeg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=3690.htm" target="_blank">匡威帆布鞋 allstar 匡威彩虹版 咖啡色高帮 匡威高帮咖啡色</a></h3>
+                                <p>&#165;128.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=3691.htm" target="_blank"><img src="../data/files/store_1090/goods_60/small_201010272241002824.jpeg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=3691.htm" target="_blank">匡威帆布鞋 海外版匡威帆布鞋[ALL STAR]黑红拉链情侣帆布鞋</a></h3>
+                                <p>&#165;128.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=3692.htm" target="_blank"><img src="../data/files/store_1090/goods_23/small_201010272240239523.jpeg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=3692.htm" target="_blank">匡威 帆布鞋 海外版[ALL STAR]巴西国旗版低帮情侣帆布鞋</a></h3>
+                                <p>&#165;128.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=3693.htm" target="_blank"><img src="../data/files/store_1090/goods_92/small_201010272241324812.jpeg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=3693.htm" target="_blank">匡威  海外版帆布鞋[ALL STAR]巴西国旗版高帮情侣帆布鞋</a></h3>
+                                <p>&#165;128.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=3694.htm" target="_blank"><img src="../data/files/store_1090/goods_198/small_201010272239584074.jpeg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=3694.htm" target="_blank">匡威 水晶底金鱼系列 黑色 刺绣水晶底透明底蓝金鱼男女帆布鞋</a></h3>
+                                <p>&#165;128.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=3695.htm" target="_blank"><img src="../data/files/store_1090/goods_55/small_201010272240553941.jpeg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=3695.htm" target="_blank">匡威 All STAR 新款 彩色霓红灯 米低 女鞋 帆布鞋 匡威夏日女鞋</a></h3>
+                                <p>&#165;128.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=3696.htm" target="_blank"><img src="../data/files/store_1090/goods_13/small_201010272240137591.jpeg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=3696.htm" target="_blank">匡威 All Star 水晶底金鱼系列 蓝色 情侣款 帆布鞋 男女鞋</a></h3>
+                                <p>&#165;128.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=3697.htm" target="_blank"><img src="../data/files/store_1090/goods_67/small_201010272241074561.jpeg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=3697.htm" target="_blank">匡威 All Star 动物世界杯 粉色低帮 帆布鞋 女鞋 动物世界杯粉低</a></h3>
+                                <p>&#165;128.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=3698.htm" target="_blank"><img src="../data/files/store_1090/goods_105/small_201010272241451418.jpeg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=3698.htm" target="_blank">匡威 All Star 动物世界杯 黄色低帮 帆布鞋 女鞋 动物世界杯黄低</a></h3>
+                                <p>&#165;128.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=3699.htm" target="_blank"><img src="../data/files/store_1090/goods_61/small_201010272241012404.jpeg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=3699.htm" target="_blank">匡威 All Star 新款 闪电 红色 高帮 新闪电红高 男女 帆布鞋</a></h3>
+                                <p>&#165;128.00</p>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="shop_list_page">
+    <div class="page">
+        <a class="stat">共 838 个项目</a>
+                <a class="former" href="index.php@app=store&id=1090&act=search&page=18.htm#module"></a>
+                                <a class="page_link" href="index.php@app=store&id=1090&act=search&page=17.htm#module">17</a>
+                                <a class="page_link" href="index.php@app=store&id=1090&act=search&page=18.htm#module">18</a>
+                                <a class="page_hover" href="#module">19</a>
+                                <a class="page_link" href="index.php@app=store&id=1090&act=search&page=20.htm#module">20</a>
+                                <a class="page_link" href="index.php@app=store&id=1090&act=search&page=21.htm#module">21</a>
+                                <a class="page_link" href="index.php@app=store&id=1090&act=search&page=22.htm#module">22</a>
+                                <a class="page_link" href="index.php@app=store&id=1090&act=search&page=23.htm#module">23</a>
+                        <a class="nonce">19 / 53</a>
+                <a class="down" href="index.php@app=store&id=1090&act=search&page=20.htm#module">下一页</a>
+            </div>
+</div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="clear"></div>
+</div>
+
+<div id="footer">
+    <p>
+        <a href="../index.php.htm">首页</a>
+                | <a href="../../www.shenei.net/default.htm" target="_blank">舍内网</a>
+                | <a href="../../u.shenei.net/default.htm" target="_blank">家园</a>
+                | <a href="../../www.shenei.net/default.htm" target="_blank">【疯·神】工作室</a>
+                | <a href="http://www.fjut.info/" target="_blank">工院百科</a>
+            </p>
+    页面执行 0.154 秒， 查询 6 次，在线 52 人    ，Gzip 已禁用    ，占用内存 2.85 MB <br />
+    Powered by <a href="http://ecmall.shopex.cn/?pid=6&host=http%3A%2F%2Fshop.shenei.net" target="_blank">ECMall 2.2 final 20100108</a> &copy; 2003-2009 <a href="http://www.shopex.cn/" target="_blank">ShopEx Inc.</a>
+</div>
+
+<script type="text/javascript" src="../../www.jiathis.com/code/jiathis_r.js@move=0&btn=r5.gif" charset=utf-8></script>
+
+</body>
+</html>

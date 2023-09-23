@@ -1,0 +1,1 @@
+document.writeln("<body onLoad=\"loading.removeNode(true);content.style.display='' \"><div id=loading>&nbsp;&nbsp;ЦРТлМгдижа...<br /><\/div><div id=\"content\"><iframe id=\"comment_box\" name=\"info\" src=\"../public/comment.php@part=info&id=75.htm\" frameborder=\"0\" scrolling=\"no\" onload=\"this.height=comment_box.document.body.scrollHeight;\"><\/iframe></div></body>")

@@ -1,0 +1,92 @@
+<!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd"><HTML>
+<!-- saved from url=(0061)http://buy.shenei.net/templates/default/tttuangou_header.html --><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<link rel="shortcut icon" href="../../favicon.ico" /><!--{eval $__my=$this->
+MemberHandler->MemberFields;}-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base  />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+{if 'index'==$_GET['mod'] && 1==count($_GET)}
+<title>【{$this->Config[site_name]}】({$this->Config[site_domain]}) - 舍内网</title>
+{else}
+<title>{$this->Title} - {$this->Config[site_name]}({$this->Config[site_domain]}){conf page_title}</title>
+{/if}
+<meta name="Keywords" content="{$this->MetaKeywords},{conf site_name}{conf meta_keywords}" />
+<meta name="Description" content="{$this->MetaDescription},{conf site_notice}{conf meta_description}" />
+<script type="text/javascript">
+var thisSiteURL = '{conf site_url}/';
+</script>
+<link rel="shortcut icon" href="http://{$this->Config[site_url]}/favicon.ico" />
+<link href="http://{$this->Config[site_url]}/styles/main.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="http://{$this->http://buy.shenei.net/templates/default/config%5bsite_url%5d}/templates/default/js/jquery.js"></script>
+<script language="javascript" src="http://{$this->http://buy.shenei.net/templates/default/config%5bsite_url%5d}/templates/default/js/main.js"></script>
+</head>
+<body>
+<div class="m_bg">
+<a name="htop" id="htop"></a>
+<div class="header">
+<div class="h960">
+<div class="at_logo"> 
+<div class="vcoupon"><a href="http://{$this->Config[site_url]}/{eval echo $this->Config[site_url]; }/?u={MEMBER_ID}" onclick="copyText(this.href);">&raquo;邀请好友购买返 {$this->config['default_payfinder']}元</a><a href="http://{$this->Config[site_url]}/?mod=list&code=ckticket">&raquo;团购券验证及消费登记</a></div>
+<div class="logo"><a href="http://{$this->Config[site_url]}/./"><img src="http://{$this->Config[site_url]}/templates/default/images/logo_m.gif" /></a></div>
+<a class="at_city" href="javascript:void(0)">{$this->cityname}</a>
+<div id="change_city"> <span id="top_title">切换城市</span>
+<div id="show_provinces">
+<div style=" position:absolute; font-weight:normal; right:8px; top:8px;" id="close">[关闭]</div>
+<div style="margin-bottom:0.75em; font-weight:bolder;"><span>请选择您所在的城市:</span></div>
+<ul class="scity">
+{loop $this->cityary $i $value}
+<li><span class="sub_title"><a href="http://{$this->Config[site_url]}/?city={$value['shorthand']}">{$value['cityname']}</a></span></li>
+{/loop}
+</ul>
+</div>
+</div>
+<div id="Tpl_c"> <a class="ft_top" href="http://{$this->Config[site_url]}/{if MEMBER_ID>=1}?mod=index&code=email{else}?mod=me&code=register{/if}">邮件订阅每日最新团购</a>
+<span id="page_options" onclick="ShowHideDiv()">更换模版<div id="Sright"><script type="text/javascript">writeCSSLinks();</script></div></span> 
+</div>
+</div>
+</div>
+</div>
+<div class="t_nav">
+<div class="h960">
+<div class="sign">
+<!--{if MEMBER_ID > 0}-->
+{MEMBER_NAME}: <a href="http://{$this->Config[site_url]}/?mod=me">我的团秒</a> {if MEMBER_ROLE_ID==2 or MEMBER_ROLE_ID==7}|<a href="http://{$this->Config[site_url]}/admin.php">管理后台</a>{/if} {if MEMBER_ROLE_ID==6}| <a href="http://{$this->Config[site_url]}/?mod=magseller">商家管理</a>{/if} | <a href="http://{$this->Config[site_url]}/?mod=login&code=logout">退出</a>
+<!--{else}-->
+您好！欢迎您的到来，<a href="http://{$this->Config[site_url]}/?mod=login">登陆</a> | <a href="http://{$this->Config[site_url]}/?mod=me&code=register">注册</a>
+<!--{/if}-->
+</div>
+<ul class="menu">
+<li class="menu2" onMouseOver="this.className='menu1'" onMouseOut="this.className='menu2'"><a href="../../../www.shenei.net/default.htm" target="_blank" title="引导页"><span>主站首页</span></a>
+<div class="list">
+</div>
+</li>
+<li class="menu2" onMouseOver="this.className='menu1'" onMouseOut="this.className='menu2'"><a {$p1} href="" title="本期团秒"><span>本期团秒</span></a>
+<div class="list">
+<a {$p1_1} href="http://{$this->Config[site_url]}/?mod=index&type=SecKills" title="本期秒杀"><span>本期秒杀</span></a><br />
+<a {$p1_2} href="http://{$this->Config[site_url]}/?mod=index&type=GroupBuy" title="本期团购"><span>本期团购</span></a><br />
+</div>
+</li>
+<li class="menu2" onMouseOver="this.className='menu1'" onMouseOut="this.className='menu2'"><a {$p2_2} href="http://{$this->Config[site_url]}/?mod=list&code=backlist" title="往期团秒"><span>往期团秒</span></a>
+<div class="list">
+<a {$p2_2} href="http://{$this->Config[site_url]}/?mod=list&code=backlist&type=GroupBuy" title="往期团购"><span>往期团购</span></a><br />
+<a {$p2_1} href="http://{$this->Config[site_url]}/?mod=list&code=backlist&type=SecKills" title="往期秒杀"><span>往期秒杀</span></a><br />
+</div>
+</li>
+<li class="menu2" onMouseOver="this.className='menu1'" onMouseOut="this.className='menu2'"><a {$p3} href="http://{$this->Config[site_url]}/?mod=list&code=tobuy" title="团购指南"><span>团购指南</span></a>
+<div class="list">
+<a {$p4} href="http://{$this->Config[site_url]}/?mod=list&code=problem" title="常见问题"><span>常见问题</span></a><br />
+</div>
+</li>
+<li class="menu2" onMouseOver="this.className='menu1'" onMouseOut="this.className='menu2'"><a {$p5} href="http://{$this->Config[site_url]}/?mod=list&code=question" title="团秒问答"><span>团秒问答</span></a>
+<div class="list">
+</div>
+</li>
+</ul>
+<!--{if 0}-->
+<!--<a {$p1} href="" title="本期团秒"><span>本期团秒</span></a>--> <a {$p1_1} href="http://{$this->Config[site_url]}/?mod=index&type=SecKills" title="本期秒杀"><span>本期秒杀</span></a> <a {$p1_2} href="http://{$this->Config[site_url]}/?mod=index&type=GroupBuy" title="本期团购"><span>本期团购</span></a> <a {$p2_2} href="http://{$this->Config[site_url]}/?mod=list&code=backlist&type=GroupBuy" title="往期团购"><span>往期团购</span></a> <a {$p2_1} href="http://{$this->Config[site_url]}/?mod=list&code=backlist&type=SecKills" title="往期秒杀"><span>往期秒杀</span></a> <a {$p3} href="http://{$this->Config[site_url]}/?mod=list&code=tobuy" title="团购指南"><span>团购指南</span></a> <!--<a {$p4} href="?mod=list&code=problem" title="常见问题"><span>常见问题</span></a>--> <a {$p5} href="http://{$this->Config[site_url]}/?mod=list&code=question" title="团秒问答"><span>团秒问答</span></a>
+<!--{/if}-->
+</div>
+</div>

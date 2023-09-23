@@ -1,0 +1,14 @@
+#menu{ position:absolute; top:16px; left:140px; color:#878787;}
+#menu li{ float:left; height:22px; line-height:22px; padding-right:15px; margin-right:12px; background:url(../../../../pic2.58.com/images/5_0/fabu/buzhou.gif) no-repeat right center;}
+#menu li.selected_fr{ background:url(../../../../pic2.58.com/images/5_0/fabu/stepicon01.gif) no-repeat right center;}
+#menu li.n{ background:none}
+.conLli{}
+.YM-mainmnu{ text-align:center;width:730px; margin-left:auto; margin-right:auto}
+.YM-mainmnu li{ width:135px; float:left; background:url(../../../../pic2.58.com/images/5_0/fabu/li_icon.gif) no-repeat left center; height:36px; line-height:36px; text-indent:16px; margin-bottom:15px; margin-right:210px; position:relative; z-index:10;  text-align:left}
+.YM-mainmnu li a{ font-size:16px;}
+.YM-mainmnu li.current{ width:135px; height:36px; position:relative}
+.YM-mainmnu li.current a{ display:block;font-weight:bold; text-decoration:underline; width:133px; height:31px; line-height:31px; background:#fdfeff;  border:2px solid #6182e4;  border-bottom:3px solid #6182e4; border-right:none; text-indent:13px; position:absolute; top:0; left:0; z-index:10}
+.YM-submnu{ position:absolute; top:0px; left:133px; width:156px; border:2px solid #6182e4; background:#fdfeff; z-index:2; padding-bottom:8px; padding-top:4px; display:none}
+.YM-mainmnu li .YM-submnu li{ background:none; font-size:14px; padding:10px 0 0; height:16px; margin:0; line-height:16px; width:150px;}
+.YM-mainmnu li .YM-submnu li a{ display:inherit; border:none; font-size:14px; font-weight:lighter; text-decoration:none}
+.YM-mainmnu li .YM-submnu li a:hover{ text-decoration:underline}

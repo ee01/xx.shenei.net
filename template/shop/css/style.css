@@ -1,0 +1,159 @@
+@import url(../../../mypub/css/page.css);
+@import url(../../../mypub/css/button.css);
+@import url(theme4.css);
+
+.changeColor_bd { margin-top:5px;}
+.changeColor_bd .hd { float:left;}
+.theme { float:left; background:url(../images/theme.gif) no-repeat 0 4px; height:10px; overflow:hidden; width:100px; padding-top:4px;}
+.theme li { float:left; display:inline; margin-right:6px; background:url(../images/theme.gif) no-repeat 0 -20px;}
+.theme li a { display:block; text-indent:-999em; overflow:hidden; width:10px; height:10px;}
+#theme1.current { background-position:0 -10px;}
+#theme2.current { background-position:-16px -10px;}
+#theme3.current { background-position:-32px -10px;}
+#theme4.current { background-position:-48px -10px;}
+#theme5.current { background-position:-64px -10px;}
+#theme6.current { background-position:-80px -10px;}
+
+body { background-image:url(http://xx.shenei.net/template/shop/images/bg2.jpg); background-repeat:repeat-y; background-position:center top;}
+.color_gay,a.color_gay { color:#999;}
+a.color_gay:hover { color:#666;}
+#header .quick_menu,#nav .search_box .bd .search_zone { background-image:url(../images/hd_320.png); background-repeat:no-repeat;}
+#top_bar .quick_link ul li {background-image:url(../images/icon.gif); background-repeat:no-repeat;}
+
+.wrapper {width:1000px;margin:0 auto; position:relative;}
+#top_bar { background:url(../images/bg_repeatx.png) repeat-x 0 0; height:26px; line-height:26px; border:1px solid #d4d4d4; border-top:0;}
+#top_bar .change_city { float:left; display:inline; margin-left:10px;}
+#top_bar .city_zone { color:#006acd; font-weight:bold;}
+#top_bar .quick_link { float:right;}
+#top_bar .quick_link ul li { float:left; display:inline; padding:0 10px 0 13px; background-position:1px -116px;}
+.menu2 ul li {float:left; display:inline; padding:0 10px 0 13px; background-position:1px -116px;}
+.menu2 a { color:#000000;}
+#header .logo { float:left; width:268px; height:52px; margin:10px 15px 0 0; display:inline;}
+#header .logo a { width:268px; height:52px;}
+#header .login_info { float:left; display:inline; margin-top:10px; height:52px; padding-left:15px; border-left:2px solid #e4e4e4; text-align:left; line-height:25px; }
+#header .login_info span.user_name { color:#FF3300;}
+#header .login_info .site_info { color:#b2aeae;}
+#header .quick_menu { float:right; background-position:-240px -25px; width:148px; height:47px; margin-top:13px; position:relative;}
+#header .quick_menu .bd { color:#ccc; text-align:left; margin:1px 0 0 2px;}
+#header .quick_menu .bd li { height:15px; margin-top:5px; float:left; width:30px; border-right:1px solid #ccc; padding:0 3px 0 7px; line-height:15px;}
+#header .quick_menu .bd li.foursize { width:50px; border:0;}
+#header .quick_menu .kil a { color:#666;}
+#header .quick_menu .kil a:hover { color:#f60;}
+
+#nav { margin-top:10px;}
+#nav .nav_zone li { float:left; width:102px; font-size:14px; font-weight:bold; line-height:33px;}
+#nav .nav_zone { padding-left:10px; height:33px; background-image:url(../images/navbg_06.png); background-repeat:no-repeat; overflow:hidden;}
+#nav .nav_zone li a { display:block; height:33px; color:#fff; width:102px; background-image:url(http://xx.shenei.net/template/shop/images/nav_bg_09.png); background-repeat:no-repeat;}
+#nav .nav_zone li.current { background-image:url(../images/index_07.png); background-repeat:no-repeat; padding-top:2px;}
+#nav .nav_zone li.current a { color:#333;}
+#nav .search_box { background:url(../images/bg_960.png) no-repeat 0 0; height:42px;}
+#nav .search_box .bd { padding:8px 0 0 10px; text-align:left;}
+#nav .search_box .search_zone { background-position:0 0; height:25px; float:right;display:inline; width:341px; margin-right:10px;}
+#nav .search_box .search_zone .searchText { border:0; background:#ccc; height:22px; line-height:20px; margin-left:35px; width:256px; background:none;}
+#nav .search_box .search_zone .searchSubmit { cursor:pointer; border:0; font-size:14px; height:25px; line-height:25px; font-weight:bold; color:#fff; width:50px; background:none;}
+#nav .search_box .search_hotkey { float:left; display:inline; margin:2px 0 0 10px;}
+#nav .search_box span.hotkeyTit { font-size:14px; color:#333; font-weight:bold;}
+#nav .search_box .search_hotkey a { margin-right:8px; color:#9f3c3c; text-decoration:underline;}
+#nav .search_box .search_hotkey a:hover { color:#bd5d5d;}
+#nav .location { float:left; color:#666; display:inline; margin:5px 0 0 10px; background:url(../images/icon.gif) no-repeat 0 -219px; padding-left:20px;}
+#nav .location a { color:#36c; text-decoration:underline;}#nav .location a:hover { color:#f30; text-decoration:underline;}
+#nav .changeColor_bd { float:right; margin:12px 4px 0 0; display:inline; color:#a59770;}
+
+/* 引导 Add By 01 */
+#years {margin:10px 10px; width:auto; height:136px;}
+#years .year1 { float:left; background:url(../images/button_4years.png) no-repeat -9px -8px; width:208px; height:136px;  margin-left:30px;}
+#years .year2 { float:left; background:url(../images/button_4years.png) no-repeat -216px -8px; width:208px; height:136px;  margin-left:30px;}
+#years .year3 { float:left; background:url(../images/button_4years.png) no-repeat -423px -8px; width:208px; height:136px;  margin-left:30px;}
+#years .year4 { float:left; background:url(../images/button_4years.png) no-repeat -630px -8px; width:208px; height:136px;  margin-left:30px;}
+#years a { display: block; color: #fff; text-decoration: none; width:208px; height:136px; }
+#years a h1 { display: block; font-weight: bold; font-size: 36px; color: #FFF; text-align: left; padding:15px 0 5px 10px; }
+#years a span { display: block; font-weight: auto; font-size: 18px; color: #FFF; text-align: left; padding:0 10px 0 30px; }
+
+#content { margin-top:10px;}
+#footer { margin-top:10px; position:relative; border-top:1px solid #dedede; padding-top:5px;}
+#footer .logo_gay { float:left; display:inline; margin-right:12px; width:263px; height:57px; margin-top:10px;}
+#footer .logo_gay a { display:block; background:url(http://xx.shenei.net/template/shop/images/logo_gay.gif) no-repeat 0 0; width:263px; height:57px; overflow:hidden; text-indent:-999em;}
+#footer .foot_info { float:left; width:566px; height:70px; text-align:left; line-height:22px;}
+#footer .foot_nav { color:#666;}
+#footer a { color:#0135af; text-decoration:underline;}
+#footer a:hover { color:#f30; text-decoration:underline;}
+#footer .safety { float:left; width:109px;}
+#footer .bor { overflow:hidden; height:5px; background:url(../images/bg_repeatx.png) repeat-x 0 -133px; margin:8px 0;}
+#debuginfo strong,#debuginfo em {font-weight:700;}
+#debuginfo strong a {color:#0954A6; text-decoration:none}
+#debuginfo strong a:hover {text-decoration:underline}
+#debuginfo em{color:#FF9D25;}
+#debuginfo em a{color:#FF9D25;}
+
+/* 分页 */
+.pagination_module { margin-top:15px;}
+.pagination_module .left { display:block; float:left;}
+.pagination_module .right { display:block; float:right;}
+
+.pagination_module .right2 { margin-top:8px; display:inline; float:right; margin-right:5px; line-height:24px;}
+.pagination_module  a { display:block; float:left; border:1px solid #d7d7d7; background:#f7f7f7; color:#333; padding:4px 6px;line-height:14px; margin-right:3px;}
+.pagination_module  a.current { border:1px solid #f25602; background:#ffd6bf; font-weight:bold;}
+.pagination_module  span.kill { display:block; float:left; padding:4px 6px; line-height:14px; margin-right:3px;}
+.pagination_module  span.invalid{ border:1px solid #eee; background:#fff; color:#ddd;}
+.pagination_module .jump_box { display:block; float:right; margin-top:-4px; color:#666;}
+.pagination_module .jump_box input.jump_input { line-height:18px; border:1px solid #a7a6aa; height:18px; margin-top:5px; width:30px; margin-left:2px;}
+.pagination_module .jump_box input.jump_menu { background:url(../images/hd_320.png) no-repeat -240px -291px; width:20px; height:20px; border:0; margin-left:2px; cursor:pointer;}
+
+/*分页2*/
+.manu { padding:3px; margin:3px; margin-top:10px; text-align:right;}
+.manu a { border:1px solid #eee; color:#036cb4; margin:2px; text-decoration:none; padding:2px 5px;}
+.manu a:hover { border:1px solid #999;}
+.manu a:active { border:1px solid #999; color:#666;}
+.manu .current { border:1px solid #036cb4; padding:2px 5px; margin:2px; color:#fff; background:#036cb4; font-weight:bold;}
+.manu .disabled { border:1px solid #eee; padding:2px 5px; margin:2px; color:#ddd;}
+
+/* 登录层 */
+.ind_login_box { display:none; position:absolute; top:21px; left:-228px; overflow:hidden; width:360px; background-position:0 -492px; height:23px!important; height:24px; text-align:left; padding:0 8px; padding-top:3px!important; padding-top:2px; vertical-align:middle;}
+*+html .ind_login_box { padding-top:4px!important; height:22px!important;}
+.ind_login_box input { vertical-align:middle;}
+input.ind_log_input { border:1px solid #cccccc; border-top:1px solid #919191; border-left:1px solid #919191; height:16px; line-height:16px; color:#666; width:97px;}
+input.l_send { width:33px; height:18px; border:0; background-position:-240px -402px; color:#fff; line-height:16px; cursor:pointer;}
+input.l_cancel { width:33px; height:18px; border:0; background-position:-275px -402px; color:#fff; line-height:16px; cursor:pointer;}
+.display { display:block;}
+.login_test { border:1px solid #ddd; height:18px; line-height:18px; width:80px;}
+.ind_login_box,input.l_send,input.l_cancel  { background-image:url(../images/hd_320.png); background-repeat:no-repeat;}
+
+
+
+/* 7.18增加 */
+.email_login {}
+.email_input { border:1px solid #ccc; height:16px; background:#fff; line-height:16px; color:#333; width:80px;}
+.email_button { border:1px solid #ccc; height:18px; background:#fff; line-height:18px; color:#777; width:40px;}
+.site_service { float:right; margin:3px 5px 0 0; _display:inline; width:71px; height:19px; background:url(http://xx.shenei.net/template/shop/images/navj_03.png) no-repeat 0 0; line-height:19px; text-align:left; padding-left:8px;}
+.site_service a { color:#972d00; display:block;}
+.site_service_zone { position:absolute; top:30px; right:0; width:278px; z-index:9999; }
+.site_service_zone .hd { background:url(../images/navj2_03.png) no-repeat 0 0; height:12px;}
+.site_service_zone .bd { background:url(../images/navj.png) repeat-y 0 0;}
+.site_service_zone .ft { background:url(../images/navj2_07.png) no-repeat 0 0; height:28px; text-align:right;}
+.site_service_zone .ft a.siteService_close { color:#888; background:url(../images/navj_15.png) no-repeat 25px 6px; margin-top:4px; width:45px; text-align:left; display:block;}
+.site_service_zone .item { text-align:left; padding:0 15px;}
+.site_service_zone .item .title { color:#f50; font-size:14px; font-weight:bold;}
+.site_service_zone .item .title img { vertical-align:middle;}
+.site_service_zone .item .cont { line-height:20px;}
+.site_service_zone .item .cont a { color:#666;}
+.display { display:block;}
+
+
+.pages { height:35px; overflow:hidden; text-align:center; line-height:25px; font-family:Verdana;}
+	.pages a, .pages strong { margin:0 1px; padding:2px 6px; border:1px solid #E4E4E4; color:#369; text-decoration:none!important; }
+	.pages a:hover { border-color:#A71D12; }
+	.pages strong { border-color:#A71D12; background:#A71D12; color:#FFF; }
+	.pages .prev { padding:4px 5px 2px; border:none; text-decoration:underline!important; }
+	.pages .next { padding:4px 5px 2px; border:none; text-decoration:underline!important; }
+
+
+
+.mldulebox_list { overflow:hidden; margin:15px auto 10px; padding-top:1px; background:url(http://xx.shenei.net/template/shop/images/dashed_bg.gif) repeat-x center top; }
+	.mldulebox_list h4{ height:25px; margin-bottom:5px; padding:0 12px; background:#F8F8F8; line-height:25px; color:#999;}
+		.mldulebox_list h4 a { color:#369; font-weight:400; }
+		.mldulebox_list h4 em{ float:right; font-size:12px;}
+	.mldulebox_list ul { width:96%; overflow:hidden; padding:0 2%; line-height:25px; }
+		.mldulebox_list ul li { float:left; margin-right:12px; white-space:nowrap; }
+		.mldulebox_list ul em, .maxcontent em { margin-right:3px; color:#666; }
+		.mldulebox_list ul li a { color:#999}
+		.maxcontent { width:100%; padding-bottom:5px; color:#999; white-space:normal !important; }

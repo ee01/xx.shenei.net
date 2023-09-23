@@ -1,0 +1,26 @@
+<!--{template tttuangou_header}-->
+<div class="m960">
+<div class="t_l">
+<div class="t_area_out">
+<div class="t_area_in">
+<p class="cur_title">加入我们</p>
+<div class="sect">
+<ol class="faqlist2">
+<li>
+<p>{$this->config['joinus']}</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="t_r">
+<!--{template "tttuangou_myfinder"}-->
+<div class="t_area_out">
+<h1>团秒问答</h1>
+<div class="t_area_in"> <a target="_blank" href="">我要提问</a> | <a target="_blank" href="">查看全部</a> {loop $question $i $value} <a target="_blank" class="txt13" href="">{$value['content']}？</a> {/loop} </div>
+</div>
+<!--{template tttuangou_mail}-->
+</div>
+</div>
+<!--{template tttuangou_footer}-->

@@ -1,0 +1,39 @@
+/*模板五 清爽风格*/
+body{background:#fff}
+#Tpl_c{/*margin-left:430px*/}
+.at_logo a.ft_top{ color:#000}
+.at_logo .vcoupon{ background:#444}
+.header{background:#fff;height:87px;}
+.logo{background:url(../images/logo.gif) no-repeat}
+.at_logo{background:none}
+.at_logo a.at_city{background:url(../images/cmb.png) 0 0 no-repeat;width:72px;height:26px;line-height:25px;color:#000;}
+.t_nav{background:#00befc}
+.t_nav a{background:none;padding:9px 20px 7px}
+.t_nav a.current,.t_nav a:hover{background:#64e5f8}
+.menu .menu1{background:none 0 0 repeat #00befc;}
+.at_jrat{color:#000}
+.t_area_out{background:#CFCFCF;border:1px solid #CFCFCF}
+.t_area_in{margin:1px}
+.at_buy{background:url(../images/cmb.png) 0 -160px no-repeat}
+.at_buy .deal_b{background:url(../images/cmb.png) 0 -30px no-repeat;margin-top:10px}
+.at_buy .deal_y{background:url(../images/cmb.png) 0 -96px no-repeat;margin-top:5px}
+.at_buy .deal_k{background:url(../images/cmb.png) 0 -320px no-repeat;margin-top:10px}
+.at_zk{background:url(../images/cmb.png) -129px -31px}
+.t_padding{background:#f5f5f5;padding-bottom:2px}
+.t_detail_r{background:#f5f5f5}
+.t_detail_l h4{background:#fff;color:#3FA0FA;font-size:16px;font-weight:500;line-height:35px;font-family:黑体;width:90px;height:42px;margin:10px 0 0 2px}
+.t_detail_txt{background:#FFF}
+.at_xts{margin:25px 0 10px 10px}
+.at_xts_t{width:452px;height:20px;overflow:hidden;background:url(../images/cmb.png) -1px -261px no-repeat}
+.at_xts_t .sName{color:#3FA0FA;margin-top:-15px}
+.at_xts_f{width:452px;height:20px;background:url(../images/cmb.png) -1px -282px no-repeat}
+.at_xts_m{width:428px;border-left:#01befc 2px solid; border-right:#0eb1fc 2px solid; margin-left:0;}
+.at_invite{width:207px;height:140px;background:url(../images/cmb.png) -249px 0 no-repeat;margin:2px}
+.fanli_0625{position:absolute;z-index:10;font-size:18px;font-family:黑体;font-weight:500;color:#C32033;margin:82px 20px 30px 70px}
+.t_area_in .btn_dy{background:url(../images/cmb.png) -76px 0 no-repeat;width:60px;height:26px}
+.t_area_in .btn_td{background:url(../images/cmb.png) -137px 0 no-repeat;width:60px;height:26px}
+.footer{background:url(../images/at_f_bg.png) repeat-x #f5f5f5}
+#ft ul{background:#f5f5f5;}
+a,.t_l h1,.t_area_in a.orange,.t_area_in .orange,.t_l .cur_title{color:#3FA0FA}
+#top_title,.at_logo a.ft_right,#page_options,.ft_bg a,.Flink,.Flink a,.footer ul li,.footer ul a{color:#333}
+.t_deal_l,.mb_0625{background:#fff;border:1px solid #CFCFCF}

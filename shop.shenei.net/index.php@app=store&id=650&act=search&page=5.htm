@@ -1,0 +1,400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!-- saved from url=(0067)http://shop.shenei.net/index.php?app=store&id=650&act=search&page=5 --><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base  />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7 charset=gbk" />
+<meta http-equiv="Content-Type" content="text/html;charset=gbk" />
+<title>商品列表 - 韩国化妆品直营店</title>
+<meta name="author" content="ecmall.shopex.cn" />
+<meta name="copyright" content="ShopEx Inc. All Rights Reserved" />
+<link href="themes/store/default/styles/style3/shop.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="index.php@act=jslang"></script>
+<script type="text/javascript" src="includes/libraries/javascript/jquery.js" charset="utf-8"></script>
+<script type="text/javascript" src="includes/libraries/javascript/ecmall.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+//<!CDATA[
+var SITE_URL = "./";
+var PRICE_FORMAT = '&#165;%s';
+
+$(function(){
+    var span = $("#child_nav");
+    span.hover(function(){
+        $("#float_layer:not(:animated)").show();
+    }, function(){
+        $("#float_layer").hide();
+    });
+});
+//]]>
+</script>
+</head>
+
+<body>
+
+<div id="head">
+    <h1 title="【舍内网店】 - 大学城学生网店 - 舍内网"><a href="index.php.htm"><img src="data/files/mall/settings/site_logo.gif" alt="ECMall" /></a></h1>
+
+    <div id="subnav">
+        <p>
+        您好,游客                [<a href="index.php@app=member&act=login&ret_url=.htm">登录</a>]
+        [<a href="index.php@app=member&act=register&ret_url=.htm">注册</a>]
+                </p>
+        <p>
+        <a class="shopping" href="index.php@app=cart.htm">购物车</a> <span>|</span>
+        <a class="favorite" href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmy_favorite.htm">收藏夹</a> <span>|</span>
+        <a class="note" href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmessage&act_253dnewpm.htm">站内消息</a> <span>|</span>
+        <a class="help" href="index.php@app=article&code=help.htm">帮助中心</a>
+                <span>|</span> <a class="user_defined" href="../xx.shenei.net/member/info.php@part=input.htm" target="_blank">发信息</a>
+                </p>
+    </div>
+
+    <div id="topbtn">
+        <div class="topbtn1"></div>
+        <div class="topbtn2"></div>
+        <span id="child_nav">
+            <a href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmember.htm" class="user">用户中心</a>
+            <ul id="float_layer">
+                <div id="adorn1"></div>
+                <div id="adorn2"></div>
+                <li><a href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dbuyer_order.htm">我的订单</a></li>
+                <li><a href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dbuyer_groupbuy.htm">我的团购</a></li>
+                <li><a href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmy_question.htm">我的咨询</a></li>
+            </ul>
+        </span>
+        <span>|</span>
+        <a href="index.php@app=category.htm">我要买</a> <span>|</span>
+        <a href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmy_goods&act_253dadd.htm">我要卖</a>
+    </div>
+
+    <div id="path">
+        当前位置:
+                        <a href="index.php.htm">首页</a> <span>&#8250;</span>
+                                <a href="index.php@app=search&act=store.htm">所有店铺</a> <span>&#8250;</span>
+                                <a href="index.php@app=store&id=650.htm">韩国化妆品直营店</a> <span>&#8250;</span>
+                                商品列表                    </div>
+
+    <div id="search">
+        <form id="" name="" method="get" action="index.php">
+            <div class="input">
+                <div class="input1"></div>
+                <div class="input2"></div>
+                <select name="act" class="select1">
+                <option value="index">搜索商品</option>
+                <option value="store">搜索店铺</option>
+                <option value="groupbuy">搜索团购</option>
+                </select>
+                <input type="hidden" name="app" value="search" />
+                <input type="text" class="search334" name="keyword" />
+            </div>
+            <input class="search_btn" type="submit" value="" />
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+//<!CDATA[
+$(function(){
+    $("select[ectype='order_by']").change(function(){
+        var params = location.search.substr(1).split('&');
+        var key    = 'order';
+        var value  = this.value;
+        var found  = false;
+        for (var i = 0; i < params.length; i++)
+        {
+            param = params[i];
+            arr   = param.split('=');
+            pKey  = arr[0];
+            if (pKey == 'page')
+            {
+                params[i] = 'page=1';
+            }
+            if (pKey == key)
+            {
+                params[i] = key + '=' + value;
+                found = true;
+            }
+        }
+        if (!found)
+        {
+            params.push(key + '=' + value);
+        }
+        location.assign(SITE_URL + '/index.php?' + params.join('&'));
+    });
+});
+//]]>
+</script>
+
+<SCRIPT type=text/javascript>
+function addBookmark(site, url) {
+        if (navigator.userAgent.toLowerCase().indexOf('ie') > -1) {
+                window.external.addFavorite(url, site)
+        } else if (navigator.userAgent.toLowerCase().indexOf('opera') > -1) {
+                return;
+        } else {
+                return;
+        }
+}
+
+function setCopy(_sTxt) {
+        if (navigator.userAgent.toLowerCase().indexOf('ie') > -1) {
+                clipboardData.setData('Text', _sTxt);
+                alert("网址“" + _sTxt + "”\n已经复制到您的剪贴板中\n您可以使用Ctrl+V快捷键粘贴到需要的地方");
+        } else {
+                prompt("请复制网站地址:", _sTxt);
+        }
+}
+</script>
+<div id="nav">
+        <div class="banner">
+                <img src="themes/store/default/styles/style3/images/banner.jpg"  />
+        
+                <H2>韩国化妆品直营店</H2>
+                <H4>韩国化妆品直营店</H4>
+                <DIV class=siteurl>
+                                                <A title=复制地址 onclick="javascript:setCopy('@650');" href="javascript:;"><IMG alt=复制地址 src="themes/store/default/styles/default/images/icon_siteinfo.gif"></A>
+                        <A title=加入收藏 onclick="javascript:addBookmark('韩国化妆品直营店', '@650');" href="javascript:;"><IMG alt=加入收藏 src="themes/store/default/styles/default/images/icon_add.gif"></A>
+                        <A title=店铺地址 href="index.php@app=store&id=650.htm">http://shop.shenei.net/?650</A>
+                                        </DIV>
+    </div>
+
+    <ul>
+        <li><a class="normal" href="index.php@app=store&id=650.htm"><span>店铺首页</span></a></li>
+<!--
+        
+                <li><a class="normal" href="index.php?app=store&amp;id=650"><span>店铺首页</span></a></li>
+        -->
+        <li><a class="active" href="index.php@app=store&id=650&act=search.htm"><span>所有商品</span></a></li>
+        <li><a class="normal" href="index.php@app=store&act=groupbuy&id=650.htm"><span>团购活动</span></a></li>
+                <li><a class="normal" href="index.php@app=store&act=credit&id=650.htm"><span>信用评价</span></a></li>
+        <li><a class="normal" href="../u.shenei.net/650.htm" target="_blank"><span>店长博客</span></a></li>
+        <a class="collection" href="javascript:collect_store(650)">收藏该店铺</a>
+    </ul>
+
+    <div class="nav_bg"></div>
+</div>
+<div id="content">
+    <div id="left">
+        <div class="user">
+            <div class="user_photo">
+                <h2>韩国化妆品直营店</h2>
+                <div class="photo"><a href="index.php@app=store&id=650.htm"><img src="data/files/store_650/other/store_logo.jpg" width="100" height="100" /></a></div>
+                <p><a href="javascript:collect_store(650)">收藏该店铺</a></p>
+            </div>
+            
+            <div class="user_data">
+                <p>
+                    <span>店主: </span>傅燕真                    <a target="_blank" href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmessage&act_253dsend&to_id_253d650.htm"><img src="themes/store/default/styles/style3/images/web_mail.gif" alt="发站内信" /></a>
+                </p>
+				
+								
+                <p>
+                    <span>信用度: </span><span class="fontColor1">0</span>
+                    <img src="themes/store/default/styles/style3/images/heart_1.gif" alt="" />                </p>
+                <p>店铺等级: 高级店铺</p>
+                                <p>商品数量: 108</p>
+					
+				<p>浏览次数: 188 次</p>
+				                <p>创店时间: 2010-05-18</p>
+                <p>所在地区: 大学城	福建工程学院	南区	I区</p>
+                                <p>详细地址: I1-507</p>
+                                                <p>联系电话: 13950431304</p>
+                                <p>
+                                        <a href="tencent_3a//message/@menu=yes&exe=&uin=652253241&websitename=_25ba_25ab_25b9_25fa_25bb_25af_25d7_25b1_25c6_25b7_25d6_25b1_25d30b84fbd3ae" target="_blank"><img src="../pub.idqqimg.com/qconn/wpa/button/button_old_41.gif" alt="QQ"></a>
+                    <!--<a href="http://wpa.qq.com/msgrd?V=1&amp;Uin=652253241&amp;Site=韩国化妆品直营店&amp;Menu=yes" target="_blank"><img src="http://wpa.qq.com/pa?p=1:652253241:4" alt="QQ"></a>-->
+					来Q我啊~
+                    <script type="text/javascript">
+function aliim() {
+window.open('http://webwwtb.im.alisoft.com/wangwang/ww1.htm?t=&uid=&tid='+escape(''));
+}
+</script>
+                                        					<br><br>联系时告诉我是从舍内网看到的！<br>并把商品链接(网址)发来~
+                </p>
+            </div>
+        
+            <div class="clear"></div>
+        </div>
+        
+        <div class="module_common">
+            <h2 class="common_title veins1">
+                <div class="ornament1"></div>
+                <div class="ornament2"></div>
+                <span class="ico1"><span class="ico2">店内搜索</span></span>
+            </h2>
+            <div class="wrap">
+                <div class="wrap_child">
+                    <div class="web_search">
+                        <form id="" name="" method="get" action="index.php">
+                            <input type="hidden" name="app" value="store" />
+                            <input type="hidden" name="act" value="search" />
+                            <input type="hidden" name="id" value="650" />
+                            <input class="text width4" type="text" name="keyword" />
+                            <input class="btn" type="submit" value="" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="module_common">
+            <h2 class="common_title veins1">
+                <div class="ornament1"></div>
+                <div class="ornament2"></div>
+                <span class="ico1"><span class="ico2">商品分类</span></span>
+            </h2>
+            <div class="wrap">
+                <div class="wrap_child">
+                    <ul class="submenu">
+                        <li><a class="none_ico" href="index.php@app=store&id=650&act=search.htm">全部商品</a></li>
+                                                                        <li><a class="none_ico" href="index.php@app=store&id=650&act=search&cate_id=315.htm">韩国兰芝</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=650&act=search&cate_id=316.htm">韩国婵真</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=650&act=search&cate_id=317.htm">韩国Skin79</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=650&act=search&cate_id=318.htm">韩国The  Face  Shop</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=650&act=search&cate_id=319.htm">韩国Skin  Food</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=650&act=search&cate_id=320.htm">The  Body  Shop</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=650&act=search&cate_id=321.htm">可莱丝Leaders   Clinie</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=650&act=search&cate_id=322.htm">JUJU</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=650&act=search&cate_id=323.htm">VOV</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=650&act=search&cate_id=324.htm">梦妆</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=650&act=search&cate_id=325.htm">爱丽</a></li>
+                                                                                                <li><a class="none_ico" href="index.php@app=store&id=650&act=search&cate_id=326.htm">珊娜</a></li>
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+        
+                
+            </div>
+    
+    <div id="right">
+        <div class="module_special">
+            <h2 class="common_title veins2">
+                <div class="ornament1"></div>
+                <div class="ornament2"></div>
+                <span class="ico1"><span class="ico2">全部商品</span></span>
+            </h2>
+            <div class="wrap">
+                <div class="wrap_child">
+                                        <div class="major">
+                        <ul class="list">
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=2461.htm" target="_blank"><img src="data/files/store_650/goods_181/small_201005211313011513.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=2461.htm" target="_blank">TFS保黛胶原抗皱弹力水(清爽)140ml</a></h3>
+                                <p>&#165;128.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=2460.htm" target="_blank"><img src="data/files/store_650/goods_43/small_201005211310438840.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=2460.htm" target="_blank">保黛胶原抗皱弹力水(滋润)140ml.jpg</a></h3>
+                                <p>&#165;128.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=2459.htm" target="_blank"><img src="data/files/store_650/goods_18/small_201005211310182250.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=2459.htm" target="_blank">白树美白水140ml</a></h3>
+                                <p>&#165;95.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=2458.htm" target="_blank"><img src="data/files/store_650/goods_89/small_201005211308093566.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=2458.htm" target="_blank">保黛胶原抗皱弹力全能面霜50ml.jpg</a></h3>
+                                <p>&#165;0.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=2457.htm" target="_blank"><img src="data/files/store_650/goods_163/small_201005211306032639.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=2457.htm" target="_blank">白树美白精华素35ml</a></h3>
+                                <p>&#165;110.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=2456.htm" target="_blank"><img src="data/files/store_650/goods_64/small_201005211307447533.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=2456.htm" target="_blank">保黛胶原抗皱弹力乳液.jpg</a></h3>
+                                <p>&#165;117.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=2455.htm" target="_blank"><img src="data/files/store_650/goods_136/small_201005211302164493.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=2455.htm" target="_blank">保黛胶原抗皱弹力精华30ml.jpg</a></h3>
+                                <p>&#165;145.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=2454.htm" target="_blank"><img src="data/files/store_650/goods_36/small_201005211303567266.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=2454.htm" target="_blank">白树美白面霜50ml</a></h3>
+                                <p>&#165;110.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=2453.htm" target="_blank"><img src="data/files/store_650/goods_5f25/small_201005211307058071.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=2453.htm" target="_blank">南瓜牛奶嫩白化妆水135ml</a></h3>
+                                <p>&#165;99.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=2448.htm" target="_blank"><img src="data/files/store_650/goods_186/small_201005211243066720.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=2448.htm" target="_blank">草本青涩润精华30ml</a></h3>
+                                <p>&#165;99.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=2446.htm" target="_blank"><img src="data/files/store_650/goods_104/small_201005211235045329.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=2446.htm" target="_blank">白树美白淡斑精华素20ml</a></h3>
+                                <p>&#165;125.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=2445.htm" target="_blank"><img src="data/files/store_650/goods_126/small_201005211228468576.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=2445.htm" target="_blank">毛孔专家面膜</a></h3>
+                                <p>&#165;65.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=2444.htm" target="_blank"><img src="data/files/store_650/goods_29/small_201005211227097564.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=2444.htm" target="_blank">毛孔专家爽肤精华素40ml</a></h3>
+                                <p>&#165;75.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=2443.htm" target="_blank"><img src="data/files/store_650/goods_89/small_201005211224493409.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=2443.htm" target="_blank">毛孔专家乳液130ml</a></h3>
+                                <p>&#165;68.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=2441.htm" target="_blank"><img src="data/files/store_650/goods_113/small_201005211158335197.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=2441.htm" target="_blank">草本青涩润肤乳液160ml</a></h3>
+                                <p>&#165;90.00</p>
+                            </li>
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=2440.htm" target="_blank"><img src="data/files/store_650/goods_89/small_201005211148091836.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=2440.htm" target="_blank">草本青涩面霜50g</a></h3>
+                                <p>&#165;99.00</p>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="shop_list_page">
+    <div class="page">
+        <a class="stat">共 108 个项目</a>
+                <a class="former" href="index.php@app=store&id=650&act=search&page=4.htm#module"></a>
+                                <a class="page_link" href="index.php@app=store&id=650&act=search&page=1.htm#module">1</a>
+                                <a class="page_link" href="index.php@app=store&id=650&act=search&page=2.htm#module">2</a>
+                                <a class="page_link" href="index.php@app=store&id=650&act=search&page=3.htm#module">3</a>
+                                <a class="page_link" href="index.php@app=store&id=650&act=search&page=4.htm#module">4</a>
+                                <a class="page_hover" href="#module">5</a>
+                                <a class="page_link" href="index.php@app=store&id=650&act=search&page=6.htm#module">6</a>
+                                <a class="page_link" href="index.php@app=store&id=650&act=search&page=7.htm#module">7</a>
+                        <a class="nonce">5 / 7</a>
+                <a class="down" href="index.php@app=store&id=650&act=search&page=6.htm#module">下一页</a>
+            </div>
+</div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="clear"></div>
+</div>
+
+<div id="footer">
+    <p>
+        <a href="index.php.htm">首页</a>
+                | <a href="../www.shenei.net/default.htm" target="_blank">舍内网</a>
+                | <a href="../u.shenei.net/default.htm" target="_blank">家园</a>
+                | <a href="../www.shenei.net/default.htm" target="_blank">【疯·神】工作室</a>
+                | <a href="http://www.fjut.info/" target="_blank">工院百科</a>
+            </p>
+    页面执行 0.891 秒， 查询 6 次，在线 244 人    ，Gzip 已禁用    ，占用内存 2.85 MB <br />
+    Powered by <a href="http://ecmall.shopex.cn/?pid=6&host=http%3A%2F%2Fshop.shenei.net" target="_blank">ECMall 2.2 final 20100108</a> &copy; 2003-2009 <a href="http://www.shopex.cn/" target="_blank">ShopEx Inc.</a>
+</div>
+
+<script type="text/javascript" src="../www.jiathis.com/code/jiathis_r.js@move=0&btn=r5.gif" charset=utf-8></script>
+
+</body>
+</html>

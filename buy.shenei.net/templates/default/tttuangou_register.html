@@ -1,0 +1,151 @@
+<!--{template tttuangou_header}-->
+<script language="javascript">
+function checkEmail(email){
+if(email=='')return false;
+var emailRegExp = new RegExp(            "[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?");
+if (!emailRegExp.test(email)||email.indexOf('.')==-1){
+alert('email地址格式错误了哦~~');
+$('#email').val('');
+return false;
+}else{
+//链接服务器验证是否已经存在
+$.get("http://buy.shenei.net/templates/default/ajax.php", { mod: "check", code: "email" ,email:$("#email").val() },
+function(data){
+if(data==1){
+alert('email地址已经被注册了~~');
+$('#email').val('');
+return false;
+}
+}
+); 
+return true;
+}
+}
+function checkuname(){
+if($("#truename").val()=='')return false;
+$.get("ajax.php", { mod: "check", code: "truename" ,username:$("#truename").val() },
+function(data){
+if(data==1){
+alert('用户名已经被注册了~~');
+$('#truename').val('');
+return false;
+}
+}
+);
+}
+function check(){
+if($('#email').val()==''){
+alert('请输入您的常用Email地址');
+return false;
+}
+if($('#pwd').val()==''){
+alert('请输入您的密码');
+return false;
+}
+if($('#truename').val().replace(/[^\x00-\xff]/g,"**").length<4 || $('#truename').val().length>16){
+alert('用户名必须在4位到16位');
+return false;
+}
+if($('#pwd').val().length<4){
+alert('密码最短4位数');
+return false;
+}
+if($('#pwd').val()!=$('#ckpwd').val()){
+alert('两次密码输入不一致');
+return false;
+}
+if($('#truename').val()==''){
+alert('用户名不可以为空哦');
+return false;
+}
+return true;
+}
+</script>
+<div class="m960">
+<div class="t_l">
+<div class="t_area_out">
+<div class="t_area_in">
+<p class="cur_title">注册</p>
+<div class="sect">
+<p>我有<a href="../../../www.shenei.net/default.htm" target="_blank">舍内网</a>的账号，无需注册可直接<a href="tttuangou_register.html@mod=login.htm">登录</a>噢！</p>
+<form action="{$action}" method="post" onsubmit="return check();" enctype="multipart/form-data" >
+<div class="nleftL">
+<div class="field">
+<label>E-mail</label>
+<input type="text" name="email" id="email"  class="f_input" value="{$email}" onblur="checkEmail(this.value);"  size="30"><span class="require">*</span>
+<span class="hint">登录及找回密码用</span> </div>
+<div class="field">
+<label>用户名</label>
+<input type="text" name="truename" id="truename" onblur="checkuname();" class="f_input"size="30"><span class="require">*</span>
+<span class="hint">4-16 个字符，一个汉字为两个字符</span> </div>
+<div class="field">
+<label>密码</label>
+<input name="pwd" type="password" class="f_input" id="pwd"  size="30"><span class="require">*</span>
+<span class="hint">最少 4 个字符</span> </div>
+<div class="field">
+<label>确认密码</label>
+<input name="ckpwd" type="password" class="f_input" id="ckpwd"  size="30"><span class="require">*</span>
+</div>
+<div class="field">
+<label>手机</label>
+<input type="text" name="phone" id="phone" class="f_input"size="30"><span class="require">*</span>
+<span class="hint">请务必填写正确，团秒成功时需此联系</span> </div>
+<div class="field">
+<label>ＱＱ</label>
+<input type="text" name="qq" id="qq" class="f_input"size="30">
+<span class="hint">请填写您的QQ号码，方便客服与您联系</span> </div>
+<div class="field">
+<label>所在城市</label>
+<select name="city" class="f_product" id="city" >
+{loop $city $i $value}
+<option  value="{$value['cityid']}">{$value['cityname']}</option>
+{/loop}
+<option value="0">其他</option>
+</select>
+<select name="school" class="f_product" id="school">
+<option value="">其他学校</option>
+<option  value="福州大学">福州大学</option>
+<option  value="福建工程学院">工程学院</option>
+<option  value="福建师范大学">师范大学</option>
+<option  value="医科大学">医科大学</option>
+<option  value="中医学院">中医学院</option>
+<option  value="江夏学院">江夏学院</option>
+<option  value="华南女子学院">华南女子</option>
+<option  value="闽江学院">闽江学院</option>
+<option  value="农林大学">农林大学</option>
+</select>
+</div>
+<div class="field">
+<label>详细地址</label>
+<input type="text" name="address" id="address"  class="f_input" size="30">
+<span class="hint">务必填写 便于交易！ 例如：福建工程学院北区E2#416</span> </div>
+<div class="field autologin">
+<input name="showemail" type="checkbox" class="f_check" id="showemail" value="1" checked="checked" >
+订阅每日最新团购信息 
+</div>
+<div class="clear"></div>
+<div class="act">
+<input type="submit" class="formbutton"  value="注册">
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>  </div>
+<div class="t_r">
+<div class="t_area_out">
+<h1>已有{conf site_name}帐户？</h1>
+<div class="t_area_in">
+<p>请直接<a href="tttuangou_register.html@mod=login.htm">登录</a>。</p>
+</div>
+</div>
+<div class="t_area_out">
+<h1>已有舍内网账号？</h1>
+<div class="t_area_in">
+<p>也请直接<a href="tttuangou_register.html@mod=login.htm">登录</a>。</p>
+<p>特别提醒：<br>舍内网启用通行证机制。所有包括舍内家园、舍内网店、舍内信息等账号都可以通用！</p>
+</div>
+</div>
+</div>
+</div>
+<!--{template tttuangou_footer}-->

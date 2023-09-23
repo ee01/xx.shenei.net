@@ -1,0 +1,40 @@
+/*模板四 紫色风格*/
+body{background:url(../images/bg-deal.jpg) no-repeat 50% 150px #F9D9E1}
+#Tpl_c{/*margin-left:430px*/}
+.header{background:#444;height:87px;}
+.at_logo .vcoupon{ background:#fff}
+.at_logo .vcoupon a { color:#000}
+.logo{background:url(../images/logo.gif) no-repeat}
+.at_logo{background:none}
+.at_logo a.at_city{background:url(../images/cmb.png) 0 0 no-repeat;width:73px;height:25px;line-height:25px;}
+.t_nav{background:#b73578}
+.t_nav a{background:none;padding:9px 20px 7px}
+.t_nav a.current,.t_nav a:hover{background:#d16f9c}
+.menu .menu1{background:none 0 0 repeat #b73578;}
+.at_jrat{color:#000}
+.t_area_out{background:#E186B1;border:1px solid #E186B1}
+.t_area_in{margin:1px}
+.t_deal_l{background:#FAD8E1;border:1px solid #F6B1C3}
+.mb_0625{background:#FDEFF3;border:1px solid #F6B1C3}
+.at_buy{background:url(../images/cmb.png) 0 -152px no-repeat}
+.at_buy .deal_b{background:url(../images/cmb.png) 0 -33px no-repeat;margin-top:5px}
+.at_buy .deal_y{background:url(../images/cmb.png) 0 -92px no-repeat;margin-top:5px}
+.at_buy .deal_k{background:url(../images/cmb.png) 0 -300px no-repeat;margin-top:5px}
+.at_zk{background:url(../images/cmb.png) -123px -36px}
+.at_invite{width:207px;height:140px;background:url(../images/cmb.png) -248px 0 no-repeat;margin:2px}
+.fanli_0625{position:absolute;z-index:10;font-size:18px;font-family:黑体;font-weight:500;color:#C32033;margin:82px 20px 30px 70px}
+.t_padding{background:#fff3ef;padding-bottom:2px}
+.t_detail_r{background:#fff3ef}
+.t_detail_l h4{background:url(../images/cmb.png) -362px -160px no-repeat;color:#fff;font-size:16px;font-weight:500;line-height:35px;font-family:黑体;width:90px;height:42px;margin:10px 0 0 10px}
+.t_detail_txt{background:#FFF}
+.at_xts{margin:25px 0 10px 10px}
+.at_xts_t{width:452px;height:20px;overflow:hidden;background:url(../images/cmb.png) 0 -253px no-repeat}
+.at_xts_t .sName{color:#B73578;margin-top:-15px}
+.at_xts_f{width:452px;height:20px;background:url(../images/cmb.png) 0 -273px no-repeat}
+.at_xts_m{width:428px; border-left:#b73679 2px solid; border-right:#b73679 2px solid; margin-left:0;}
+.t_area_in .btn_dy{background:url(../images/cmb.png) -74px 0 no-repeat;width:42px;height:23px}
+.t_area_in .btn_td{background:url(../images/cmb.png) -117px 0 no-repeat;width:42px;height:23px}
+.footer{background:url(../images/at_f_bg.png) repeat-x #3d3c3c}
+.ft_bg a{color:#fff}
+#ft ul{background:#3d3c3c;}
+a,.t_l h1,.t_area_in a.orange,.t_area_in .orange,.t_l .cur_title{color:#B73578}

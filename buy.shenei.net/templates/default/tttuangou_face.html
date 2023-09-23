@@ -1,0 +1,33 @@
+<!--{template tttuangou_header}-->
+<div class="m960">
+<div class="t_l">
+<div class="ts_menu_2">
+<ul>
+<li class="ts3_mbtn2"><a href="tttuangou_face.html@mod=me&code=ticket.htm">我的团购券</a></li>
+<li class="ts3_mbtn2"><a href="tttuangou_face.html@mod=me&code=order.htm">我的订单</a></li>
+<li class="ts3_mbtn2"><a href="tttuangou_face.html@mod=me&code=money.htm">我的余额</a></li>
+<li class="ts3_mbtn2"><a href="tttuangou_face.html@mod=me&code=info.htm">账户设置</a></li>
+{if UCENTER}
+<li class="ts3_mbtn1"><a href="tttuangou_face.html@mod=me&code=face.htm">我的头像</a></li>
+{/if}
+</ul>
+<div class="clear"></div>
+</div>
+<div class="t_area_out">
+<div class="t_area_in" style="overflow:hidden;">
+<div class="avatar">
+<li><h1>当前我的头像</h1></li>
+<li><img src="{uc_api}/avatar.php@uid={$usr%5b'ucuid'%5d}&size=big.htm" /></li>
+<li><h1>设置我的新头像</h1><h2>请选择一个新照片进行上传编辑。</h2></li>
+<li>
+{$face}
+<h2>提示：头像保存后，您可能需要刷新一下本页面(按F5键)，才能查看最新的头像效果。</h2></li>
+</div>      
+</div>
+</div>
+</div>
+<div class="t_r">
+<!--{template "tttuangou_myfinder"}-->
+</div>
+</div>
+<!--{template tttuangou_footer}-->

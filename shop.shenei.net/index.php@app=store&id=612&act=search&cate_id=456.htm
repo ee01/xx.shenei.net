@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!-- saved from url=(0072)http://shop.shenei.net/index.php?app=store&id=612&act=search&cate_id=456 --><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base  />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7 charset=gbk" />
+<meta http-equiv="Content-Type" content="text/html;charset=gbk" />
+<title>商品列表 - 福州绿林办公用品</title>
+<meta name="author" content="ecmall.shopex.cn" />
+<meta name="copyright" content="ShopEx Inc. All Rights Reserved" />
+<link href="themes/store/default/styles/style3/shop.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="index.php@act=jslang"></script>
+<script type="text/javascript" src="includes/libraries/javascript/jquery.js" charset="utf-8"></script>
+<script type="text/javascript" src="includes/libraries/javascript/ecmall.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+//<!CDATA[
+var SITE_URL = "./";
+var PRICE_FORMAT = '&#165;%s';
+
+$(function(){
+    var span = $("#child_nav");
+    span.hover(function(){
+        $("#float_layer:not(:animated)").show();
+    }, function(){
+        $("#float_layer").hide();
+    });
+});
+//]]>
+</script>
+</head>
+
+<body>
+
+<div id="head">
+    <h1 title="【舍内网店】 - 大学城学生网店 - 舍内网"><a href="index.php.htm"><img src="data/files/mall/settings/site_logo.gif" alt="ECMall" /></a></h1>
+
+    <div id="subnav">
+        <p>
+        您好,游客                [<a href="index.php@app=member&act=login&ret_url=.htm">登录</a>]
+        [<a href="index.php@app=member&act=register&ret_url=.htm">注册</a>]
+                </p>
+        <p>
+        <a class="shopping" href="index.php@app=cart.htm">购物车</a> <span>|</span>
+        <a class="favorite" href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmy_favorite.htm">收藏夹</a> <span>|</span>
+        <a class="note" href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmessage&act_253dnewpm.htm">站内消息</a> <span>|</span>
+        <a class="help" href="index.php@app=article&code=help.htm">帮助中心</a>
+                <span>|</span> <a class="user_defined" href="../xx.shenei.net/member/info.php@part=input.htm" target="_blank">发信息</a>
+                </p>
+    </div>
+
+    <div id="topbtn">
+        <div class="topbtn1"></div>
+        <div class="topbtn2"></div>
+        <span id="child_nav">
+            <a href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmember.htm" class="user">用户中心</a>
+            <ul id="float_layer">
+                <div id="adorn1"></div>
+                <div id="adorn2"></div>
+                <li><a href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dbuyer_order.htm">我的订单</a></li>
+                <li><a href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dbuyer_groupbuy.htm">我的团购</a></li>
+                <li><a href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmy_question.htm">我的咨询</a></li>
+            </ul>
+        </span>
+        <span>|</span>
+        <a href="index.php@app=category.htm">我要买</a> <span>|</span>
+        <a href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmy_goods&act_253dadd.htm">我要卖</a>
+    </div>
+
+    <div id="path">
+        当前位置:
+                        <a href="index.php.htm">首页</a> <span>&#8250;</span>
+                                <a href="index.php@app=search&act=store.htm">所有店铺</a> <span>&#8250;</span>
+                                <a href="index.php@app=store&id=612.htm">福州绿林办公用品</a> <span>&#8250;</span>
+                                商品列表                    </div>
+
+    <div id="search">
+        <form id="" name="" method="get" action="index.php">
+            <div class="input">
+                <div class="input1"></div>
+                <div class="input2"></div>
+                <select name="act" class="select1">
+                <option value="index">搜索商品</option>
+                <option value="store">搜索店铺</option>
+                <option value="groupbuy">搜索团购</option>
+                </select>
+                <input type="hidden" name="app" value="search" />
+                <input type="text" class="search334" name="keyword" />
+            </div>
+            <input class="search_btn" type="submit" value="" />
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+//<!CDATA[
+$(function(){
+    $("select[ectype='order_by']").change(function(){
+        var params = location.search.substr(1).split('&');
+        var key    = 'order';
+        var value  = this.value;
+        var found  = false;
+        for (var i = 0; i < params.length; i++)
+        {
+            param = params[i];
+            arr   = param.split('=');
+            pKey  = arr[0];
+            if (pKey == 'page')
+            {
+                params[i] = 'page=1';
+            }
+            if (pKey == key)
+            {
+                params[i] = key + '=' + value;
+                found = true;
+            }
+        }
+        if (!found)
+        {
+            params.push(key + '=' + value);
+        }
+        location.assign(SITE_URL + '/index.php?' + params.join('&'));
+    });
+});
+//]]>
+</script>
+
+<SCRIPT type=text/javascript>
+function addBookmark(site, url) {
+        if (navigator.userAgent.toLowerCase().indexOf('ie') > -1) {
+                window.external.addFavorite(url, site)
+        } else if (navigator.userAgent.toLowerCase().indexOf('opera') > -1) {
+                return;
+        } else {
+                return;
+        }
+}
+
+function setCopy(_sTxt) {
+        if (navigator.userAgent.toLowerCase().indexOf('ie') > -1) {
+                clipboardData.setData('Text', _sTxt);
+                alert("网址“" + _sTxt + "”\n已经复制到您的剪贴板中\n您可以使用Ctrl+V快捷键粘贴到需要的地方");
+        } else {
+                prompt("请复制网站地址:", _sTxt);
+        }
+}
+</script>
+<div id="nav">
+        <div class="banner">
+                <img src="data/files/store_612/other/store_banner.gif" width="1000" height="150" />
+        
+                <H2>福州绿林办公用品</H2>
+                <H4>福州绿林办公用品</H4>
+                <DIV class=siteurl>
+                                                <A title=复制地址 onclick="javascript:setCopy('@612');" href="javascript:;"><IMG alt=复制地址 src="themes/store/default/styles/default/images/icon_siteinfo.gif"></A>
+                        <A title=加入收藏 onclick="javascript:addBookmark('福州绿林办公用品', '@612');" href="javascript:;"><IMG alt=加入收藏 src="themes/store/default/styles/default/images/icon_add.gif"></A>
+                        <A title=店铺地址 href="index.php@app=store&id=612.htm">http://shop.shenei.net/?612</A>
+                                        </DIV>
+    </div>
+
+    <ul>
+        <li><a class="normal" href="index.php@app=store&id=612.htm"><span>店铺首页</span></a></li>
+<!--
+        
+                <li><a class="normal" href="index.php?app=store&amp;id=612"><span>店铺首页</span></a></li>
+        -->
+        <li><a class="active" href="index.php@app=store&id=612&act=search.htm"><span>所有商品</span></a></li>
+        <li><a class="normal" href="index.php@app=store&act=groupbuy&id=612.htm"><span>团购活动</span></a></li>
+                <li><a class="normal" href="index.php@app=store&act=credit&id=612.htm"><span>信用评价</span></a></li>
+        <li><a class="normal" href="../u.shenei.net/612.htm" target="_blank"><span>店长博客</span></a></li>
+        <a class="collection" href="javascript:collect_store(612)">收藏该店铺</a>
+    </ul>
+
+    <div class="nav_bg"></div>
+</div>
+<div id="content">
+    <div id="left">
+        <div class="user">
+            <div class="user_photo">
+                <h2>福州绿林办公用品</h2>
+                <div class="photo"><a href="index.php@app=store&id=612.htm"><img src="data/files/store_612/other/store_logo.jpg" width="100" height="100" /></a></div>
+                <p><a href="javascript:collect_store(612)">收藏该店铺</a></p>
+            </div>
+            
+            <div class="user_data">
+                <p>
+                    <span>店主: </span>chiefai                    <a target="_blank" href="index.php@app=member&act=login&ret_url=_252findex.php_253fapp_253dmessage&act_253dsend&to_id_253d612.htm"><img src="themes/store/default/styles/style3/images/web_mail.gif" alt="发站内信" /></a>
+                </p>
+				
+								
+                <p>
+                    <span>信用度: </span><span class="fontColor1">6</span>
+                    <img src="themes/store/default/styles/style3/images/heart_1.gif" alt="" />                </p>
+                <p>店铺等级: 体验店面</p>
+                                <p>商品数量: 47</p>
+					
+				<p>浏览次数: 152 次</p>
+				                <p>创店时间: 2010-05-17</p>
+                <p>所在地区: 福州市区	福州大学</p>
+                                <p>详细地址: 福州市台江区51公馆（頣高数码港）</p>
+                                                <p>联系电话: 15659035689  0591-83328315</p>
+                                <p>
+                                        <a href="tencent_3a//message/@menu=yes&exe=&uin=78870601&websitename=_25b8_25a3_25d6_25dd_25c2_25cc_25c1_25d6_25b0_25ec_25b9_25ab_25d3_09a286b338" target="_blank"><img src="../pub.idqqimg.com/qconn/wpa/button/button_old_41.gif" alt="QQ"></a>
+                    <!--<a href="http://wpa.qq.com/msgrd?V=1&amp;Uin=78870601&amp;Site=福州绿林办公用品&amp;Menu=yes" target="_blank"><img src="http://wpa.qq.com/pa?p=1:78870601:4" alt="QQ"></a>-->
+					来Q我啊~
+                    <script type="text/javascript">
+function aliim() {
+window.open('http://webwwtb.im.alisoft.com/wangwang/ww1.htm?t=&uid=&tid='+escape('chiefai'));
+}
+</script>
+                                        <a href="javascript:aliim();" ><img border="0" src="../img.alicdn.com/tps/i1/t1b7m.xexuxxahnz_x-16-16.gif" alt="Wang Wang" /></a>
+                    <!--<a target="_blank" href="aliim:sendmsg?uid=cntaobao&touid=cntaobaochiefai&siteid=cntaobao&status=1&nick=福州绿林办公用品&uid_t=福州绿林办公用品&status=1&gid=0&suid=&fenliu=1" ><img border="0" src="http://amos.im.alisoft.com/online.aw?v=2&uid=chiefai&site=cntaobao&s=2&charset=gbk" alt="Wang Wang" /></a>-->
+                    <!--<a target="_blank" href="http://amos.im.alisoft.com/msg.aw?v=2&uid=chiefai&site=cntaobao&s=2&charset=gbk" ><img border="0" src="http://amos.im.alisoft.com/online.aw?v=2&uid=chiefai&site=cntaobao&s=2&charset=gbk" alt="Wang Wang" /></a>-->
+					淘宝旺旺
+                                                            <a target="_blank" href="http://settings.messenger.live.com/Conversation/IMMe.aspx?invitee=98dbed2e8761f73b@apps.messenger.live.com"><img src="../messenger.services.live.com/users/98dbed2e8761f73b_40apps.messenger.live.com/presenceimage/default.htm" alt="status" /></a>
+                    					<br><br>联系时告诉我是从舍内网看到的！<br>并把商品链接(网址)发来~
+                </p>
+            </div>
+        
+            <div class="clear"></div>
+        </div>
+        
+        <div class="module_common">
+            <h2 class="common_title veins1">
+                <div class="ornament1"></div>
+                <div class="ornament2"></div>
+                <span class="ico1"><span class="ico2">店内搜索</span></span>
+            </h2>
+            <div class="wrap">
+                <div class="wrap_child">
+                    <div class="web_search">
+                        <form id="" name="" method="get" action="index.php">
+                            <input type="hidden" name="app" value="store" />
+                            <input type="hidden" name="act" value="search" />
+                            <input type="hidden" name="id" value="612" />
+                            <input class="text width4" type="text" name="keyword" />
+                            <input class="btn" type="submit" value="" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="module_common">
+            <h2 class="common_title veins1">
+                <div class="ornament1"></div>
+                <div class="ornament2"></div>
+                <span class="ico1"><span class="ico2">商品分类</span></span>
+            </h2>
+            <div class="wrap">
+                <div class="wrap_child">
+                    <ul class="submenu">
+                        <li><a class="none_ico" href="index.php@app=store&id=612&act=search.htm">全部商品</a></li>
+                                                                        <li>
+                            <a class="block_ico" href="index.php@app=store&id=612&act=search&cate_id=405.htm">抵用券</a>
+                            <ul>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=438.htm">一元现金抵用券</a></li>
+                                                            </ul>
+                        </li>
+                                                                                                <li>
+                            <a class="block_ico" href="index.php@app=store&id=612&act=search&cate_id=406.htm">夏日香气</a>
+                            <ul>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=428.htm">带夹子USB电池两用风扇</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=429.htm">电池USB两用型卡通风扇</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=444.htm">测紫外线手机链</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=448.htm">透明三风扇水晶笔记本散热器</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=451.htm">韩国负离子减压手表</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=452.htm">韩版卡通冰垫（多种图案可选）</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=453.htm">韩版卡通冰枕（多种款式可选）</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=454.htm">长效KT猫夜光驱蚊贴</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=455.htm">苹果USB、电池两用风扇</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=456.htm">360度旋转大风力USB风扇</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=457.htm">USB卡通小风扇</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=463.htm">USB蛇形风扇</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=489.htm">卡通头像冰垫</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=492.htm">3风扇蓝光超炫散热垫</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=493.htm">水晶三代笔记本散热底座</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=494.htm">迷你折叠笔记本散热器 变形金刚</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=495.htm">便携式迷你笔记本散热器 八爪鱼</a></li>
+                                                            </ul>
+                        </li>
+                                                                                                <li>
+                            <a class="block_ico" href="index.php@app=store&id=612&act=search&cate_id=407.htm">新奇特商品</a>
+                            <ul>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=426.htm">USB任意弯曲三灯</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=430.htm">神奇海洋宝宝</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=431.htm">节节高笔筒 CD架</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=432.htm">涂鸦开关贴</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=433.htm">可爱熊猫手机挂件</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=434.htm">胭脂大眼兔兔手机链</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=435.htm">16格有盖收纳盒-玫瑰花</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=436.htm">充电式水洗电动剃须刀</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=437.htm">水果便签纸</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=441.htm">华太电池</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=442.htm">LED触摸灯</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=443.htm">防磁银行卡收纳册</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=445.htm">晶灵之恋</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=446.htm">许愿晶灵</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=447.htm">防风变色烟盒</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=449.htm">七彩闹钟（送电池）</a></li>
+                                                            </ul>
+                        </li>
+                                                                                                <li>
+                            <a class="block_ico" href="index.php@app=store&id=612&act=search&cate_id=408.htm">电脑办公</a>
+                            <ul>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=409.htm">金手指读卡器</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=425.htm">索尼隐藏线鼠标</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=427.htm">USB蛇形风扇</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=439.htm">KD鼠标垫计算器</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=440.htm">KD鼠标垫计算器1</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=450.htm">猎狐光电套装</a></li>
+                                                            </ul>
+                        </li>
+                                                                                                <li>
+                            <a class="block_ico" href="index.php@app=store&id=612&act=search&cate_id=412.htm">电脑</a>
+                            <ul>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=423.htm">惠普 DV1000</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=424.htm">二手IBM笔记本</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=502.htm">组装电脑 DIY电脑</a></li>
+                                                            </ul>
+                        </li>
+                                                                                                <li>
+                            <a class="block_ico" href="index.php@app=store&id=612&act=search&cate_id=468.htm">手机</a>
+                            <ul>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=469.htm">联想TD115</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=503.htm">金士顿 4G TF MICRO SD 卡</a></li>
+                                                            </ul>
+                        </li>
+                                                                                                <li>
+                            <a class="block_ico" href="index.php@app=store&id=612&act=search&cate_id=490.htm">电脑配件</a>
+                            <ul>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=496.htm">八爪鱼USB集线器</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=497.htm">小白人USB集线器</a></li>
+                                                                <li><a href="index.php@app=store&id=612&act=search&cate_id=498.htm">梅花USB集线器</a></li>
+                                                            </ul>
+                        </li>
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+        
+                
+            </div>
+    
+    <div id="right">
+        <div class="module_special">
+            <h2 class="common_title veins2">
+                <div class="ornament1"></div>
+                <div class="ornament2"></div>
+                <span class="ico1"><span class="ico2">360度旋转大风力USB风扇</span></span>
+            </h2>
+            <div class="wrap">
+                <div class="wrap_child">
+                                        <div class="major">
+                        <ul class="list">
+                                                        <li>
+                                <div class="pic"><a href="index.php@app=goods&id=2394.htm" target="_blank"><img src="data/files/store_612/goods_48/small_201005200307283938.jpg" width="150" height="150" /></a></div>
+                                <h3><a href="index.php@app=goods&id=2394.htm" target="_blank">360度旋转大风力USB风扇</a></h3>
+                                <p>&#165;15.00</p>
+                            </li>
+                                                    </ul>
+                    </div>
+                                                        </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="clear"></div>
+</div>
+
+<div id="footer">
+    <p>
+        <a href="index.php.htm">首页</a>
+                | <a href="../www.shenei.net/default.htm" target="_blank">舍内网</a>
+                | <a href="../u.shenei.net/default.htm" target="_blank">家园</a>
+                | <a href="../www.shenei.net/default.htm" target="_blank">【疯·神】工作室</a>
+                | <a href="http://www.fjut.info/" target="_blank">工院百科</a>
+            </p>
+    页面执行 0.834 秒， 查询 9 次，在线 256 人    ，Gzip 已禁用    ，占用内存 2.92 MB <br />
+    Powered by <a href="http://ecmall.shopex.cn/?pid=6&host=http%3A%2F%2Fshop.shenei.net" target="_blank">ECMall 2.2 final 20100108</a> &copy; 2003-2009 <a href="http://www.shopex.cn/" target="_blank">ShopEx Inc.</a>
+</div>
+
+<script type="text/javascript" src="../www.jiathis.com/code/jiathis_r.js@move=0&btn=r5.gif" charset=utf-8></script>
+
+</body>
+</html>

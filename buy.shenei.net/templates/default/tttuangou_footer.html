@@ -1,0 +1,95 @@
+<div class="footer">
+<div class="ft_bg"> <span><a href="javascript:scroll(0,0)">↑返回顶部</a></span></div>
+<script type="text/javascript">
+$(document).ready(function() {
+$("#top_title").click(function() {
+$("#show_provinces").toggle();
+}).mouseover(function() {
+$(this).css({ "color":"#fff" });	
+}).mouseout(function() {
+$(this).css({ "color":"#fff" });	
+}).css({ "cursor":"pointer" , "text-decoration":"underline" });	
+var last_show = null;
+$(".sub_title").mouseover(function() {
+if(last_show != null) {
+last_show.prev().css({ "color":"#fff" , "font-weight":"normal" });
+last_show.hide();				
+}
+last_show = $(this).css({ "color":"#fff" }).next();
+last_show.show();	
+}).css({ "cursor":"pointer" , "text-decoration":"underline" });	
+$("li a").click(function() {			
+$(".show_citys").hide();
+$("#show_provinces").hide();
+});
+$("#close").click(function() {
+$(".show_citys").css({ "color":"#F00" }).hide();
+$("#show_provinces").css({ "color":"#F00" }).hide();
+}).mouseover(function() {
+$(this).css({ "color":"#F00" });
+}).mouseout(function() {
+$(this).css({ "color":"#F00" });	
+}).css({ "cursor":"pointer" });
+});
+</script>
+<div id="ft">
+<ul class="cf">
+<li class="col">
+<h3>友情链接</h3>
+<ul class="sub-list">
+{if 'index'==$_GET['mod'] && 1==count($_GET) or 1}
+<!--{eval @include(CONFIG_PATH . 'link.php');}-->
+{if $config[link_list]}
+<!--{loop $config[link_list] $i $value}-->
+<li><a href="http://buy.shenei.net/templates/default/{$value%5burl%5d}" title="{$value[name]}" target="_blank">{$value[name]}{if $value[logo]}<img src="http://buy.shenei.net/templates/default/{$value%5blogo%5d}" />{/if}</a> </li>
+<!--{/loop}-->
+{/if}
+{/if}
+</ul>
+</li>
+<li class="col">
+<h3>如何团购</h3>
+<ul class="sub-list">
+<li><a href="tttuangou_footer.html@mod=list&code=tobuy.htm">团购指南</a></li>
+<li><a href="tttuangou_footer.html@mod=list&code=problem.htm">常见问题</a></li>
+<li><a href="tttuangou_footer.html@mod=index&code=email.htm">邮件订阅</a></li>
+<li><a href="http://buy.shenei.net/templates/default/{eval%20echo%20$this-_3econfig%5bsite_url%5d;%20}/?u={member_id}" onclick="copyText(this.href);" title="邀请好友购买返 {$this->config['default_payfinder']}元">邀请好友</a></li>
+</ul>
+</li>
+<li class="col">
+<h3>联系我们</h3>
+<ul class="sub-list">
+<li><a href="tttuangou_footer.html@mod=index&code=contat.htm">联系我们</a></li>
+<li><a href="tttuangou_footer.html@mod=list&code=question.htm">在线问答</a></li>
+<li><a href="tttuangou_footer.html@mod=index&code=feedback.htm">意见反馈</a></li>
+<li><a href="tttuangou_footer.html@mod=index&code=teamwork.htm">商务合作</a></li>
+</ul>
+</li>
+<li class="col">
+<h3>公司信息</h3>
+<ul class="sub-list">
+<li><a href="tttuangou_footer.html@mod=index&code=aboutus.htm">关于我们</a></li>
+<li><a href="tttuangou_footer.html@mod=index&code=privacy.htm">隐私保护</a></li>
+<li><a href="tttuangou_footer.html@mod=index&code=joinus.htm">加入我们</a></li>
+<li><a href="tttuangou_footer.html@mod=index&code=terms.htm">用户协议</a></li>
+</ul>
+</li>
+<li class="col end">
+<div class="logo-footer"> <a href="../../default.htm"><img src="http://buy.shenei.net/templates/default/templates/default/images/f_logo.png" /></a>
+<p><a href="http://www.miibeian.gov.cn/" target="_blank" title="网站备案">{conf icp}</a>
+<!--{conf tongji}-->
+&nbsp; {conf copyright}&nbsp;
+</p>
+</div>
+</li>
+</ul>    
+</div>
+</div>
+</div>
+<!-- JiaThis Button BEGIN -->
+<script type="text/javascript" src="../../../v2.jiathis.com/code/jiathis_r.js@move=0&btn=r4.gif" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+</body>
+</html>
+{$GLOBALS[iframe]}
+{eval $this->MemberHandler->UpdateSessions();}

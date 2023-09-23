@@ -1,0 +1,78 @@
+<html><!-- saved from url=(0038)http://xx.shenei.net/mymps/default.htm --><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=gb2312>'>
+<title>Login - Mymps Administrator's Control Panel - powered by mymps</title>
+<link href='css/login.css' rel='stylesheet' type='text/css'>
+<script type="text/javascript" language="javascript">
+<!--
+function CheckForm()
+{
+	if(document.Login.username.value=="")
+	{
+		alert("请输入用户名！");
+		document.Login.username.focus();
+		return false;
+	}
+	if(document.Login.password.value == "")
+	{
+		alert("请输入密码！");
+		document.Login.password.focus();
+		return false;
+	}
+}
+-->
+</script>
+</head>
+<body>
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr height="70px">
+    <td><div class="top">
+    <a href="javascript:;" title="设置舍内分类信息后台登录为浏览器首页" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('..');">设为首页</a>&nbsp;&nbsp;
+    <a href="../default.htm" target="_blank">网站首页</a>&nbsp;&nbsp;
+        
+    </div></td>
+  </tr>
+  <tr>
+    <td><div class="con">
+        <div class="login">
+          
+          <div class="input">
+            <div class="logo"><img src="images/mymps.gif" style="margin:20px 0 0 20px" alt="mymps分类信息系统后台管理系统"></div>
+
+			<form name="Login" action="index.php@part=chk&url=&go=mymps_right" method="post" onSubmit="return CheckForm();">
+            <input name="do" value="login" type="hidden">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="logTb">
+              <tr>
+                <th>用户名</th>
+                <td>
+                <input type="text" name="username" maxlength="20" class="input-border" style="ime-mode:disabled" />
+                </td>
+              </tr>
+              <tr>
+                <th>密&nbsp;&nbsp;&nbsp;&nbsp;码</th>
+                <td width="90"><input type="password" name="password" maxlength="20" class="input-border"></td>
+              </tr>
+                            <tr>
+                <th>&nbsp;</th>
+                <td  colspan="2" style="line-height:22px; padding-top:0px; padding-left:6px; padding-bottom:10px;">
+                <div class="Sel_Ver">
+                  <input type="submit" value="" class="login-b"  onMouseOver="this.className='login-b2'" onMouseDown="this.className='login-b3'" onMouseOut="this.className='login-b'"/>
+                   </div></td>
+              </tr>
+<tr>
+                <th></th>
+                <td><br>版权所有:<a href="http://www.mymps.com.cn/" target="_blank">mymps</a></td>
+              </tr>
+              <tr>
+                 <td colspan="2"><br>为提高系统兼容性，验证码输入默认关闭，你可以在后台开启</td>
+              </tr>
+            </table>
+			</form>
+          </div>
+        </div>
+      </div></td>
+  </tr>
+</table>
+</body>
+</html>

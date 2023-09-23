@@ -1,0 +1,39 @@
+/*模板二 蓝色风格*/
+body{background:url(../images/bg-deal.jpg) no-repeat 50% 150px #A3DCEF}
+#Tpl_c{/*margin-left:430px*/}
+.header{background:#444;height:87px;}
+.at_logo .vcoupon{ background:#fff}
+.at_logo .vcoupon a { color:#000}
+.logo{background:url(../images/logo.gif) no-repeat}
+.at_logo{background:none}
+.at_logo a.at_city{background:url(../images/cmb.png) 0 0 no-repeat;width:73px;height:25px;line-height:25px;}
+.t_nav{background:#44abaf}
+.t_nav a{background:none;padding:9px 20px 7px}
+.t_nav a.current,.t_nav a:hover{background:#63c5c8}
+.menu .menu1{background:none 0 0 repeat #44abaf;}
+.t_area_out{background:#89B4D4;border:1px solid #89B4D4}
+.t_area_in{margin:1px}
+.t_deal_l{background:#DEF9F0;border:1px solid #339A99}
+.mb_0625{background:#E4F1FA;border:1px solid #89B4D6}
+.at_buy{background:url(../images/cmb.png) 0 -171px no-repeat}
+.at_buy .deal_b{background:url(../images/cmb.png) -334px 0 no-repeat}
+.at_buy .deal_y{background:url(../images/cmb.png) -334px -62px no-repeat}
+.at_buy .deal_k{background:url(../images/cmb.png) -334px -122px no-repeat}
+.at_zk{background:url(../images/cmb.png) -210px 0}
+.at_invite{width:207px;height:140px;background:url(../images/cmb.png) 0 -26px no-repeat;margin:2px}
+.fanli_0625{position:absolute;z-index:10;font-size:18px;font-family:黑体;font-weight:500;color:#C32033;margin:82px 20px 30px 70px}
+.t_padding{background:#EFF6FE;padding-bottom:2px}
+.t_detail_r{background:#EFF6FE}
+.t_detail_l h4{background:none;color:#000;font-size:18px;font-weight:600}
+.at_xts{margin:25px 0 10px 10px}
+.at_xts_t{width:452px;height:20px;overflow:hidden;background:url(../images/cmb.png) 0 -261px no-repeat}
+.at_xts_t .sName{color:#399;margin-top:-15px}
+.at_xts_f{width:452px;height:20px;background:url(../images/cmb.png) 0 -281px no-repeat}
+.at_xts_m{border-left:#45acb0 2px solid; border-right:#45acb0 2px solid;width:428px; margin-left:0}
+.t_area_in .btn_dy{background:url(../images/cmb.png) -74px 0 no-repeat;width:65px;height:23px}
+.t_area_in .btn_td{background:url(../images/cmb.png) -140px 0 no-repeat;width:65px;height:23px}
+.footer{background:url(../images/at_f_bg.png) repeat-x #3d3c3c}
+.ft_bg a{color:#fff}
+#ft ul{background:#3d3c3c;}
+a,.t_l h1{color:#399}
+.at_jrat,.t_l .cur_title{color:#000}
