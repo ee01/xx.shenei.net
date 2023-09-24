@@ -1,1 +1,0 @@
-document.writeln("<li><a href=\"http://xx.shenei.net/http://xx.shenei.net/member/login.php?url=http%3a%2f%2fxx.shenei.net%2fpublic%2finfo.php\">登录<\/a><\/li><li><a href=\"../http_3a//xx.shenei.net/member/login.php@part=register\">注册<\/a><\/li>")
