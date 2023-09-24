@@ -224,3 +224,70 @@ ul.zpli li.zp{ width:65px; height:21px; font-weight:bold; float:left; font-size:
 
 .yixing{ width:85px;}
 .selectDog{ width:60px;}
+
+
+/* _fabu.css */
+.red_skin { color:#f00!important;}
+.thd { font-size:14px; font-weight:bold; color:#333; line-height:33px;}
+.thd b,.thd span { float:left; display:block;}
+.thd b { width:200px; text-align:right;}
+.thd span { width:158px; background:url(../images/bg5.jpg) no-repeat 0 0; height:33px; color:#a4a4a4;}
+.thd span.current { width:158px; background:url(../images/bg1.jpg) no-repeat 0 0; color:#fff;}
+.fbd { margin:10px 0 0 0; border-top:1px solid #c9dfed; border-bottom:1px solid #c9dfed; background:#f5faff; padding:15px; height:100%;}
+.tips { border:1px solid #ffc686; background:#f8f5da; text-align:left; padding:10px; width:730px; margin:0 auto 15px auto; line-height:20px;}
+
+.c_left1{ margin:20px auto; width:730px;}
+.conLli{}
+.YM-mainmnu{ text-align:left; margin-left:auto; margin-right:auto}
+.YM-mainmnu li{ width:134px; float:left; 
+background:url(../images/li_icon.gif) no-repeat left center;height:50px; line-height:50px; text-indent:15px; margin-right:225px; position:relative; z-index:10; display:inline}
+.YM-mainmnu li a{ font-size:15px;color:#000099; text-decoration:underline;}
+.YM-mainmnu li.current{ width:134px; height:50px; position:relative}
+.YM-mainmnu li.current a{ display:block;font-weight:bold; text-decoration:underline; width:126px; height:46px; line-height:46px; background:#fdfeff;  border:2px solid #6182e4;  border-bottom:3px solid #6182e4; border-right:none; text-indent:13px; position:absolute; top:0; left:0; z-index:10}
+
+
+.YM-submnu{ position:absolute; top:0px; left:126px; width:226px; border:2px solid #6182e4; background:#fdfeff; z-index:2; padding-bottom:0px; padding-top:12px; display:none}
+.YM-mainmnu li .YM-submnu li{ background:none; font-size:14px; padding:8px 0 0; height:20px; margin:0; line-height:20px; width:113px; float:left;}
+.YM-mainmnu li .YM-submnu li a{ width:113px; height:20px; line-height:20px; display:inherit; border:none; font-size:13px; font-weight:lighter; text-decoration:none}
+.YM-mainmnu li .YM-submnu li a:hover{ text-decoration:underline}
+
+#content {text-align:center;}
+#content .form_box{ text-align:left; padding:10px; width:730px; margin-left:auto; margin-right:auto; height:100%;}
+#content p{ font-size:14px; line-height:25px; margin:7px auto; text-align:left;}
+#content p label{width:85px; display:block; float:left}
+
+.fbd .pic { float:left; width:300px; text-align:right;}
+.fbd .text { float:left; text-align:left; font-size:14px; margin-top:4px;}
+.fbd .text p { margin-bottom:15px; line-height:24px;}
+.fbd .text p b { color:#333;}
+.fbd .text p a { }
+.fbd .text p a:hover { color:#f30;}
+
+.edit_box { text-align:left; background-color:#f5faff;}
+.edit_box li { clear:both; font-size:14px; padding:8px 0; line-height:22px; border-bottom:1px solid #e4edf4; color:#333; zoom:1; overflow:hidden;}
+
+.edit_box li span.span_1 { display:block; float:left; text-align:right; width:140px; font-size:14px; font-weight:bold; color:#000; margin-right:20px;}
+.edit_box li span.span_2 { display:block; float:left;}
+.edit_box li span.red_skin { font-size:20px; color:#ff0000;}
+.edit_box li a { text-decoration:underline;}
+.edit_box li input,.edit_box li select { font-size:12px;}
+.edit_box li input.textInt { border:1px solid #a7a6aa; height:22px; line-height:20px; color:#333; font-size:12px;}
+.edit_box li input.button { height:28px; width:50px; line-height:20px; font-size:14px;}
+
+input.fabu {
+font-size:14px!important;
+cursor:pointer;
+margin-top:10px;
+font-weight:100!important;
+letter-spacing:5px;
+padding:8px 15px 4px;
+}
+
+.upload_img{width:100%; height:auto; padding:30px 60px}
+.upload_img input{margin-top:5px}
+.upload_img ul{float:left; margin:10px 10px 10px 0; text-align:center; }
+.upload_img .preview{height:125px; border:1px #ccc solid; width:125px }
+.upload_img .preview img {width:120px;}
+.upload_img ul{margin-top:0; padding-top:0;}
+.upload_img li{margin:0 0 10px 0}
+.upload_img .img_input{width:130px;height:22px}
